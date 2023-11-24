@@ -20,9 +20,9 @@ function Home() {
   return (
     <>
       <ul>
-        {products.map((product) => {
-          <li> {product.name} </li>;
-        })}
+        {products.map((product) => (
+         <li key={product.id}> {product.name} </li>
+        ))}
       </ul>
     </>
   );
