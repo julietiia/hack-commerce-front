@@ -1,0 +1,10 @@
+.navbar {
+  height: 2rem;
+}
+
+.apparat-logo {
+  background-image: url("/src/assets/apparat-logo-navbar.png");
+  height: 40px;
+  object-fit: cover;
+
+}

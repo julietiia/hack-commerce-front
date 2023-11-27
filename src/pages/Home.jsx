@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
+import "./Home.css";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -11,7 +13,7 @@ function Home() {
         method: "get",
         url: `http://localhost:3000/`,
       });
-      console.log(response.data.products)
+    
       setProducts(response.data.products);
     };
     getProducts();
@@ -19,6 +21,7 @@ function Home() {
 
   return (
     <>
+    <Navbar />
       <ul>
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>
