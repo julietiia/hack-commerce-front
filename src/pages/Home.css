@@ -1,10 +1,33 @@
 .navbar {
   height: 2rem;
+
 }
 
-.apparat-logo {
-  background-image: url("/src/assets/apparat-logo-navbar.png");
-  height: 40px;
+.apparat-logo img {
   object-fit: cover;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin-left: 5rem;
+}
 
+i {
+  padding-left: 2rem;
+}
+
+.shop-profile {
+  padding-right: 2rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 5rem;
+
+}
+.navigation p {
+  font-weight: 500;
 }

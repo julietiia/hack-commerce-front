@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
 import "./Home.css";
 
 function Home() {
@@ -21,8 +20,7 @@ function Home() {
 
   return (
     <>
-    <Navbar />
-      <ul>
+      <ul className="mt-5">
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>
         ))}
