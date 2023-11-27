@@ -1,6 +1,5 @@
 .navbar {
   height: 2rem;
-
 }
 
 .apparat-logo img {
@@ -26,8 +25,14 @@ i {
   align-items: center;
   margin-top: 4rem;
   gap: 5rem;
-
 }
 .navigation p {
   font-weight: 500;
+}
+
+.carousel img {
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
 }

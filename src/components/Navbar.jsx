@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -14,7 +13,7 @@ function Navbar() {
           />
         </div>
         <div className="shop-profile">
-          <i className="bi bi-cart3"></i>
+          <i className="bi bi-cart3" ></i>
           <i className="bi bi-person-circle"></i>
         </div>
       </div>

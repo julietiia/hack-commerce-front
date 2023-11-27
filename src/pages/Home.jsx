@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Home.css";
+import Categories from "../components/Categories";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -19,12 +20,18 @@ function Home() {
   }, []);
 
   return (
+
     <>
-      <ul className="mt-5">
+      {/* <ul className="mt-5">
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>
         ))}
-      </ul>
+      </ul> */}
+      <section className="carousel">
+        <img src="/src/assets/banner.png" alt="banner" />
+      </section>
+      <Categories />
+  
     </>
   );
 }

@@ -2,7 +2,11 @@ import React from 'react'
 
 function OneCategory() {
   return (
-    <div>OneCategory</div>
+    <>
+     <img src="" alt="" />
+    <p></p>
+    </>
+   
   )
 }
 
