@@ -1,0 +1,19 @@
+.newsletter-paragraph{
+    font-size: 12px;
+}
+
+.container-background{
+    background-color: 
+    #2C6E49;
+    border-radius: 20px;
+    height: 280px;
+    color: white;
+}
+
+.newsletter-tittle{
+    font-size: 20px;
+}
+
+input ::placeholder {
+    font-size: 7px;
+}

@@ -6,6 +6,7 @@ import Categories from "../components/Categories";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HightlightProducts from "../components/HightlightProducts";
+import Subscription from "../components/Subscription";
 
 
 function Home() {
@@ -36,6 +37,7 @@ function Home() {
       </section>
       <Categories />
       <HightlightProducts/>
+      <Subscription/>
     </>
   );
 }
