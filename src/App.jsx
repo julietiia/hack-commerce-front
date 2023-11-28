@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "./pages/AboutUs";
-import CheckOut from "./pages/CheckOut";
+import AboutUs from "./pages/AboutUs.jsx";
+import CheckOut from "./pages/CheckOut.jsx";
 
 function App() {
   return (
