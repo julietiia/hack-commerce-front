@@ -1,0 +1,17 @@
+.img-hightlight-product{
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.row-hightlight-products{
+    background-color: #f6f6f6 ;
+    border-radius: 20px;
+}
+
+.hightlight-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
