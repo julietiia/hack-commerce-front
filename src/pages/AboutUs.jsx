@@ -12,20 +12,7 @@ function AboutUs() {
                             What's apparat?
                         </h2>
                         <p className="pt-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consequatur laborum ratione nam, obcaecati et
-                            accusantium enim facere dolor, soluta in,
-                            consectetur incidunt dolorum porro accusamus atque
-                            vitae sapiente voluptates eos. Lorem ipsum dolor sit
-                            amet consectetur adipisicing elit. Repellat veniam,
-                            unde rem ullam ipsam tenetur fuga? Ipsam eos
-                            necessitatibus consequuntur aliquid obcaecati.
-                            Praesentium ad sequi, et laborum aspernatur dolore
-                            ab. Lorem ipsum dolor sit, amet consectetur
-                            adipisicing elit. Dolore necessitatibus tempora
-                            debitis ea beatae aspernatur sit, quasi quae nihil
-                            corrupti. Illum eos corporis modi. Pariatur ipsum
-                            tempore tenetur quasi provident!
+                        At apparat, we're dedicated to offering high-quality furniture crafted with love. We want every moment you spend sitting, lounging, or simply enjoying your space to be filled with comfort and style, knowing that what you choose for your home is not only beautiful but also thoughtfully made. We appreciate being a part of your daily life, and we take that commitment seriously. We believe that furniture can be more than just functional pieces; they can be sources of comfort, inspiration, and creativity in every corner of your home.
                         </p>
                     </div>
                     <div className="col-6 img-col d-flex justify-content-center ">
