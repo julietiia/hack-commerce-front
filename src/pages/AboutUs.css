@@ -4,6 +4,43 @@
 }
 
 .tech-row{
-    height: 300px;
+   
     background-color: chocolate;
+
 }
+
+.project-row{
+background-color: blueviolet;
+}
+
+/* .presentation {
+    background-image: url("https://galeria-imagenes-mobler.s3.eu-west-3.amazonaws.com/mobler/wp-content/uploads/2022/11/30132707/mesa-design-house-stockholm-aria-roble-cojin-knot-1000x1000.jpg");
+} */
+
+
+
+
+.iconTech{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+small{
+    margin-left: 30px;
+}
+
+.iconTech i {
+    cursor: pointer;
+    font-size: 40px;
+    
+}
+
+.img-icon{
+    width: 40px;
+}
+
