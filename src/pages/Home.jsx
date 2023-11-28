@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import Categories from "../components/Categories";
 
+
 function Home() {
   const [products, setProducts] = useState([]);
 
@@ -22,6 +23,7 @@ function Home() {
   return (
 
     <>
+   
       {/* <ul className="mt-5">
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>

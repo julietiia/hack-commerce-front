@@ -1,6 +1,13 @@
 import React from "react";
+import { useState } from "react";
+import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 
 function Navbar() {
+  const [show, setShow] = useState(false);
+
+  const handleShow = (event) => setShow(true);
+  const handleClose = (event) => setShow(false);
+
   return (
     <>
       <div className="navbar mb-4">
@@ -13,7 +20,7 @@ function Navbar() {
           />
         </div>
         <div className="shop-profile">
-          <i className="bi bi-cart3" ></i>
+          <i onClick={(event) => handleShow(event)} className="bi bi-cart3"></i>
           <i className="bi bi-person-circle"></i>
         </div>
       </div>
@@ -23,6 +30,7 @@ function Navbar() {
         <p>categories</p>
         <p>about us</p>
       </div>
+      <OffCanvasShoppingCart show={show} handleClose={() => setShow(false)} />
     </>
   );
 }
