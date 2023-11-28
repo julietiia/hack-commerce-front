@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Categories from "../components/Categories";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 function Home() {
@@ -14,14 +16,13 @@ function Home() {
         method: "get",
         url: `http://localhost:3000/`,
       });
-    
+
       setProducts(response.data.products);
     };
     getProducts();
   }, []);
 
   return (
-
     <>
    
       {/* <ul className="mt-5">
@@ -33,7 +34,6 @@ function Home() {
         <img src="/src/assets/banner.png" alt="banner" />
       </section>
       <Categories />
-  
     </>
   );
 }
