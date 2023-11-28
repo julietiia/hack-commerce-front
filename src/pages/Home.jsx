@@ -15,16 +15,14 @@ function Home() {
         method: "get",
         url: `http://localhost:3000/`,
       });
-    
+
       setProducts(response.data.products);
     };
     getProducts();
   }, []);
 
   return (
-
     <>
-      <Navbar />
       {/* <ul className="mt-5">
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>
@@ -34,8 +32,6 @@ function Home() {
         <img src="/src/assets/banner.png" alt="banner" />
       </section>
       <Categories />
-      <Footer />
-  
     </>
   );
 }
