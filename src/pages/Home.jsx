@@ -5,6 +5,7 @@ import "./Home.css";
 import Categories from "../components/Categories";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import HightlightProducts from "../components/HightlightProducts";
 
 
 function Home() {
@@ -34,6 +35,7 @@ function Home() {
         <img src="/src/assets/banner.png" alt="banner" />
       </section>
       <Categories />
+      <HightlightProducts/>
     </>
   );
 }

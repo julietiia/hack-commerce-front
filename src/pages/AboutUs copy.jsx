@@ -5,9 +5,9 @@ function AboutUs() {
     return (
         <>
           
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row mt-4 ">
-                    <div className="col d-flex justify-content-center align-self-center flex-wrap">
+                    <div className="col-6 bg-black text-white rounded pt-5 ">
                         <h2 className="justify-content-center d-flex mt-5">
                             What's apparat?
                         </h2>
@@ -28,7 +28,7 @@ function AboutUs() {
                             tempore tenetur quasi provident!
                         </p>
                     </div>
-                    <div className="col-6 img-col d-flex justify-content-center ">
+                    <div className="col-6  img-col d-flex justify-content-center">
                         <img
                             src="/src/assets/apparat_white-navbar-logo.svg"
                             alt=""
@@ -39,7 +39,7 @@ function AboutUs() {
           
             {/* <div className="container"> */}
                
-                <div className="row mt-5 tech-row pt-3 text-white ">
+                <div className="row rounded tech-row pt-3 text-white ">
                 <h2 className="d-flex justify-content-center mt-3 mb-3">
                     Technologies & Tools
                 </h2>
@@ -113,32 +113,27 @@ function AboutUs() {
                         
                     </div>
                 </div>
-                <div className="row project-row pt-3 text-white mt-5">
+                <div className="row project-row pt-3 text-white">
                   <h2 className="d-flex justify-content-center mt-3 mb-3">Project Organisation</h2>
                   <img src="../src/assets/figma-mern.png" alt="" />
                 </div>
-                <div className="row team-row pt-3 text-white mt-5 mb-5">
+                <div className="row team-row pt-3 text-white">
                           <h2 className="d-flex justify-content-center mt-3 mb-3"> Our team</h2>
                           <div className="col  d-flex justify-content-center align-self-center flex-wrap gap-4 mb-5">
                             <div className="team-pic">
                             <img src="../src/assets/our-teamPic/nick.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Vanina</small>
                             </div>
                             <div className="team-pic">
                             <img src="../src/assets/our-teamPic/howie.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Julieta</small>
                             </div>
                             <div className="team-pic">
                             <img src="../src/assets/our-teamPic/kevin.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Helmuth</small>
                             </div>
                             <div className="team-pic">
                             <img src="../src/assets/our-teamPic/brian.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Ana</small>
                             </div>
                             <div className="team-pic">
                             <img src="../src/assets/our-teamPic/aj.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Felipe</small>
                             </div>
                           </div>
                         </div>

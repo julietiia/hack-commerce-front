@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useState } from "react";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 import { useNavigate } from "react-router-dom";
