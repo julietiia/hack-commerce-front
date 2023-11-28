@@ -1,4 +1,9 @@
 .logo {
     width: 400px;
-    height: 400px;
+    height: 400px; 
+}
+
+.tech-row{
+    height: 300px;
+    background-color: chocolate;
 }
