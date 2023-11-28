@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Categories from "../components/Categories";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -22,6 +24,7 @@ function Home() {
   return (
 
     <>
+      <Navbar />
       {/* <ul className="mt-5">
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>
@@ -31,6 +34,7 @@ function Home() {
         <img src="/src/assets/banner.png" alt="banner" />
       </section>
       <Categories />
+      <Footer />
   
     </>
   );
