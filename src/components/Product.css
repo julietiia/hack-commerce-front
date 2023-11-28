@@ -1,0 +1,70 @@
+.product-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 10%;
+   
+    
+}
+
+.product-details{
+    font-size: 16px;
+}
+
+.product-features{
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+.product-details-text{
+    font-size: 10px;
+}
+
+.product-description{
+    font-size: 12px;
+}
+
+.collapse-details-text {
+font-size: 10px;
+}
+
+.text-select{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.select-arrows{
+    width: 50px;
+    height: 50px;
+}
+
+.image-product-suggested{
+    width: 180px;
+    height: 180px;
+    border-radius: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    margin-top: 0;
+}
+
+.text-discover-designs{
+    font-size: 13px;
+}
+
+.body-page{
+    margin-top: 7rem;
+}
+
+.text-similar-design-name{
+    font-size: 10px;
+    margin: 0;
+    margin-top: 0;
+    
+}
+
+.similar-designs{
+    margin: 8px;
+}
