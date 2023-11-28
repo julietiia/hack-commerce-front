@@ -69,11 +69,11 @@ function CheckOut() {
                 </tr>
               </tbody>
             </table>
-            <div className="my-3 buttons">
+            <div className="my-3 checkout-buttons">
               <button type="button" className="btn action-button">
                 Empty cart
               </button>
-              <button type="button" className="btn action-button">
+              <button type="button" className="btn action-button ms-2">
                 Save for later
               </button>
             </div>

@@ -92,4 +92,11 @@ i {
   color: white;
   display: flex;
   flex-direction: row;
+  
+}
+
+.checkout-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
