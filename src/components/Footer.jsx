@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
   return (
     <footer>
-      <div className="bg-dark">
+      <div className="bg-dark text-white">
         <div>
           <img id="logo" src="/src/assets/Final-HA.png" alt="apparat logo" />
         </div>
@@ -79,6 +79,7 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div><p className="copyright-footer">©2023 apparat inc. All rights reserved</p></div>
       </div>
     </footer>
   );
