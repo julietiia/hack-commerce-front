@@ -15,7 +15,7 @@ function Navbar() {
     <>
       <div className="navbar mb-4">
         <i className="bi bi-search lupita"></i>
-        <div className="apparat-logo">
+        <div onClick={() => navigate("/")} className="apparat-logo">
           <img
             className="img-fluid"
             src="/src/assets/apparat-logo-navbar.png"
