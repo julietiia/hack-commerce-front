@@ -6,6 +6,7 @@ import Categories from "../components/Categories";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+
 function Home() {
   const [products, setProducts] = useState([]);
 
@@ -23,6 +24,7 @@ function Home() {
 
   return (
     <>
+   
       {/* <ul className="mt-5">
         {products.map((product) => (
          <li key={product.id}> {product.name} </li>
