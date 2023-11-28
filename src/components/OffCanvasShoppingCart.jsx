@@ -1,10 +1,8 @@
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import Navbar from './Navbar';
-
+import Button from "react-bootstrap/Button";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import Navbar from "./Navbar";
 
 function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
-
   return (
     <>
       <Offcanvas show={show} onHide={handleClose} {...props} placement={"end"}>
@@ -20,4 +18,4 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
   );
 }
 
-export default OffCanvasShoppingCart
+export default OffCanvasShoppingCart;
