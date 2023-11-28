@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function Navbar() {
+
+  const navigate = useNavigate();
+  
   return (
     <>
       <div className="navbar mb-4">
@@ -18,10 +23,10 @@ function Navbar() {
         </div>
       </div>
       <div className="navigation">
-        <p>home</p>
-        <p>shop</p>
-        <p>categories</p>
-        <p>about us</p>
+        <p onClick={() => navigate("/")}>home</p>
+        <p onClick={() => navigate("/shop")}>shop</p>
+        <p onClick={() => navigate("/categories")}>categories</p>
+        <p onClick={() => navigate("/about-us")}>about us</p>
       </div>
     </>
   );
