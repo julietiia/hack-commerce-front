@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Categories from "../components/Categories";
+import HomeCarousel from "../components/Carousel"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HightlightProducts from "../components/HightlightProducts";
@@ -32,9 +33,10 @@ function Home() {
          <li key={product.id}> {product.name} </li>
         ))}
       </ul> */}
-      <section className="carousel">
+      <HomeCarousel/>
+      {/* <section className="carousel">
         <img src="/src/assets/banner.png" alt="banner" />
-      </section>
+      </section> */}
       <Categories />
       <HightlightProducts/>
       <Subscription/>

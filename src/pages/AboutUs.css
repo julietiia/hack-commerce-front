@@ -16,7 +16,7 @@ border-radius: 20px;
 }
 
 .team-row{
-    background-color: #eda42b;
+    background-color: #2c6e49;
     border-radius: 20px;
 }
 
@@ -29,7 +29,7 @@ border-radius: 20px;
     background-image: url("https://galeria-imagenes-mobler.s3.eu-west-3.amazonaws.com/mobler/wp-content/uploads/2022/11/30132707/mesa-design-house-stockholm-aria-roble-cojin-knot-1000x1000.jpg");
 } */
 .img-col{
-    background-image: url("../assets/about-us-bannerPic.jpg");
+    background-color: black;
     border-radius: 20px;
 }
 
