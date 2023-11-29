@@ -23,39 +23,14 @@ function CheckOut() {
               <p className="product-price">000.00UYU</p>
               <p className="product-sku">Ref.53494878</p>
             </div>
-            <div className="shopping-list-product">
-              <img src={orangelamp} alt="" />
-              <p className="product-name">Ansel Glass Table Lamp</p>
-              <p className="product-price">000.00UYU</p>
-              <p className="product-sku">Ref.53494878</p>
-            </div>
-            <div className="shopping-list-product">
-              <img src={plumongradiente} alt="" />
-              <p className="product-name">Metallic Nylon Comforter</p>
-              <p className="product-price">000.00UYU</p>
-              <p className="product-sku">Ref.53494878</p>
-            </div>
-            <div className="shopping-list-product">
-              <img src={orangelamp} alt="" />
-              <p className="product-name">Ansel Glass Table Lamp</p>
-              <p className="product-price">000.00UYU</p>
-              <p className="product-sku">Ref.53494878</p>
-            </div>
           </div>
 
           <div className="col-4 shopping-cart-details">
             <h4>2 products</h4>
-            <table className="table table-borderless">
+            <table className="table table-borderless fl">
               <tbody>
                 <tr>
-                  <td>Ansel Glass Table Lamp</td>
-                  <td>000.00UYU</td>
-                </tr>
-                <tr>
-                  <td>Metallic Nylon Comforter</td>
-                  <td>000.00UYU</td>
-                </tr>
-                <tr>
+                  
                   <td>Ansel Glass Table Lamp</td>
                   <td>000.00UYU</td>
                 </tr>
