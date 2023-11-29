@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./HighlightProductsCheckout.css";
+import "./css/HighlightProductsCheckout.css";
 import { useNavigate } from "react-router-dom";
-import "../App.css"
+
 
 function HightlightProducts() {
   const [products, setProducts] = useState([]);

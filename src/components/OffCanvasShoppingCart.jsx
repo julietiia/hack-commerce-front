@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Navbar from "./Navbar";
-import "./ShoppingCart.css";
+import "./css/ShoppingCart.css";
 import { useNavigate } from "react-router-dom";
 
 function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
@@ -21,7 +21,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 <div className="one-product-div">
                   <img
                     className="one-product-pic w-100"
-                    src="/src/assets/chair.png"
+                    src="/src/assets/img/chair.png"
                     alt="nombre del producto"
                   />
                 </div>
@@ -46,7 +46,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 <div className="one-product-div">
                   <img
                     className="one-product-pic w-100"
-                    src="/src/assets/metallic_lamppng.png"
+                    src="/src/assets/img/metallic_lamppng.png"
                     alt="nombre del producto"
                   />
                 </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./Home.css";
+import "../components/css/Home.css";
 import Categories from "../components/Categories";
 import HomeCarousel from "../components/Carousel"
 import Navbar from "../components/Navbar";

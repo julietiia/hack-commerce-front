@@ -7,7 +7,7 @@ function DiscoverSimilarDesigns() {
                   <a href="#">
                     <img
                       className="image-product-suggested"
-                      src="/src/assets/liam_chair.webp"
+                      src="/src/assets/img/liam_chair.webp"
                       alt=""
                     />
                   </a>
@@ -28,7 +28,7 @@ function DiscoverSimilarDesigns() {
                     <a href="#">
                       <img
                         className="image-product-suggested "
-                        src="/src/assets/floria_chair.webp"
+                        src="/src/assets/img/floria_chair.webp"
                         alt=""
                       />
                     </a>
@@ -50,7 +50,7 @@ function DiscoverSimilarDesigns() {
                     <a href="#">
                       <img
                         className="image-product-suggested"
-                        src="/src/assets/charlotte_chair.png"
+                        src="/src/assets/img/charlotte_chair.png"
                         alt=""
                       />
                     </a>
@@ -72,7 +72,7 @@ function DiscoverSimilarDesigns() {
                     <a href="#">
                       <img
                         className="image-product-suggested"
-                        src="/src/assets/wallie_chair.png"
+                        src="/src/assets/img/wallie_chair.png"
                         alt=""
                       />
                     </a>

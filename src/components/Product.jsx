@@ -1,4 +1,4 @@
-import "./Product.css";
+import "./css/Product.css";
 import AddToCartButton from "./AddToCartButton";
 import Collapse from "react-bootstrap/Collapse";
 import Card from "react-bootstrap/Card";
@@ -19,7 +19,7 @@ function Product() {
               <div className="col-6">
                 <img
                   className="product-image img-fluid"
-                  src="/src/assets/alexia_chair_lifestyle.webp"
+                  src="/src/assets/img/alexia_chair_lifestyle.webp"
                   alt="chair"
                 />
               </div>

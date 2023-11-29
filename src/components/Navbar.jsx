@@ -25,7 +25,7 @@ function Navbar() {
         <div onClick={() => navigate("/")} className="apparat-logo">
           <img
             className="img-fluid"
-            src="/src/assets/apparatNavbar.png"
+            src="/src/assets/logo/apparatNavbar.png"
             alt=""
           />
         </div>
