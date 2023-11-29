@@ -1,6 +1,6 @@
 .product-image {
-    height: 360px;
-    width: 320px;
+    height: 460px;
+    width: 420px;
     object-fit: cover;
     border-radius: 20px;
     padding: 0;
@@ -17,6 +17,12 @@
     font-size: 11px;
     margin-bottom: 0;
 }
+
+
+.product-features p :hover {
+    cursor: pointer; 
+}
+
 
 .product-details-text{
     font-size: 10px;

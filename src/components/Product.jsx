@@ -18,7 +18,7 @@ function Product() {
               <div className="col-6">
                 <img
                   className="product-image img-fluid"
-                  src="/src/assets/floria_chair.png"
+                  src="/src/assets/alexia_chair_lifestyle.webp"
                   alt="chair"
                 />
               </div>
@@ -53,7 +53,7 @@ function Product() {
                 <div className="container mt-4">
                   <div>
                     <p
-                      className="product-features text-start mt-4 fw-bold"
+                      className="product-features text-start mt-4 fw-bold" role="button"
                       onClick={() => setProductDetailsOpen(!productDetailsOpen)}
                       aria-controls="productDetails"
                       aria-expanded={productDetailsOpen}
@@ -75,7 +75,7 @@ function Product() {
                     </Collapse>
 
                     <p
-                      className="product-features text-start fw-bold"
+                      className="product-features text-start fw-bold" role="button"
                       onClick={() =>
                         setShippingReturnsOpen(!shippingReturnsOpen)
                       }
@@ -88,7 +88,7 @@ function Product() {
                       <div id="shippingReturns">
                         <Card>
                           <Card.Body>
-                            <p className="collapse-details-text text-start ">
+                            <p className="collapse-details-text text-start" role="button" >
                               Shipping and Returns details go here.
                             </p>
                           </Card.Body>
@@ -97,7 +97,7 @@ function Product() {
                     </Collapse>
 
                     <p
-                      className="product-features text-start fw-bold"
+                      className="product-features text-start fw-bold" role="button"
                       onClick={() => setStockAvailableOpen(!stockAvailableOpen)}
                       aria-controls="stockAvailable"
                       aria-expanded={stockAvailableOpen}
@@ -144,7 +144,7 @@ function Product() {
                   <a href="#">
                     <img
                       className="image-product-suggested"
-                      src="/src/assets/liam_chair.png"
+                      src="/src/assets/liam_chair.webp"
                       alt=""
                     />
                   </a>
@@ -165,13 +165,13 @@ function Product() {
                     <a href="#">
                       <img
                         className="image-product-suggested "
-                        src="/src/assets/alexa_chair.png"
+                        src="/src/assets/floria_chair.webp"
                         alt=""
                       />
                     </a>
                     <a href="#">
                       <p className="text-similar-design-name text-start mt-2">
-                        Alexa Chair
+                        Floria Chair
                       </p>
                     </a>
                     <a href="#">
