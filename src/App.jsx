@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs.jsx";
 import CheckOut from "./pages/CheckOut.jsx";
 import Admin from "./pages/Admin";
+import "./components/footer.css"
 
 function App() {
   return (
