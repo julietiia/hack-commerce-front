@@ -39,7 +39,7 @@ function HightlightProducts() {
         {products.map((product) => (
          <div className='col mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2' key={product.id}>
         <div className="hightlight-product">
-         <img className='img-hightlight-product mb-3' src={product.image} alt={product.name} />
+         <a href="/product/1"><img className='img-hightlight-product mb-3' src={product.image} alt={product.name} /></a>
          <small>{product.name}</small>
          <small>{product.price} $</small>
        </div>
