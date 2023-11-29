@@ -41,10 +41,10 @@ function Categories() {
           <div className="col-4 category-box text-center">
             <img
               className="img-fluid"
-              src="/src/assets/rack.png"
+              src="/src/assets/soapdispenser.png"
               alt="storage"
             />
-            <p>storage & organization</p>
+            <p>deco</p>
           </div>
           <div className="col-4 category-box text-center">
             <img

@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutUs.css";
+import diagrama from "../assets/diagrama.png"
 
 function AboutUs() {
     return (
@@ -102,7 +103,7 @@ function AboutUs() {
                 </div>
                 <div className="row project-row pt-3 text-white mt-5">
                   <h2 className="text-black d-flex justify-content-center my-3">Project Organization</h2>
-                  <img src="../src/assets/figma-mern.png" alt="" />
+                  <img src={diagrama} alt="" />
                 </div>
                 <div className="row team-row pt-3 text-white mt-5 mb-5">
                           <h2 className="d-flex justify-content-center mt-3 mb-3"> Our team</h2>

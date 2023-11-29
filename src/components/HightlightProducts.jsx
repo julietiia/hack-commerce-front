@@ -1,34 +1,30 @@
-import React from 'react'
+import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./HightlightProducts.css"
+import "./HightlightProducts.css";
+import { useNavigate } from "react-router-dom";
 import Categories from "../components/Categories";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-
-
-  
-
-  
-
 function HightlightProducts() {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        const getHighlightProducts = async () => {
-          const response = await axios({
-            method: "get",
-            url: `http://localhost:3000/`,
-            
-          });
-          const highlightProducts = response.data.products.filter(
-            (product) => product.highlight === true
-          );
-    
-          setProducts(highlightProducts);
-        };
-        getHighlightProducts();
-      }, []);
+  const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const getHighlightProducts = async () => {
+      const response = await axios({
+        method: "get",
+        url: `http://localhost:3000/`,
+      });
+      const highlightProducts = response.data.products.filter(
+        (product) => product.highlight === true
+      );
+
+      setProducts(highlightProducts);
+    };
+    getHighlightProducts();
+  }, []);
 
   return (
     <>
@@ -50,9 +46,8 @@ function HightlightProducts() {
             
         </div>
       </div>
-  
     </>
   );
 }
 
-export default HightlightProducts
+export default HightlightProducts;

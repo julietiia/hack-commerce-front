@@ -1,20 +1,19 @@
 li {
-    list-style-type: none;
-   
+  list-style-type: none;
 }
 p {
-    text-align: center;
-
+  text-align: center;
 }
 
 #logo {
-    height: 150px;
-    width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  height: 150px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+<<<<<<< Updated upstream
 .rs-icon{
     color: white;
 }
@@ -22,3 +21,5 @@ p {
 .copyright-footer{
     font-size: 0.8rem;
 }
+=======
+>>>>>>> Stashed changes
