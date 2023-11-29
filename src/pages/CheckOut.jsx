@@ -6,7 +6,7 @@ import whitechair from "../assets/whitechair.webp";
 function CheckOut() {
   return (
     <>
-      <div className="container-fluid ">
+      <div className="container-fluid">
         <div className="mt-3">
           <p className="checkout-warning">
             These articles are not reserved until they have been completed.
@@ -102,7 +102,7 @@ function CheckOut() {
             </div>
           </div>
         </div>
-      </div>
+    </div>
     </>
   );
 }
