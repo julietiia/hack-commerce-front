@@ -32,7 +32,6 @@ li:hover {
 
 .shopping-list {
   margin-left: 1rem;
-  
   display: flex;
   justify-content: start;
   flex-direction: row;
@@ -40,12 +39,13 @@ li:hover {
 }
 
 .shopping-list img {
-  height: 380px;
-  width: 320px;
+  height: 320px;
+  width: 250px;
   object-fit: cover;
   border-radius: 20px;
   padding: 0;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 .shopping-list-product {
@@ -53,6 +53,7 @@ li:hover {
   flex-direction: column;
   align-items: start;
   margin-bottom: 1rem;
+  
 }
 
 .product-info{
@@ -66,13 +67,14 @@ li:hover {
   align-items: start;
 }
 
-.shopping-cart-details{
-  margin-right: 2rem;
-}
-
 .shopping-cart-details ul {
   padding: 0;
   
+}
+
+.shopping-cart-details{
+  padding: 0 0 0 0;
+  width: 450px;
 }
 
 .total {
@@ -111,4 +113,20 @@ li:hover {
 
 .checkout-warning{
   font-size: 0.8rem;
+}
+
+.delete-from-checkout{
+  padding: 0;
+}
+
+.table-list{
+  width: 450px;
+}
+
+.product-list-name{
+  width: 250px;
+}
+
+.product-list-price{
+  width: 120px;
 }
