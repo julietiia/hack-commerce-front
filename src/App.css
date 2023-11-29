@@ -55,6 +55,17 @@ li:hover {
   margin-bottom: 1rem;
 }
 
+.product-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.product-identifier{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .shopping-cart-details{
   margin-right: 2rem;
 }
@@ -70,18 +81,18 @@ li:hover {
 
 .product-name {
   font-size: 1rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0;
 }
 
 .product-price {
   font-size: 1rem;
   font-weight: 600;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0;
 }
 
 .product-sku {
   font-size: 0.7rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0;
 }
 
 .action-button {
@@ -97,7 +108,6 @@ li:hover {
   flex-direction: row;
   justify-content: start;
 }
-
 
 .checkout-warning{
   font-size: 0.8rem;
