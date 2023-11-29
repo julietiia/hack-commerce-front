@@ -30,29 +30,20 @@ function HightlightProducts() {
     <>
       <div className="container">
         <div className="row row-hightlight-products mb-5 ">
-          <h2 className="d-flex justify-content-center mb-5 mt-3">
-            get inspired with apparat{" "}
-          </h2>
-
-          {products.map((product) => (
-            <div
-              className="col mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
-              key={product.id}
-            >
-              <div
-                className="hightlight-product"
-                onClick={() => navigate("/product/1")}
-              >
-                <img
-                  className="img-hightlight-product mb-3"
-                  src={product.image}
-                  alt={product.name}
-                />
-                <small>{product.name}</small>
-                <small>{product.price} $</small>
-              </div>
-            </div>
-          ))}
+            <h2 className='d-flex justify-content-center mb-5 mt-3'>get inspire with apparat </h2>
+               
+        {products.map((product) => (
+         <div className='col mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2' key={product.id}>
+        <div className="hightlight-product">
+         <a href="/product/1"><img className='img-hightlight-product mb-3' src={product.image} alt={product.name} /></a>
+         <small>{product.name}</small>
+         <small>{product.price} $</small>
+       </div>
+       </div>
+         
+        ))}
+      
+            
         </div>
       </div>
     </>

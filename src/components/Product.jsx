@@ -3,6 +3,7 @@ import AddToCartButton from "./AddToCartButton";
 import Collapse from "react-bootstrap/Collapse";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
+import DiscoverSimilarDesigns from "./DiscoverSimilarDesigns";
 
 function Product() {
   const [productDetailsOpen, setProductDetailsOpen] = useState(false);
@@ -18,7 +19,7 @@ function Product() {
               <div className="col-6">
                 <img
                   className="product-image img-fluid"
-                  src="/src/assets/floria_chair.png"
+                  src="/src/assets/alexia_chair_lifestyle.webp"
                   alt="chair"
                 />
               </div>
@@ -54,6 +55,7 @@ function Product() {
                   <div>
                     <p
                       className="product-features text-start mt-4 fw-bold"
+                      role="button"
                       onClick={() => setProductDetailsOpen(!productDetailsOpen)}
                       aria-controls="productDetails"
                       aria-expanded={productDetailsOpen}
@@ -76,6 +78,7 @@ function Product() {
 
                     <p
                       className="product-features text-start fw-bold"
+                      role="button"
                       onClick={() =>
                         setShippingReturnsOpen(!shippingReturnsOpen)
                       }
@@ -88,7 +91,10 @@ function Product() {
                       <div id="shippingReturns">
                         <Card>
                           <Card.Body>
-                            <p className="collapse-details-text text-start ">
+                            <p
+                              className="collapse-details-text text-start"
+                              role="button"
+                            >
                               Shipping and Returns details go here.
                             </p>
                           </Card.Body>
@@ -98,6 +104,7 @@ function Product() {
 
                     <p
                       className="product-features text-start fw-bold"
+                      role="button"
                       onClick={() => setStockAvailableOpen(!stockAvailableOpen)}
                       aria-controls="stockAvailable"
                       aria-expanded={stockAvailableOpen}
@@ -124,108 +131,15 @@ function Product() {
 
         <div>
           <section>
-            <div className="container">
+            <div className="container similar-products-background">
               <div className="row mt-5">
                 <div className="col-6 mt-5">
                   <p className="text-discover-designs fw-bold text-start">
                     Discover similar designs
                   </p>
                 </div>
-                <div className="col-6 d-flex  align-items-center">
-                  <img
-                    className="select-arrows"
-                    src="/src/assets/select_arrows.png"
-                    alt=""
-                  />
-                </div>
               </div>
-              <div className="row g-5">
-                <div className="col-3">
-                  <a href="#">
-                    <img
-                      className="image-product-suggested"
-                      src="/src/assets/liam_chair.png"
-                      alt=""
-                    />
-                  </a>
-                  <a href="#">
-                    <p className="text-similar-design-name text-start mt-2">
-                      Liam Chair
-                    </p>
-                  </a>
-                  <a href="#">
-                    <p className="text-similar-design-name fw-bold text-start">
-                      0.000UYU
-                    </p>
-                  </a>
-                </div>
-
-                <div className="col-3">
-                  <div>
-                    <a href="#">
-                      <img
-                        className="image-product-suggested "
-                        src="/src/assets/alexa_chair.png"
-                        alt=""
-                      />
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name text-start mt-2">
-                        Alexa Chair
-                      </p>
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
-                      </p>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="col-3 mb-5">
-                  <div>
-                    <a href="#">
-                      <img
-                        className="image-product-suggested"
-                        src="/src/assets/charlotte_chair.png"
-                        alt=""
-                      />
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name text-start mt-2">
-                        Charlotte Chair
-                      </p>
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
-                      </p>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="col-3">
-                  <div>
-                    <a href="#">
-                      <img
-                        className="image-product-suggested"
-                        src="/src/assets/wallie_chair.png"
-                        alt=""
-                      />
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name text-start mt-2">
-                        Wallie curvature Chair
-                      </p>
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <DiscoverSimilarDesigns />
             </div>
           </section>
         </div>
