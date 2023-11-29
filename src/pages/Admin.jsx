@@ -9,32 +9,27 @@ function Admin() {
         <div className="row">
           <div className="col-12"></div>
           <div className="col-2">
-            {/* <div>
+            {/* <div >
               <img id="adminLogo" src={apparatNavbar} alt="apparatLogo" />
             </div> */}
-
             <ul>
               <li>
-                <button className="adminButton btn">
-                  <i className="bi bi-graph-up-arrow"></i>dashboard
-                </button>
+                <button className="adminButton btn"><i className="bi bi-bar-chart-line"></i>dashboard</button>
               </li>
               <li>
-                <button className="adminButton btn">products</button>
+                <button className="adminButton btn"><i className="bi bi-box-seam"></i>products</button>
               </li>
               <li>
-                <button className="adminButton btn">categories</button>
+                <button className="adminButton btn"><i className="bi bi-grid"></i>categories</button>
               </li>
               <li>
-                <button className="adminButton btn">orders</button>
+                <button className="adminButton btn"><i className="bi bi-cart3"></i>orders</button>
               </li>
               <li>
-                <button className="adminButton btn">customers</button>
+                <button className="adminButton btn"><i className="bi bi-people"></i>customers</button>
               </li>
               <hr />
-              <li>
-                <button className="adminButton btn">log out</button>
-              </li>
+              <li><button className="adminButton btn"><i className="bi bi-box-arrow-right"></i>log out</button></li>
             </ul>
           </div>
 
