@@ -1,5 +1,5 @@
 import React from "react";
-import "./Categories.css";
+import "./css/Categories.css";
 
 function Categories() {
   return (
@@ -9,7 +9,7 @@ function Categories() {
           <div className="col-4 category-box text-center">
             <img
               className="img-fluid sofa"
-              src="/src/assets/sofa.png"
+              src="/src/assets/img/sofa.png"
               alt="sofas"
             />
             <p>sofas</p>
@@ -17,7 +17,7 @@ function Categories() {
           <div className="col-4 category-box text-center">
           <a href="/category/1"> <img
               className="img-fluid"
-              src="/src/assets/chair.png"
+              src="/src/assets/img/chair.png"
               alt="chairs"
             /></a>
             <p>chairs</p>
@@ -25,7 +25,7 @@ function Categories() {
           <div className="col-4 category-box text-center">
             <img
               className="img-fluid"
-              src="/src/assets/tables.png"
+              src="/src/assets/img/tables.png"
               alt="tables"
             />
             <p>tables</p>
@@ -33,7 +33,7 @@ function Categories() {
           <div className="col-4 category-box text-center">
             <img
               className="img-fluid"
-              src="/src/assets/rack.png"
+              src="/src/assets/img/rack.png"
               alt="storage"
             />
             <p>storage & organization</p>
@@ -41,7 +41,7 @@ function Categories() {
           <div className="col-4 category-box text-center">
             <img
               className="img-fluid"
-              src="/src/assets/soapdispenser.png"
+              src="/src/assets/img/soapdispenser.png"
               alt="storage"
             />
             <p>deco</p>
@@ -49,7 +49,7 @@ function Categories() {
           <div className="col-4 category-box text-center">
             <img
               className="img-fluid category-tile"
-              src="/src/assets/metallic_lamppng.png"
+              src="/src/assets/img/metallic_lamppng.png"
               alt="lightning"
             />
             <p>lightning</p>

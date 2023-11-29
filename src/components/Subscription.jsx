@@ -1,5 +1,5 @@
 import React from "react";
-import "./Subscription.css";
+import "./css/Subscription.css";
 
 function Subscription() {
   return (

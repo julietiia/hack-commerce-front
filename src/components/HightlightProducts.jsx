@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./HightlightProducts.css";
-import { useNavigate } from "react-router-dom";
+import "../components/css/HightlightProducts.css";
+import { useNavigate, Link } from "react-router-dom";
 import Categories from "../components/Categories";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -35,7 +35,7 @@ function HightlightProducts() {
         {products.map((product) => (
          <div className='col mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2' key={product.id}>
         <div className="hightlight-product">
-         <a href="/product/1"><img className='img-hightlight-product mb-3' src={product.image} alt={product.name} /></a>
+         <Link to="/product/1"><img className='img-hightlight-product mb-3' src={product.image} alt={product.name} /></Link> 
          <small>{product.name}</small>
          <small>{product.price} $</small>
        </div>
