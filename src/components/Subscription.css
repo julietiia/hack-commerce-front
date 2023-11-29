@@ -1,5 +1,5 @@
 .newsletter-paragraph{
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .container-background{
@@ -8,12 +8,24 @@
     border-radius: 20px;
     height: 280px;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
-.newsletter-tittle{
-    font-size: 20px;
+.subscribe-input{
+    height: 3rem;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    padding-left: 1rem;
 }
 
-input ::placeholder {
-    font-size: 7px;
+.subscribe-btn{
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.subscription-img{
+    height: 200px;
 }
