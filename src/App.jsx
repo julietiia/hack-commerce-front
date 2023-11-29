@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs.jsx";
 import CheckOut from "./pages/CheckOut.jsx";
 import Admin from "./pages/Admin";
-import "./components/footer.css"
+import "./components/Footer.css"
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/category/:id" element={<Category />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/admin" element={<Admin />} />

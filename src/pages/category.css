@@ -1,0 +1,45 @@
+.img-banner-category-chairs{
+    width: 100%;
+ height: 700px;
+ object-fit: cover;
+}
+
+.img-chair {
+    object-fit: cover;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    
+    
+}
+
+/* .image-container:hover .img1{
+    opacity: 1;
+}
+.image-container:hover .img2{
+    opacity: 0;
+} */
+
+
+
+.image-container{
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transition: opacity 0.3s ease-in-out;
+        
+    }
+
+    .top-img{
+        position: absolute;
+        opacity: 0;
+    }
+
+    .top-img:hover{
+        opacity:1;
+    }
+
+
+
