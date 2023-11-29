@@ -32,7 +32,7 @@ li:hover {
 
 .shopping-list {
   margin-left: 1rem;
-  margin-right: 1rem;
+  
   display: flex;
   justify-content: start;
   flex-direction: row;
@@ -40,7 +40,7 @@ li:hover {
 }
 
 .shopping-list img {
-  height: 360px;
+  height: 380px;
   width: 320px;
   object-fit: cover;
   border-radius: 20px;
@@ -55,8 +55,13 @@ li:hover {
   margin-bottom: 1rem;
 }
 
+.shopping-cart-details{
+  margin-right: 2rem;
+}
+
 .shopping-cart-details ul {
   padding: 0;
+  
 }
 
 .total {
@@ -91,4 +96,9 @@ li:hover {
   display: flex;
   flex-direction: row;
   justify-content: start;
+}
+
+
+.checkout-warning{
+  font-size: 0.8rem;
 }

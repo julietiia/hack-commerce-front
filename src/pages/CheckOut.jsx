@@ -1,13 +1,14 @@
 import React from "react";
 import orangelamp from "../assets/orangelamp.webp";
 import plumongradiente from "../assets/plumongradiente.webp";
+import whitechair from "../assets/whitechair.webp";
 
 function CheckOut() {
   return (
     <>
       <div className="container-fluid ">
         <div className="mt-3">
-          <p>These articles are not reserved until they have been completed.</p>
+          <p className="checkout-warning">These articles are not reserved until they have been completed.</p>
         </div>
         <div className="row d-flex flex-nowrap">
           <div className="col-8 shopping-list">
@@ -23,20 +24,32 @@ function CheckOut() {
               <p className="product-price">000.00UYU</p>
               <p className="product-sku">Ref.53494878</p>
             </div>
+            <div className="shopping-list-product">
+              <img src={whitechair} alt="" />
+              <p className="product-name">Bubble Chair</p>
+              <p className="product-price">000.00UYU</p>
+              <p className="product-sku">Ref.53494878</p>
+            </div>
           </div>
 
           <div className="col-4 shopping-cart-details">
-            <h4>2 products</h4>
-            <table className="table table-borderless fl">
+            <h4>3 products</h4>
+            <table className="table table-borderless">
               <tbody>
                 <tr>
-                  
                   <td>Ansel Glass Table Lamp</td>
                   <td>000.00UYU</td>
+                  <td><i className="bi bi-trash3 delete-froom-chekout"></i></td>
                 </tr>
                 <tr>
                   <td>Metallic Nylon Comforter</td>
                   <td>000.00UYU</td>
+                  <td><i className="bi bi-trash3 delete-froom-chekout"></i></td>
+                </tr>
+                <tr>
+                  <td>Bubble Chair</td>
+                  <td>000.00UYU</td>
+                  <td><i className="bi bi-trash3 delete-froom-chekout"></i></td>
                 </tr>
                 <tr>
                   <td className="total">TOTAL</td>
