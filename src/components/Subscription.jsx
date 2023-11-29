@@ -14,10 +14,10 @@ function Subscription() {
           </p>
         </div>
       </div>
-      <form action="" className="mt-3 mb-5">
-        <input type="text" className="rounded" placeholder="your emails goes here" />
+      <form action="" className="mt-3 mb-5 ">
+        <input type="text" className="rounded " placeholder="your email goes here"/>
         <label htmlFor="subscribe"></label>
-        <button className="rounded btn btn-dark text-select">subscribe</button>
+        <button className="rounded btn btn-dark text-select ">subscribe</button>
       </form>
     </div>
   );
