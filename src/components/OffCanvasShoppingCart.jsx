@@ -2,8 +2,12 @@ import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Navbar from "./Navbar";
 import "./ShoppingCart.css";
+import { useNavigate } from "react-router-dom";
 
 function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <Offcanvas show={show} onHide={handleClose} {...props} placement={"end"}>
@@ -33,7 +37,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 </div>
               </div>
               <div className="col-4 third-box">
-              <i class="bi bi-trash3"></i>
+              <i className="bi bi-trash3"></i>
               <p>USD 150</p>
               </div>
             </div>
@@ -58,12 +62,12 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 </div>
               </div>
               <div className="col-4 third-box">
-              <i class="bi bi-trash3"></i>
+              <i className="bi bi-trash3"></i>
               <p>USD 40</p>
               </div>
             </div>
             <div className="row">
-              <button className="col-12 mt-3 btn check-out-button rounded-pill">
+              <button className="col-12 mt-3 btn check-out-button rounded-pill" onClick={() => navigate("/checkout")}>
                 check out
               </button>
             </div>

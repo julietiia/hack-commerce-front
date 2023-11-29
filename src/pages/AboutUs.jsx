@@ -101,7 +101,7 @@ function AboutUs() {
                     </div>
                 </div>
                 <div className="row project-row pt-3 text-white mt-5">
-                  <h2 className="d-flex justify-content-center mt-3 mb-3">Project Organisation</h2>
+                  <h2 className="text-black d-flex justify-content-center my-3">Project Organization</h2>
                   <img src="../src/assets/figma-mern.png" alt="" />
                 </div>
                 <div className="row team-row pt-3 text-white mt-5 mb-5">
