@@ -7,7 +7,7 @@ import HighlightProductsCheckout from "../components/HighlightProductsCheckout"
 function CheckOut() {
   return (
     <>
-      <div className="container">
+      <div className="container-fluid">
         <div className="mt-3">
           <p className="checkout-warning">
             These articles are not reserved until they have been completed.
@@ -118,12 +118,7 @@ function CheckOut() {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col">
-            <HighlightProductsCheckout />
-          </div>
-        </div>
-      </div>
+    </div>
     </>
   );
 }
