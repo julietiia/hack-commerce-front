@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs.jsx";
 import CheckOut from "./pages/CheckOut.jsx";
 import Admin from "./pages/Admin";
 import "./components/Footer.css"
+import Category from "./pages/Category.jsx";
 
 function App() {
   return (

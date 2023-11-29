@@ -1,6 +1,14 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import "./Home.css";
+import Categories from "../components/Categories";
+import HomeCarousel from "../components/Carousel"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import HightlightProducts from "../components/HightlightProducts";
+import Subscription from "../components/Subscription";
+
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -11,7 +19,7 @@ function Home() {
         method: "get",
         url: `http://localhost:3000/`,
       });
-      console.log(response.data.products)
+
       setProducts(response.data.products);
     };
     getProducts();
@@ -19,13 +27,22 @@ function Home() {
 
   return (
     <>
-      <ul>
-        {products.map((product) => {
-          return <li> {product.name} </li>;
-        })}
-      </ul>
+   
+      {/* <ul className="mt-5">
+        {products.map((product) => (
+         <li key={product.id}> {product.name} </li>
+        ))}
+      </ul> */}
+      <HomeCarousel/>
+      {/* <section className="carousel">
+        <img src="/src/assets/banner.png" alt="banner" />
+      </section> */}
+      <Categories />
+      <HightlightProducts/>
+      <Subscription/>
     </>
   );
 }
 
 export default Home;
+
