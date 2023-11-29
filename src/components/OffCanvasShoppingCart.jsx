@@ -5,8 +5,7 @@ import "./css/ShoppingCart.css";
 import { useNavigate } from "react-router-dom";
 
 function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
@@ -37,8 +36,8 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 </div>
               </div>
               <div className="col-4 third-box">
-              <i className="bi bi-trash3"></i>
-              <p>USD 150</p>
+                <i className="bi bi-trash3"></i>
+                <p>USD 150</p>
               </div>
             </div>
             <div className="row product-cart rounded mt-2">
@@ -62,12 +61,15 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 </div>
               </div>
               <div className="col-4 third-box">
-              <i className="bi bi-trash3"></i>
-              <p>USD 40</p>
+                <i className="bi bi-trash3"></i>
+                <p>USD 40</p>
               </div>
             </div>
             <div className="row">
-              <button className="col-12 mt-3 btn check-out-button rounded-pill" onClick={() => navigate("/checkout")}>
+              <button
+                className="col-12 mt-3 btn check-out-button rounded"
+                onClick={() => navigate("/checkout")}
+              >
                 check out
               </button>
             </div>
