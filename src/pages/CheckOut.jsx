@@ -93,10 +93,10 @@ function CheckOut() {
               </tbody>
             </table>
             <div className="my-3 checkout-buttons">
-              <button type="button" className="btn action-button">
+              <button className="addtocart-button rounded btn btn-dark text-select">
                 Empty cart
               </button>
-              <button type="button" className="btn action-button ms-2">
+              <button className="addtocart-button rounded btn btn-dark text-select ms-2">
                 Save for later
               </button>
             </div>
