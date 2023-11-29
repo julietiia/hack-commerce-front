@@ -1,11 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./HightlightProducts.css";
+import "./HighlightProductsCheckout.css";
 import { useNavigate } from "react-router-dom";
-import Categories from "../components/Categories";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import "../App.css"
 
 function HightlightProducts() {
   const [products, setProducts] = useState([]);
@@ -30,8 +28,8 @@ function HightlightProducts() {
     <>
       <div className="container">
         <div className="row row-hightlight-products mb-5 ">
-          <h2 className="d-flex justify-content-center mb-5 mt-3">
-            get inspired with apparat{" "}
+          <h2 className="d-flex justify-content-center my-4">
+            you may also like
           </h2>
 
           {products.map((product) => (
@@ -48,8 +46,8 @@ function HightlightProducts() {
                   src={product.image}
                   alt={product.name}
                 />
-                <small>{product.name}</small>
-                <small>{product.price} $</small>
+                <p className="product-name">{product.name}</p>
+                <p className="product-price">{product.price}UYU</p>
               </div>
             </div>
           ))}

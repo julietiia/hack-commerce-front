@@ -6,8 +6,6 @@ import Product from "./components/Product";
 import { Route, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs.jsx";
 import CheckOut from "./pages/CheckOut.jsx";
-import AboutUs from "./pages/AboutUs";
-import CheckOut from "./pages/CheckOut";
 import Admin from "./pages/Admin";
 
 function App() {
