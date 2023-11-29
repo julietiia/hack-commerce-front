@@ -15,11 +15,11 @@ function Categories() {
             <p>sofas</p>
           </div>
           <div className="col-4 category-box text-center">
-            <img
+          <a href="/category/1"> <img
               className="img-fluid"
               src="/src/assets/chair.png"
               alt="chairs"
-            />
+            /></a>
             <p>chairs</p>
           </div>
           <div className="col-4 category-box text-center">
