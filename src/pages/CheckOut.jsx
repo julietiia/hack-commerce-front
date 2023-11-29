@@ -1,7 +1,7 @@
 import React from "react";
-import orangelamp from "../assets/orangelamp.webp";
-import plumongradiente from "../assets/plumongradiente.webp";
-import whitechair from "../assets/whitechair.webp";
+import orangelamp from "../assets/img/orangelamp.webp";
+import plumongradiente from "../assets/img/plumongradiente.webp";
+import whitechair from "../assets/img/whitechair.webp";
 import HighlightProductsCheckout from "../components/HighlightProductsCheckout"
 
 function CheckOut() {

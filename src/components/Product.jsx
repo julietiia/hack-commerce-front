@@ -1,4 +1,4 @@
-import "./Product.css";
+import "./css/Product.css";
 import AddToCartButton from "./AddToCartButton";
 import Collapse from "react-bootstrap/Collapse";
 import Card from "react-bootstrap/Card";

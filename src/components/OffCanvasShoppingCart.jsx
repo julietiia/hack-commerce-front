@@ -1,12 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Navbar from "./Navbar";
-import "./ShoppingCart.css";
+import "./css/ShoppingCart.css";
 import { useNavigate } from "react-router-dom";
 
 function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
@@ -21,7 +20,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 <div className="one-product-div">
                   <img
                     className="one-product-pic w-100"
-                    src="/src/assets/chair.png"
+                    src="/src/assets/img/chair.png"
                     alt="nombre del producto"
                   />
                 </div>
@@ -37,8 +36,8 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 </div>
               </div>
               <div className="col-4 third-box">
-              <i className="bi bi-trash3"></i>
-              <p>USD 150</p>
+                <i className="bi bi-trash3"></i>
+                <p>USD 150</p>
               </div>
             </div>
             <div className="row product-cart rounded mt-2">
@@ -46,7 +45,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 <div className="one-product-div">
                   <img
                     className="one-product-pic w-100"
-                    src="/src/assets/metallic_lamppng.png"
+                    src="/src/assets/img/metallic_lamppng.png"
                     alt="nombre del producto"
                   />
                 </div>
@@ -62,12 +61,15 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
                 </div>
               </div>
               <div className="col-4 third-box">
-              <i className="bi bi-trash3"></i>
-              <p>USD 40</p>
+                <i className="bi bi-trash3"></i>
+                <p>USD 40</p>
               </div>
             </div>
             <div className="row">
-              <button className="col-12 mt-3 btn check-out-button rounded-pill" onClick={() => navigate("/checkout")}>
+              <button
+                className="col-12 mt-3 btn check-out-button rounded"
+                onClick={() => navigate("/checkout")}
+              >
                 check out
               </button>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import "./AboutUs.css";
-import diagrama from "../assets/diagrama.png"
+import "../components/css/AboutUs.css";
+import diagrama from "../assets/img/diagrama.png"
 
 function AboutUs() {
     return (
