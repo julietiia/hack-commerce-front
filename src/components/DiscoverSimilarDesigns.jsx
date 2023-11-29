@@ -2,6 +2,7 @@ import React from 'react'
 
 function DiscoverSimilarDesigns() {
   return (
+   
     <div className="row g-5 similar-design-background">
                 <div className="col-3">
                   <a href="#">
@@ -89,6 +90,7 @@ function DiscoverSimilarDesigns() {
                   </div>
                 </div>
               </div>
+           
   )
 }
 
