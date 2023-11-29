@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from "react";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 import { useNavigate } from "react-router-dom";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navbar() {
   const [show, setShow] = useState(false);
-  // const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const handleShow = (event) => setShow(true);
   const handleClose = (event) => setShow(false);
   const navigate = useNavigate();
@@ -38,7 +39,24 @@ function Navbar() {
         <p onClick={() => navigate("/")}>home</p>
         <p onClick={() => navigate("/shop")}>shop</p>
         
-          <p
+        <NavDropdown title="categories" id="basic-nav-dropdown" className="custom-dropdown" >
+              <NavDropdown.Item className="custom-item" href="#action/3.1">sofas</NavDropdown.Item>
+              <NavDropdown.Item className="custom-item" href="/category/1">
+                chairs
+              </NavDropdown.Item>
+              <NavDropdown.Item className="custom-item" href="#action/3.3">tables</NavDropdown.Item>
+        
+              <NavDropdown.Item className="custom-item" href="#action/3.4">
+                lightning
+              </NavDropdown.Item>
+              <NavDropdown.Item className="custom-item" href="#action/3.4">
+                storage & organization
+              </NavDropdown.Item>
+              <NavDropdown.Item className="custom-item" href="#action/3.4">
+                deco
+              </NavDropdown.Item>
+            </NavDropdown>
+          {/* <p
             className="btn dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -48,7 +66,7 @@ function Navbar() {
             onClick={() => navigate("/categories")}
           >
             categories
-          </p>
+          </p> */}
           {/* {showDropdown && (
             <div className="dropdown">
             <ul className="dropdown-menu">
