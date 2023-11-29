@@ -16,7 +16,7 @@ function Admin() {
             <ul>
               <li>
                 <button className="adminButton btn">
-                  <i className="bi bi-graph-up-arrow me-3"></i>dashboard
+                  <i className="bi bi-graph-up-arrow"></i>dashboard
                 </button>
               </li>
               <li>
