@@ -9,20 +9,18 @@
     width: 300px;
     height: 350px;
     border-radius: 20px;
-    position:absolute
+    
     
 }
 
-.image-container:hover .img1{
+/* .image-container:hover .img1{
     opacity: 1;
 }
 .image-container:hover .img2{
     opacity: 0;
 } */
 
- .img2{
-    opacity:0;
-}
+
 
 .image-container{
     
@@ -31,6 +29,16 @@
         align-items: center;
         position: relative;
         transition: opacity 0.3s ease-in-out;
+        
+    }
+
+    .top-img{
+        position: absolute;
+        opacity: 0;
+    }
+
+    .top-img:hover{
+        opacity:1;
     }
 
 
