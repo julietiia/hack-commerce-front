@@ -1,5 +1,10 @@
 import React from "react";
+<<<<<<< Updated upstream
 import "./css/Subscription.css";
+=======
+import "./Subscription.css";
+import bell from "../assets/bell.png";
+>>>>>>> Stashed changes
 
 function Subscription() {
   return (
