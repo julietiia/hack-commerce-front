@@ -26,6 +26,17 @@ li:hover {
 .apparat-logo:hover {
   cursor: pointer;
 }
+.custom-dropdown{
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.custom-item{
+  font-size: 15px;
+  font-family: Poppins;
+}
 
 
 /*CheckOut*/

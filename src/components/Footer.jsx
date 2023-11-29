@@ -1,12 +1,12 @@
 import React from "react";
-import "./Footer.css";
+import "./css/Footer.css";
 
 function Footer() {
   return (
     <footer>
       <div className="bg-dark text-white">
         <div>
-          <img id="logo" src="/src/assets/Final-HA.png" alt="apparat logo" />
+          <img id="logo" src="/src/assets/img/Final-HA.png" alt="apparat logo" />
         </div>
         <div className="container">
           <div className="row">

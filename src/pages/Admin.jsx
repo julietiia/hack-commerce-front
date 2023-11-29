@@ -1,6 +1,6 @@
 import React from "react";
-import "./Admin.css";
-import apparatNavbar from "../assets/apparatNavbar.png";
+import "../components/css/Admin.css";
+import apparatNavbar from "../assets/logo/apparatNavbar.png";
 
 function Admin() {
   return (
