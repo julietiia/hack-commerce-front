@@ -17,12 +17,12 @@ function Product() {
             <div className="row">
               <div className="col-6">
                 <img
-                  className="product-image"
+                  className="product-image img-fluid"
                   src="/src/assets/floria_chair.png"
                   alt="chair"
                 />
               </div>
-              <div className="col-4">
+              <div className="col-6">
                 <div className="text-start">
                   <h6 className="text-start">Alexia chair</h6>
                   <p className="fw-bold text-start">0.000UYU</p>
@@ -139,34 +139,32 @@ function Product() {
                   />
                 </div>
               </div>
-              <div className="row">
+              <div className="row g-5">
                 <div className="col-3">
-                  <div className="similar-designs">
-                    <a href="#">
-                      <img
-                        className="image-product-suggested"
-                        src="/src/assets/liam_chair.png"
-                        alt=""
-                      />
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name text-start mt-2">
-                        Liam Chair
-                      </p>
-                    </a>
-                    <a href="#">
-                      <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
-                      </p>
-                    </a>
-                  </div>
+                  <a href="#">
+                    <img
+                      className="image-product-suggested"
+                      src="/src/assets/liam_chair.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="#">
+                    <p className="text-similar-design-name text-start mt-2">
+                      Liam Chair
+                    </p>
+                  </a>
+                  <a href="#">
+                    <p className="text-similar-design-name fw-bold text-start">
+                      0.000UYU
+                    </p>
+                  </a>
                 </div>
 
                 <div className="col-3">
                   <div>
                     <a href="#">
                       <img
-                        className="image-product-suggested"
+                        className="image-product-suggested "
                         src="/src/assets/alexa_chair.png"
                         alt=""
                       />
