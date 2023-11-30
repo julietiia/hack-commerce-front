@@ -3,6 +3,7 @@ import { useState } from "react";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 import { useNavigate } from "react-router-dom";
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import apparatBlackNavbarLogo from "/src/assets/logo/apparatBlackNavbarLogo.svg";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -22,17 +23,17 @@ function Navbar() {
   return (
     <>
       <div className="navbar mb-4">
-        <i className="bi bi-search lupita"></i>
         <div onClick={() => navigate("/")} className="apparat-logo">
           <img
-            className="img-fluid"
-            src="/src/assets/logo/apparatNavbar.png"
-            alt=""
+            className=""
+            src={apparatBlackNavbarLogo}
+            alt="logo"
           />
         </div>
         <div className="shop-profile">
-          <i onClick={(event) => handleShow(event)} className="bi bi-cart3"></i>
-          <i className="bi bi-person-circle"></i>
+        <i className="bi bi-search lupita"></i>
+          <i onClick={(event) => handleShow(event)} className="bi bi-cart3 carrito-icon"></i>
+          <i className="bi bi-person-circle profile-icon"></i>
         </div>
       </div>
       <div className="navigation">
