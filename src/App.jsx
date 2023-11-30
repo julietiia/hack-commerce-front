@@ -1,6 +1,6 @@
 import "./components/css/app.css";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
+import NavbarApparat from "./components/Navbar";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
 import { Route, Routes } from "react-router-dom";
@@ -14,12 +14,12 @@ import SignUp from "./pages/signUp.jsx";
 function App() {
   return (
     <>
-      <Navbar />
+      <NavbarApparat />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/product/:id" element={<Product />} />
-        <Route path="/category/:id" element={<Category />} />
+        <Route path="/category/:name" element={<Category />} />
         <Route path="/about-this-project" element={<AboutUs />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/admin" element={<Admin />} />
