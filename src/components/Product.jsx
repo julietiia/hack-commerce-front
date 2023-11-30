@@ -17,7 +17,7 @@ function Product() {
           <div className="col-6">
             <img
               className="product-image img-fluid"
-              src="/src/assets/alexia_chair_lifestyle.webp"
+              src="/src/assets/img/alexia_chair_lifestyle.webp"
               alt="chair"
             />
           </div>

@@ -18,6 +18,7 @@ function Footer() {
                 <li>tables</li>
                 <li>lighting</li>
                 <li>storage & organisation</li>
+                <li>deco</li>
                 <li>top rated</li>
               </ul>
             </div>
@@ -34,7 +35,7 @@ function Footer() {
                 <h4>service</h4>
                 <li>contact</li>
                 <li>customer review</li>
-                <li>about us</li>
+                <li>about this project</li>
                 <li>terms & conditions</li>
               </ul>
             </div>

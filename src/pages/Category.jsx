@@ -1,7 +1,9 @@
 import React from 'react'
 import "../components/css/Category.css"
+import { useNavigate } from "react-router-dom";
 
 function Category() {
+  const navigate = useNavigate();
   return (
     <>
    <div className="header"> 
@@ -11,7 +13,8 @@ function Category() {
       <div className="row mb-5 mt-5">
         <div className="col">
          <div className="image-container">
-          <img src="../src/assets/img/alexa_chair.png" alt="image1" className='img-chair img1'  />
+         
+          <img onClick={() => navigate("/product/1")} src="../src/assets/img/alexa_chair.png" alt="image1" className='img-chair img1'   />
           <img src="../src/assets/img/alexia_chair_ls.webp" alt="image2" className='img-chair top-img' />
           <small>Alexa chair</small>
           <small>250 $</small>
