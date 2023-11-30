@@ -1,7 +1,8 @@
 * {
   font-family: Poppins;
-  font-weight: 300;
-  font-size: 16px;
+  /* font-weight: 300; */
+  font-size: 1rem;
+
 }
 i:hover {
   cursor: pointer;
@@ -14,13 +15,19 @@ i:hover {
 body {
   width: 100%;
 }
+
 #root {
   margin: 0;
   padding: 0;
 }
 
+.navigation p {
+  font-size: 18px;
+}
+
 .navigation p:hover {
   cursor: pointer;
+
 }
 
 li:hover {
@@ -30,16 +37,30 @@ li:hover {
 .apparat-logo:hover {
   cursor: pointer;
 }
+
+/* .apparat-logo-navbar {
+  width: 3rem;
+
+} */
+
 .custom-dropdown{
   font-family: Poppins;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   padding-bottom: 15px;
 }
 
 .custom-item{
   font-size: 15px;
   font-family: Poppins;
+}
+
+.myNavbar {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
 }
 
 
