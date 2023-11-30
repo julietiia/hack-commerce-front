@@ -76,16 +76,15 @@ function NavbarApparat() {
             <div className="shop-profile">
               <i className="bi bi-search lupita"></i>
               <i
-                onClick={(event) => handleShow(event)}
+                onClick={(event) => handleShowCart(event)}
                 className="bi bi-cart3 carrito-icon"
               ></i>
-              <i className="bi bi-person-circle profile-icon"></i>
+              <i
+              onClick={(event) => handleShowSignIn(event)} 
+              className="bi bi-person-circle profile-icon"></i>
             </div>
 
-            <OffCanvasShoppingCart
-              show={show}
-              handleClose={() => setShow(false)}
-            />
+           
           </Navbar.Collapse>
           <OffCanvasShoppingCart
             showCart={showCart}
