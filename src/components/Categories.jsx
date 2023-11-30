@@ -1,7 +1,10 @@
 import React from "react";
 import "./css/Categories.css";
+import { useNavigate } from "react-router-dom";
+
 
 function Categories() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="container">
@@ -14,12 +17,12 @@ function Categories() {
             />
             <p>sofas</p>
           </div>
-          <div className="col-4 category-box text-center">
-          <a href="/category/1"> <img
+          <div onClick={()=> navigate("/category/1")} className="col-4 category-box text-center">
+            <img
               className="img-fluid"
               src="/src/assets/img/chair.png"
               alt="chairs"
-            /></a>
+            />
             <p>chairs</p>
           </div>
           <div className="col-4 category-box text-center">
