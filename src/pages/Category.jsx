@@ -12,7 +12,7 @@ function Category() {
     </div>
     <div className="container">
       <div className="row mb-5 mt-5">
-        <div className="col">
+        <div className="col-6 col-lg-3">
          <div className="image-container">
          
           <img onClick={() => navigate("/product/1")} src="../src/assets/img/alexa_chair.png" alt="image1" className='img-chair img1'   />
@@ -21,7 +21,7 @@ function Category() {
           <small>250USD</small>
         </div>
         </div>
-        <div className="col">
+        <div className="col-6 col-lg-3">
           <div className="image-container">
           <img src="../src/assets/img/charlotte_chair.png" alt="image1" className='img-chair img1' />
           <img src="../src/assets/img/charlotte-chair-ls.webp" alt="image2" className='img-chair top-img' />
@@ -29,7 +29,7 @@ function Category() {
           <small>999USD</small>
           </div>
         </div>
-        <div className="col">
+        <div className="col-6  col-lg-3">
           <div className="image-container">
           <img src="../src/assets/img/wallie_chair.png" alt="image1" className='img-chair img1'/>
           <img src="../src/assets/img/wallie_chair_ls.webp" alt="image1" className='img-chair top-img'/>
@@ -37,7 +37,7 @@ function Category() {
           <small>599USD</small>
         </div>
         </div>
-        <div className="col">
+        <div className="col-6 col-lg-3">
           <div className="image-container">
           <img src="../src/assets/img/liam_chair.png" alt="image1" className='img-chair img1'/>
           <img src="../src/assets/img/liam_chair_ls.webp" alt="image1" className='img-chair top-img'/>

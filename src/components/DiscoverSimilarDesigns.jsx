@@ -3,8 +3,8 @@ import React from 'react'
 function DiscoverSimilarDesigns() {
   return (
    
-    <div className="row g-5 similar-design-background">
-                <div className="col-3">
+    <div className="row g-5 similar-design-background mx-auto">
+                <div className="col-6 col-sm-6 col-md-3 ">
                   <a href="#">
                     <img
                       className="image-product-suggested"
@@ -24,7 +24,7 @@ function DiscoverSimilarDesigns() {
                   </a>
                 </div>
 
-                <div className="col-3">
+                <div className="col-6 col-sm-6 col-md-3">
                   <div>
                     <a href="#">
                       <img
@@ -46,7 +46,7 @@ function DiscoverSimilarDesigns() {
                   </div>
                 </div>
 
-                <div className="col-3 mb-5">
+                <div className="col-6 col-sm-6 col-md-3 mb-5">
                   <div>
                     <a href="#">
                       <img
@@ -68,7 +68,7 @@ function DiscoverSimilarDesigns() {
                   </div>
                 </div>
 
-                <div className="col-3">
+                <div className="col-6 col-sm-6 col-md-3">
                   <div>
                     <a href="#">
                       <img
