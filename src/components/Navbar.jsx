@@ -99,7 +99,7 @@ function Navbar() {
             </div>
           )} */}
        
-        <p onClick={() => navigate("/about-us")}>about us</p>
+        <p onClick={() => navigate("/about-this-project")}>about this project</p>
       </div>
       <OffCanvasShoppingCart show={show} handleClose={() => setShow(false)} />
     </>
