@@ -37,7 +37,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
               </div>
               <div className="col-4 third-box">
                 <i className="bi bi-trash3"></i>
-                <p>USD 150</p>
+                <p>150USD</p>
               </div>
             </div>
             <div className="row product-cart rounded mt-2">
@@ -62,7 +62,7 @@ function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
               </div>
               <div className="col-4 third-box">
                 <i className="bi bi-trash3"></i>
-                <p>USD 40</p>
+                <p>40USD</p>
               </div>
             </div>
             <div className="row">
