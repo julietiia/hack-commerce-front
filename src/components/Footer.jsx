@@ -6,11 +6,15 @@ function Footer() {
     <footer>
       <div className="bg-dark text-white">
         <div>
-          <img id="logo" src="/src/assets/img/Final-HA.png" alt="apparat logo" />
+          <img
+            id="logo"
+            src="/src/assets/img/Final-HA.png"
+            alt="apparat logo"
+          />
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-sm-6 text-center col-md-3">
               <ul>
                 <h4>shop</h4>
                 <li>chair</li>
@@ -22,15 +26,7 @@ function Footer() {
                 <li>top rated</li>
               </ul>
             </div>
-            <div className="col-3">
-              <ul>
-                <h4>user info</h4>
-                <li>create account</li>
-                <li>sign in</li>
-                <li>pivacy policy</li>
-              </ul>
-            </div>
-            <div className="col-3">
+            <div className="col-sm-6 text-center col-md-3">
               <ul>
                 <h4>service</h4>
                 <li>contact</li>
@@ -39,7 +35,16 @@ function Footer() {
                 <li>terms & conditions</li>
               </ul>
             </div>
-            <div className="col-3">
+            <div className="col-sm-6 text-center col-md-3">
+              <ul>
+                <h4>user info</h4>
+                <li>create account</li>
+                <li>sign in</li>
+                <li>pivacy policy</li>
+              </ul>
+            </div>
+
+            <div className="col-sm-6 text-center col-md-3">
               <h4>let's keep in touch</h4>
               <a className="mx-4" href="https://www.facebook.com/">
                 <svg
@@ -80,7 +85,11 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div><p className="text-white-50 copyright-footer py-3 mb-0">©2023 Apparat inc. All rights reserved</p></div>
+        <div>
+          <p className="text-white-50 copyright-footer py-3 mb-0">
+            ©2023 Apparat inc. All rights reserved
+          </p>
+        </div>
       </div>
     </footer>
   );
