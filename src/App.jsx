@@ -9,6 +9,7 @@ import CheckOut from "./pages/CheckOut.jsx";
 import Admin from "./pages/Admin";
 import "./components/css/Footer.css"
 import Category from "./pages/Category.jsx";
+import SignUp from "./pages/signUp.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/about-this-project" element={<AboutUs />} />
