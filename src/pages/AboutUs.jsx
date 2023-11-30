@@ -8,7 +8,7 @@ function AboutUs() {
           
             <div className="container">
                 <div className="row mt-4 ">
-                    <div className="col d-flex justify-content-center align-self-center flex-wrap">
+                    <div className="col-12 col-lg-6 d-flex justify-content-center align-self-center flex-wrap">
                         <h2 className="justify-content-center d-flex mt-5">
                             What's apparat?
                         </h2>
@@ -16,7 +16,7 @@ function AboutUs() {
                         At apparat, we're dedicated to offering high-quality furniture crafted with love. We want every moment you spend sitting, lounging, or simply enjoying your space to be filled with comfort and style, knowing that what you choose for your home is not only beautiful but also thoughtfully made. We appreciate being a part of your daily life, and we take that commitment seriously. We believe that furniture can be more than just functional pieces; they can be sources of comfort, inspiration, and creativity in every corner of your home.
                         </p>
                     </div>
-                    <div className="col-6 img-col d-flex justify-content-center ">
+                    <div className="col-12 col-lg-6 img-col d-flex justify-content-center    ">
                         <img
                             src="/src/assets/logo/apparat_white-navbar-logo.svg"
                             alt=""
