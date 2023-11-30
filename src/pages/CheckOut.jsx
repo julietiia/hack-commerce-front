@@ -25,7 +25,7 @@ function CheckOut() {
                 </div>
                 <div className="product-identifier">
                   <p className="product-name">Ansel Glass Table Lamp</p>
-                  <p className="product-price">000UYU</p>
+                  <p className="product-price">000USD</p>
                   <p className="product-sku">Ref.53494878</p>
                 </div>
               </div>
@@ -40,7 +40,7 @@ function CheckOut() {
                 </div>
                 <div className="product-identifier">
                   <p className="product-name">Metallic Nylon Comforter</p>
-                  <p className="product-price">000UYU</p>
+                  <p className="product-price">000USD</p>
                   <p className="product-sku">Ref.53494878</p>
                 </div>
               </div>
@@ -55,7 +55,7 @@ function CheckOut() {
                 </div>
                 <div className="product-identifier">
                   <p className="product-name">Bubble Chair</p>
-                  <p className="product-price">000UYU</p>
+                  <p className="product-price">000USD</p>
                   <p className="product-sku">Ref.53494878</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ function CheckOut() {
                 </div>
                 <div className="product-identifier">
                   <p className="product-name">Metallic Nylon Comforter</p>
-                  <p className="product-price">000UYU</p>
+                  <p className="product-price">000USD</p>
                   <p className="product-sku">Ref.53494878</p>
                 </div>
               </div>
@@ -83,28 +83,28 @@ function CheckOut() {
               <tbody>
                 <tr>
                   <td className="product-list-name">Ansel Glass Table Lamp</td>
-                  <td className="product-list-price">000.00UYU</td>
+                  <td className="product-list-price">000USD</td>
                   <td>
                     <i className="bi bi-trash3 delete-from-checkout"></i>
                   </td>
                 </tr>
                 <tr>
                   <td>Metallic Nylon Comforter</td>
-                  <td>000.00UYU</td>
+                  <td>000USD</td>
                   <td>
                     <i className="bi bi-trash3 delete-from-checkout"></i>
                   </td>
                 </tr>
                 <tr>
                   <td>Bubble Chair</td>
-                  <td>000.00UYU</td>
+                  <td>000USD</td>
                   <td>
                     <i className="bi bi-trash3 delete-from-checkout"></i>
                   </td>
                 </tr>
                 <tr>
                   <td className="total">TOTAL</td>
-                  <td className="total">000.00UYU</td>
+                  <td className="total">000USD</td>
                 </tr>
               </tbody>
             </table>

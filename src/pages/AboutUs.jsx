@@ -18,7 +18,7 @@ function AboutUs() {
                     </div>
                     <div className="col-6 img-col d-flex justify-content-center ">
                         <img
-                            src="/src/assets/apparat_white-navbar-logo.svg"
+                            src="/src/assets/logo/apparat_white-navbar-logo.svg"
                             alt=""
                             className="logo"
                         />

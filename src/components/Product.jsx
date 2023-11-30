@@ -17,14 +17,14 @@ function Product() {
           <div className="col-6">
             <img
               className="product-image img-fluid"
-              src="/src/assets/alexia_chair_lifestyle.webp"
+              src="/src/assets/img/alexia_chair_lifestyle.webp"
               alt="chair"
             />
           </div>
           <div className="col-6">
             <div className="text-start mt-4">
               <h3 className="text-start">Alexia chair</h3>
-              <p className="fw-bold text-start">000UYU</p>
+              <p className="fw-bold text-start">499USD</p>
               <p className="text-start product-description">Ref.53494878</p>
               <p className="text-start mt-4">
                 This armchair lends a luxurious interpretation of modernist

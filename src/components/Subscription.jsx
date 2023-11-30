@@ -1,6 +1,7 @@
 import React from "react";
-import "./css/Subscription.css";
+import "../components/css/Subscription.css";
 import bell from "../assets/bell.png"
+
 
 function Subscription() {
   return (
