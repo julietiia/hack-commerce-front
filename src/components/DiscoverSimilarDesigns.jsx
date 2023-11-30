@@ -19,7 +19,7 @@ function DiscoverSimilarDesigns() {
                   </a>
                   <a href="#">
                     <p className="text-similar-design-name fw-bold text-start">
-                      0.000UYU
+                      0.000USD
                     </p>
                   </a>
                 </div>
@@ -40,7 +40,7 @@ function DiscoverSimilarDesigns() {
                     </a>
                     <a href="#">
                       <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
+                        499USD
                       </p>
                     </a>
                   </div>
@@ -62,7 +62,7 @@ function DiscoverSimilarDesigns() {
                     </a>
                     <a href="#">
                       <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
+                        599USD
                       </p>
                     </a>
                   </div>
@@ -84,7 +84,7 @@ function DiscoverSimilarDesigns() {
                     </a>
                     <a href="#">
                       <p className="text-similar-design-name fw-bold text-start">
-                        0.000UYU
+                        399USD
                       </p>
                     </a>
                   </div>

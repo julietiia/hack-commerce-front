@@ -37,7 +37,7 @@ function HightlightProducts() {
         <div className="hightlight-product">
          <Link to="/product/1"><img className='img-hightlight-product mb-3' src={product.image} alt={product.name} /></Link> 
          <small>{product.name}</small>
-         <small>{product.price} $</small>
+         <small>{product.price}USD</small>
        </div>
        </div>
          

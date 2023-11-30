@@ -47,7 +47,7 @@ function HightlightProducts() {
                   alt={product.name}
                 />
                 <p className="product-name">{product.name}</p>
-                <p className="product-price">{product.price}UYU</p>
+                <p className="product-price">{product.price}USD</p>
               </div>
             </div>
           ))}

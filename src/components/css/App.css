@@ -7,6 +7,10 @@ i:hover {
   cursor: pointer;
 }
 
+.carrito-icon, .profile-icon, .lupita {
+  font-size: 25px;
+}
+
 body {
   width: 100%;
 }
