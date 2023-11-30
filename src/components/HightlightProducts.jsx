@@ -28,22 +28,31 @@ function HightlightProducts() {
 
   return (
     <>
-      <div className="container">
-        <div className="row row-hightlight-products mb-5 ">
-            <h2 className='d-flex justify-content-center mb-5 mt-3'>get inspire with apparat </h2>
-               
-        {products.map((product) => (
-         <div className='col mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2' key={product.id}>
-        <div className="hightlight-product">
-         <Link to="/product/1"><img className='img-hightlight-product mb-3' src={product.image} alt={product.name} /></Link> 
-         <small>{product.name}</small>
-         <small>{product.price}USD</small>
-       </div>
-       </div>
-         
-        ))}
-      
-            
+      <div className="container row-hightlight-products">
+        <div className="row   mb-5 ">
+          <h2 className="d-flex justify-content-center mt-3">
+            get inspire with apparat{" "}
+          </h2>
+        </div>
+        <div className="row">
+          {products.map((product) => (
+            <div
+              className="col-6 col-sm-6 col-md-3 mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
+              key={product.id}
+            >
+              <div className="hightlight-product">
+                <Link to="/product/1">
+                  <img
+                    className="img-hightlight-product mb-3"
+                    src={product.image}
+                    alt={product.name}
+                  />
+                </Link>
+                <small>{product.name}</small>
+                <small>{product.price}USD</small>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
