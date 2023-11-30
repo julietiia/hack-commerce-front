@@ -3,12 +3,16 @@ import { useState } from "react";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 import { useNavigate } from "react-router-dom";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import OffCanvasSignIn from "./OffCanvasSignIn";
 
 function Navbar() {
-  const [show, setShow] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const handleShow = (event) => setShow(true);
-  const handleClose = (event) => setShow(false);
+  const handleShowCart = (event) => setShowCart(true);
+  const handleShowSignIn = (event) => setShowSignIn(true);
+  const handleCloseCart = (event) => setShowCart(false);
+  const handleCloseSignIn = (event) => setShowSignIn(false);
   const navigate = useNavigate();
 
   return (
@@ -58,13 +62,18 @@ function Navbar() {
         <div className="shop-profile">
           <i className="bi bi-search lupita"></i>
           <i
-            onClick={(event) => handleShow(event)}
+            onClick={(event) => handleShowCart(event)}
             className="bi bi-cart3 carrito-icon"
           ></i>
-          <i className="bi bi-person-circle profile-icon"></i>
+          <i 
+          onClick={(event) => handleShowSignIn(event)} 
+          className="bi bi-person-circle profile-icon"></i>
+       
         </div>
 
-        <OffCanvasShoppingCart show={show} handleClose={() => setShow(false)} />
+        <OffCanvasShoppingCart showCart={showCart} handleCloseCart={() => setShowCart(false)} />
+        <OffCanvasSignIn showSignIn={showSignIn} handleCloseSignIn={() => setShowSignIn(false)} />
+       
       </div>
     </>
   );
