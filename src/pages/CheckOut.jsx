@@ -1,8 +1,11 @@
 import React from "react";
 import orangelamp from "../assets/img/orangelamp.webp";
 import plumongradiente from "../assets/img/plumongradiente.webp";
-import whitechair from "../assets/img/whitechair.webp";
-import HighlightProductsCheckout from "../components/HighlightProductsCheckout"
+import chair from "../assets/img/chair.png";
+import HighlightProductsCheckout from "../components/HighlightProductsCheckout";
+import Breadcrumb from "../components/CheckoutBreadcrumb";
+import "../components/css/checkout.css";
+import CheckoutLoginForm from "../components/CheckoutLogInForm";
 
 function CheckOut() {
   return (
@@ -13,117 +16,153 @@ function CheckOut() {
             These articles are not reserved until they have been completed.
           </p>
         </div>
-        <div className="row d-flex flex-nowrap my-5">
-          <div className="col-8 shopping-list">
-            <div className="shopping-list-product">
-              <img src={orangelamp} alt="" />
-              <div className="product-info">
-                <div className="quantity mb-0">
-                  <p className="btn m-0">-</p>
-                  <p className="m-0">1</p>
-                  <p className="btn m-0">+</p>
+      </div>
+      <div className="container">
+        <div className="row mb-4">
+          <div className="col-lg-6 col-md-12">
+            <div className="shopping-list-container">
+              <h3 className="ps-2">your shopping list</h3>
+              <Breadcrumb />
+
+              <div className="shopping-list">
+                <div className="checkout-product ps-2 pe-4 py-2">
+                  <div className="d-flex">
+                    <img
+                      className="checkout-product-image"
+                      src={orangelamp}
+                      alt=""
+                    />
+                    <div className="checkout-product-details ps-3">
+                      <p className="checkout-product-name">
+                        Ansel Glass Table Lamp
+                      </p>
+                      <p className="checkout-product-ref">Ref.53494878</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="checkout-product-price">999USD</p>
+                  </div>
                 </div>
-                <div className="product-identifier">
-                  <p className="product-name">Ansel Glass Table Lamp</p>
-                  <p className="product-price">000USD</p>
-                  <p className="product-sku">Ref.53494878</p>
+
+                <div className="checkout-product ps-2 pe-4 py-2">
+                  <div className="d-flex">
+                    <img
+                      className="checkout-product-image"
+                      src={plumongradiente}
+                      alt=""
+                    />
+                    <div className="checkout-product-details ps-3">
+                      <p className="checkout-product-name">
+                        Metallic Nylon Comforter
+                      </p>
+                      <p className="checkout-product-ref">Ref.53494878</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="checkout-product-price">999USD</p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="shopping-list-product">
-              <img src={plumongradiente} alt="" />
-              <div className="product-info">
-                <div className="quantity mb-0">
-                  <p className="btn m-0">-</p>
-                  <p className="m-0">1</p>
-                  <p className="btn m-0">+</p>
+
+                <div className="checkout-product ps-2 pe-4 py-2">
+                  <div className="d-flex">
+                    <img
+                      className="checkout-product-image"
+                      src={chair}
+                      alt=""
+                    />
+                    <div className="checkout-product-details ps-3">
+                      <p className="checkout-product-name">Bubble Chair</p>
+                      <p className="checkout-product-ref">Ref.53494878</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="checkout-product-price">999USD</p>
+                  </div>
                 </div>
-                <div className="product-identifier">
-                  <p className="product-name">Metallic Nylon Comforter</p>
-                  <p className="product-price">000USD</p>
-                  <p className="product-sku">Ref.53494878</p>
+
+                <div className="checkout-product ps-2 pe-4 py-2">
+                  <div className="d-flex">
+                    <img
+                      className="checkout-product-image"
+                      src={orangelamp}
+                      alt=""
+                    />
+                    <div className="checkout-product-details ps-3">
+                      <p className="checkout-product-name">
+                        Ansel Glass Table Lamp
+                      </p>
+                      <p className="checkout-product-ref">Ref.53494878</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="checkout-product-price">999USD</p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="shopping-list-product">
-              <img src={whitechair} alt="" />
-              <div className="product-info">
-                <div className="quantity mb-0">
-                  <p className="btn m-0">-</p>
-                  <p className="m-0">1</p>
-                  <p className="btn m-0">+</p>
+
+                <div className="checkout-product ps-2 pe-4 py-2">
+                  <div className="d-flex">
+                    <img
+                      className="checkout-product-image"
+                      src={plumongradiente}
+                      alt=""
+                    />
+                    <div className="checkout-product-details ps-3">
+                      <p className="checkout-product-name">
+                        Metallic Nylon Comforter
+                      </p>
+                      <p className="checkout-product-ref">Ref.53494878</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="checkout-product-price">999USD</p>
+                  </div>
                 </div>
-                <div className="product-identifier">
-                  <p className="product-name">Bubble Chair</p>
-                  <p className="product-price">000USD</p>
-                  <p className="product-sku">Ref.53494878</p>
+
+                <div className="checkout-product ps-2 pe-4 py-2">
+                  <div className="d-flex">
+                    <img
+                      className="checkout-product-image"
+                      src={chair}
+                      alt=""
+                    />
+                    <div className="checkout-product-details ps-3">
+                      <p className="checkout-product-name">Bubble Chair</p>
+                      <p className="checkout-product-ref">Ref.53494878</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="checkout-product-price">999USD</p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="shopping-list-product">
-              <img src={plumongradiente} alt="" />
-              <div className="product-info">
-                <div className="quantity mb-0">
-                  <p className="btn m-0">-</p>
-                  <p className="m-0">1</p>
-                  <p className="btn m-0">+</p>
+
+                <hr />
+                <div className="subtotal ps-2 pe-4">
+                  <p className="checkout-subtotal">Subtotal</p>
+                  <p className="checkout-subtotal">999USD</p>
                 </div>
-                <div className="product-identifier">
-                  <p className="product-name">Metallic Nylon Comforter</p>
-                  <p className="product-price">000USD</p>
-                  <p className="product-sku">Ref.53494878</p>
+                <div className="total ps-2 pe-4">
+                  <p className="checkout-total">Total</p>
+                  <p className="checkout-total">999USD</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="col-4 shopping-cart-details">
-            <h4>3 products</h4>
-            <table className="table table-borderless table-list">
-              <tbody>
-                <tr>
-                  <td className="product-list-name">Ansel Glass Table Lamp</td>
-                  <td className="product-list-price">000USD</td>
-                  <td>
-                    <i className="bi bi-trash3 delete-from-checkout"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Metallic Nylon Comforter</td>
-                  <td>000USD</td>
-                  <td>
-                    <i className="bi bi-trash3 delete-from-checkout"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Bubble Chair</td>
-                  <td>000USD</td>
-                  <td>
-                    <i className="bi bi-trash3 delete-from-checkout"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="total">TOTAL</td>
-                  <td className="total">000USD</td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="my-3 checkout-buttons">
-              <button className="addtocart-button rounded btn btn-dark text-select">
-                Empty cart
-              </button>
-              <button className="addtocart-button rounded btn btn-dark text-select ms-2">
-                Save for later
-              </button>
+          <div className="col-lg-6 col-md-12">
+            <div className="checkout-payment-container">
+              <h3 className="ps-2">login</h3>
+              <div className="form-container ps-2 pe-4 py-2">
+                <CheckoutLoginForm />
+              </div>
             </div>
           </div>
         </div>
-    </div>
-    <div className="container">
-      <div className="row">
-        <HighlightProductsCheckout/>
       </div>
-    </div>
+      <div className="container px-">
+        <div className="row">
+          <HighlightProductsCheckout />
+        </div>
+      </div>
     </>
   );
 }
