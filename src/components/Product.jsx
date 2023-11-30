@@ -14,14 +14,14 @@ function Product() {
     <>
       <div className="container mt-4">
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <img
               className="product-image img-fluid"
               src="/src/assets/img/alexia_chair_lifestyle.webp"
               alt="chair"
             />
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <div className="text-start mt-4">
               <h3 className="text-start">Alexia chair</h3>
               <p className="fw-bold text-start">499USD</p>
@@ -32,14 +32,15 @@ function Product() {
                 seat and back, set on a wrapped and folded structure that feels
                 so fresh and unexpected. This custom piece of furniture will be
                 made to order just for you. Available exclusively at Urban
-                Outfitters. Measures: 52X34X62CM
+                Outfitters. 
+                Measures: 52X34X62CM
               </p>
             </div>
             <div>
               <select
                 name="quantity"
                 id="quantity"
-                className="m-2 btn btn-dark text-white text-select"
+                className="m-2 btn text-dark text-select background-color-select border border-2"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((option) => (
                   <option key={option} value={option}>
@@ -125,7 +126,7 @@ function Product() {
 
         <div>
           <section>
-            <div className="container similar-products-background my-5">
+            <div className="container similar-products-background my-5 ">
               <div className="row">
                 <div className="col">
                   <h2 className="d-flex justify-content-center my-4">
