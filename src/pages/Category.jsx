@@ -1,9 +1,10 @@
-import React from 'react'
-import "../components/css/Category.css"
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import "../components/css/Category.css";
+import { useNavigate, Link } from "react-router-dom";
 
 function Category() {
   const navigate = useNavigate();
+  
   return (
     <>
    <div className="header"> 
@@ -45,10 +46,9 @@ function Category() {
         </div>
         </div>
       </div>
-    </div>
- 
+      </div>
     </>
-  )
+ )
 }
 
 export default Category;
