@@ -20,7 +20,7 @@ const LoginForm = () => {
         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
         <input
           type="email"
-          className="form-control"
+          className="form-control boder"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           value={email}
@@ -52,7 +52,7 @@ const LoginForm = () => {
           Check me out
         </label>
       </div> */}
-      <button type="submit" className="addtocart-button rounded btn btn-dark text-select">
+      <button type="submit" className="col-12 mt-3 btn check-out-button rounded">
         login
       </button>
     </form>
