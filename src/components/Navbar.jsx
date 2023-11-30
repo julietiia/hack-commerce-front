@@ -8,6 +8,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import OffCanvasSignIn from "./OffCanvasSignIn";
+import "./css/App.css"
 
 function NavbarApparat() {
   const [showCart, setShowCart] = useState(false);
@@ -21,14 +22,15 @@ function NavbarApparat() {
 
   return (
     <>
-      <Navbar expand="lg p-5" className="myNavbar">
+    <div className="parent-navbar-container p-5">
+      <Navbar expand="lg" className="myNavbar">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand className="" href="/">
             <div onClick={() => navigate("/")} className="apparat-logo">
               <img
-                className="ms-0 apparat-logo-navbar"
+                className="apparat-logo-navbar m-0"
                 src="src/assets/logo/apparat+black-navbar-logo.png"
-                alt="logo"
+                alt="Apparat logo"
               />
             </div>
           </Navbar.Brand>
@@ -72,20 +74,19 @@ function NavbarApparat() {
                 </NavLink>
               </NavDropdown>
             </Nav>
-
-            <div className="shop-profile">
-              <i className="bi bi-search lupita"></i>
-              <i
-                onClick={(event) => handleShowCart(event)}
-                className="bi bi-cart3 carrito-icon"
-              ></i>
-              <i
-              onClick={(event) => handleShowSignIn(event)} 
-              className="bi bi-person-circle profile-icon"></i>
-            </div>
-
-           
           </Navbar.Collapse>
+          <div className="shop-profile">
+            <i className="bi bi-search lupita"></i>
+            <i
+              onClick={(event) => handleShowCart(event)}
+              className="bi bi-cart3 carrito-icon"
+            ></i>
+            <i
+              onClick={(event) => handleShowSignIn(event)}
+              className="bi bi-person-circle profile-icon"
+            ></i>
+          </div>
+
           <OffCanvasShoppingCart
             showCart={showCart}
             handleCloseCart={() => setShowCart(false)}
@@ -96,6 +97,7 @@ function NavbarApparat() {
           />
         </Container>
       </Navbar>
+      </div>
     </>
   );
 }
