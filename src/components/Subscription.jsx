@@ -7,11 +7,11 @@ function Subscription() {
   return (
     <div className="container container-background mb-5">
       <div className="row">
-        <div className="col-4 d-flex justify-content-center align-items-center">
+        <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
           <img className="subscription-img" src={bell} alt="" />
         </div>
-        <div className="col-8">
-          <h3>subscribe to our newsletter</h3>
+        <div className="col-sm-12 col-md-6">
+          <h3 className="newsletter-tittle">subscribe to our newsletter</h3>
           <p className="newsletter-paragraph mt-4 text-start">
             Stay up to date with all our products, and get the newsletter
             straight to your inbox. Get first dibs on new arrivals, sales,
