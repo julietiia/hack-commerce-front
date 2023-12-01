@@ -4,12 +4,12 @@ import Navbar from "./Navbar";
 import "./css/ShoppingCart.css";
 import { useNavigate } from "react-router-dom";
 
-function OffCanvasShoppingCart({ show, handleClose, handleShow, ...props }) {
+function OffCanvasShoppingCart({ showCart, handleCloseCart, handleShowCart, ...props }) {
   const navigate = useNavigate();
 
   return (
     <>
-      <Offcanvas show={show} onHide={handleClose} {...props} placement={"end"}>
+      <Offcanvas show={showCart} onHide={handleCloseCart} {...props} placement={"end"}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>your cart</Offcanvas.Title>
         </Offcanvas.Header>

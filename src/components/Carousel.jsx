@@ -7,7 +7,7 @@ import banner3 from "../assets/img/banner3.png"
 
 function HomeCarousel() {
   return (
-    <Carousel>
+    <Carousel className="mt-2">
       <Carousel.Item>
         <img src={banner} alt="" />
         

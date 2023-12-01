@@ -1,7 +1,9 @@
 .img-hightlight-product{
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .row-hightlight-products{
@@ -14,4 +16,11 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .row-hightlight-products{
+       max-width: 90vw;
+    }
 }

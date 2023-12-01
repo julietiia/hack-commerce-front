@@ -33,7 +33,7 @@ function Home() {
          <li key={product.id}> {product.name} </li>
         ))}
       </ul> */}
-      <HomeCarousel/>
+      <HomeCarousel />
       {/* <section className="carousel">
         <img src="/src/assets/banner.png" alt="banner" />
       </section> */}
