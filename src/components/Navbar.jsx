@@ -45,7 +45,7 @@ function NavbarApparat() {
               className="bi bi-cart3 carrito-icon-responsive "
             ></i>
             {/* <Navbar.Collapse id="basic-navbar-nav">  */}
-              <Nav className="me-auto d-sm-none d-lg-flex collapse-responsive">
+              <Nav className="me-auto d-sm-none d-lg-flex">
                 <NavLink className="nav-link custom-item" to="/">
                   home
                 </NavLink>

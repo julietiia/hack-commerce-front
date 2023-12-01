@@ -11,6 +11,7 @@ import "./components/css/Footer.css"
 import Category from "./pages/Category.jsx";
 import SignUp from "./pages/signUp.jsx";
 import NotFound from "./components/NotFound.jsx";
+import Shop from "./pages/Shop.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <NavbarApparat />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/category/:name" element={<Category />} />
