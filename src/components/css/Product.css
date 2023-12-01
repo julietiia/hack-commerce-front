@@ -56,6 +56,10 @@
   margin-top: 7rem;
 }
 
+.similar-design-product{
+  cursor: pointer;
+}
+
 .text-similar-design-name {
   font-size: 1rem;
   margin: 0;

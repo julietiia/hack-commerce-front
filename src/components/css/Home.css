@@ -15,6 +15,10 @@ i {
   padding-left: 2rem;
 }
 
+a{
+  text-decoration: none;
+}
+
 .shop-profile {
   padding-right: 2rem;
 }
