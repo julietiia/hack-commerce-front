@@ -6,8 +6,8 @@ import HighlightProductsCheckout from "../components/HighlightProductsCheckout";
 import Breadcrumb from "../components/CheckoutBreadcrumb";
 import "../components/css/checkout.css";
 import CheckoutLoginForm from "../components/CheckoutLogInForm";
-import botonMercadoPago from "../assets/buttons/botonMercadoPago.png"
-import visaNet from "../assets/buttons/visaNet.png"
+import botonMercadoPago from "../assets/buttons/botonMercadoPago.png";
+import visaNet from "../assets/buttons/visaNet.png";
 
 function CheckOut() {
   return (
@@ -29,11 +29,17 @@ function CheckOut() {
               <div className="shopping-list">
                 <div className="checkout-product ">
                   <div className="d-flex">
-                    <img
-                      className="checkout-product-image"
-                      src={soapdispenser}
-                      alt=""
-                    />
+                    <div className="position-relative">
+                      <img
+                        className="checkout-product-image"
+                        src={soapdispenser}
+                        alt=""
+                      />
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                    </div>
+
                     <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Ansel Glass Table Lamp
@@ -48,11 +54,16 @@ function CheckOut() {
 
                 <div className="checkout-product ">
                   <div className="d-flex">
-                    <img
-                      className="checkout-product-image"
-                      src={tables}
-                      alt=""
-                    />
+                    <div className="position-relative">
+                      <img
+                        className="checkout-product-image"
+                        src={tables}
+                        alt=""
+                      />
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                    </div>
                     <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Metallic Nylon Comforter
@@ -67,11 +78,16 @@ function CheckOut() {
 
                 <div className="checkout-product ">
                   <div className="d-flex">
-                    <img
-                      className="checkout-product-image"
-                      src={chair}
-                      alt=""
-                    />
+                    <div className="position-relative">
+                      <img
+                        className="checkout-product-image"
+                        src={chair}
+                        alt=""
+                      />
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                    </div>
                     <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">Bubble Chair</p>
                       <p className="checkout-product-ref">Ref.53494878</p>
@@ -84,11 +100,17 @@ function CheckOut() {
 
                 <div className="checkout-product ">
                   <div className="d-flex">
-                    <img
-                      className="checkout-product-image"
-                      src={soapdispenser}
-                      alt=""
-                    />
+                    <div className="position-relative">
+                      <img
+                        className="checkout-product-image"
+                        src={soapdispenser}
+                        alt=""
+                      />
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                    </div>
+
                     <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Ansel Glass Table Lamp
@@ -103,11 +125,16 @@ function CheckOut() {
 
                 <div className="checkout-product ">
                   <div className="d-flex">
-                    <img
-                      className="checkout-product-image"
-                      src={tables}
-                      alt=""
-                    />
+                    <div className="position-relative">
+                      <img
+                        className="checkout-product-image"
+                        src={tables}
+                        alt=""
+                      />
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                    </div>
                     <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Metallic Nylon Comforter
@@ -122,11 +149,16 @@ function CheckOut() {
 
                 <div className="checkout-product ">
                   <div className="d-flex">
-                    <img
-                      className="checkout-product-image"
-                      src={chair}
-                      alt=""
-                    />
+                    <div className="position-relative">
+                      <img
+                        className="checkout-product-image"
+                        src={chair}
+                        alt=""
+                      />
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                    </div>
                     <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">Bubble Chair</p>
                       <p className="checkout-product-ref">Ref.53494878</p>
@@ -136,6 +168,8 @@ function CheckOut() {
                     <p className="checkout-product-price">999USD</p>
                   </div>
                 </div>
+
+                
 
                 <hr />
                 <div className="subtotal ps-2 pe-4">
@@ -147,9 +181,10 @@ function CheckOut() {
                   <p className="checkout-total">999USD</p>
                 </div>
               </div>
-              <button className='checkout-button rounded btn btn-dark text-select'>continue to shipping</button>
+              <button className="checkout-button rounded btn btn-dark text-select">
+                continue to shipping
+              </button>
             </div>
-            
           </div>
 
           <div className="col-lg-6 col-md-12">
@@ -159,11 +194,10 @@ function CheckOut() {
                 <CheckoutLoginForm />
               </div>
               <div className="pay-buttons">
-              <img src={botonMercadoPago} className="mercadopago"/>
-              <img src={visaNet} className="ebrou"/>
+                <img src={botonMercadoPago} className="mercadopago" />
+                <img src={visaNet} className="ebrou" />
+              </div>
             </div>
-            </div>
-            
           </div>
         </div>
       </div>
