@@ -3,9 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "../components/css/HightlightProducts.css";
 import { useNavigate, Link } from "react-router-dom";
-import Categories from "../components/Categories";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 function HightlightProducts() {
   const [products, setProducts] = useState([]);
@@ -31,7 +29,7 @@ function HightlightProducts() {
       <div className="container row-hightlight-products">
         <div className="row   mb-5 ">
           <h2 className="d-flex justify-content-center mt-3">
-            get inspire with apparat{" "}
+            get inspired with apparat{" "}
           </h2>
         </div>
         <div className="row">

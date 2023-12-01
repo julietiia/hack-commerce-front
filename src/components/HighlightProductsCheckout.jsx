@@ -2,8 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./css/HighlightProductsCheckout.css";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, Link } from "react-router-dom";
 
 function HightlightProducts() {
   const [products, setProducts] = useState([]);
@@ -26,29 +25,30 @@ function HightlightProducts() {
 
   return (
     <>
-      <div className="container d-flex justify-content-center">
-        <div className="row row-hightlight-products mb-5 mx-1">
-         
-          <h2 className="d-flex justify-content-center my-4">
-            you may also like
+      <div className="container row-hightlight-products mb-5">
+        <div className="row my-3 ">
+          <h2 className="d-flex justify-content-center mt-2">
+            you may also like{" "}
           </h2>
-
+        </div>
+        <div className="row px-3">
           {products.map((product) => (
             <div
-              className="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center align-self-center flex-wrap gap-2"
+              className="col-6 col-sm-6 col-md-3 mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
               key={product.id}
             >
-              <div
-                className="hightlight-product"
-                onClick={() => navigate("/product/1")}
-              >
-                <img
-                  className="img-hightlight-product mb-3"
-                  src={product.image}
-                  alt={product.name}
-                />
+              <div className="hightlight-product">
+                <Link to="/product/1">
+                  <img
+                    className="img-hightlight-product mb-3"
+                    src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                      product.image[0]
+                    }`}
+                    alt={product.name}
+                  />
+                </Link>
                 <p className="product-name">{product.name}</p>
-                <p className="product-price">{product.price}USD</p>
+                <p>{product.price}USD</p>
               </div>
             </div>
           ))}
