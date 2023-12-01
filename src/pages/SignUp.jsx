@@ -117,15 +117,15 @@ function SignUp() {
                                     </div>
                                     <div className="mb-3">
                                         <label
-                                            htmlFor="telefono"
+                                            htmlFor="phone"
                                             className="form-label"
                                         >
-                                            Telefono
+                                            Phone
                                         </label>
                                         <input
                                             type="number"
                                             className="form-control"
-                                            id="telephono"
+                                            id="phone"
                                         />
                                     </div>
                                     <div className="mb-3">
