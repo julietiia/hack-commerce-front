@@ -1,6 +1,6 @@
 import React from "react";
-import orangelamp from "../assets/img/orangelamp.webp";
-import plumongradiente from "../assets/img/plumongradiente.webp";
+import soapdispenser from "../assets/img/soapdispenser.png";
+import tables from "../assets/img/tables.png";
 import chair from "../assets/img/chair.png";
 import HighlightProductsCheckout from "../components/HighlightProductsCheckout";
 import Breadcrumb from "../components/CheckoutBreadcrumb";
@@ -25,14 +25,14 @@ function CheckOut() {
               <Breadcrumb />
 
               <div className="shopping-list">
-                <div className="checkout-product ps-2 pe-4 py-2">
+                <div className="checkout-product ">
                   <div className="d-flex">
                     <img
                       className="checkout-product-image"
-                      src={orangelamp}
+                      src={soapdispenser}
                       alt=""
                     />
-                    <div className="checkout-product-details ps-3">
+                    <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Ansel Glass Table Lamp
                       </p>
@@ -44,14 +44,14 @@ function CheckOut() {
                   </div>
                 </div>
 
-                <div className="checkout-product ps-2 pe-4 py-2">
+                <div className="checkout-product ">
                   <div className="d-flex">
                     <img
                       className="checkout-product-image"
-                      src={plumongradiente}
+                      src={tables}
                       alt=""
                     />
-                    <div className="checkout-product-details ps-3">
+                    <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Metallic Nylon Comforter
                       </p>
@@ -63,14 +63,14 @@ function CheckOut() {
                   </div>
                 </div>
 
-                <div className="checkout-product ps-2 pe-4 py-2">
+                <div className="checkout-product ">
                   <div className="d-flex">
                     <img
                       className="checkout-product-image"
                       src={chair}
                       alt=""
                     />
-                    <div className="checkout-product-details ps-3">
+                    <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">Bubble Chair</p>
                       <p className="checkout-product-ref">Ref.53494878</p>
                     </div>
@@ -80,14 +80,14 @@ function CheckOut() {
                   </div>
                 </div>
 
-                <div className="checkout-product ps-2 pe-4 py-2">
+                <div className="checkout-product ">
                   <div className="d-flex">
                     <img
                       className="checkout-product-image"
-                      src={orangelamp}
+                      src={soapdispenser}
                       alt=""
                     />
-                    <div className="checkout-product-details ps-3">
+                    <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Ansel Glass Table Lamp
                       </p>
@@ -99,14 +99,14 @@ function CheckOut() {
                   </div>
                 </div>
 
-                <div className="checkout-product ps-2 pe-4 py-2">
+                <div className="checkout-product ">
                   <div className="d-flex">
                     <img
                       className="checkout-product-image"
-                      src={plumongradiente}
+                      src={tables}
                       alt=""
                     />
-                    <div className="checkout-product-details ps-3">
+                    <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">
                         Metallic Nylon Comforter
                       </p>
@@ -118,14 +118,14 @@ function CheckOut() {
                   </div>
                 </div>
 
-                <div className="checkout-product ps-2 pe-4 py-2">
+                <div className="checkout-product ">
                   <div className="d-flex">
                     <img
                       className="checkout-product-image"
                       src={chair}
                       alt=""
                     />
-                    <div className="checkout-product-details ps-3">
+                    <div className="checkout-product-details ps-2">
                       <p className="checkout-product-name">Bubble Chair</p>
                       <p className="checkout-product-ref">Ref.53494878</p>
                     </div>

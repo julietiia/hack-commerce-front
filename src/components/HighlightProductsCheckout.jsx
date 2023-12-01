@@ -26,7 +26,7 @@ function HightlightProducts() {
 
   return (
     <>
-      <div className="container">
+      <div className="container d-flex justify-content-center">
         <div className="row row-hightlight-products mb-5 ">
           <h2 className="d-flex justify-content-center my-4">
             you may also like
@@ -34,7 +34,7 @@ function HightlightProducts() {
 
           {products.map((product) => (
             <div
-              className="col mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
+              className="col-mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
               key={product.id}
             >
               <div

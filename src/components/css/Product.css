@@ -47,12 +47,6 @@
   object-fit: cover;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 10px;
-  margin-top: 0;
-}
 
 .text-discover-designs {
   font-size: 14px;
@@ -63,9 +57,14 @@ a {
 }
 
 .text-similar-design-name {
-  font-size: 10px;
+  font-size: 1rem;
   margin: 0;
-  margin-top: 0;
+
+}
+
+.text-similar-design-price{
+  font-weight: 600;
+  margin: 0;
 }
 
 .similar-products-background {

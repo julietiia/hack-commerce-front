@@ -3,16 +3,18 @@
     height: 6rem;
     object-fit: cover;
     border-radius: 15px;
-    border: solid 2px white;
+    border: solid 2px rgb(0, 0, 0);
+    flex-shrink: 0;
 }
 
 .checkout-product{
     display: flex;
     justify-content: space-between;
-    
+    padding: 0.5rem;
 }
 
 .checkout-product-details{
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -20,6 +22,8 @@
 
 .checkout-product-name{
     margin: 0;
+    text-align: start;
+    font-size: 0.9rem;
 }
 
 .checkout-product-ref{
@@ -27,6 +31,7 @@
     font-size: 0.7rem;
 }
 .checkout-product-price{
+    padding-top: 1rem;
     font-weight: 400;
     margin: 0;
 }
