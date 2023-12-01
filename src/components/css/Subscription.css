@@ -10,6 +10,8 @@
     color: white;
     display: flex;
     align-items: center;
+    margin-top: 4rem;
+    
 }
 
 .subscribe-input{
@@ -28,4 +30,29 @@
 
 .subscription-img{
     height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .container-background{
+        height: 380px;
+        max-width: 90vw;
+    }
+
+    .subscription-img{
+        height: 80px;
+    }
+
+    .newsletter-paragraph{
+        font-size: 12px;
+    }
+
+    .newsletter-tittle{
+        font-size: 20px;
+        margin-top: 2rem;
+    }
+    .container-background{
+        margin-top: 1.5rem;
+        
+    }
 }

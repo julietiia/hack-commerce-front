@@ -20,7 +20,7 @@ function CheckOut() {
       <div className="container">
         <div className="row mb-4">
           <div className="col-lg-6 col-md-12">
-            <div className="shopping-list-container">
+            <div className="shopping-list-container mt-4">
               <h3 className="ps-2">your shopping list</h3>
               <Breadcrumb />
 
@@ -149,8 +149,8 @@ function CheckOut() {
           </div>
 
           <div className="col-lg-6 col-md-12">
-            <div className="checkout-payment-container">
-              <h3 className="ps-2">login</h3>
+            <div className="checkout-payment-container mt-4">
+              <h3 className="ps-2">already have an account? login</h3>
               <div className="form-container ps-2 pe-4 py-2">
                 <CheckoutLoginForm />
               </div>
