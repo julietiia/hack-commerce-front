@@ -1,7 +1,16 @@
 import React from "react";
+import Collapse from "react-bootstrap/Collapse";
+import { useState } from "react";
+import Card from "react-bootstrap/Card";
 import "./css/Footer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { ArrowUp, ArrowDown, Plus, Dash } from "react-bootstrap-icons";
 
 function Footer() {
+  const [shopOpen, setShopOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
+  const [userInfoOpen, setUserInfoOpen] = useState(false);
+
   return (
     <footer>
       <div className="bg-dark text-white">
@@ -14,19 +23,45 @@ function Footer() {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-sm-6 text-center col-md-3">
+            <div className="col-md-3 text-center d-none d-md-block onlyDesktop">
               <ul>
                 <h4>shop</h4>
-                <li>chair</li>
                 <li>sofas</li>
+                <li>chairs</li>
                 <li>tables</li>
                 <li>lighting</li>
                 <li>storage & organisation</li>
                 <li>deco</li>
-                <li>top rated</li>
               </ul>
             </div>
-            <div className="col-sm-6 text-center col-md-3">
+            <div className="d-block d-md-none">
+              <h4
+                className=""
+                role="button"
+                onClick={() => setShopOpen(!shopOpen)}
+                aria-controls="shop"
+                aria-expanded={shopOpen}
+              >
+                shop {shopOpen ? <Dash /> : <Plus />}
+              </h4>
+              <Collapse in={shopOpen}>
+                <div id="shopCollapse">
+                  <Card>
+                    <Card.Body className="blackCard text-white">
+                      <ul className="">
+                        <li>sofas</li>
+                        <li>chairs</li>
+                        <li>tables</li>
+                        <li>lighting</li>
+                        <li>storage & organisation</li>
+                        <li>deco</li>
+                      </ul>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Collapse>
+            </div>
+            <div className="col-md-3 text-center d-none d-md-block onlyDesktop">
               <ul>
                 <h4>service</h4>
                 <li>contact</li>
@@ -35,7 +70,32 @@ function Footer() {
                 <li>terms & conditions</li>
               </ul>
             </div>
-            <div className="col-sm-6 text-center col-md-3">
+            <div className="d-block d-md-none">
+              <h4
+                className=""
+                role="button"
+                onClick={() => setServiceOpen(!serviceOpen)}
+                aria-controls="service"
+                aria-expanded={serviceOpen}
+              >
+                service {serviceOpen ? <Dash /> : <Plus />}
+              </h4>
+              <Collapse in={serviceOpen}>
+                <div id="serviceCollapse">
+                  <Card>
+                    <Card.Body className="blackCard text-white">
+                      <ul className="">
+                        <li>contact</li>
+                        <li>customer review</li>
+                        <li>about this project</li>
+                        <li>terms & conditions</li>
+                      </ul>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Collapse>
+            </div>
+            <div className="col-md-3 text-center d-none d-md-block">
               <ul>
                 <h4>user info</h4>
                 <li>create account</li>
@@ -43,8 +103,31 @@ function Footer() {
                 <li>pivacy policy</li>
               </ul>
             </div>
-
-            <div className="col-sm-6 text-center col-md-3">
+            <div className=" d-block d-md-none">
+              <h4
+                className=""
+                role="button"
+                onClick={() => setUserInfoOpen(!userInfoOpen)}
+                aria-controls="userInfo"
+                aria-expanded={userInfoOpen}
+              >
+                user info {userInfoOpen ? <Dash /> : <Plus />}
+              </h4>
+              <Collapse in={userInfoOpen}>
+                <div id="userInfoCollapse">
+                  <Card>
+                    <Card.Body className="blackCard text-white">
+                      <ul className="">
+                        <li>create account</li>
+                        <li>sign in</li>
+                        <li>privacy policy</li>
+                      </ul>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Collapse>
+            </div>
+            <div className="col-sm-12 col-md-3">
               <h4>let's keep in touch</h4>
               <a className="mx-4" href="https://www.facebook.com/">
                 <svg
@@ -84,11 +167,7 @@ function Footer() {
               </a>
             </div>
           </div>
-        </div>
-        <div>
-          <p className="text-white-50 copyright-footer py-3 mb-0">
-            ©2023 Apparat inc. All rights reserved
-          </p>
+          <div className="copyright-footer"></div>
         </div>
       </div>
     </footer>

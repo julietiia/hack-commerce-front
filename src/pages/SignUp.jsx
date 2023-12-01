@@ -1,15 +1,26 @@
 import React from "react";
 import "../components/css/SignUp.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import OffCanvasSignIn from "../components/OffCanvasSignIn";
 
 function SignUp() {
+    const handleShowSignIn = (event) => setShowSignIn(true);
+    const [showSignIn, setShowSignIn] = useState(false);
+    const handleCloseSignIn = (event) => setShowSignIn(false);
     return (
         <>
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-8 signUp  mt-5 mb-5 p-5 rounded">
-                        <h2 className="text-center">Create a new account</h2>
-                        {/* <p>Already have an account? <Link to="/"> sign in here </Link></p> */}
+                        <div className="text-center">
+                        <h2>Create a new account</h2>
+                        <span >Already have an account?</span> <span className="text-decoration-underline"  onClick={(event) => handleShowSignIn(event)}>  Sign in here  </span>
+                        <OffCanvasSignIn
+            showSignIn={showSignIn}
+            handleCloseSignIn={() => setShowSignIn(false)}
+          />
+          </div>
                         <div className="row d-flex justify-content-center mt-3 p-3">
                             <div className="col-7 border border-black border-3 rounded p-4">
                                 <form>
@@ -23,7 +34,7 @@ function SignUp() {
                                         />
                                         <label
                                             className="form-check-label"
-                                            for="inlineRadio1"
+                                            htmlFor="inlineRadio1"
                                         >
                                             Private customer
                                         </label>
@@ -38,14 +49,41 @@ function SignUp() {
                                         />
                                         <label
                                             className="form-check-label"
-                                            for="inlineRadio2"
+                                            htmlFor="inlineRadio2"
                                         >
                                             Business customer
                                         </label>
                                     </div>
+                                    
                                     <div className="mb-3">
                                         <label
-                                            for="exampleInputEmail1"
+                                            htmlFor="firstname"
+                                            className="form-label"
+                                        >
+                                            Firstname
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            id="firstname"
+                                        />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label
+                                            htmlFor="lastname"
+                                            className="form-label"
+                                        >
+                                            Lastname
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            id="lastname"
+                                        />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label
+                                            htmlFor="exampleInputEmail1"
                                             className="form-label"
                                         >
                                             Email address
@@ -64,80 +102,9 @@ function SignUp() {
                                             anyone else.
                                         </div>
                                     </div>
-                                    <div className="form-check form-check-inline mb-3">
-                                        <input
-                                            className="form-check-input"
-                                            type="radio"
-                                            name="inlineRadioOptions"
-                                            id="inlineRadio1"
-                                            value="option1"
-                                        />
-                                        <label
-                                            className="form-check-label"
-                                            for="inlineRadio1"
-                                        >
-                                            Ms
-                                        </label>
-                                    </div>
-                                    <div className="form-check form-check-inline">
-                                        <input
-                                            className="form-check-input"
-                                            type="radio"
-                                            name="inlineRadioOptions"
-                                            id="inlineRadio2"
-                                            value="option2"
-                                        />
-                                        <label
-                                            className="form-check-label"
-                                            for="inlineRadio2"
-                                        >
-                                            Mr
-                                        </label>
-                                    </div>
-                                    <div className="form-check form-check-inline">
-                                        <input
-                                            className="form-check-input"
-                                            type="radio"
-                                            name="inlineRadioOptions"
-                                            id="inlineRadio2"
-                                            value="option2"
-                                        />
-                                        <label
-                                            className="form-check-label"
-                                            for="inlineRadio2"
-                                        >
-                                            Mx
-                                        </label>
-                                    </div>
                                     <div className="mb-3">
                                         <label
-                                            for="firstname"
-                                            className="form-label"
-                                        >
-                                            Firstname
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="firstname"
-                                        />
-                                    </div>
-                                    <div className="mb-3">
-                                        <label
-                                            for="lastname"
-                                            className="form-label"
-                                        >
-                                            Lastname
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="lastname"
-                                        />
-                                    </div>
-                                    <div className="mb-3">
-                                        <label
-                                            for="address"
+                                            htmlFor="address"
                                             className="form-label"
                                         >
                                             Address
@@ -150,7 +117,20 @@ function SignUp() {
                                     </div>
                                     <div className="mb-3">
                                         <label
-                                            for="exampleInputPassword1"
+                                            htmlFor="phone"
+                                            className="form-label"
+                                        >
+                                            Phone
+                                        </label>
+                                        <input
+                                            type="number"
+                                            className="form-control"
+                                            id="phone"
+                                        />
+                                    </div>
+                                    <div className="mb-3">
+                                        <label
+                                            htmlFor="exampleInputPassword1"
                                             className="form-label"
                                         >
                                             Password
@@ -160,24 +140,12 @@ function SignUp() {
                                             className="form-control"
                                             id="exampleInputPassword1"
                                             aria-describedby="passwordHelpBlock"/>
-<div id="passwordHelpBlock" class="form-text">
+<div id="passwordHelpBlock" className="form-text">
   Your password must be 8-20 characters long, contain letters and numbers and special characters.
 </div>
                                         
                                     </div>
-                                    <div className="mb-3">
-                                        <label
-                                            for="exampleInputPassword1"
-                                            className="form-label"
-                                        >
-                                            Repeat password
-                                        </label>
-                                        <input
-                                            type="password"
-                                            className="form-control"
-                                            id="exampleInputPassword1"
-                                        />
-                                    </div>
+                                   
                                     <div className="mb-3 form-check">
                                         <input
                                             type="checkbox"
@@ -186,7 +154,7 @@ function SignUp() {
                                         />
                                         <label
                                             className="form-check-label"
-                                            for="exampleCheck1"
+                                            htmlFor="exampleCheck1"
                                         >
                                             Yes, I agree to the terms and conditions and the policy privacy
                                         </label>
