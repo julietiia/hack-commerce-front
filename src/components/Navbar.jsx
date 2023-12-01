@@ -23,7 +23,7 @@ function NavbarApparat() {
   return (
     <>
     <div className="parent-navbar-container p-5">
-      <Navbar expand="lg" className="myNavbar">
+      <Navbar expand="lg" className="myNavbar higher-z-index">
         <Container>
           <Navbar.Brand className="" href="/">
             <div onClick={() => navigate("/")} className="apparat-logo">
@@ -34,7 +34,7 @@ function NavbarApparat() {
               />
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle  aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <NavLink className="nav-link custom-item" to="/">

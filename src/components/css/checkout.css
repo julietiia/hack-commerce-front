@@ -60,4 +60,11 @@
     background-color:#f6f6f6;
     padding: 1rem;
     border-radius: 20px;
+    
+}
+
+/*Breadcrum*/
+
+.breadcrumb{
+    font-size: 0.8rem;
 }
