@@ -76,3 +76,22 @@ a {
 
 }
 
+/* Responsive */
+@media (max-width: 768px){
+  .product-description{
+     max-width: 90vw;
+     font-size: 12px;
+    
+  }
+
+.product-image{
+  margin: auto;
+}
+.product-description{
+  margin: auto;
+}
+.qtty-option{
+  margin-top: 2rem;
+}
+}
+

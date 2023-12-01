@@ -21,12 +21,12 @@ function Product() {
               alt="chair"
             />
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6 product-description">
             <div className="text-start mt-4">
               <h3 className="text-start">Alexia chair</h3>
               <p className="fw-bold text-start">499USD</p>
               <p className="text-start product-description">Ref.53494878</p>
-              <p className="text-start mt-4">
+              <p className="text-start mt-4 product-description">
                 This armchair lends a luxurious interpretation of modernist
                 silhouettes to your space. Tri-leg chair features cushions at
                 seat and back, set on a wrapped and folded structure that feels
@@ -36,7 +36,7 @@ function Product() {
                 Measures: 52X34X62CM
               </p>
             </div>
-            <div>
+            <div className="qtty-option">
               <select
                 name="quantity"
                 id="quantity"
