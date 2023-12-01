@@ -10,6 +10,7 @@ import Admin from "./pages/Admin";
 import "./components/css/Footer.css"
 import Category from "./pages/Category.jsx";
 import SignUp from "./pages/signUp.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about-this-project" element={<AboutUs />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
     </>
