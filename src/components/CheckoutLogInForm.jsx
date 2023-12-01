@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ const LoginForm = () => {
         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
         <input
           type="email"
-          className="form-control boder"
+          className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           value={email}
@@ -53,8 +54,11 @@ const LoginForm = () => {
         </label>
       </div> */}
       <button type="submit" className="col-12 mt-3 btn check-out-button rounded">
-        login
+        sign in
       </button>
+      <div className='mt-3 text-decoration-underline'>
+       <Link to="/sign-up"> <p> or create a new account</p> </Link>
+      </div>
     </form>
   );
 };
