@@ -3,6 +3,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { useNavigate } from "react-router-dom";
 import CheckoutLoginForm from "./CheckoutLogInForm"
 
+
 function OffCanvasSignIn({ showSignIn, handleCloseSignIn, handleShowSignIn, ...props }) {
   const navigate = useNavigate();
 

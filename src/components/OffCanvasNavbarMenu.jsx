@@ -17,7 +17,7 @@ function OffCanvasNavbarMenu({
   handleCloseSignIn,
    ...props
 }) {
-  const navigate = useNavigate();
+
 
   return (
     <>
@@ -81,16 +81,15 @@ function OffCanvasNavbarMenu({
               className="bi bi-person-circle profile-icon d-block"
             ></i>
           </div>
-
-          <OffCanvasShoppingCart
+        </Offcanvas.Body>
+        <OffCanvasShoppingCart
             showCart={showCart}
             handleCloseCart={() => setShowCart(false)}
           />
-          <OffCanvasSignIn
-            showSignIn={showSignIn}
-            handleCloseSignIn={() => setShowSignIn(false)}
-          />
-        </Offcanvas.Body>
+             <OffCanvasSignIn
+              showSignIn={showSignIn}
+              handleCloseSignIn={() => setShowSignIn(false)}
+            />
       </Offcanvas>
     </>
   );

@@ -32,10 +32,11 @@ body {
 }
 
 
-.navbar {
-  height: 6rem;
- 
-} 
+.myNavbar.navbar {
+  height: 4rem;
+  padding-top: 1rem; /* Puedes ajustar este valor según tus necesidades */
+
+}
 
 .higher-z-index {
   z-index: 1000;
@@ -46,13 +47,9 @@ body {
   display: none;
 }
 
-@media (max-width: 577px) {
-  .parent-navbar-container {
-    margin-top: 0;
-    padding-top: 0;
-    
-  }
 
+/* @media (max-width: 577px) {
+ 
   .carrito-icon-responsive {
     display: block;
     font-size: 18px;
@@ -71,7 +68,7 @@ body {
   .shop-profile {
     display: flex;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .parent-navbar-container {
@@ -107,4 +104,14 @@ body {
   .profile-icon, .lupita {
     display: none;
   }
+  .myNavbar.navbar {
+    height: 4rem; 
+    
+  }
+
+  /* .mobile-icons-navbar {
+    display: flex;
+   
+
+  } */
 }
