@@ -49,7 +49,7 @@ function NavbarApparat() {
                 <NavLink className="nav-link custom-item" to="/">
                   home
                 </NavLink>
-                <NavLink className="nav-link custom-item" to="#">
+                <NavLink className="nav-link custom-item" to="/shop">
                   shop
                 </NavLink>
                 <NavLink
