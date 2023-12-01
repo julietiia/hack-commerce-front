@@ -21,3 +21,9 @@ p {
     font-size: 0.8rem;
 }
 
+
+.blackCard {
+  background-color: rgba(0, 0, 0, 0.80); 
+  border: none;
+  
+}
