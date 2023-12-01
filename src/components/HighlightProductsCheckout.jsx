@@ -27,14 +27,15 @@ function HightlightProducts() {
   return (
     <>
       <div className="container d-flex justify-content-center">
-        <div className="row row-hightlight-products mb-5 ">
+        <div className="row row-hightlight-products mb-5 mx-1">
+         
           <h2 className="d-flex justify-content-center my-4">
             you may also like
           </h2>
 
           {products.map((product) => (
             <div
-              className="col-mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
+              className="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center align-self-center flex-wrap gap-2"
               key={product.id}
             >
               <div

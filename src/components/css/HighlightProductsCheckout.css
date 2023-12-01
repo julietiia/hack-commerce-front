@@ -3,11 +3,13 @@
     height: auto;
     border-radius: 20px;
     object-fit: cover;
+    
 }
 
 .row-hightlight-products{
     background-color: #f6f6f6 ;
     border-radius: 20px;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 .hightlight-product{

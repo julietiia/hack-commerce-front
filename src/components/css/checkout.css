@@ -1,3 +1,7 @@
+.checkout-warning{
+    font-weight: 200;
+}
+
 .checkout-product-image{
     width: 6rem;
     height: 6rem;
@@ -57,13 +61,14 @@
 
 .shopping-list-container{
     background-color:#f6f6f6;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 20px;
+    
 }
 
 .checkout-payment-container{
     background-color:#f6f6f6;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 20px;
     
 }
@@ -72,4 +77,38 @@
 
 .breadcrumb{
     font-size: 0.8rem;
+}
+
+/*Button*/
+
+.checkout-button{
+    
+    font-size: 1rem;
+    width: 100%;
+}
+
+.pay-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    
+}
+
+.mercadopago{
+    width: 45%;
+    height: 2.5rem;
+    border-radius: 7px;
+    object-fit: cover;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.ebrou{
+    width: 45%;
+    height: 2.5rem;
+    border-radius: 7px;
+    object-fit: cover;
+    margin: 0.5rem;
+    cursor: pointer;
 }
