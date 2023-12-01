@@ -35,7 +35,7 @@ function CheckOut() {
                         src={soapdispenser}
                         alt=""
                       />
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                         1
                       </span>
                     </div>
@@ -60,7 +60,7 @@ function CheckOut() {
                         src={tables}
                         alt=""
                       />
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                         1
                       </span>
                     </div>
@@ -84,7 +84,7 @@ function CheckOut() {
                         src={chair}
                         alt=""
                       />
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                         1
                       </span>
                     </div>
@@ -106,7 +106,7 @@ function CheckOut() {
                         src={soapdispenser}
                         alt=""
                       />
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                         1
                       </span>
                     </div>
@@ -131,7 +131,7 @@ function CheckOut() {
                         src={tables}
                         alt=""
                       />
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                         1
                       </span>
                     </div>
@@ -155,7 +155,7 @@ function CheckOut() {
                         src={chair}
                         alt=""
                       />
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                         1
                       </span>
                     </div>

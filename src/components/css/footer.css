@@ -5,12 +5,13 @@ p {
   text-align: center;
 }
 
-#logo {
+#footerLogo {
   height: 150px;
   width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .rs-icon{
@@ -26,4 +27,11 @@ p {
   background-color: rgba(0, 0, 0, 0.80); 
   border: none;
   
+}
+
+ul{
+  cursor: pointer;
+}
+li{
+  cursor: pointer;
 }
