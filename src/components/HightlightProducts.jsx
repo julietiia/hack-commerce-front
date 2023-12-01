@@ -44,7 +44,7 @@ function HightlightProducts() {
                 <Link to="/product/1">
                   <img
                     className="img-hightlight-product mb-3"
-                    src={product.image}
+                    src={`${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`}
                     alt={product.name}
                   />
                 </Link>
