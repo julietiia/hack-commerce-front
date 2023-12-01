@@ -27,8 +27,8 @@ function NavbarApparat() {
 
   return (
     <>
-      <div className="parent-navbar-container p-4">
-        <Navbar expand="lg" className="navbar higher-z-index">
+      <div className="parent-navbar-container">
+        <Navbar expand="lg" className="myNavbar navbar higher-z-index">
           <Container>
             <Navbar.Brand className="" href="/">
               <div onClick={() => navigate("/")} className="apparat-logo">
@@ -39,7 +39,12 @@ function NavbarApparat() {
                 />
               </div>
             </Navbar.Brand>
-            {/* <Navbar.Collapse id="basic-navbar-nav" className={showMenu ? "show" : ""}>  */}
+           
+            <i
+              onClick={(event) => handleShowCart(event)}
+              className="bi bi-cart3 carrito-icon-responsive "
+            ></i>
+            {/* <Navbar.Collapse id="basic-navbar-nav">  */}
               <Nav className="me-auto d-sm-none d-lg-flex collapse-responsive">
                 <NavLink className="nav-link custom-item" to="/">
                   home
@@ -95,15 +100,15 @@ function NavbarApparat() {
               onClick={handleToggleMenu}
               className="bi bi-list mobile-menu-icon d-lg-none"
             ></i>
-
-            <i
-              onClick={(event) => handleShowCart(event)}
-              className="bi bi-cart3 carrito-icon-responsive"
-            ></i>
             {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
             <OffCanvasNavbarMenu
-              showMenu={showMenu}
-              handleCloseMenu={() => setShowMenu(false)}
+               showMenu={showMenu}
+               handleCloseMenu={() => setShowMenu(false)}
+               handleShowSignIn={() => setShowSignIn(true)} 
+               showCart={showCart}
+               handleCloseCart={() => setShowCart(false)}
+               showSignIn={showSignIn}
+               handleCloseSignIn={() => setShowSignIn(false)}
             />
 
             <OffCanvasShoppingCart
@@ -114,6 +119,7 @@ function NavbarApparat() {
               showSignIn={showSignIn}
               handleCloseSignIn={() => setShowSignIn(false)}
             />
+          
           </Container>
         </Navbar>
       </div>
