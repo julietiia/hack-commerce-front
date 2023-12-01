@@ -10,10 +10,12 @@ function OffCanvasSignIn({ showSignIn, handleCloseSignIn, handleShowSignIn, ...p
     <>
       <Offcanvas show={showSignIn} onHide={handleCloseSignIn} {...props} placement={"end"}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Sign in</Offcanvas.Title>
+          <Offcanvas.Title>sign in</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
+          <div className="border border-black border-3 rounded p-3 ">
          <CheckoutLoginForm/>
+         </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>
