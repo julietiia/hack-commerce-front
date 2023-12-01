@@ -74,11 +74,16 @@ li:hover {
  
 } 
 
+.higher-z-index {
+  z-index: 1000;
+}
+
+
 @media (max-width: 577px) {
   .parent-navbar-container {
     display: flex;
     flex-direction: column;
-   
+    
   }
 
   .carrito-icon, .profile-icon, .lupita {
