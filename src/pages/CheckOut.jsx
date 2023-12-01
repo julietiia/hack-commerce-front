@@ -6,6 +6,8 @@ import HighlightProductsCheckout from "../components/HighlightProductsCheckout";
 import Breadcrumb from "../components/CheckoutBreadcrumb";
 import "../components/css/checkout.css";
 import CheckoutLoginForm from "../components/CheckoutLogInForm";
+import botonMercadoPago from "../assets/buttons/botonMercadoPago.png"
+import visaNet from "../assets/buttons/visaNet.png"
 
 function CheckOut() {
   return (
@@ -145,7 +147,9 @@ function CheckOut() {
                   <p className="checkout-total">999USD</p>
                 </div>
               </div>
+              <button className='checkout-button rounded btn btn-dark text-select'>continue to shipping</button>
             </div>
+            
           </div>
 
           <div className="col-lg-6 col-md-12">
@@ -154,7 +158,12 @@ function CheckOut() {
               <div className="form-container ps-2 pe-4 py-2">
                 <CheckoutLoginForm />
               </div>
+              <div className="pay-buttons">
+              <img src={botonMercadoPago} className="mercadopago"/>
+              <img src={visaNet} className="ebrou"/>
             </div>
+            </div>
+            
           </div>
         </div>
       </div>
