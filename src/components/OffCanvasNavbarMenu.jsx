@@ -1,8 +1,8 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Navbar from "./Navbar";
-import { Nav, NavLink, NavDropdown } from "react-bootstrap";
+import { Nav, NavDropdown } from "react-bootstrap";
 import "./css/App.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import OffCanvasSignIn from "./OffCanvasSignIn";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 
