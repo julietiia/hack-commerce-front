@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Collapse from "react-bootstrap/Collapse";
 import { useState } from "react";
 import Card from "react-bootstrap/Card";
@@ -7,6 +8,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ArrowUp, ArrowDown, Plus, Dash } from "react-bootstrap-icons";
 
 function Footer() {
+  const navigate = useNavigate();
+  const handleShowSignIn = (event) => setShowSignIn(true);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const handleCloseSignIn = (event) => setShowSignIn(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
   const [userInfoOpen, setUserInfoOpen] = useState(false);
@@ -14,27 +19,28 @@ function Footer() {
   return (
     <footer>
       <div className="bg-dark text-white">
-        <div>
+        <div onClick={() => navigate("/")}>
           <img
-            id="logo"
+            id="footerLogo"
             src="/src/assets/img/Final-HA.png"
             alt="apparat logo"
+            
           />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-md-3 text-center d-none d-md-block onlyDesktop">
               <ul>
-                <h4>shop</h4>
-                <li>sofas</li>
-                <li>chairs</li>
-                <li>tables</li>
-                <li>lighting</li>
-                <li>storage & organisation</li>
-                <li>deco</li>
+                <h4 onClick={() => navigate("/shop")}>shop</h4>
+                <li onClick={() => navigate("/category/sofas")}>sofas</li>
+                <li onClick={() => navigate("/category/chairs")}>chairs</li>
+                <li onClick={() => navigate("/category/tables")}>tables</li>
+                <li onClick={() => navigate("/category/lighting")}>lighting</li>
+                <li onClick={() => navigate("/category/storage")}>storage & organisation</li>
+                <li onClick={() => navigate("/category/deco")}>deco</li>
               </ul>
             </div>
-            <div className="d-block d-md-none">
+            <div className="d-block d-md-none mb-2">
               <h4
                 className=""
                 role="button"
@@ -49,12 +55,12 @@ function Footer() {
                   <Card>
                     <Card.Body className="blackCard text-white">
                       <ul className="">
-                        <li>sofas</li>
-                        <li>chairs</li>
-                        <li>tables</li>
-                        <li>lighting</li>
-                        <li>storage & organisation</li>
-                        <li>deco</li>
+                        <li onClick={() => navigate("/category/sofas")}>sofas</li>
+                        <li onClick={() => navigate("/category/chairs")}>chairs</li>
+                        <li onClick={() => navigate("/category/tables")}>tables</li>
+                        <li onClick={() => navigate("/category/lighting")}>lighting</li>
+                        <li onClick={() => navigate("/category/storage")}>storage & organisation</li>
+                        <li onClick={() => navigate("/category/deco")}>deco</li>
                       </ul>
                     </Card.Body>
                   </Card>
@@ -66,11 +72,11 @@ function Footer() {
                 <h4>service</h4>
                 <li>contact</li>
                 <li>customer review</li>
-                <li>about this project</li>
+                <li onClick={() => navigate("/about-this-project")}>about this project</li>
                 <li>terms & conditions</li>
               </ul>
             </div>
-            <div className="d-block d-md-none">
+            <div className="d-block d-md-none mb-2">
               <h4
                 className=""
                 role="button"
@@ -87,7 +93,7 @@ function Footer() {
                       <ul className="">
                         <li>contact</li>
                         <li>customer review</li>
-                        <li>about this project</li>
+                        <li onClick={() => navigate("/about-this-project")}>about this project</li>
                         <li>terms & conditions</li>
                       </ul>
                     </Card.Body>
@@ -98,12 +104,12 @@ function Footer() {
             <div className="col-md-3 text-center d-none d-md-block">
               <ul>
                 <h4>user info</h4>
-                <li>create account</li>
-                <li>sign in</li>
+                <li onClick={() => navigate("/sign-up")}>create account</li>
+                <li onClick={() => navigate("/sign-up")}>sign in</li>
                 <li>pivacy policy</li>
               </ul>
             </div>
-            <div className=" d-block d-md-none">
+            <div className=" d-block d-md-none mb-2">
               <h4
                 className=""
                 role="button"
@@ -118,8 +124,8 @@ function Footer() {
                   <Card>
                     <Card.Body className="blackCard text-white">
                       <ul className="">
-                        <li>create account</li>
-                        <li>sign in</li>
+                        <li onClick={() => navigate("/sign-up")}>create account</li>
+                        <li onClick={(event) => handleShowSignIn(event)}>sign in</li>
                         <li>privacy policy</li>
                       </ul>
                     </Card.Body>
@@ -167,7 +173,10 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div className="copyright-footer"></div>
+          <div className="copyright-footer">
+          © 2023 apparat inc. All rights reserved
+
+          </div>
         </div>
       </div>
     </footer>
