@@ -17,6 +17,7 @@ function HightlightProducts() {
       });
       const highlightProducts = response.data.products.filter(
         (product) => product.highlight === true
+        
       );
 
       setProducts(highlightProducts);
@@ -48,6 +49,8 @@ function HightlightProducts() {
                 </Link>
                 <small>{product.name}</small>
                 <small className="fw-light">{product.price}USD</small>
+                {console.log("Image URL:", `${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`)}
+
               </div>
             </div>
           ))}

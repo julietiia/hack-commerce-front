@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 
-function AddToCartButton() {
+const AddToCartButton = ({ product, quantity }) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ product, quantity }));
+  };
   return (
-    <button className='addtocart-button rounded btn btn-dark text-select'>add to cart</button>
-  )
-}
+    <button
+      onClick={handleAddToCart}
+      className="addtocart-button rounded btn btn-dark text-select"
+    >
+      add to cart
+    </button>
+  );
+};
 
-export default AddToCartButton
+export default AddToCartButton;

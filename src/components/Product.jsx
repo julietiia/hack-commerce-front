@@ -1,39 +1,60 @@
 import "./css/Product.css";
+import React from "react";
 import AddToCartButton from "./AddToCartButton";
 import Collapse from "react-bootstrap/Collapse";
+import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DiscoverSimilarDesigns from "./DiscoverSimilarDesigns";
+import { useDispatch, useSelector } from "react-redux";
+import { setAllProducts } from "../redux/productSlice";
+import axios from "axios";
+import ProductCarousel from "./ProductCarousel";
+import { useParams } from "react-router-dom";
+
 
 function Product() {
   const [productDetailsOpen, setProductDetailsOpen] = useState(false);
   const [shippingReturnsOpen, setShippingReturnsOpen] = useState(false);
   const [stockAvailableOpen, setStockAvailableOpen] = useState(false);
 
+  const { id } = useParams();
+  const product = useSelector((state) =>
+    state.products.find((p) => p.id === Number(id)));
+  const dispatch = useDispatch();
+
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
+
+
+
+  useEffect(() => {
+    const getProduct = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${import.meta.env.VITE_PORT_URL}/products`,
+      });
+      dispatch(setAllProducts(response.data.products));
+    };
+    getProduct();
+  }, []);
+
   return (
-    <>
-      <div className="container mt-4">
-        <div className="row">
+    <div className="container mt-4">
+      {product && (
+        <div key={product.id} className="row">
           <div className="col-12 col-md-6">
-            <img
-              className="product-image img-fluid"
-              src="/src/assets/img/alexia_chair_lifestyle.webp"
-              alt="chair"
+            <ProductCarousel
+              product={product}
+              imagesUrl={import.meta.env.VITE_IMAGES_URL}
             />
           </div>
+
           <div className="col-12 col-md-6 product-description">
             <div className="text-start mt-4">
-              <h3 className="text-start">Alexia chair</h3>
-              <p className="fw-bold text-start">499USD</p>
-              <p className="text-start product-description">Ref.53494878</p>
+              <h3 className="text-start">{product.name}</h3>
+              <p className="text-start">{product.price} USD</p>
               <p className="text-start mt-4 product-description">
-                This armchair lends a luxurious interpretation of modernist
-                silhouettes to your space. Tri-leg chair features cushions at
-                seat and back, set on a wrapped and folded structure that feels
-                so fresh and unexpected. This custom piece of furniture will be
-                made to order just for you. Available exclusively at Urban
-                Outfitters. 
-                Measures: 52X34X62CM
+                {product.description}
               </p>
             </div>
             <div className="qtty-option">
@@ -41,6 +62,8 @@ function Product() {
                 name="quantity"
                 id="quantity"
                 className="m-2 btn text-dark text-select background-color-select border border-2"
+                onChange={(e) => setSelectedQuantity (Number(e.target.value))}
+                value={selectedQuantity}
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((option) => (
                   <option key={option} value={option}>
@@ -48,7 +71,7 @@ function Product() {
                   </option>
                 ))}
               </select>
-              <AddToCartButton />
+              <AddToCartButton product={product} quantity={selectedQuantity} />
             </div>
             <div className="container mt-4">
               <div>
@@ -66,9 +89,19 @@ function Product() {
                     <Card>
                       <Card.Body>
                         <p className="collapse-details-text text-start">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Cumque illum beatae accusantium amet qui
-                          quibusdam?
+                          {product.productDetail
+                            .split(".")
+                            .map((sentence, index, array) => (
+                              <React.Fragment key={index}>
+                                {index < array.length - 1 ? (
+                                  <>
+                                    {sentence.trim()}.<br />
+                                  </>
+                                ) : (
+                                  sentence.trim()
+                                )}
+                              </React.Fragment>
+                            ))}
                         </p>
                       </Card.Body>
                     </Card>
@@ -92,7 +125,30 @@ function Product() {
                           className="collapse-details-text text-start"
                           role="button"
                         >
-                          Shipping and Returns details go here.
+                          Delivery methods may vary depending on the items added
+                          to your basket:
+                          <br />
+                          STANDARD DELIVERY: 5.95 USD
+                          <br />
+                          In 2-5 business days - Free for orders over 50 USD.
+                          <br />
+                          DROP POINT: 4.95 USD
+                          <br />
+                          In 4-5 business days - Free for orders over 50 USD.
+                          <br />
+                          <br />
+                          Returns must be made within 30 days from when you
+                          received the shipping confirmation email for your
+                          order.
+                          <br />
+                          Remember that you need the purchase receipt to return
+                          any item.
+                          <br />
+                          The items you return must be in the same condition you
+                          received them in.
+                          <br />
+                          Remember to print the purchase receipt for your order
+                          and include it with your return.
                         </p>
                       </Card.Body>
                     </Card>
@@ -106,14 +162,14 @@ function Product() {
                   aria-controls="stockAvailable"
                   aria-expanded={stockAvailableOpen}
                 >
-                  Stock available in store
+                  Stock available in-store
                 </p>
                 <Collapse in={stockAvailableOpen}>
                   <div id="stockAvailable">
                     <Card>
                       <Card.Body>
                         <p className="collapse-details-text text-start">
-                          Stock availability information goes here.
+                        Sorry, we are currently building this functionality. You'll be able to use it soon. Please check back later.
                         </p>
                       </Card.Body>
                     </Card>
@@ -123,27 +179,26 @@ function Product() {
             </div>
           </div>
         </div>
-
-        <div>
-          <section>
-            <div className="container similar-products-background my-5 ">
-              <div className="row">
-                <div className="col">
-                  <h2 className="d-flex justify-content-center my-4">
-                    discover similar designs
-                  </h2>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col list-similar-products">
-                  <DiscoverSimilarDesigns />
-                </div>
+      )}
+      <div>
+        <section>
+          <div className="container similar-products-background my-5">
+            <div className="row">
+              <div className="col">
+                <h2 className="d-flex justify-content-center my-4">
+                  Discover similar designs
+                </h2>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
+        <div className="row">
+          <div className="col list-similar-products">
+            <DiscoverSimilarDesigns />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
