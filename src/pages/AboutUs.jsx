@@ -1,138 +1,200 @@
 import React from "react";
 import "../components/css/AboutUs.css";
-import diagrama from "../assets/img/diagrama.png"
+// import diagrama from "../assets/img/diagrama.png";
+import aboutapparatbg from "../assets/img/aboutapparatbg.jpg";
+import react from "../assets/tech-icons/react.png";
+import mysql from "../assets/tech-icons/mysql.png";
+import redux from "../assets/tech-icons/redux.png";
+import nodeJS from "../assets/tech-icons/nodeJS.png";
+import bootstrap from "../assets/tech-icons/bootstrap.png";
+import html from "../assets/tech-icons/html.png";
+import css3 from "../assets/tech-icons/css3.png";
+import figma from "../assets/tech-icons/figma.png";
+import trello from "../assets/tech-icons/trello.png";
+import discord from "../assets/tech-icons/discord.png";
+import express from "../assets/tech-icons/express.png";
 
 function AboutUs() {
-    return (
-        <>
-          
-            <div className="container">
-                <div className="row mt-4 ">
-                    <div className="col-12 col-lg-6 d-flex justify-content-center align-self-center flex-wrap">
-                        <h2 className="justify-content-center d-flex mt-5">
-                            What's apparat?
-                        </h2>
-                        <p className="pt-3">
-                        At apparat, we're dedicated to offering high-quality furniture crafted with love. We want every moment you spend sitting, lounging, or simply enjoying your space to be filled with comfort and style, knowing that what you choose for your home is not only beautiful but also thoughtfully made. We appreciate being a part of your daily life, and we take that commitment seriously. We believe that furniture can be more than just functional pieces; they can be sources of comfort, inspiration, and creativity in every corner of your home.
-                        </p>
-                    </div>
-                    <div className="col-12 col-lg-6 img-col d-flex justify-content-center    ">
-                        <img
-                            src="/src/assets/logo/apparat_white-navbar-logo.svg"
-                            alt=""
-                            className="logo"
-                        />
-                    </div>
-                </div>
-          
-            {/* <div className="container"> */}
-               
-                <div className="row mt-5 tech-row pt-3 text-white ">
-                <h2 className="d-flex justify-content-center mt-3 mb-3">
-                    Technologies & Tools
-                </h2>
-                    <div className="col mt-3">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Laborum atque doloribus eligendi dolor.
-                            Eveniet alias quia accusantium debitis aliquam ex
-                            fuga, dolores qui, placeat eum et recusandae fugit
-                            nihil. Dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam blanditiis ipsum provident error repudiandae accusamus quidem alias dignissimos. Harum voluptatem, porro ullam possimus animi blanditiis beatae eaque quidem inventore.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Fuga molestiae harum nisi aperiam, repudiandae
-                            magni repellendus tempora in, modi ex, nesciunt
-                            maxime ad odit quibusdam cum at nobis laudantium
-                            unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus facere ex obcaecati, necessitatibus neque cupiditate repudiandae autem fugiat assumenda tempore velit natus sit atque voluptates quos dolores accusantium consequuntur nesciunt!
-                        </p>
-                        <div className="row pb-3">
-                            <div className="col d-flex justify-content-center align-self-center flex-wrap gap-2">
-                                <div className="iconTech">
-                                    <i> <img src="../src/assets/tech-icons/bootstrap.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>Bootstrap</small>
-                                </div>
-                                <div className="iconTech">
-                                    <i>
-                                        {" "}
-                                        <img
-                                            src="../src/assets/tech-icons/css3.png"
-                                            alt="icon-tech"
-                                            className="img-icon"
-                                        />
-                                    </i>
-                                    <small>CSS3</small>
-                                </div>
-                                <div className="iconTech">
-                                <i class="bi bi-github"></i>
-                                <small>GitHub</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/figma.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>Figma</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/JavaScript.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>JavaScript</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/NodeJs.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>NodeJS</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/Redux.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>Redux</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/react.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>React</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/discord.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>Discord</small>
-                                </div>
-                                <div className="iconTech">
-                                <i> <img src="../src/assets/tech-icons/Trello.png" alt="icon-tech" className="img-icon" /></i>
-                                    <small>Trello</small>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div className="row project-row pt-3 text-white mt-5">
-                  <h2 className="text-black d-flex justify-content-center my-3">Project Organization</h2>
-                  <img src={diagrama} alt="" />
-                </div>
-                <div className="row team-row pt-3 text-white mt-5 mb-5">
-                          <h2 className="d-flex justify-content-center mt-3 mb-3"> Our team</h2>
-                          <div className="col  d-flex justify-content-center align-self-center flex-wrap gap-4 mb-5">
-                            <div className="team-pic">
-                            <img src="../src/assets/our-teamPic/nick.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Vanina</small>
-                            </div>
-                            <div className="team-pic">
-                            <img src="../src/assets/our-teamPic/howie.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Julieta</small>
-                            </div>
-                            <div className="team-pic">
-                            <img src="../src/assets/our-teamPic/kevin.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Helmuth</small>
-                            </div>
-                            <div className="team-pic">
-                            <img src="../src/assets/our-teamPic/brian.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Ana</small>
-                            </div>
-                            <div className="team-pic">
-                            <img src="../src/assets/our-teamPic/aj.jpg" alt="" className="rounded-circle img-team-member" />
-                            <small>Felipe</small>
-                            </div>
-                          </div>
-                        </div>
+  return (
+    <>
+      <div className="container-fluid about-bg-container">
+        <h2 className="about-us-title">about apparat</h2>
+        <img className="about-us-bg" src={aboutapparatbg} alt="" />
+      </div>
+      <article className="container my-5">
+        <div className="row d-flex justify-content-center">
+          <div className="col-sm-12 col-md-8">
+            <div className="">
+              <p className="about-us-body-text">
+                Apparat is a fictitious online store that was born as a final proyect of a team of
+                students from the <a className="ha-link" href="https://ha.dev" target="blank">Hack Academy</a> coding Bootcamp over a period of three weeks.
+              </p>
+              <p className="about-us-body-text">
+                 The team is made up of five people with different skills and knowledge, which allowed them to develop a solid and functional project while striving to create a seamless and enjoyable online shopping experience for users.
+              </p>
+              <p className="about-us-body-text">
+                The main objective of the project is to integrate all the knowledge
+                acquired in the bootcamp into a website that displays a
+                selection of designer furniture and accessories.
+              </p>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </article>
+      <section className="container">
+        <div className="row technologies-bg">
+          <div className="col">
+            <p className="technologies-title">
+              This website is built with the following technologies
+              and tools:
+            </p>
+            <div className="icons-container">
+              <div className="icon-container">
+                <img src={react} alt="" />
+                <p className="tech-name">React.js</p>
+              </div>
+              <div className="icon-container">
+                <img src={mysql} alt="" />
+                <p className="tech-name">MySQL</p>
+              </div>
+              <div className="icon-container">
+                <img src={redux} alt="" />
+                <p className="tech-name">Redux</p>
+              </div>
+              <div className="icon-container">
+                <img src={nodeJS} alt="" />
+                <p className="tech-name">Node.js</p>
+              </div>
+              <div className="icon-container">
+                <img src={express} alt="" />
+                <p className="tech-name">Express.js</p>
+              </div>
+              <div className="icon-container">
+                <img src={bootstrap} alt="" />
+                <p className="tech-name">Bootstrap</p>
+              </div>
+              <div className="icon-container">
+                <img src={html} alt="" />
+                <p className="tech-name">HTML5</p>
+              </div>
+              <div className="icon-container">
+                <img src={css3} alt="" />
+                <p className="tech-name">CSS3</p>
+              </div>
+              <div className="icon-container">
+                <img src={figma} alt="" />
+                <p className="tech-name">Figma</p>
+              </div>
+              <div className="icon-container">
+                <img src={trello} alt="" />
+                <p className="tech-name">Trello</p>
+              </div>
+              <div className="icon-container">
+                <img src={discord} alt="" />
+                <p className="tech-name">Discord</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="container">
+        <div className="row team-row text-white mb-5">
+          <p className="technologies-title">
+            These are the members of the team:
+          </p>
+          <div className="col">
+            <div className="team-container">
+              <div className="member-card">
+                <img
+                  src="../src/assets/our-teamPic/nick.jpg"
+                  alt=""
+                  className="img-team-member"
+                />
+                <p className="team-member-name">Vanina Santarnecchi</p>
+                <p className="team-member-job-position">Full Stack Developer</p>
+                <div className="personal-links">
+                  <a href="#" target="_blank">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="member-card">
+                <img
+                  src="../src/assets/our-teamPic/howie.jpg"
+                  alt=""
+                  className="img-team-member"
+                />
+                <p className="team-member-name">Julieta Mautone</p>
+                <p className="team-member-job-position">Full Stack Developer</p>
+                <div className="personal-links">
+                  <a href="#" target="_blank">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="member-card">
+                <img
+                  src="../src/assets/our-teamPic/kevin.jpg"
+                  alt=""
+                  className="img-team-member"
+                />
+                <p className="team-member-name">Helmuth Dyck</p>
+                <p className="team-member-job-position">Full Stack Developer</p>
+                <div className="personal-links">
+                  <a href="#" target="_blank">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="member-card">
+                <img
+                  src="../src/assets/our-teamPic/brian.jpg"
+                  alt=""
+                  className="img-team-member"
+                />
+                <p className="team-member-name">Ana Baccaro</p>
+                <p className="team-member-job-position">Full Stack Developer</p>
+                <div className="personal-links">
+                  <a href="#" target="_blank">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="member-card">
+                <img
+                  src="../src/assets/our-teamPic/aj.jpg"
+                  alt=""
+                  className="img-team-member"
+                />
+                <p className="team-member-name">Felipe Baz</p>
+                <p className="team-member-job-position">Full Stack Developer</p>
+                <div className="personal-links">
+                  <a href="#" target="_blank">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default AboutUs;
