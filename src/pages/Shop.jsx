@@ -34,9 +34,9 @@ function Shop() {
         </div>
       ) : (
         <div className="container mt-4">
-          <div className="row g-5">
+          <div className="row">
             {allProducts.map((product) => (
-              <div className="col-4 mt-5">
+              <div className="col-12 mt-2 lg-col-4 lg-mt-5">
                 <img
                   className="img-hightlight-product mb-3"
                   src={`${import.meta.env.VITE_IMAGES_URL}products/${
