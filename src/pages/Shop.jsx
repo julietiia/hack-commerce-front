@@ -25,7 +25,7 @@ function Shop() {
 
   return (
     <>
-      <HightlightProducts className="highlight-products-shop" />
+      <HightlightProducts  />
       {!allProducts.length ? (
         <div className="d-flex justify-content-center mt-5">
           <div className="spinner-border" role="status">
@@ -36,7 +36,7 @@ function Shop() {
         <div className="container mt-4">
           <div className="row">
             {allProducts.map((product) => (
-              <div className="col-12 mt-2 lg-col-4 lg-mt-5">
+              <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
                 <img
                   className="img-hightlight-product mb-3"
                   src={`${import.meta.env.VITE_IMAGES_URL}products/${
@@ -47,9 +47,9 @@ function Shop() {
                 <div className="shop-product-info d-flex flex-column">
                   <p className="m-0">{product.name}</p>
                   <p id="price" className="mb-2 fw-light">{product.price}USD</p>
-                  <p>
-                    <AddToCartButton />
-                  </p>
+                  
+                    <AddToCartButton  />
+                  
                 </div>
               </div>
             ))}
