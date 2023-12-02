@@ -1,15 +1,33 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "../components/css/Category.css";
 import { useNavigate, useParams } from "react-router-dom";
 
 function Category() {
   const navigate = useNavigate();
   const params = useParams();
+  const id = params.id;
+  const [category, setCategory]  = useState();
+  const [products, setProducts] = useState([]);
   
+  useEffect(() => {
+    const getCategory = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${import.meta.env.VITE_PORT_URL}/category/${id}`,
+      });
+      setCategory(response.data.category);
+      setProducts(response.data.products);
+      console.log(category, products);
+    };
+    getCategory();
+  }, [id]);
+  // se rompe
 
-  
   return (
     <>
+   {/* <p>{category.name}</p> */}
       <div className="header">
         <img
           src="../src/assets/img/banner-category-sillas.jpg"
@@ -32,7 +50,7 @@ function Category() {
                 alt="image2"
                 className="img-chair top-img"
               />
-              <small>Alexa chair</small>
+              <small>{}</small>
               <small>250USD</small>
             </div>
           </div>

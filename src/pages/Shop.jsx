@@ -17,7 +17,7 @@ function Shop() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
-      console.log(response.data.products);
+  
       dispatch(setAllProducts(response.data.products));
     };
     getAllProducts();
@@ -46,7 +46,7 @@ function Shop() {
                 />
                 <div className="shop-product-info d-flex flex-column">
                   <p className="m-0">{product.name}</p>
-                  <p id="price" className="m-0 fw-light">{product.price}USD</p>
+                  <p id="price" className="mb-2 fw-light">{product.price}USD</p>
                   <p>
                     <AddToCartButton />
                   </p>
