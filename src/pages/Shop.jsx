@@ -22,11 +22,17 @@ function Shop() {
 
   return (
     <>
+      {!allProducts.length ? (
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      ) : (
       <div className="container mt-4">
         <div className="row">
           {allProducts.map((product) => (
             <div className="col-4">
-              
               <img
                 className="img-hightlight-product mb-3"
                 src={`${import.meta.env.VITE_IMAGES_URL}products/${
@@ -34,12 +40,13 @@ function Shop() {
                 }`}
                 alt={product.name}
               />{" "}
-             <p>{product.name}</p>
-             <p>{product.price}USD</p>
+              <p>{product.name}</p>
+              <p>{product.price}USD</p>
             </div>
           ))}
         </div>
       </div>
+      )}
     </>
   );
 }

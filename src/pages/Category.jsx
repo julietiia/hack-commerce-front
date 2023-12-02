@@ -6,6 +6,8 @@ function Category() {
   const navigate = useNavigate();
   const params = useParams();
   
+
+  
   return (
     <>
       <div className="header">
