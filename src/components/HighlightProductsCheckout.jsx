@@ -48,7 +48,7 @@ function HightlightProducts() {
                   />
                 </Link>
                 <p className="product-name">{product.name}</p>
-                <p>{product.price}USD</p>
+                <p className="fw-light">{product.price}USD</p>
               </div>
             </div>
           ))}

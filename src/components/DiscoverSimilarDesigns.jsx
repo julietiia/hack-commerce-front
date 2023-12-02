@@ -11,7 +11,7 @@ function DiscoverSimilarDesigns() {
             alt=""
           />
           <p className="text-similar-design-name">Liam Chair</p>
-          <p className="text-similar-design-price">999USD</p>
+          <p className="text-similar-design-price fw-light">999USD</p>
         </div>
       </div>
 
@@ -23,7 +23,7 @@ function DiscoverSimilarDesigns() {
             alt=""
           />
           <p className="text-similar-design-name">Floria Chair</p>
-          <p className="text-similar-design-price">999USD</p>
+          <p className="text-similar-design-price fw-light">999USD</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ function DiscoverSimilarDesigns() {
             alt=""
           />
           <p className="text-similar-design-name">Charlotte Chair</p>
-          <p className="text-similar-design-price">999USD</p>
+          <p className="text-similar-design-price fw-light">999USD</p>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ function DiscoverSimilarDesigns() {
             alt=""
           />
           <p className="text-similar-design-name">Wallie curvature Chair</p>
-          <p className="text-similar-design-price">999USD</p>
+          <p className="text-similar-design-price fw-light">999USD</p>
         </div>
       </div>
     </div>
