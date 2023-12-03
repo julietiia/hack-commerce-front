@@ -9,7 +9,7 @@ function Categories() {
     <>
       <div className="container">
         <div className="row my-5">
-          <div className="col-4 category-box text-center">
+          <div onClick={()=> navigate("/category/2")} className="col-4 category-box text-center">
             <img
               className="img-fluid sofa"
               src="/src/assets/img/sofa.png"
@@ -25,7 +25,7 @@ function Categories() {
             />
             <p>chairs</p>
           </div>
-          <div className="col-4 category-box text-center">
+          <div onClick={()=> navigate("/category/4")} className="col-4 category-box text-center">
             <img
               className="img-fluid"
               src="/src/assets/img/tables.png"
@@ -33,7 +33,7 @@ function Categories() {
             />
             <p>tables</p>
           </div>
-          <div className="col-4 category-box text-center">
+          <div onClick={()=> navigate("/category/5")} className="col-4 category-box text-center">
             <img
               className="img-fluid"
               src="/src/assets/img/rack.png"
@@ -41,7 +41,7 @@ function Categories() {
             />
             <p>storage & organization</p>
           </div>
-          <div className="col-4 category-box text-center">
+          <div onClick={()=> navigate("/category/6")} className="col-4 category-box text-center">
             <img
               className="img-fluid"
               src="/src/assets/img/soapdispenser.png"
@@ -49,7 +49,7 @@ function Categories() {
             />
             <p>deco</p>
           </div>
-          <div className="col-4 category-box text-center">
+          <div onClick={()=> navigate("/category/3")} className="col-4 category-box text-center">
             <img
               className="img-fluid category-tile"
               src="/src/assets/img/metallic_lamppng.png"
