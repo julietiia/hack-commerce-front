@@ -64,22 +64,22 @@ function NavbarApparat() {
                   title="categories"
                   id="basic-nav-dropdown"
                 >
-                  <NavLink className="dropdown-item" to="/category/chairs">
+                  <NavLink className="dropdown-item" to="/category/1">
                     chairs
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/sofas">
+                  <NavLink className="dropdown-item" to="/category/2">
                     sofas
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/tables">
+                  <NavLink className="dropdown-item" to="/category/4">
                     tables
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/lightning">
+                  <NavLink className="dropdown-item" to="/category/3">
                     lightning
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/storage">
+                  <NavLink className="dropdown-item" to="/category/5">
                     storage&organization
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/deco">
+                  <NavLink className="dropdown-item" to="/category/6">
                     deco
                   </NavLink>
                 </NavDropdown>
