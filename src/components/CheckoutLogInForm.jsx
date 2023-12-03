@@ -24,6 +24,7 @@ const LoginForm = () => {
           className="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
+          placeholder="Email address"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
         />
@@ -53,8 +54,8 @@ const LoginForm = () => {
           Check me out
         </label>
       </div> */}
-      <button type="submit" className="col-12 mt-3 btn check-out-button rounded">
-        sign in
+      <button type="submit" className="col-12 mt-3 btn btn-dark check-out-button rounded">
+        Login
       </button>
       <div className='mt-3 text-decoration-underline'>
        <Link to="/sign-up"> <p> or create a new account</p> </Link>

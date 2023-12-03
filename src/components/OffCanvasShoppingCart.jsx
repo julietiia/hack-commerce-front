@@ -10,7 +10,7 @@ function OffCanvasShoppingCart({ showCart, handleCloseCart, handleShowCart, ...p
     <>
       <Offcanvas show={showCart} onHide={handleCloseCart} {...props} placement={"end"}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>your cart</Offcanvas.Title>
+          <Offcanvas.Title>Your cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="container">

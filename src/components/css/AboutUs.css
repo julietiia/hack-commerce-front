@@ -27,6 +27,7 @@
   z-index: 10;
   color: #ffffff;
   transition: 0.5s ease-in-out;
+  text-shadow: 0 0 40px  rgba(44, 44, 44, 0.333);
 }
 
 .about-us-body-text {

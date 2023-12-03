@@ -9,9 +9,9 @@ function Category() {
   const navigate = useNavigate();
   const params = useParams();
   const id = params.id;
-  const [category, setCategory]  = useState();
+  const [category, setCategory] = useState();
   const [products, setProducts] = useState([]);
-  
+
   useEffect(() => {
     const getCategory = async () => {
       const response = await axios({
@@ -20,7 +20,7 @@ function Category() {
       });
       setCategory(response.data.category);
       setProducts(response.data.products);
-      console.log(category, products);
+      console.log(response.data);
     };
     getCategory();
   }, [id]);
@@ -28,15 +28,16 @@ function Category() {
 
   return (
     <>
-   {/* <p>{category.name}</p> */}
+      {/* <p>{category.name}</p> */}
       <div className="header">
+        <h1 className="category-title">chairs</h1>
         <img
           src="../src/assets/img/banner-category-sillas.jpg"
           alt="image1"
           className="img-banner-category-chairs"
         />
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="row mb-5 mt-5">
           {products.map((product)=>(
           <div key={product.id} className="col-6 col-lg-3">
@@ -62,7 +63,7 @@ function Category() {
           ))}
           
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
