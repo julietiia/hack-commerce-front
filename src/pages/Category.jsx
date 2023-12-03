@@ -36,7 +36,7 @@ function Category() {
           className="img-banner-category-chairs"
         />
       </div>
-      <h1 className="text-center mt-5">{category.name}</h1>
+      {/* <h1 className="text-center mt-5">{category.name}</h1> */}
       <div className="container">
         <div className="row mb-5 mt-5">
           {products.map((product) => (
