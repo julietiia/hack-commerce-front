@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../components/css/Category.css";
 import { useNavigate, useParams } from "react-router-dom";
+import ProductCarousel from "../components/ProductCarousel";
 
 function Category() {
   const navigate = useNavigate();
@@ -37,71 +38,29 @@ function Category() {
       </div>
       <div className="container">
         <div className="row mb-5 mt-5">
-          <div className="col-6 col-lg-3">
+          {products.map((product)=>(
+          <div key={product.id} className="col-6 col-lg-3">
+            
             <div className="image-container">
-              <img
-                onClick={() => navigate("/product/1")}
-                src="../src/assets/img/alexa_chair.png"
-                alt="image1"
+           
+            
+               <img
+                onClick={() => navigate(`/product/${product.id}`)}
+                src={`${import.meta.env.VITE_IMAGES_URL}products/${product.image[1]}`}
+                alt={product.name}
                 className="img-chair img1"
               />
-              <img
-                src="../src/assets/img/alexia_chair_ls.webp"
-                alt="image2"
+               <img
+                src={`${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`}
+                alt={product.name}
                 className="img-chair top-img"
-              />
-              <small>{}</small>
-              <small>250USD</small>
+              />  
+              <small>{product.name}</small>
+              <small>{product.price}USD</small>
             </div>
           </div>
-          <div className="col-6 col-lg-3">
-            <div className="image-container">
-              <img
-                src="../src/assets/img/charlotte_chair.png"
-                alt="image1"
-                className="img-chair img1"
-              />
-              <img
-                src="../src/assets/img/charlotte-chair-ls.webp"
-                alt="image2"
-                className="img-chair top-img"
-              />
-              <small>Charlotte chair</small>
-              <small>999USD</small>
-            </div>
-          </div>
-          <div className="col-6  col-lg-3">
-            <div className="image-container">
-              <img
-                src="../src/assets/img/wallie_chair.png"
-                alt="image1"
-                className="img-chair img1"
-              />
-              <img
-                src="../src/assets/img/wallie_chair_ls.webp"
-                alt="image1"
-                className="img-chair top-img"
-              />
-              <small>Wallie chair</small>
-              <small>599USD</small>
-            </div>
-          </div>
-          <div className="col-6 col-lg-3">
-            <div className="image-container">
-              <img
-                src="../src/assets/img/liam_chair.png"
-                alt="image1"
-                className="img-chair img1"
-              />
-              <img
-                src="../src/assets/img/liam_chair_ls.webp"
-                alt="image1"
-                className="img-chair top-img"
-              />
-              <small>Liam chair</small>
-              <small> 499USD</small>
-            </div>
-          </div>
+          ))}
+          
         </div>
       </div>
     </>
