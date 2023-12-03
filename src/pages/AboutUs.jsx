@@ -13,7 +13,8 @@ import figma from "../assets/tech-icons/figma.png";
 import trello from "../assets/tech-icons/trello.png";
 import discord from "../assets/tech-icons/discord.png";
 import express from "../assets/tech-icons/express.png";
-
+import infostructure from "../assets/img/infostructure.png";
+import sitestructure from "../assets/img/sitestructure.png";
 function AboutUs() {
   return (
     <>
@@ -26,16 +27,23 @@ function AboutUs() {
           <div className="col-sm-12 col-md-8">
             <div className="">
               <p className="about-us-body-text">
-                Apparat is a fictitious online store that was born as a final proyect of a team of
-                students from the <a className="ha-link" href="https://ha.dev" target="blank">Hack Academy</a> coding Bootcamp over a period of three weeks.
+                Apparat is a fictitious online store that was born as a final
+                proyect of a team of students from the{" "}
+                <a className="ha-link" href="https://ha.dev" target="blank">
+                  Hack Academy
+                </a>{" "}
+                coding Bootcamp over a period of three weeks.
               </p>
               <p className="about-us-body-text">
-                 The team is made up of five people with different skills and knowledge, which allowed them to develop a solid and functional project while striving to create a seamless and enjoyable online shopping experience for users.
+                The team is made up of five people with different skills and
+                knowledge, which allowed them to develop a solid and functional
+                project while striving to create a seamless and enjoyable online
+                shopping experience for users.
               </p>
               <p className="about-us-body-text">
-                The main objective of the project is to integrate all the knowledge
-                acquired in the bootcamp into a website that displays a
-                selection of designer furniture and accessories.
+                The main objective of the project is to integrate all the
+                knowledge acquired in the bootcamp into a website that displays
+                a selection of designer furniture and accessories.
               </p>
             </div>
           </div>
@@ -45,8 +53,7 @@ function AboutUs() {
         <div className="row technologies-bg">
           <div className="col">
             <p className="technologies-title">
-              This website is built with the following technologies
-              and tools:
+              This website is built with the following technologies and tools:
             </p>
             <div className="icons-container">
               <div className="icon-container">
@@ -97,8 +104,27 @@ function AboutUs() {
           </div>
         </div>
       </section>
+
       <section className="container">
-        <div className="row team-row text-white mb-5">
+        <div className="row site-structure-container">
+          <div className="col-xl-6 col-md-12">
+            <p className="site-structure-title">
+              This is the information structure of the site.
+            </p>
+            <img className="site-structure-img" src={infostructure} alt="" />
+          </div>
+
+          <div className="col-xl-6 col-md-12">
+            <p className="site-structure-title">
+              This is the site structure of the site.
+            </p>
+            <img className="site-structure-img" src={sitestructure} alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className="container">
+        <div className="row team-row mb-5">
           <p className="technologies-title">
             These are the members of the team:
           </p>

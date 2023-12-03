@@ -40,8 +40,8 @@
   transition: 0.5s ease-in-out;
 }
 
-.ha-link:hover{
- color:#d64933 ;
+.ha-link:hover {
+  color: #d64933;
 }
 
 /*Icons*/
@@ -62,7 +62,7 @@
 
 .icon-container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
   width: 5rem;
 }
@@ -87,7 +87,6 @@
   color: white;
   padding-bottom: 0;
   margin: 0;
-  
 }
 
 /*Team*/
@@ -97,7 +96,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .member-card {
@@ -153,6 +152,27 @@
   padding: 0.5rem;
   font-size: 1.2rem;
   color: #d64933;
+}
+
+/*Site Structure Image*/
+
+.site-structure-container {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  display: flex;
+
+  justify-content: center;
+  margin: 0 1rem 2rem;
+  align-items: top;
+  padding: 2rem;
+}
+
+.site-structure-img {
+  width: 100%;
+}
+
+.site-structure-title {
+  font-size: 1.2rem;
 }
 
 @media (max-width: 992px) {
