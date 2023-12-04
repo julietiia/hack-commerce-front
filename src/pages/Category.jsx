@@ -23,6 +23,7 @@ function Category() {
       });
       setCategory(response.data.category);
       setProducts(response.data.products);
+      console.log(category.name)
     };
     getCategory();
   }, [id]);
@@ -46,6 +47,7 @@ function Category() {
           </p>
         </div>
       </div>
+      {/* <h1>{category.name}</h1> */}
       <div className="container">
         <div className="row mb-5 mt-5">
           {products.map((product) => (

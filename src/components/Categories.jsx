@@ -24,7 +24,6 @@ function Categories() {
               <h3 className="category-name">sofas<span className="arrow">🡥</span></h3>
               
               <img className="" src={iconsofas} alt="sofas" />
-              
             </div>
           </div>
           <div className="col-xl-4 col-md-6">
@@ -37,28 +36,48 @@ function Categories() {
               <img className="" src={iconchairs} alt="chairs" />
             </div>
           </div>
-          <div className="col-xl-4 col-md-6">
+          <div
+            onClick={() => navigate("/category/4")}
+            className="col-xl-4 col-md-6"
+          >
             <div className="category-box">
               <h3 className="category-name">tables<span className="arrow">🡥</span></h3>
               
               <img className="" src={icontables} alt="tables" />
             </div>
           </div>
-          <div className="col-xl-4 col-md-6">
+          <div
+            onClick={() => navigate("/category/5")}
+            className="col-xl-4 col-md-6"
+          >
             <div className="category-box">
+<<<<<<< Updated upstream
               <h3 className="category-name">storage & <br />organization <span className="arrow">🡥</span></h3>
               
+=======
+              <h3 className="category-name">
+                storage & <br />
+                organization
+              </h3>
+              <p className="arrow">🡵</p>
+>>>>>>> Stashed changes
               <img className="" src={iconstorage} alt="storage" />
             </div>
           </div>
-          <div className="col-xl-4 col-md-6">
+          <div
+            onClick={() => navigate("/category/6")}
+            className="col-xl-4 col-md-6"
+          >
             <div className="category-box">
               <h3 className="category-name">deco<span className="arrow">🡥</span></h3>
               
               <img className="" src={icondeco} alt="storage" />
             </div>
           </div>
-          <div className="col-xl-4 col-md-6">
+          <div
+            onClick={() => navigate("/category/3")}
+            className="col-xl-4 col-md-6"
+          >
             <div className="category-box">
               <h3 className="category-name">lightning<span className="arrow">🡥</span></h3>
               
