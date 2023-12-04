@@ -15,13 +15,13 @@ function Categories() {
       <div className="container">
         <div className="row">
           <div className="col-12 d-flex justify-content-center mt-5">
-            <h3 className="ps-2">find what you need </h3>
+            <h2 className="ps-2">find what you need </h2>
           </div>
         </div>
         <div className="row my-3">
           <div className="col-xl-4 col-md-6 ">
             <div className="category-box">
-              <h3 className="category-name">sofas<span className="arrow">🡥</span></h3>
+              <h3 className="category-name">sofas<i className="bi bi-arrow-up-right arrow"></i></h3>
               
               <img className="" src={iconsofas} alt="sofas" />
             </div>
@@ -31,7 +31,7 @@ function Categories() {
               className="category-box"
               onClick={() => navigate("/category/1")}
             >
-              <h3 className="category-name">chairs <span className="arrow">🡥</span></h3>
+              <h3 className="category-name">chairs<i className="bi bi-arrow-up-right arrow"></i></h3>
               
               <img className="" src={iconchairs} alt="chairs" />
             </div>
@@ -41,7 +41,7 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">tables<span className="arrow">🡥</span></h3>
+              <h3 className="category-name">tables<i className="bi bi-arrow-up-right arrow"></i></h3>
               
               <img className="" src={icontables} alt="tables" />
             </div>
@@ -51,7 +51,7 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">storage & <br />organization <span className="arrow">🡥</span></h3>
+              <h3 className="category-name">storage & <br />organization<i className="bi bi-arrow-up-right arrow"></i></h3>
               
            
               <img className="" src={iconstorage} alt="storage" />
@@ -62,7 +62,7 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">deco<span className="arrow">🡥</span></h3>
+              <h3 className="category-name">deco<i className="bi bi-arrow-up-right arrow"></i></h3>
               
               <img className="" src={icondeco} alt="storage" />
             </div>
@@ -72,7 +72,7 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">lightning<span className="arrow">🡥</span></h3>
+              <h3 className="category-name">lightning<i className="bi bi-arrow-up-right arrow"></i></h3>
               
               <img className="" src={iconlightning} alt="lightning" />
             </div>

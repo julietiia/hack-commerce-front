@@ -116,7 +116,7 @@ function AboutUs() {
 
           <div className="col-xl-6 col-md-12">
             <p className="site-structure-title">
-              This is the site structure of the site.
+              This is the site structure.
             </p>
             <img className="site-structure-img" src={sitestructure} alt="" />
           </div>
