@@ -25,7 +25,7 @@ function Category() {
       setProducts(response.data.products);
     };
     getCategory();
-  }, []);
+  }, [id]);
   // se rompe
 
   return (

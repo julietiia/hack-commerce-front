@@ -19,9 +19,9 @@
 
 .arrow{
   font-size: 2rem;
-  bottom: 71%;
+  /* bottom: 71%;
   left: 83%;
-  position: absolute;
+  position: absolute; */
   color: white;
 }
 
@@ -33,7 +33,9 @@
 
 .category-name {
   font-weight: 600;
-  padding: 2rem 0 0 2rem;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .category-box img {
