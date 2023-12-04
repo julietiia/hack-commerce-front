@@ -75,8 +75,11 @@ function Product() {
                   </option>
                 ))}
               </select>
-              <AddToCartButton onClick={() =>
-                dispatch(addToCart({ product, quantity: selectedQuantity }))} />
+              <AddToCartButton
+                onClick={() =>
+                  dispatch(addToCart({ product, quantity: selectedQuantity }))
+                }
+              />
             </div>
             <div className="container mt-4">
               <div>
@@ -199,12 +202,15 @@ function Product() {
                 </div>
               </div>
             )}
-          </div>
-          <div className="row">
-            <div className="col list-similar-products ">
-              {product && product.id && (
-                <DiscoverSimilarDesigns productId={product.id} category={product.category} />
-              )}
+            <div className="row">
+              <div className="col list-similar-products ">
+                {product && product.id && (
+                  <DiscoverSimilarDesigns
+                    productId={product.id}
+                    category={product.categoryId}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </section>
