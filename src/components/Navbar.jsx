@@ -34,7 +34,7 @@ function NavbarApparat() {
               <div onClick={() => navigate("/")} className="apparat-logo">
                 <img
                   className="apparat-logo-navbar m-0"
-                  src="src/assets/logo/apparat+black-navbar-logo.png"
+                  src="/src/assets/logo/apparat+black-navbar-logo.png"
                   alt="Apparat logo"
                 />
               </div>

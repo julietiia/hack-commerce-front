@@ -20,7 +20,7 @@ function DiscoverSimilarDesigns({ productId }) {
       dispatch(setSimilarProducts(response.data.products));
     };
     getSimilarProducts();
-  }, [productId, dispatch]);
+  }, [productId]);
 
   return (
     <div className="row g-3 mx-auto">

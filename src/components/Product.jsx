@@ -10,6 +10,7 @@ import { setAllProducts } from "../redux/productSlice";
 import axios from "axios";
 import ProductCarousel from "./ProductCarousel";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../redux/cartSlice";
 
 function Product() {
   const [productDetailsOpen, setProductDetailsOpen] = useState(false);
@@ -22,7 +23,7 @@ function Product() {
   );
   const dispatch = useDispatch();
 
-  const [selectedQuantity, setSelectedQuantity] = useState(1);
+  const [selectedQuantity, setSelectedQuantity] = useState(0);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -34,6 +35,10 @@ function Product() {
     };
     getProduct();
   }, []);
+
+  const handleQuantity = (e) => {
+    setSelectedQuantity(Number(e.target.value));
+  };
 
   return (
     <div className="container mt-4">
@@ -59,7 +64,9 @@ function Product() {
                 name="quantity"
                 id="quantity"
                 className="m-2 btn text-dark text-select background-color-select border border-2"
-                onChange={(e) => setSelectedQuantity(Number(e.target.value))}
+                onChange={(e) => {
+                  handleQuantity(e);
+                }}
                 value={selectedQuantity}
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((option) => (
@@ -68,7 +75,7 @@ function Product() {
                   </option>
                 ))}
               </select>
-              <AddToCartButton product={product} quantity={selectedQuantity} />
+              <AddToCartButton onClick={dispatch(addToCart({ product, quantity: selectedQuantity }))} />
             </div>
             <div className="container mt-4">
               <div>
