@@ -44,7 +44,7 @@ function Shop() {
                   alt={product.name}
                 />
                 <div className="shop-product-info d-flex flex-column">
-                  <p className="m-0">{product.name}</p>
+                  <p onClick={() => navigate(`/product/${product.id}`)} className="m-0">{product.name}</p>
                   <p id="price" className="mb-2 fw-light">
                     {product.price} USD
                   </p>
