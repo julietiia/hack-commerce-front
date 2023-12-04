@@ -7,7 +7,6 @@ import HightlightProducts from "../components/HightlightProducts";
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
 
-
 function Shop() {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ function Shop() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
-  
+
       dispatch(setAllProducts(response.data.products));
     };
     getAllProducts();
@@ -26,9 +25,9 @@ function Shop() {
 
   return (
     <>
-      <HightlightProducts  />
+      <HightlightProducts />
       {!allProducts.length ? (
-     <Spinner />
+        <Spinner />
       ) : (
         <div className="container mt-4">
           <div className="row">
@@ -43,10 +42,11 @@ function Shop() {
                 />
                 <div className="shop-product-info d-flex flex-column">
                   <p className="m-0">{product.name}</p>
-                  <p id="price" className="mb-2 fw-light">{product.price}USD</p>
-                  
-                    <AddToCartButton  />
-                  
+                  <p id="price" className="mb-2 fw-light">
+                    {product.price} USD
+                  </p>
+
+                  <AddToCartButton />
                 </div>
               </div>
             ))}
