@@ -173,7 +173,7 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div className="copyright-footer">
+          <div className="copyright-footer text-center">
           © 2023 apparat inc. All rights reserved
 
           </div>
