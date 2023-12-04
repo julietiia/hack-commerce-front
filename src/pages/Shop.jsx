@@ -34,8 +34,9 @@ function Shop() {
         <div className="container mt-4">
           <div className="row">
             {allProducts.map((product) => (
-              <div onClick={() => navigate(`/product/${product.id}`)} className="col-sm-12 col-md-6 col-lg-4 mt-5">
+              <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
                 <img
+                 onClick={() => navigate(`/product/${product.id}`)}
                   className="img-hightlight-product mb-3"
                   src={`${import.meta.env.VITE_IMAGES_URL}products/${
                     product.image[0]
