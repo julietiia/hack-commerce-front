@@ -6,10 +6,12 @@ import { setAllProducts } from "../redux/productSlice";
 import HightlightProducts from "../components/HightlightProducts";
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
+import { useNavigate } from "react-router-dom";
 
 function Shop() {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getAllProducts = async () => {
@@ -34,6 +36,7 @@ function Shop() {
             {allProducts.map((product) => (
               <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
                 <img
+                 onClick={() => navigate(`/product/${product.id}`)}
                   className="img-hightlight-product mb-3"
                   src={`${import.meta.env.VITE_IMAGES_URL}products/${
                     product.image[0]
@@ -41,7 +44,7 @@ function Shop() {
                   alt={product.name}
                 />
                 <div className="shop-product-info d-flex flex-column">
-                  <p className="m-0">{product.name}</p>
+                  <p onClick={() => navigate(`/product/${product.id}`)} className="m-0">{product.name}</p>
                   <p id="price" className="mb-2 fw-light">
                     {product.price} USD
                   </p>

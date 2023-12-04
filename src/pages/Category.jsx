@@ -23,7 +23,8 @@ function Category() {
       });
       setCategory(response.data.category);
       setProducts(response.data.products);
-      // console.log(category.name)
+      console.log(category.name)
+      console.log(category.image)
     };
     getCategory();
   }, [id]);
@@ -79,7 +80,7 @@ function Category() {
                   </Carousel>
                 </div>
               </div>
-              <div className="d-none d-lg-block">
+              <div onClick={() => navigate(`/product/${product.id}`)} className="d-none d-lg-block">
                 <div className="image-container">
                   <img
                     onClick={() => navigate(`/product/${product.id}`)}
@@ -99,7 +100,7 @@ function Category() {
                   />
                 </div>
               </div>
-              <div className="shop-product-info d-flex flex-column mb-4">
+              <div  className="shop-product-info d-flex flex-column mb-4">
                 <p className="m-0">{product.name}</p>
                 <p id="price" className="mb-2 fw-light">
                   {product.price}USD

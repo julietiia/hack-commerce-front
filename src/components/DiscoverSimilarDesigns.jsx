@@ -2,11 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function DiscoverSimilarDesigns({ productId }) {
   const [similarProducts, setSimilarProducts] = useState([]);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getSimilarProducts = async () => {
