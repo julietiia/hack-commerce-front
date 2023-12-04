@@ -195,7 +195,7 @@ function Product() {
           <div className="row">
             <div className="col list-similar-products ">
               {product && product.id && (
-                <DiscoverSimilarDesigns productId={product.id} />
+                <DiscoverSimilarDesigns productId={product.id} category={product.category} />
               )}
             </div>
           </div>
