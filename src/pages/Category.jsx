@@ -24,7 +24,10 @@ function Category() {
       setCategory(response.data.category);
       setProducts(response.data.products);
       console.log(category.name)
+<<<<<<< Updated upstream
       console.log(category.image)
+=======
+>>>>>>> Stashed changes
     };
     getCategory();
   }, [id]);
