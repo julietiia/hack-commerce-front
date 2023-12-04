@@ -19,7 +19,8 @@ function SignUp() {
               <span
                 className="text-decoration-underline"
                 onClick={(event) => handleShowSignIn(event)}
-              >Log in here
+              >
+                Log in here
               </span>
               <OffCanvasSignIn
                 showSignIn={showSignIn}
@@ -44,7 +45,12 @@ function SignUp() {
                     <label htmlFor="lastname" className="form-label">
                       Lastname
                     </label>
-                    <input type="text" className="form-control" id="lastname" placeholder="Lastname"/>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="lastname"
+                      placeholder="Lastname"
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
@@ -65,13 +71,23 @@ function SignUp() {
                     <label htmlFor="address" className="form-label">
                       Address
                     </label>
-                    <input type="text" className="form-control" id="adress" placeholder="Street name, 9999"/>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="adress"
+                      placeholder="Street name, 9999"
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="phone" className="form-label">
                       Phone
                     </label>
-                    <input type="number" className="form-control" id="phone" placeholder="+00 000 00000"/>
+                    <input
+                      type="number"
+                      className="form-control"
+                      id="phone"
+                      placeholder="+00 000 00000"
+                    />
                   </div>
                   <div className="mb-3">
                     <label
@@ -85,6 +101,7 @@ function SignUp() {
                       className="form-control"
                       id="exampleInputPassword1"
                       aria-describedby="passwordHelpBlock"
+                      placeholder="Password"
                     />
                     <div id="passwordHelpBlock" className="form-text">
                       Your password must be 8-20 characters long, contain

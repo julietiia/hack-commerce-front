@@ -38,6 +38,7 @@ const LoginForm = () => {
           type="password"
           className="form-control"
           id="exampleInputPassword1"
+          placeholder='Password'
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
@@ -54,7 +55,7 @@ const LoginForm = () => {
           Check me out
         </label>
       </div> */}
-      <button type="submit" className="col-12 mt-3 btn btn-dark check-out-button rounded">
+      <button type="submit" className="col-12 btn btn-dark check-out-button rounded">
         Login
       </button>
       <div className='mt-3 text-decoration-underline'>

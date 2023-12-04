@@ -5,12 +5,13 @@
   aspect-ratio: 1;
 }
 
-.header{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
+
 .header img {
   position: relative;
   width: 100%;
@@ -23,13 +24,30 @@
   filter: brightness(70%);
 }
 
-.category-title {
+.title-container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-title {
   font-size: 6rem;
   font-weight: 600;
+  margin: 0;
   z-index: 10;
   color: #ffffff;
-  text-shadow: 0 0 40px  rgba(44, 44, 44, 0.333);
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.333);
+}
+
+.category-description {
+  color: white;
+  z-index: 11;
+  font-size: 0.8rem;
+  font-weight: 100;
+  width: 40%;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.333);
 }
 
 .image-container {

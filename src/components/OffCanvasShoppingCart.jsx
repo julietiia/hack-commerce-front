@@ -66,10 +66,10 @@ function OffCanvasShoppingCart({ showCart, handleCloseCart, handleShowCart, ...p
             </div>
             <div className="row">
               <button
-                className="col-12 mt-3 btn check-out-button rounded"
+                className="col-12 mt-3 btn btn-dark check-out-button rounded"
                 onClick={() => navigate("/checkout")}
               >
-                check out
+                Check out
               </button>
             </div>
           </div>
