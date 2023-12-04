@@ -27,6 +27,7 @@
   z-index: 10;
   color: #ffffff;
   transition: 0.5s ease-in-out;
+  text-shadow: 0 0 40px  rgba(44, 44, 44, 0.333);
 }
 
 .about-us-body-text {
@@ -47,7 +48,7 @@
 /*Icons*/
 
 .technologies-bg {
-  background-color: #d64933;
+  background-color: #000000;
   border-radius: 20px;
   margin: 0 0.5rem 2rem 0.5rem;
 }
@@ -63,16 +64,19 @@
 .icon-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 5rem;
+  
 }
 
 .icon-container img {
+  max-width: 5rem;
   transition: 0.5s ease-in-out;
 }
 
 .icon-container img:hover {
   transform: scale(1.1);
+  filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
 }
 
 .technologies-title {

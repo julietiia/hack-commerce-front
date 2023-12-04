@@ -1,40 +1,71 @@
-.img-banner-category-chairs {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
+.img-chair {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 1;
 }
 
-.img-chair {
-    object-fit: cover;
-    width: 100%;
-   border-radius: 20px;
-    aspect-ratio: 1;
-
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .header img {
-    max-width: 100%;
-    height: auto;
+  position: relative;
+  width: 100%;
+  height: 86vh;
+  object-fit: cover;
+  transition: 1s ease-in-out;
+}
+
+.header img:hover {
+  filter: brightness(70%);
+}
+
+.title-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-title {
+  font-size: 6rem;
+  font-weight: 600;
+  margin: 0;
+  z-index: 10;
+  color: #ffffff;
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.333);
+}
+
+.category-description {
+  color: white;
+  z-index: 11;
+  font-size: 0.8rem;
+  font-weight: 100;
+  width: 40%;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.333);
 }
 
 .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .top-img {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    
-
+  position: absolute;
+  opacity: 0;
+  width: 100%;
 }
 
 .top-img:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /*Responsive
@@ -42,22 +73,18 @@
 
       /* Tablet Styles */
 @media (max-width: 768px) {
-    .header img {
-        max-width: 100%;
-    }
-   
-    
-    
+  .header img {
+    max-width: 100%;
+  }
 }
 
 /* Mobile Styles */
 @media (max-width: 576px) {
-    .header img {
-        max-width: 100%;
-    }
-    .img-chair {
-        max-width: 100%;
-        height: auto; 
-      }
-    
+  .header img {
+    max-width: 100%;
+  }
+  .img-chair {
+    max-width: 100%;
+    height: auto;
+  }
 }

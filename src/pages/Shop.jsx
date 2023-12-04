@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { setAllProducts } from "../redux/productSlice";
 import HightlightProducts from "../components/HightlightProducts";
 import AddToCartButton from "../components/AddToCartButton";
+import Spinner from "../components/Spinner";
 
 
 function Shop() {
@@ -27,11 +28,7 @@ function Shop() {
     <>
       <HightlightProducts  />
       {!allProducts.length ? (
-        <div className="d-flex justify-content-center mt-5">
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
+     <Spinner />
       ) : (
         <div className="container mt-4">
           <div className="row">

@@ -10,7 +10,7 @@ function OffCanvasShoppingCart({ showCart, handleCloseCart, handleShowCart, ...p
     <>
       <Offcanvas show={showCart} onHide={handleCloseCart} {...props} placement={"end"}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>your cart</Offcanvas.Title>
+          <Offcanvas.Title>Your cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="container">
@@ -66,10 +66,10 @@ function OffCanvasShoppingCart({ showCart, handleCloseCart, handleShowCart, ...p
             </div>
             <div className="row">
               <button
-                className="col-12 mt-3 btn check-out-button rounded"
+                className="col-12 mt-3 btn btn-dark check-out-button rounded"
                 onClick={() => navigate("/checkout")}
               >
-                check out
+                Check out
               </button>
             </div>
           </div>

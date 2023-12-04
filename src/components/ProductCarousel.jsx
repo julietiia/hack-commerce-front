@@ -18,4 +18,5 @@ function ProductCarousel({ product, imagesUrl }) {
   );
 }
 
+
 export default ProductCarousel;
