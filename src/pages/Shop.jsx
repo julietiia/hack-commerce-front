@@ -6,10 +6,12 @@ import { setAllProducts } from "../redux/productSlice";
 import HightlightProducts from "../components/HightlightProducts";
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
+import { useNavigate } from "react-router-dom";
 
 function Shop() {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getAllProducts = async () => {
@@ -32,7 +34,7 @@ function Shop() {
         <div className="container mt-4">
           <div className="row">
             {allProducts.map((product) => (
-              <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
+              <div onClick={() => navigate(`/product/${product.id}`)} className="col-sm-12 col-md-6 col-lg-4 mt-5">
                 <img
                   className="img-hightlight-product mb-3"
                   src={`${import.meta.env.VITE_IMAGES_URL}products/${
