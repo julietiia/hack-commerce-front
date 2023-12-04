@@ -1,12 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 function DiscoverSimilarDesigns({ productId }) {
   const [similarProducts, setSimilarProducts] = useState([]);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,12 +13,15 @@ function DiscoverSimilarDesigns({ productId }) {
         method: "get",
         url: `${
           import.meta.env.VITE_PORT_URL
-        }/similar-designs/category/${productId}`,
+        }/products/${productId}`,
       });
-      dispatch(setSimilarProducts(response.data.products));
+
+      const filteredProducts = response.data.filter ((product) => product.id !== productId);
+      const shuffledProducts = filteredProducts.sort (() => Math.random() - 0.5);
+      setSimilarProducts(shuffledProducts.SLICE (0, 4));
     };
     getSimilarProducts();
-  }, [productId, dispatch]);
+  }, [productId]);
 
   return (
     <div className="row g-3 mx-auto">
