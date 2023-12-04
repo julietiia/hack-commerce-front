@@ -51,16 +51,9 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-<<<<<<< Updated upstream
               <h3 className="category-name">storage & <br />organization <span className="arrow">🡥</span></h3>
               
-=======
-              <h3 className="category-name">
-                storage & <br />
-                organization
-              </h3>
-              <p className="arrow">🡵</p>
->>>>>>> Stashed changes
+           
               <img className="" src={iconstorage} alt="storage" />
             </div>
           </div>
