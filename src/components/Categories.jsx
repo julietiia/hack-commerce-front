@@ -19,42 +19,49 @@ function Categories() {
           </div>
         </div>
         <div className="row my-3">
-          <div className="col-4">
+          <div className="col-xl-4 col-md-6 ">
             <div className="category-box">
               <h3 className="category-name">sofas</h3>
+              <p className="arrow">🡵</p>
               <img className="" src={iconsofas} alt="sofas" />
+              
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-xl-4 col-md-6">
             <div
               className="category-box"
               onClick={() => navigate("/category/1")}
             >
               <h3 className="category-name">chairs</h3>
+              <p className="arrow">🡵</p>
               <img className="" src={iconchairs} alt="chairs" />
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-xl-4 col-md-6">
             <div className="category-box">
               <h3 className="category-name">tables</h3>
+              <p className="arrow">🡵</p>
               <img className="" src={icontables} alt="tables" />
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-xl-4 col-md-6">
             <div className="category-box">
-              <h3 className="category-name">storage & organization</h3>
+              <h3 className="category-name">storage & <br />organization</h3>
+              <p className="arrow">🡵</p>
               <img className="" src={iconstorage} alt="storage" />
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-xl-4 col-md-6">
             <div className="category-box">
               <h3 className="category-name">deco</h3>
+              <p className="arrow">🡵</p>
               <img className="" src={icondeco} alt="storage" />
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-xl-4 col-md-6">
             <div className="category-box">
               <h3 className="category-name">lightning</h3>
+              <p className="arrow">🡵</p>
               <img className="" src={iconlightning} alt="lightning" />
             </div>
           </div>
