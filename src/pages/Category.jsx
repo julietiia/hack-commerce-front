@@ -24,10 +24,7 @@ function Category() {
       setCategory(response.data.category);
       setProducts(response.data.products);
       console.log(category.name)
-<<<<<<< Updated upstream
-=======
-      console.log(category.description)
->>>>>>> Stashed changes
+      console.log(category.image)
     };
     getCategory();
   }, [id]);
@@ -39,7 +36,9 @@ function Category() {
       {category && (
         <>
         <img
-          src="../src/assets/img/banner-category-sillas.jpg"
+          src={`${
+            import.meta.env.VITE_IMAGES_URL
+          }products/${category.image}`}
           alt="image1"
           className="img-banner-category-chairs"
         />
@@ -56,7 +55,7 @@ function Category() {
         </>
          )}
       </div>
-      {/* <h1>{category.name}</h1> */}
+     
       <div className="container">
         <div className="row mb-5 mt-5">
           {products.map((product) => (
