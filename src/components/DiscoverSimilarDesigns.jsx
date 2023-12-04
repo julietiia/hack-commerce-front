@@ -13,15 +13,17 @@ function DiscoverSimilarDesigns({ productId }) {
         method: "get",
         url: `${
           import.meta.env.VITE_PORT_URL
-        }/products/${productId}`,
+        }/products/`,
       });
 
-      const filteredProducts = response.data.filter ((product) => product.id !== productId);
-      const shuffledProducts = filteredProducts.sort (() => Math.random() - 0.5);
-      setSimilarProducts(shuffledProducts.SLICE (0, 4));
+      const category = response.data.category;
+
+      const filteredProducts = response.data.products.filter((product) => product.category === category)
+      setSimilarProducts(filteredProducts.slice(0,4))
+    
     };
     getSimilarProducts();
-  }, [productId]);
+  }, []);
 
   return (
     <div className="row g-3 mx-auto">

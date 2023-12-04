@@ -9,9 +9,7 @@
     height: 280px;
     color: white;
     display: flex;
-    align-items: center;
-    margin-top: 4rem;
-    
+    align-items: center;    
 }
 
 .subscribe-input{
