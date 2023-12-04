@@ -8,7 +8,7 @@ function ProductCarousel({ product, imagesUrl }) {
       {product.image.map((image, index) => (
         <Carousel.Item key={index}>
           <img
-            className="product-image img-fluid"
+            className="product-image"
             src={`${imagesUrl}products/${image}`}
             alt={`Product Image ${index + 1}`}
           />

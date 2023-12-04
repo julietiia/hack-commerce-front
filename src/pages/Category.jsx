@@ -23,8 +23,6 @@ function Category() {
       });
       setCategory(response.data.category);
       setProducts(response.data.products);
-      console.log(category.name)
-      console.log(category.image)
     };
     getCategory();
   }, [id]);

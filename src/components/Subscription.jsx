@@ -5,7 +5,7 @@ import bell from "../assets/bell.png"
 
 function Subscription() {
   return (
-    <div className="container container-background mb-5">
+    <div className="container container-background mb-4">
       <div className="row">
         <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
           <img className="subscription-img" src={bell} alt="" />

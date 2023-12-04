@@ -12,6 +12,8 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 i:hover {
@@ -44,8 +46,12 @@ body {
 
 .myNavbar.navbar {
   height: 4rem;
-  padding-top: 1rem; /* Puedes ajustar este valor según tus necesidades */
+  padding-top: 1rem 0 1rem 0; /* Puedes ajustar este valor según tus necesidades */
 
+}
+
+.menu-icon{
+  font-size: 2rem;
 }
 
 .higher-z-index {
@@ -55,30 +61,18 @@ body {
 
 .carrito-icon-responsive {
   display: none;
+  padding: 0;
 }
 
 
-/* @media (max-width: 577px) {
- 
+@media (max-width: 992px) {
   .carrito-icon-responsive {
     display: block;
-    font-size: 18px;
+    font-size: 1.2rem;
 
   }
-
- .profile-icon, .lupita {
-    font-size: 1rem;
   
-  }
-
-  .carrito-icon {
-    display: none;
-  }
-
-  .shop-profile {
-    display: flex;
-  }
-} */
+}
 
 @media (max-width: 768px) {
   .parent-navbar-container {
