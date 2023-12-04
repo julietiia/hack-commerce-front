@@ -30,6 +30,7 @@ function NavbarApparat() {
       <div className="parent-navbar-container">
         <Navbar expand="lg" className="myNavbar navbar higher-z-index">
           <Container>
+
             <Navbar.Brand className="" href="/">
               <div onClick={() => navigate("/")} className="apparat-logo">
                 <img
@@ -42,9 +43,10 @@ function NavbarApparat() {
            
             <i
               onClick={(event) => handleShowCart(event)}
-              className="bi bi-cart3 carrito-icon-responsive "
+              className="bi bi-cart3 carrito-icon-responsive"
             ></i>
-            {/* <Navbar.Collapse id="basic-navbar-nav">  */}
+
+            
               <Nav className="me-auto d-sm-none d-lg-flex navbar-custom">
                 <NavLink className="nav-link custom-item" to="/">
                   home
@@ -84,6 +86,7 @@ function NavbarApparat() {
                   </NavLink>
                 </NavDropdown>
               </Nav>
+              
               <div className="shop-profile d-sm-none d-lg-flex">
                 <i className="bi bi-search lupita"></i>
                 <i
@@ -95,10 +98,10 @@ function NavbarApparat() {
                   className="bi bi-person-circle profile-icon"
                 ></i>
               </div>
-            {/* </Navbar.Collapse> */}
+            
             <i
               onClick={handleToggleMenu}
-              className="bi bi-list mobile-menu-icon d-lg-none"
+              className="bi bi-list mobile-menu-icon menu-icon d-lg-none"
             ></i>
             {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
             <OffCanvasNavbarMenu

@@ -4,9 +4,9 @@
   object-fit: cover;
   border-radius: 20px;
   padding: 0;
-  margin: 0.5rem;
+  /* margin: 0.5rem; */
   aspect-ratio:0.7;
-  object-position: 50% 50%;
+  /* object-position: 50% 50%; */
   
 }
 
