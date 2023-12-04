@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import "../components/css/HightlightProducts.css";
 import { useNavigate, Link } from "react-router-dom";
 
-
 function HightlightProducts() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -13,11 +12,10 @@ function HightlightProducts() {
     const getHighlightProducts = async () => {
       const response = await axios({
         method: "get",
-        url: `http://localhost:3000/`,
+        url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
       const highlightProducts = response.data.products.filter(
         (product) => product.highlight === true
-        
       );
 
       setProducts(highlightProducts);
@@ -40,17 +38,17 @@ function HightlightProducts() {
               key={product.id}
             >
               <div className="hightlight-product">
-                <Link to="/product/1">
+                <Link to={`/product/${product.id}`}>
                   <img
                     className="img-hightlight-product mb-3"
-                    src={`${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`}
+                    src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                      product.image[0]
+                    }`}
                     alt={product.name}
                   />
                 </Link>
                 <small>{product.name}</small>
-                <small className="fw-light">{product.price}USD</small>
-                {console.log("Image URL:", `${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`)}
-
+                <small className="fw-light">{product.price} USD</small>
               </div>
             </div>
           ))}

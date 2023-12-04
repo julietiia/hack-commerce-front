@@ -17,7 +17,7 @@ function Home() {
     const getProducts = async () => {
       const response = await axios({
         method: "get",
-        url: `http://localhost:3000/`,
+        url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
 
       setProducts(response.data.products);

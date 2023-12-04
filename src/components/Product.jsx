@@ -2,7 +2,6 @@ import "./css/Product.css";
 import React from "react";
 import AddToCartButton from "./AddToCartButton";
 import Collapse from "react-bootstrap/Collapse";
-import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import { useEffect, useState } from "react";
 import DiscoverSimilarDesigns from "./DiscoverSimilarDesigns";
@@ -12,7 +11,6 @@ import axios from "axios";
 import ProductCarousel from "./ProductCarousel";
 import { useParams } from "react-router-dom";
 
-
 function Product() {
   const [productDetailsOpen, setProductDetailsOpen] = useState(false);
   const [shippingReturnsOpen, setShippingReturnsOpen] = useState(false);
@@ -20,12 +18,11 @@ function Product() {
 
   const { id } = useParams();
   const product = useSelector((state) =>
-    state.products.find((p) => p.id === Number(id)));
+    state.products.find((p) => p.id === Number(id))
+  );
   const dispatch = useDispatch();
 
   const [selectedQuantity, setSelectedQuantity] = useState(1);
-
-
 
   useEffect(() => {
     const getProduct = async () => {
@@ -62,7 +59,7 @@ function Product() {
                 name="quantity"
                 id="quantity"
                 className="m-2 btn text-dark text-select background-color-select border border-2"
-                onChange={(e) => setSelectedQuantity (Number(e.target.value))}
+                onChange={(e) => setSelectedQuantity(Number(e.target.value))}
                 value={selectedQuantity}
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((option) => (
@@ -169,7 +166,9 @@ function Product() {
                     <Card>
                       <Card.Body>
                         <p className="collapse-details-text text-start">
-                        Sorry, we are currently building this functionality. You'll be able to use it soon. Please check back later.
+                          Sorry, we are currently building this functionality.
+                          You'll be able to use it soon. Please check back
+                          later.
                         </p>
                       </Card.Body>
                     </Card>
@@ -182,21 +181,25 @@ function Product() {
       )}
       <div>
         <section>
-          <div className="container similar-products-background my-5">
-            <div className="row">
-              <div className="col">
-                <h2 className="d-flex justify-content-center my-4">
-                  Discover similar designs
-                </h2>
+          <div className="container similar-design-background my-5">
+            {product && product.id && (
+              <div className="row">
+                <div className="col">
+                  <h2 className="d-flex justify-content-center my-4">
+                    Discover similar designs
+                  </h2>
+                </div>
               </div>
+            )}
+          </div>
+          <div className="row">
+            <div className="col list-similar-products ">
+              {product && product.id && (
+                <DiscoverSimilarDesigns productId={product.id} />
+              )}
             </div>
           </div>
         </section>
-        <div className="row">
-          <div className="col list-similar-products">
-            <DiscoverSimilarDesigns />
-          </div>
-        </div>
       </div>
     </div>
   );

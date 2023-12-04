@@ -1,55 +1,48 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-function DiscoverSimilarDesigns() {
+function DiscoverSimilarDesigns({ productId }) {
+  const [similarProducts, setSimilarProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getSimilarProducts = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${
+          import.meta.env.VITE_PORT_URL
+        }/similar-designs/category/${productId}`,
+      });
+      dispatch(setSimilarProducts(response.data.products));
+    };
+    getSimilarProducts();
+  }, [productId, dispatch]);
+
   return (
-    <div className="row g-3 similar-design-background mx-auto">
-      <div className="col-6 col-sm-6 col-md-3 ">
-        <div className="similar-design-product">
-          <img
-            className="image-product-suggested mb-2"
-            src="/src/assets/img/liam_chair.webp"
-            alt=""
-          />
-          <p className="text-similar-design-name">Liam Chair</p>
-          <p className="text-similar-design-price fw-light">999USD</p>
+    <div className="row g-3 mx-auto">
+      {similarProducts.map((product) => (
+        <div key={product.id} className="col-6 col-sm-6 col-md-3 ">
+          <div className="similar-design-product">
+            <Link to={`/product/${product.id}`} className="text-reset text-decoration-none">
+            <img
+              className="image-product-suggested mb-2"
+              src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                product.image[0]
+              }`}
+              alt={product.name}
+             
+            />
+            <p className="text-similar-design-name">{product.name}</p>
+            <p className="text-similar-design-price fw-light">
+              {product.price} USD
+            </p>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div className="col-6 col-sm-6 col-md-3">
-        <div className="similar-design-product">
-          <img
-            className="image-product-suggested mb-2"
-            src="/src/assets/img/floria_chair.webp"
-            alt=""
-          />
-          <p className="text-similar-design-name">Floria Chair</p>
-          <p className="text-similar-design-price fw-light">999USD</p>
-        </div>
-      </div>
-
-      <div className="col-6 col-sm-6 col-md-3 mb-5">
-        <div className="similar-design-product">
-          <img
-            className="image-product-suggested mb-2"
-            src="/src/assets/img/charlotte_chair.png"
-            alt=""
-          />
-          <p className="text-similar-design-name">Charlotte Chair</p>
-          <p className="text-similar-design-price fw-light">999USD</p>
-        </div>
-      </div>
-
-      <div className="col-6 col-sm-6 col-md-3">
-        <div className="similar-design-product">
-          <img
-            className="image-product-suggested mb-2"
-            src="/src/assets/img/wallie_chair.png"
-            alt=""
-          />
-          <p className="text-similar-design-name">Wallie curvature Chair</p>
-          <p className="text-similar-design-price fw-light">999USD</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

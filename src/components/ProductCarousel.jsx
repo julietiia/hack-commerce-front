@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import "./css/Product.css";
 
 function ProductCarousel({ product, imagesUrl }) {
   return (
