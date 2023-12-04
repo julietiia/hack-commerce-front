@@ -11,7 +11,7 @@ import "./components/css/Footer.css";
 import "./components/css/App.css";
 import Category from "./pages/Category.jsx";
 import SignUp from "./pages/signUp.jsx";
-import NotFound from "./components/NotFound.jsx";
+import NotFound from "./pages/NotFound.jsx";
 import Shop from "./pages/Shop.jsx";
 
 function App() {
