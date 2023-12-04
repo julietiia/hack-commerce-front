@@ -75,7 +75,8 @@ function Product() {
                   </option>
                 ))}
               </select>
-              <AddToCartButton onClick={dispatch(addToCart({ product, quantity: selectedQuantity }))} />
+              <AddToCartButton onClick={() =>
+                dispatch(addToCart({ product, quantity: selectedQuantity }))} />
             </div>
             <div className="container mt-4">
               <div>
