@@ -5,6 +5,8 @@ import "../components/css/Category.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
+import AddToCartButton from "../components/AddToCartButton";
+import Spinner from "../components/Spinner";
 
 function Category() {
   const navigate = useNavigate();
@@ -21,15 +23,13 @@ function Category() {
       });
       setCategory(response.data.category);
       setProducts(response.data.products);
-      console.log(category, products);
     };
     getCategory();
-  }, [id]);
+  }, []);
   // se rompe
 
   return (
     <>
-      {/* <p>{category.name}</p> */}
       <div className="header">
         <img
           src="../src/assets/img/banner-category-sillas.jpg"
@@ -46,7 +46,7 @@ function Category() {
           </p>
         </div>
       </div>
-      {/* <div className="container">
+      <div className="container">
         <div className="row mb-5 mt-5">
           {products.map((product) => (
             <div key={product.id} className="col-6 col-lg-3">
@@ -90,13 +90,17 @@ function Category() {
                   />
                 </div>
               </div>
-
-              <small>{product.name}</small>
-              <small>{product.price}USD</small>
+              <div className="shop-product-info d-flex flex-column mb-4">
+                <p className="m-0">{product.name}</p>
+                <p id="price" className="mb-2 fw-light">
+                  {product.price}USD
+                </p>
+                <AddToCartButton />
+              </div>
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
