@@ -25,13 +25,13 @@ function HightlightProducts() {
 
   return (
     <>
-      <div className="container row-hightlight-products">
-        <div className="row   mb-5 ">
-          <h2 className="d-flex justify-content-center mt-3">
-            get inspired with apparat{" "}
+      <div className="container row-hightlight-products mb-5">
+        <div className="row my-3 ">
+          <h2 className="d-flex justify-content-center mt-2">
+            get inspired by apparat
           </h2>
         </div>
-        <div className="row">
+        <div className="row px-3">
           {products.map((product) => (
             <div
               className="col-6 col-sm-6 col-md-3 mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
@@ -47,8 +47,8 @@ function HightlightProducts() {
                     alt={product.name}
                   />
                 </Link>
-                <small>{product.name}</small>
-                <small className="fw-light">{product.price} USD</small>
+                <p className="hl-product-name">{product.name}</p>
+                <p className="hl-product-price">USD{product.price}</p>
               </div>
             </div>
           ))}

@@ -12,7 +12,7 @@ function HightlightProducts() {
     const getHighlightProducts = async () => {
       const response = await axios({
         method: "get",
-        url: `http://localhost:3000/`,
+        url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
       const highlightProducts = response.data.products.filter(
         (product) => product.highlight === true

@@ -76,7 +76,7 @@
 
 .icon-container img:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
+  /* filter: drop-shadow(0 0 1rem rgb(255, 255, 255)); */
 }
 
 .technologies-title {
@@ -131,7 +131,7 @@
 }
 
 .img-team-member:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   filter: none;
   box-shadow: 0 1rem 1rem hsl(0 0% 0% / 20%);
 }

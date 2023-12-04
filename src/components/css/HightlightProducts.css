@@ -18,6 +18,15 @@
     position: relative;
 }
 
+.hl-product-name{
+    margin: 0;
+}
+
+.hl-product-price{
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
 /* Responsive */
 @media (max-width: 768px){
     .row-hightlight-products{
