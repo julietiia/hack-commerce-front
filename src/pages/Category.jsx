@@ -24,6 +24,10 @@ function Category() {
       setCategory(response.data.category);
       setProducts(response.data.products);
       console.log(category.name)
+<<<<<<< Updated upstream
+=======
+      console.log(category.description)
+>>>>>>> Stashed changes
     };
     getCategory();
   }, [id]);
@@ -32,20 +36,25 @@ function Category() {
   return (
     <>
       <div className="header">
+      {category && (
+        <>
         <img
           src="../src/assets/img/banner-category-sillas.jpg"
           alt="image1"
           className="img-banner-category-chairs"
         />
         <div className="title-container">
-          <p className="category-title">chairs</p>
+        
+          <p className="category-title">
+            {category.name}
+            </p>
           <p className="category-description">
-            A chair is a type of seat, typically designed for one person and
-            consisting of one or more legs, a flat or slightly angled seat and a
-            back-rest. They may be made of wood, metal, or synthetic materials,
-            and may be padded or upholstered in various colors and fabrics.​
+            {category.description}
           </p>
+         
         </div>
+        </>
+         )}
       </div>
       {/* <h1>{category.name}</h1> */}
       <div className="container">
