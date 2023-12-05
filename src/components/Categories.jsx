@@ -20,9 +20,11 @@ function Categories() {
         </div>
         <div className="row my-3">
           <div className="col-xl-4 col-md-6 ">
-            <div className="category-box">
-              <h3 className="category-name">sofas<i className="bi bi-arrow-up-right arrow"></i></h3>
+            <div className="category-box"   
+            onClick={() => navigate("/category/2")}>
               
+              <h3 className="category-name">sofas<i className="bi bi-arrow-up-right arrow"></i></h3>
+            
               <img className="" src={iconsofas} alt="sofas" />
             </div>
           </div>
