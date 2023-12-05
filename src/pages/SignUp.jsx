@@ -1,22 +1,36 @@
 import React from "react";
 import "../components/css/SignUp.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import OffCanvasSignIn from "../components/OffCanvasSignIn";
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function SignUp() {
-  
+const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
   const handleShowSignIn = (event) => setShowSignIn(true);
   const [showSignIn, setShowSignIn] = useState(false);
   const handleCloseSignIn = (event) => setShowSignIn(false);
+
+  const onSubmit = async (data) => {
+    console.log(data)
+    await axios({
+      method: "post",
+    url:  `${import.meta.env.VITE_PORT_URL}/usuarios/`,
+    data: data,
+    headers: { "Content-Type": "application/json" }
+});
+    navigate("/login");
+  };
+
   return (
     <>
       <div className="container">
@@ -51,7 +65,6 @@ function SignUp() {
                       </label>
                       <input
                         type="text"
-                        value={firstname}
                         className="form-control"
                         id="firstname"
                         placeholder="Firstname"
@@ -64,7 +77,6 @@ function SignUp() {
                       </label>
                       <input
                         type="text"
-                        value={lastname}
                         className="form-control"
                         id="lastname"
                         placeholder="Lastname"
@@ -80,7 +92,6 @@ function SignUp() {
                       </label>
                       <input
                         type="email"
-                        value={email}
                         className="form-control"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
@@ -97,7 +108,6 @@ function SignUp() {
                       </label>
                       <input
                         type="text"
-                        value={address}
                         className="form-control"
                         id="address"
                         placeholder="Street name, 9999"
@@ -110,7 +120,6 @@ function SignUp() {
                       </label>
                       <input
                         type="number"
-                        value={phone}
                         className="form-control"
                         id="phone"
                         placeholder="+00 000 00000"
@@ -126,12 +135,11 @@ function SignUp() {
                       </label>
                       <input
                         type="password"
-                        value={password}
                         className="form-control"
                         id="exampleInputPassword1"
                         aria-describedby="passwordHelpBlock"
                         placeholder="Password"
-                        {...register("password")}
+                        {...register("password", { required: true })}
                       />
                       <div id="passwordHelpBlock" className="form-text">
                         Your password must be 8-20 characters long, contain
