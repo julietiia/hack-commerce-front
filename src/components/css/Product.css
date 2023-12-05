@@ -15,7 +15,8 @@
 }
 
 .product-features {
-  font-size: 11px;
+  font-size: 0.8rem;
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -28,7 +29,8 @@
 }
 
 .product-description {
-  font-size: 12px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .collapse-details-text {

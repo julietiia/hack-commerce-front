@@ -52,6 +52,11 @@ body {
 
 }
 
+.custom-item{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .menu-icon{
   font-size: 2rem;
 }

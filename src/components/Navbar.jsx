@@ -55,33 +55,33 @@ function NavbarApparat() {
                   shop
                 </NavLink>
                 <NavLink
-                  className="nav-link custom-item text-black"
+                  className="nav-link custom-item"
                   to="/about-this-project"
                 >
                   about this project
                 </NavLink>
 
                 <NavDropdown
-                  className="text-black"
+                  className="custom-item"
                   title="categories"
                   id="basic-nav-dropdown"
                 >
-                  <NavLink className="dropdown-item" to="/category/1">
+                  <NavLink className="dropdown-item custom-item" to="/category/1">
                     chairs
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/2">
+                  <NavLink className="dropdown-item custom-item" to="/category/2">
                     sofas
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/4">
+                  <NavLink className="dropdown-item custom-item" to="/category/4">
                     tables
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/3">
+                  <NavLink className="dropdown-item custom-item" to="/category/3">
                     lightning
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/5">
-                    storage&organization
+                  <NavLink className="dropdown-item custom-item" to="/category/5">
+                    storage & organization
                   </NavLink>
-                  <NavLink className="dropdown-item" to="/category/6">
+                  <NavLink className="dropdown-item custom-item" to="/category/6">
                     deco
                   </NavLink>
                 </NavDropdown>

@@ -55,7 +55,7 @@ function Product() {
             <div className="text-start mt-4">
               <h3 className="text-start">{product.name}</h3>
               <p className="text-start">{product.price} USD</p>
-              <p className="text-start mt-4 product-description">
+              <p className="text-start mt-2 product-description">
                 {product.description}
               </p>
             </div>
@@ -77,16 +77,16 @@ function Product() {
               </select>
               <AddToCartButton onClick={() =>dispatch(addToCart({ product, quantity: selectedQuantity }))} />
             </div>
-            <div className="container mt-4">
+            <div className="container mt-4 p-0">
               <div>
                 <p
-                  className="product-features text-start mt-4 fw-bold"
+                  className="product-features text-start mt-3"
                   role="button"
                   onClick={() => setProductDetailsOpen(!productDetailsOpen)}
                   aria-controls="productDetails"
                   aria-expanded={productDetailsOpen}
                 >
-                  Product details
+                  + Product details
                 </p>
                 <Collapse in={productDetailsOpen}>
                   <div id="productDetails">
@@ -113,13 +113,13 @@ function Product() {
                 </Collapse>
 
                 <p
-                  className="product-features text-start fw-bold"
+                  className="product-features text-start"
                   role="button"
                   onClick={() => setShippingReturnsOpen(!shippingReturnsOpen)}
                   aria-controls="shippingReturns"
                   aria-expanded={shippingReturnsOpen}
                 >
-                  Shipping + Returns
+                  + Shipping + Returns
                 </p>
                 <Collapse in={shippingReturnsOpen}>
                   <div id="shippingReturns">
@@ -160,13 +160,13 @@ function Product() {
                 </Collapse>
 
                 <p
-                  className="product-features text-start fw-bold"
+                  className="product-features text-start"
                   role="button"
                   onClick={() => setStockAvailableOpen(!stockAvailableOpen)}
                   aria-controls="stockAvailable"
                   aria-expanded={stockAvailableOpen}
                 >
-                  Stock available in-store
+                  + Stock available in-store
                 </p>
                 <Collapse in={stockAvailableOpen}>
                   <div id="stockAvailable">

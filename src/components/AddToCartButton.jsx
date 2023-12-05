@@ -13,7 +13,7 @@ const AddToCartButton = ({onClick}) => {
       onClick={onClick}
       className="addtocart-button rounded btn btn-dark text-select"
     >
-      add to cart
+      Add to cart
     </button>
   );
 };
