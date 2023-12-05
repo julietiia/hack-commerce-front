@@ -18,10 +18,25 @@ const cartSlice = createSlice({
     removeFromCart(state, action) {
       return state;
     },
+incrementQuantity(state, action){
+const productId = action.payload
+const  productIndex = state.findIndex((item)=> item.product.id === productId);
 
+if (productIndex !== -1) {
+  state[productIndex].quantity +=1;
+}
+},
+decrementQuantity(state, action){
+  const productId = action.payload
+  const  productIndex = state.findIndex((item)=> item.product.id === productId);
+  
+  if (productIndex !== -1 && state[productIndex].quantity > 0) {
+    state[productIndex].quantity -= 1;
+  }
+}
   },
 });
 
 const { actions, reducer } = cartSlice;
-export const { addToCart, removeFromCart } = actions;
+export const { addToCart, removeFromCart, incrementQuantity, decrementQuantity } = actions;
 export default reducer;

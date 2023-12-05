@@ -23,7 +23,7 @@ function Product() {
   );
   const dispatch = useDispatch();
 
-  const [selectedQuantity, setSelectedQuantity] = useState(0);
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -75,11 +75,7 @@ function Product() {
                   </option>
                 ))}
               </select>
-              <AddToCartButton
-                onClick={() =>
-                  dispatch(addToCart({ product, quantity: selectedQuantity }))
-                }
-              />
+              <AddToCartButton onClick={() =>dispatch(addToCart({ product, quantity: selectedQuantity }))} />
             </div>
             <div className="container mt-4">
               <div>
