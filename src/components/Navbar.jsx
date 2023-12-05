@@ -10,14 +10,18 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import OffCanvasSignIn from "./OffCanvasSignIn";
 import "./css/App.css";
 import OffCanvasNavbarMenu from "./OffCanvasNavbarMenu";
+import { toggleShowModal } from "../redux/pageSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function NavbarApparat() {
-  const [showCart, setShowCart] = useState(false);
+  const dispatch = useDispatch();
+  const showCart = useSelector((state) => state.page.showCart)
   const [showSignIn, setShowSignIn] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const handleShowCart = (event) => setShowCart(true);
+  const handleShowCart = (event) => dispatch(toggleShowModal());
   const handleShowSignIn = (event) => setShowSignIn(true);
-  const handleCloseCart = (event) => setShowCart(false);
+  const handleCloseCart = (event) => dispatch(toggleShowModal());
   const handleCloseSignIn = (event) => setShowSignIn(false);
   const [showMenu, setShowMenu] = useState(false);
   const handleToggleMenu = () => setShowMenu(!showMenu);
@@ -42,7 +46,7 @@ function NavbarApparat() {
             </Navbar.Brand>
            
             <i
-              onClick={(event) => handleShowCart(event)}
+              onClick={(event) => dispatch(toggleShowCart())}
               className="bi bi-cart3 carrito-icon-responsive"
             ></i>
 
@@ -116,7 +120,7 @@ function NavbarApparat() {
 
             <OffCanvasShoppingCart
               showCart={showCart}
-              handleCloseCart={() => setShowCart(false)}
+              handleCloseCart={() => dispatch(toggleShowModal())}
             />
             <OffCanvasSignIn
               showSignIn={showSignIn}
