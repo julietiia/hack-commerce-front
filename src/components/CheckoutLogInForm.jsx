@@ -1,22 +1,44 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import { login } from '../redux/userSlice';
+
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [checked, setChecked] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form submitted:', {
-      email,
-      password,
-      checked,
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const response = await axios({
+      method: "POST",
+      url: "http://localhost:3000/tokens",
+      data: {
+        email,
+        password,
+      },
     });
+    dispatch(login(response.data));
+    console.log(response.data)
+    navigate("/");
   };
 
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log('Form submitted:', {
+  //     email,
+  //     password,
+  //     checked,
+  //   });
+  // };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleLogin}>
       <div className="mb-3">
         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
         <input

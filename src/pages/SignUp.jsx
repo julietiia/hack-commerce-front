@@ -24,9 +24,9 @@ const navigate = useNavigate();
     console.log(data)
     await axios({
       method: "post",
-    url:  `${import.meta.env.VITE_PORT_URL}/usuarios/`,
+    url:  `${import.meta.env.VITE_PORT_URL}/usuarios`,
     data: data,
-    headers: { "Content-Type": "application/json" }
+    
 });
     navigate("/login");
   };
