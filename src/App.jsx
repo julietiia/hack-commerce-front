@@ -10,11 +10,18 @@ import Admin from "./pages/Admin";
 import "./components/css/Footer.css";
 import "./components/css/App.css";
 import Category from "./pages/Category.jsx";
-import SignUp from "./pages/signUp.jsx";
+import SignUp from "./pages/SignUp.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Shop from "./pages/Shop.jsx";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <NavbarApparat />

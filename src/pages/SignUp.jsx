@@ -3,8 +3,17 @@ import "../components/css/SignUp.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import OffCanvasSignIn from "../components/OffCanvasSignIn";
+import { useForm } from "react-hook-form"
 
 function SignUp() {
+  
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
   const handleShowSignIn = (event) => setShowSignIn(true);
   const [showSignIn, setShowSignIn] = useState(false);
   const handleCloseSignIn = (event) => setShowSignIn(false);
@@ -35,16 +44,18 @@ function SignUp() {
               </div>
               <div className="row d-flex justify-content-center p-3">
                 <div className="col-md-8 p-4">
-                  <form>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                       <label htmlFor="firstname" className="form-label">
                         Firstname
                       </label>
                       <input
                         type="text"
+                        value={firstname}
                         className="form-control"
                         id="firstname"
                         placeholder="Firstname"
+                        {...register("firstname")}
                       />
                     </div>
                     <div className="mb-3">
@@ -53,9 +64,11 @@ function SignUp() {
                       </label>
                       <input
                         type="text"
+                        value={lastname}
                         className="form-control"
                         id="lastname"
                         placeholder="Lastname"
+                        {...register("lastname")}
                       />
                     </div>
                     <div className="mb-3">
@@ -67,10 +80,12 @@ function SignUp() {
                       </label>
                       <input
                         type="email"
+                        value={email}
                         className="form-control"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         placeholder="user@mail.com"
+                        {...register("email")}
                       />
                       <div id="emailHelp" className="form-text">
                         We'll never share your email with anyone else.
@@ -82,9 +97,11 @@ function SignUp() {
                       </label>
                       <input
                         type="text"
+                        value={address}
                         className="form-control"
-                        id="adress"
+                        id="address"
                         placeholder="Street name, 9999"
+                        {...register("address")}
                       />
                     </div>
                     <div className="mb-3">
@@ -93,9 +110,11 @@ function SignUp() {
                       </label>
                       <input
                         type="number"
+                        value={phone}
                         className="form-control"
                         id="phone"
                         placeholder="+00 000 00000"
+                        {...register("phone")}
                       />
                     </div>
                     <div className="mb-3">
@@ -107,10 +126,12 @@ function SignUp() {
                       </label>
                       <input
                         type="password"
+                        value={password}
                         className="form-control"
                         id="exampleInputPassword1"
                         aria-describedby="passwordHelpBlock"
                         placeholder="Password"
+                        {...register("password")}
                       />
                       <div id="passwordHelpBlock" className="form-text">
                         Your password must be 8-20 characters long, contain
