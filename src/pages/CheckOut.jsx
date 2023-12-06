@@ -8,8 +8,11 @@ import "../components/css/checkout.css";
 import CheckoutLoginForm from "../components/CheckoutLogInForm";
 import botonMercadoPago from "../assets/buttons/botonMercadoPago.png";
 import visaNet from "../assets/buttons/visaNet.png";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 function CheckOut() {
+  const cartProducts = useSelector((state) => state.cart);
+  console.log(cartProducts)
   return (
     <>
       <div className="container">
@@ -27,149 +30,34 @@ function CheckOut() {
               <Breadcrumb />
 
               <div className="shopping-list">
-                <div className="checkout-product ">
-                  <div className="d-flex">
-                    <div className="position-relative">
-                      <img
-                        className="checkout-product-image"
-                        src={soapdispenser}
-                        alt=""
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
-                    </div>
+                {cartProducts.map((cart) => (
+                  <div className="checkout-product" key={cart.product.id}>
+                    <div className="d-flex">
+                      <div className="position-relative">
+                        <img
+                          className="checkout-product-image"
+                          src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                            cart.product.image[1]
+                          }`}
+                          alt={cart.product.name}
+                        />
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        {cart.quantity}
+                        </span>
+                      </div>
 
-                    <div className="checkout-product-details ps-2">
-                      <p className="checkout-product-name">
-                        Ansel Glass Table Lamp
-                      </p>
-                      <p className="checkout-product-ref">Ref.53494878</p>
+                      <div className="checkout-product-details ps-2">
+                        <p className="checkout-product-name">
+                        {cart.product.name}
+                        </p>
+                        <p className="checkout-product-ref">Ref.{cart.product.id}</p>
+                      </div>
+                    </div>
+                    <div className="">
+                      <p className="checkout-product-price">{cart.product.price}</p>
                     </div>
                   </div>
-                  <div className="">
-                    <p className="checkout-product-price">999USD</p>
-                  </div>
-                </div>
-
-                <div className="checkout-product ">
-                  <div className="d-flex">
-                    <div className="position-relative">
-                      <img
-                        className="checkout-product-image"
-                        src={tables}
-                        alt=""
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
-                    </div>
-                    <div className="checkout-product-details ps-2">
-                      <p className="checkout-product-name">
-                        Metallic Nylon Comforter
-                      </p>
-                      <p className="checkout-product-ref">Ref.53494878</p>
-                    </div>
-                  </div>
-                  <div className="">
-                    <p className="checkout-product-price">999USD</p>
-                  </div>
-                </div>
-
-                <div className="checkout-product ">
-                  <div className="d-flex">
-                    <div className="position-relative">
-                      <img
-                        className="checkout-product-image"
-                        src={chair}
-                        alt=""
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
-                    </div>
-                    <div className="checkout-product-details ps-2">
-                      <p className="checkout-product-name">Bubble Chair</p>
-                      <p className="checkout-product-ref">Ref.53494878</p>
-                    </div>
-                  </div>
-                  <div className="">
-                    <p className="checkout-product-price">999USD</p>
-                  </div>
-                </div>
-
-                <div className="checkout-product ">
-                  <div className="d-flex">
-                    <div className="position-relative">
-                      <img
-                        className="checkout-product-image"
-                        src={soapdispenser}
-                        alt=""
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
-                    </div>
-
-                    <div className="checkout-product-details ps-2">
-                      <p className="checkout-product-name">
-                        Ansel Glass Table Lamp
-                      </p>
-                      <p className="checkout-product-ref">Ref.53494878</p>
-                    </div>
-                  </div>
-                  <div className="">
-                    <p className="checkout-product-price">999USD</p>
-                  </div>
-                </div>
-
-                <div className="checkout-product ">
-                  <div className="d-flex">
-                    <div className="position-relative">
-                      <img
-                        className="checkout-product-image"
-                        src={tables}
-                        alt=""
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
-                    </div>
-                    <div className="checkout-product-details ps-2">
-                      <p className="checkout-product-name">
-                        Metallic Nylon Comforter
-                      </p>
-                      <p className="checkout-product-ref">Ref.53494878</p>
-                    </div>
-                  </div>
-                  <div className="">
-                    <p className="checkout-product-price">999USD</p>
-                  </div>
-                </div>
-
-                <div className="checkout-product ">
-                  <div className="d-flex">
-                    <div className="position-relative">
-                      <img
-                        className="checkout-product-image"
-                        src={chair}
-                        alt=""
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
-                    </div>
-                    <div className="checkout-product-details ps-2">
-                      <p className="checkout-product-name">Bubble Chair</p>
-                      <p className="checkout-product-ref">Ref.53494878</p>
-                    </div>
-                  </div>
-                  <div className="">
-                    <p className="checkout-product-price">999USD</p>
-                  </div>
-                </div>
-
-                
+                ))}
 
                 <hr />
                 <div className="subtotal ps-2 pe-4">
@@ -182,7 +70,7 @@ function CheckOut() {
                 </div>
               </div>
               <button className="checkout-button rounded btn btn-dark text-select">
-                continue to shipping
+                Continue to shipping
               </button>
             </div>
           </div>
