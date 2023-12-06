@@ -12,6 +12,7 @@ import "./css/App.css";
 import OffCanvasNavbarMenu from "./OffCanvasNavbarMenu";
 import { toggleShowModal } from "../redux/pageSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
 
 
 function NavbarApparat() {
@@ -26,6 +27,7 @@ function NavbarApparat() {
   const [showMenu, setShowMenu] = useState(false);
   const handleToggleMenu = () => setShowMenu(!showMenu);
   const handleCloseMenu = () => setShowMenu(false);
+  const cartQuantity = useSelector((state) => state.cart.length);
 
   const navigate = useNavigate();
 
@@ -96,7 +98,7 @@ function NavbarApparat() {
                 <i
                   onClick={(event) => handleShowCart(event)}
                   className="bi bi-cart3 carrito-icon"
-                ></i>
+                ></i> <span style={{ marginLeft: "5px" }}>{cartQuantity}</span>
                 <i
                   onClick={(event) => handleShowSignIn(event)}
                   className="bi bi-person-circle profile-icon"
