@@ -23,7 +23,7 @@ function Product() {
   );
   const dispatch = useDispatch();
 
-  const [selectedQuantity, setSelectedQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -36,9 +36,15 @@ function Product() {
     getProduct();
   }, []);
 
-  const handleQuantity = (e) => {
-    setSelectedQuantity(Number(e.target.value));
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
   };
+
+  const handleDecrement = () => {
+    if (quantity > 1 ){
+      setQuantity(quantity - 1)
+    }
+  }
 
   return (
     <div className="container mt-4">
@@ -60,22 +66,24 @@ function Product() {
               </p>
             </div>
             <div className="qtty-option">
-              <select
-                name="quantity"
-                id="quantity"
-                className="m-2 btn text-dark text-select background-color-select border border-2"
-                onChange={(e) => {
-                  handleQuantity(e);
-                }}
-                value={selectedQuantity}
+              <button
+                className="btn btn-outline-dark qtty-btn"
+                onClick={handleDecrement}
               >
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-              <AddToCartButton onClick={() =>dispatch(addToCart({ product, quantity: selectedQuantity }))} />
+                -
+              </button>
+              <span className="m-2">{quantity}</span>
+              <button
+                className="btn btn-outline-dark qtty-btn"
+                onClick={handleIncrement}
+              >
+                +
+              </button>
+              <AddToCartButton 
+                product={product} quantity={quantity}
+                className="cart-btn"
+                
+              />
             </div>
             <div className="container mt-4 p-0">
               <div>

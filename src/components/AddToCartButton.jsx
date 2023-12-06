@@ -2,15 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 
-const AddToCartButton = ({onClick}) => {
-  // const dispatch = useDispatch();
+const AddToCartButton = ({ product, quantity }) => {
+  const dispatch = useDispatch();
 
-  // const handleAddToCart = () => {
-  //   dispatch(addToCart({ product, quantity }));
-  
+  const handleAddToCart = () => {
+    dispatch(addToCart({ product, quantity }));
+  };
+
   return (
     <button
-      onClick={onClick}
+      onClick={handleAddToCart}
       className="addtocart-button rounded btn btn-dark text-select"
     >
       Add to cart
@@ -18,5 +19,5 @@ const AddToCartButton = ({onClick}) => {
   );
 };
 
-
 export default AddToCartButton;
+
