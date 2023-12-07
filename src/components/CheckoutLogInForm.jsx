@@ -28,14 +28,6 @@ const LoginForm = () => {
     navigate("/");
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log('Form submitted:', {
-  //     email,
-  //     password,
-  //     checked,
-  //   });
-  // };
 
   return (
     <form onSubmit={handleLogin}>
@@ -65,18 +57,7 @@ const LoginForm = () => {
           onChange={(event) => setPassword(event.target.value)}
         />
       </div>
-      {/* <div className="mb-3 form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="exampleCheck1"
-          checked={checked}
-          onChange={(event) => setChecked(event.target.checked)}
-        />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          Check me out
-        </label>
-      </div> */}
+     
       <button type="submit" className="col-12 btn btn-dark check-out-button rounded">
         Login
       </button>

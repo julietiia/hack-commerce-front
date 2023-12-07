@@ -12,7 +12,8 @@ import "./css/App.css";
 import OffCanvasNavbarMenu from "./OffCanvasNavbarMenu";
 import { toggleShowModal } from "../redux/pageSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
+
+
 
 
 function NavbarApparat() {
@@ -28,8 +29,13 @@ function NavbarApparat() {
   const handleToggleMenu = () => setShowMenu(!showMenu);
   const handleCloseMenu = () => setShowMenu(false);
   const cartQuantity = useSelector((state) => state.cart.length);
+  const user = useSelector((state) => state.user.firstname)
+ 
 
   const navigate = useNavigate();
+
+ 
+  
 
   return (
     <>
@@ -55,7 +61,7 @@ function NavbarApparat() {
             
               <Nav className="me-auto d-sm-none d-lg-flex navbar-custom">
                 <NavLink className="nav-link custom-item" to="/">
-                  home
+                  Home
                 </NavLink>
                 <NavLink className="nav-link custom-item" to="/shop">
                   shop
@@ -103,6 +109,9 @@ function NavbarApparat() {
                   onClick={(event) => handleShowSignIn(event)}
                   className="bi bi-person-circle profile-icon"
                 ></i>
+                {user && <span style={{ marginLeft: "5px", fontSize: "15px" }} className="user-firstname">{user}</span>}
+               
+                
               </div>
             
             <i
