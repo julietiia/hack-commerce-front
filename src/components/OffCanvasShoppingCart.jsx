@@ -21,7 +21,7 @@ function OffCanvasShoppingCart({
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cart);
 
-  const [quantity, setQuantity] = useState();
+  const [quantity, setQuantity] = useState(1);
   const [productQuantity, setProductQuantity] = useState(
     cartProducts.reduce((quantity, cart) => {
       quantity[cart.product.id] = cart.quantity;
