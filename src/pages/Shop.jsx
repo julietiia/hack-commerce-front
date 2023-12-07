@@ -28,11 +28,14 @@ function Shop() {
 
   return (
     <>
-      <HightlightProducts />
+    <div className="mt-5">
+    <HightlightProducts />
+    </div>
+      
       {!allProducts.length ? (
         <Spinner />
       ) : (
-        <div className="container mt-4">
+        <div className="container mt-2">
           <div className="row">
             {allProducts.map((product) => (
               <div key={product.id} className="col-sm-12 col-md-6 col-lg-4 mt-5">

@@ -38,7 +38,10 @@ function Home() {
         <img src="/src/assets/banner.png" alt="banner" />
       </section> */}
       <Categories />
+      <div className="mt-5">
       <HightlightProducts/>
+      </div>
+      
       <Subscription/>
     </>
   );

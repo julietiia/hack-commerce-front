@@ -1,10 +1,15 @@
-.newsletter-paragraph{
-    font-size: 1rem;
+
+.newsletter-tittle{
+    color: black;
 }
 
-.container-background{
-    background-color: 
-    #2C6E49;
+.newsletter-paragraph{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.612);
+}
+
+.subscription-background{
+    background-color: #f6f6f6;
     border-radius: 20px;
     height: 280px;
     color: white;
