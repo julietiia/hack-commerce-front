@@ -7,6 +7,7 @@ import HightlightProducts from "../components/HightlightProducts";
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../redux/cartSlice";
 
 function Shop() {
   const allProducts = useSelector((state) => state.products);
@@ -34,7 +35,7 @@ function Shop() {
         <div className="container mt-4">
           <div className="row">
             {allProducts.map((product) => (
-              <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
+              <div key={product.id} className="col-sm-12 col-md-6 col-lg-4 mt-5">
                 <img
                  onClick={() => navigate(`/product/${product.id}`)}
                   className="img-hightlight-product mb-3"
@@ -49,7 +50,7 @@ function Shop() {
                     {product.price} USD
                   </p>
 
-                  <AddToCartButton />
+                  <AddToCartButton product={product} />
                 </div>
               </div>
             ))}

@@ -17,6 +17,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Toastify from "./components/Toastify";
 
+import CreatedOrder from "./pages/CreatedOrder.jsx";
 
 function App() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function App() {
           <Route path="/category/:id" element={<Category />} />
           <Route path="/about-this-project" element={<AboutUs />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/created-order" element={<CreatedOrder />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

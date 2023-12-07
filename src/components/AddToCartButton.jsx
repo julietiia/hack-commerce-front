@@ -4,10 +4,12 @@ import { addToCart } from "../redux/cartSlice";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// import { toggleShowModal } from "../redux/pageSlice";
+// import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const AddToCartButton = ({ product, quantity }) => {
   const dispatch = useDispatch();
-
+  // const showCart = useSelector((state) => state.page.showCart)
   const handleAddToCart = () => {
     dispatch(addToCart({ product, quantity }));
 
@@ -35,6 +37,7 @@ const AddToCartButton = ({ product, quantity }) => {
         draggable: true,
       }
     );
+    // dispatch(toggleShowModal()); 
   };
 
   return (

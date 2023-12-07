@@ -4,7 +4,11 @@ import "./css/ShoppingCart.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useState } from "react";
-import { incrementQuantity, decrementQuantity } from "../redux/cartSlice";
+import {
+  incrementQuantity,
+  decrementQuantity,
+  removeFromCart,
+} from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 
 function OffCanvasShoppingCart({
@@ -16,6 +20,7 @@ function OffCanvasShoppingCart({
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cart);
+  // const [productToRemove, setProductToRemove] = useState();
   const [quantity, setQuantity] = useState();
   const [productQuantity, setProductQuantity] = useState(
     cartProducts.reduce((quantity, cart) => {
@@ -84,7 +89,12 @@ function OffCanvasShoppingCart({
                   <div className="col-3 price-n-remove">
                     <p className="cart-unit-price">USD {cart.product.price}</p>
                     <div className="remove-from-cart">
-                      <i className="bi bi-trash3 btn btn-outline-dark"></i>
+                      <i
+                        onClick={() =>
+                          dispatch(removeFromCart(cart.product.id))
+                        }
+                        className="bi bi-trash3 btn btn-outline-dark"
+                      ></i>
                     </div>
                   </div>
                 </div>
