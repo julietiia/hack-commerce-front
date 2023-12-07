@@ -103,7 +103,7 @@ function Category() {
                 <p id="price" className="mb-2 fw-light">
                   {product.price}USD
                 </p>
-                <AddToCartButton />
+                <AddToCartButton product={product}/>
               </div>
             </div>
           ))}

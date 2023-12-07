@@ -13,17 +13,15 @@ const AddToCartButton = ({ product, quantity }) => {
   const handleAddToCart = () => {
     dispatch(addToCart({ product, quantity }));
 
-    
-
-    toast.success(
+    toast.dark(
       <div className="custom-toast">
         <img
-          src={product.image[0]}
+          src={`${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`}
           alt={product.name}
-          className="toast-image"
+          className="toast-image toast-img"
         />
         <div className="toast-content">
-          <p>
+          <p className="mt-3">
             {quantity} {product.name} added to the cart!
           </p>
         </div>
@@ -31,13 +29,13 @@ const AddToCartButton = ({ product, quantity }) => {
       {
         position: "bottom-right",
         autoClose: 3000,
-        hideProgressBar: false,
+        hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
       }
     );
-    // dispatch(toggleShowModal()); 
+    // dispatch(toggleShowModal());
   };
 
   return (
