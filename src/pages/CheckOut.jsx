@@ -9,10 +9,24 @@ import CheckoutLoginForm from "../components/CheckoutLogInForm";
 import botonMercadoPago from "../assets/buttons/botonMercadoPago.png";
 import visaNet from "../assets/buttons/visaNet.png";
 import { useSelector } from "react-redux/es/hooks/useSelector";
+import axios from "axios";
 
 function CheckOut() {
+  const userToken = useSelector((state) => state.user);
   const cartProducts = useSelector((state) => state.cart);
-  console.log(cartProducts)
+
+  const sendOrder = async () => {
+     await axios({
+      method: "post",
+      url: `${import.meta.env.VITE_PORT_URL}/orders`,
+      data: cartProducts,
+      headers: {
+        Authorization: `Bearer ${userToken.token}`,
+      }
+    });
+  
+  };
+
   return (
     <>
       <div className="container">
@@ -42,19 +56,23 @@ function CheckOut() {
                           alt={cart.product.name}
                         />
                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        {cart.quantity}
+                          {cart.quantity}
                         </span>
                       </div>
 
                       <div className="checkout-product-details ps-2">
                         <p className="checkout-product-name">
-                        {cart.product.name}
+                          {cart.product.name}
                         </p>
-                        <p className="checkout-product-ref">Ref.{cart.product.id}</p>
+                        <p className="checkout-product-ref">
+                          Ref.{cart.product.id}
+                        </p>
                       </div>
                     </div>
                     <div className="">
-                      <p className="checkout-product-price">{cart.product.price}</p>
+                      <p className="checkout-product-price">
+                        {cart.product.price}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -69,7 +87,10 @@ function CheckOut() {
                   <p className="checkout-total">999USD</p>
                 </div>
               </div>
-              <button className="checkout-button rounded btn btn-dark text-select">
+              <button
+                onClick={sendOrder}
+                className="checkout-button rounded btn btn-dark text-select"
+              >
                 Continue to shipping
               </button>
             </div>
