@@ -11,7 +11,7 @@ const AddToCartButton = ({ product, quantity }) => {
   const dispatch = useDispatch();
   // const showCart = useSelector((state) => state.page.showCart)
   const handleAddToCart = () => {
-    dispatch(addToCart({ product, quantity }));
+    dispatch(addToCart({ product, quantity:1 }));
 
     toast.dark(
       <div className="custom-toast">
