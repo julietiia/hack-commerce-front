@@ -20,7 +20,7 @@ function OffCanvasShoppingCart({
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cart);
-  // const [productToRemove, setProductToRemove] = useState();
+
   const [quantity, setQuantity] = useState();
   const [productQuantity, setProductQuantity] = useState(
     cartProducts.reduce((quantity, cart) => {
@@ -99,6 +99,18 @@ function OffCanvasShoppingCart({
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="shopping-cart-total ps-2 pe-4 mt-3">
+              <p className="shopping-cart-price">Total</p>
+              <p className="shopping-cart-price">
+                USD{" "}
+                {cartProducts.reduce(
+                  (acc, product) =>
+                    acc + product.product.price * product.quantity,
+                  0
+                )}
+              </p>
             </div>
 
             <div className="row">

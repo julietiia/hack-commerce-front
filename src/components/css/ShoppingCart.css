@@ -62,3 +62,13 @@
   color: rgba(0, 0, 0, 0.699);
   font-weight: 400;
 }
+
+.shopping-cart-total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopping-cart-price{
+  font-weight: 600;
+  font-size: 1.2rem;
+}

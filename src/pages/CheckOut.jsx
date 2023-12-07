@@ -15,18 +15,18 @@ import { useNavigate } from "react-router-dom";
 function CheckOut() {
   const userToken = useSelector((state) => state.user);
   const cartProducts = useSelector((state) => state.cart);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const sendOrder = async () => {
-     await axios({
+    await axios({
       method: "post",
       url: `${import.meta.env.VITE_PORT_URL}/orders`,
       data: cartProducts,
       headers: {
         Authorization: `Bearer ${userToken.token}`,
-      }
+      },
     });
-    navigate("/created-order")
+    navigate("/created-order");
   };
 
   return (
@@ -86,7 +86,14 @@ function CheckOut() {
                 </div>
                 <div className="total ps-2 pe-4">
                   <p className="checkout-total">Total</p>
-                  <p className="checkout-total">999USD</p>
+                  <p className="checkout-total">
+                    USD{" "}
+                    {cartProducts.reduce(
+                      (acc, product) =>
+                        acc + product.product.price * product.quantity,
+                      0
+                    )}
+                  </p>
                 </div>
               </div>
               <button
