@@ -20,11 +20,14 @@ function Categories() {
         </div>
         <div className="row my-3">
           <div className="col-xl-4 col-md-6 ">
-            <div className="category-box"   
-            onClick={() => navigate("/category/2")}>
-              
-              <h3 className="category-name">sofas<i className="bi bi-arrow-up-right arrow"></i></h3>
-            
+            <div
+              className="category-box"
+              onClick={() => navigate("/category/2")}
+            >
+              <h4 className="category-name">
+                sofas<i className="bi bi-arrow-up-right arrow"></i>
+              </h4>
+
               <img className="" src={iconsofas} alt="sofas" />
             </div>
           </div>
@@ -33,8 +36,10 @@ function Categories() {
               className="category-box"
               onClick={() => navigate("/category/1")}
             >
-              <h3 className="category-name">chairs<i className="bi bi-arrow-up-right arrow"></i></h3>
-              
+              <h4 className="category-name">
+                chairs<i className="bi bi-arrow-up-right arrow"></i>
+              </h4>
+
               <img className="" src={iconchairs} alt="chairs" />
             </div>
           </div>
@@ -43,8 +48,10 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">tables<i className="bi bi-arrow-up-right arrow"></i></h3>
-              
+              <h4 className="category-name">
+                tables<i className="bi bi-arrow-up-right arrow"></i>
+              </h4>
+
               <img className="" src={icontables} alt="tables" />
             </div>
           </div>
@@ -53,9 +60,11 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">storage & <br />organization<i className="bi bi-arrow-up-right arrow"></i></h3>
-              
-           
+              <h4 className="category-name">
+                storage & organization
+                <i className="bi bi-arrow-up-right arrow"></i>
+              </h4>
+
               <img className="" src={iconstorage} alt="storage" />
             </div>
           </div>
@@ -64,8 +73,10 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">deco<i className="bi bi-arrow-up-right arrow"></i></h3>
-              
+              <h4 className="category-name">
+                deco<i className="bi bi-arrow-up-right arrow"></i>
+              </h4>
+
               <img className="" src={icondeco} alt="storage" />
             </div>
           </div>
@@ -74,8 +85,10 @@ function Categories() {
             className="col-xl-4 col-md-6"
           >
             <div className="category-box">
-              <h3 className="category-name">lightning<i className="bi bi-arrow-up-right arrow"></i></h3>
-              
+              <h4 className="category-name">
+                lightning<i className="bi bi-arrow-up-right arrow"></i>
+              </h4>
+
               <img className="" src={iconlightning} alt="lightning" />
             </div>
           </div>

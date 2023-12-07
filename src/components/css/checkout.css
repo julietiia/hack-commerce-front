@@ -1,114 +1,158 @@
-.checkout-warning{
-    font-weight: 200;
+.checkout-warning {
+  font-weight: 300;
 }
 
-.checkout-product-image{
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    border-radius: 15px;
-    border: solid 2px rgb(0, 0, 0);
-    flex-shrink: 0;
+.checkout-product-image {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 15px;
+  border: solid 2px rgb(0, 0, 0);
+  flex-shrink: 0;
 }
 
-.checkout-product{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
+.checkout-product {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-.checkout-product-details{
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+.checkout-product-details {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.checkout-product-name{
-    margin: 0;
-    text-align: start;
-    font-size: 0.9rem;
+.checkout-product-name {
+  margin: 0;
+  text-align: start;
+  font-size: 0.9rem;
 }
 
-.checkout-product-ref{
-    margin: 0;
-    font-size: 0.7rem;
+.checkout-product-ref {
+  margin: 0;
+  font-size: 0.7rem;
 }
-.checkout-product-price{
-    padding-top: 1rem;
-    font-weight: 400;
-    margin: 0;
+.checkout-product-price {
+  padding-top: 1rem;
+  font-weight: 400;
+  margin: 0;
 }
 
-.subtotal{
-    display: flex;
-    justify-content: space-between;
+.subtotal {
+  display: flex;
+  justify-content: space-between;
 }
 
 .total {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.checkout-total{
-    font-weight: 600;
-    font-size: 1.2rem;
+.checkout-total {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-.checkout-subtotal{
-    font-weight: 400;
+.checkout-subtotal {
+  font-weight: 400;
 }
 
-.shopping-list-container{
-    background-color:#f6f6f6;
-    padding: 2rem;
-    border-radius: 20px;
-    
+.shopping-list-container {
+  background-color: #f6f6f6;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
-.checkout-payment-container{
-    background-color:#f6f6f6;
-    padding: 2rem;
-    border-radius: 20px;
-    
+.checkout-payment-container {
+  background-color: #f6f6f6;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
 /*Breadcrum*/
 
-.breadcrumb{
-    font-size: 0.8rem;
+.breadcrumb {
+  font-size: 0.8rem;
 }
 
 /*Button*/
 
-.checkout-button{
-    
-    font-size: 1rem;
-    width: 100%;
+.checkout-button {
+  font-size: 1rem;
+  width: 100%;
 }
 
-.pay-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
-    
+.pay-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
 }
 
-.mercadopago{
-    width: 45%;
-    height: 2.5rem;
-    border-radius: 7px;
-    object-fit: cover;
-    margin: 0.5rem;
-    cursor: pointer;
+.mercadopago {
+  width: 45%;
+  height: 2.5rem;
+  border-radius: 7px;
+  object-fit: cover;
+  margin: 0.5rem;
+  cursor: pointer;
 }
 
-.ebrou{
-    width: 45%;
-    height: 2.5rem;
-    border-radius: 7px;
-    object-fit: cover;
-    margin: 0.5rem;
-    cursor: pointer;
+.ebrou {
+  width: 45%;
+  height: 2.5rem;
+  border-radius: 7px;
+  object-fit: cover;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+/*Successful Order Page*/
+.created-order-bg {
+  position: relative;
+  width: 100%;
+  height: 86vh;
+  object-fit: cover;
+  transition: 1s ease-in-out;
+  object-position: center;
+}
+
+.order-bg-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: absolute;
+  
+  z-index: 11;
+  
+}
+
+.succesfull-order-title{
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+
+.succesfull-order-message{
+    text-align: start;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+}
+
+.my-orders-link{
+    color: black;
+}
+
+.my-orders-link:hover{
+    color:#d64933 ;
+
 }

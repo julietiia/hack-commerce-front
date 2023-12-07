@@ -5,33 +5,35 @@ p {
   text-align: center;
 }
 
+.footer-logo-container {
+  height: 60px;
+}
+
 #footerLogo {
-  height: 150px;
-  width: 300px;
+  height: 55px;
+  padding-top: 0.8rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
 }
 
-.rs-icon{
-    color: white;
+.rs-icon {
+  color: white;
 }
 
-.copyright-footer{
-    font-size: 0.8rem;
+.copyright-footer {
+  font-size: 0.8rem;
 }
-
 
 .blackCard {
-  background-color: rgba(0, 0, 0, 0.80); 
+  background-color: rgba(0, 0, 0, 0.8);
   border: none;
-  
 }
 
-ul{
+ul {
   cursor: pointer;
 }
-li{
+li {
   cursor: pointer;
 }

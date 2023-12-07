@@ -10,10 +10,12 @@ import botonMercadoPago from "../assets/buttons/botonMercadoPago.png";
 import visaNet from "../assets/buttons/visaNet.png";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function CheckOut() {
   const userToken = useSelector((state) => state.user);
   const cartProducts = useSelector((state) => state.cart);
+  const navigate = useNavigate()
 
   const sendOrder = async () => {
      await axios({
@@ -24,7 +26,7 @@ function CheckOut() {
         Authorization: `Bearer ${userToken.token}`,
       }
     });
-  
+    navigate("/created-order")
   };
 
   return (
