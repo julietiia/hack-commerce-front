@@ -7,6 +7,7 @@
 
 .category-box {
   width: 100%;
+  /* background-color: #f6f6f6; */
   margin-top: 2rem;
   align-items: start;
   cursor: pointer;
@@ -20,13 +21,15 @@
 .arrow{
   font-size: 1.8rem;
   font-weight: 600;
-  color: white;
+  color: #00000061;
 }
 
+
 .category-box:hover {
-  background-color: #d64933;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.436);
   border-radius: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .category-name {
