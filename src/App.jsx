@@ -15,6 +15,8 @@ import NotFound from "./pages/NotFound.jsx";
 import Shop from "./pages/Shop.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Toastify from "./components/Toastify";
+
 
 function App() {
   const location = useLocation();
@@ -24,6 +26,7 @@ function App() {
 
   return (
     <>
+      <Toastify />
       <NavbarApparat />
       <div className="app-container">
         <Routes>
