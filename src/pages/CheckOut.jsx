@@ -11,11 +11,14 @@ import visaNet from "../assets/buttons/visaNet.png";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { clearCart } from "../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
 function CheckOut() {
   const userToken = useSelector((state) => state.user);
   const cartProducts = useSelector((state) => state.cart);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const sendOrder = async () => {
     await axios({
@@ -26,6 +29,7 @@ function CheckOut() {
         Authorization: `Bearer ${userToken.token}`,
       },
     });
+    dispatch (clearCart());
     navigate("/created-order");
   };
 
