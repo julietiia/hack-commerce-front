@@ -109,7 +109,7 @@ function NavbarApparat() {
                   onClick={(event) => handleShowSignIn(event)}
                   className="bi bi-person-circle profile-icon"
                 ></i>
-                {user && <span style={{ marginLeft: "5px", fontSize: "15px" }} className="user-firstname">{user.firstname}</span>}
+                {user && <span style={{ marginLeft: "5px", fontSize: "15px" }} className="user-firstname">{user}</span>}
                
                 
               </div>
