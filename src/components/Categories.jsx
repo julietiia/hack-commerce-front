@@ -1,16 +1,33 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import "./css/Categories.css";
 import { useNavigate } from "react-router-dom";
-import iconchairs from "../assets/CategoryIcons/iconchairs.png";
-import icontables from "../assets/CategoryIcons/icontables.png";
-import iconsofas from "../assets/CategoryIcons/iconsofas.png";
-import iconlightning from "../assets/CategoryIcons/iconlightning.png";
-import iconstorage from "../assets/CategoryIcons/iconstorage.png";
-import icondeco from "../assets/CategoryIcons/icondeco.png";
+import axios from "axios";
+// import iconchairs from "../assets/CategoryIcons/iconchairs.png";
+// import icontables from "../assets/CategoryIcons/icontables.png";
+// import iconsofas from "../assets/CategoryIcons/iconsofas.png";
+// import iconlightning from "../assets/CategoryIcons/iconlightning.png";
+// import iconstorage from "../assets/CategoryIcons/iconstorage.png";
+// import icondeco from "../assets/CategoryIcons/icondeco.png";
 import Subscription from "./Subscription";
 
 function Categories() {
   const navigate = useNavigate();
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() =>{
+    const getCategories = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${import.meta.env.VITE_PORT_URL}/categories`,
+      });
+      setCategories(response.data.categories);
+     
+    };
+   
+    getCategories();
+  }, []);
+      
+
   return (
     <>
       <div className="container">
@@ -20,79 +37,25 @@ function Categories() {
           </div>
         </div>
         <div className="row my-3">
-          <div className="col-xl-4 col-md-6 ">
-            <div
-              className="category-box"
-              onClick={() => navigate("/category/2")}
-            >
-              <h4 className="category-name">
-                sofas<i className="bi bi-arrow-up-right arrow"></i>
-              </h4>
-
-              <img className="" src={iconsofas} alt="sofas" />
-            </div>
+        {categories.map((category) => (
+          <div className="col-xl-4 col-md-6 " key={category.id}>
+          
+                  <div 
+                  className="category-box"
+                  onClick={() => navigate(`/category/${category.id}`)}
+                >
+                  <h4 className="category-name">
+                    {category.name}<i className="bi bi-arrow-up-right arrow"></i>
+                  </h4>
+    
+                  <img className="" src={`${
+            import.meta.env.VITE_IMAGES_URL
+          }products/${category.imageIcon}`} alt="" />
+                </div>
+                  
+           
           </div>
-          <div className="col-xl-4 col-md-6">
-            <div
-              className="category-box"
-              onClick={() => navigate("/category/1")}
-            >
-              <h4 className="category-name">
-                chairs<i className="bi bi-arrow-up-right arrow"></i>
-              </h4>
-
-              <img className="" src={iconchairs} alt="chairs" />
-            </div>
-          </div>
-          <div
-            onClick={() => navigate("/category/4")}
-            className="col-xl-4 col-md-6"
-          >
-            <div className="category-box">
-              <h4 className="category-name">
-                tables<i className="bi bi-arrow-up-right arrow"></i>
-              </h4>
-
-              <img className="" src={icontables} alt="tables" />
-            </div>
-          </div>
-          <div
-            onClick={() => navigate("/category/5")}
-            className="col-xl-4 col-md-6"
-          >
-            <div className="category-box">
-              <h4 className="category-name">
-                storage & organization
-                <i className="bi bi-arrow-up-right arrow"></i>
-              </h4>
-
-              <img className="" src={iconstorage} alt="storage" />
-            </div>
-          </div>
-          <div
-            onClick={() => navigate("/category/6")}
-            className="col-xl-4 col-md-6"
-          >
-            <div className="category-box">
-              <h4 className="category-name">
-                deco<i className="bi bi-arrow-up-right arrow"></i>
-              </h4>
-
-              <img className="" src={icondeco} alt="storage" />
-            </div>
-          </div>
-          <div
-            onClick={() => navigate("/category/3")}
-            className="col-xl-4 col-md-6"
-          >
-            <div className="category-box">
-              <h4 className="category-name">
-                lightning<i className="bi bi-arrow-up-right arrow"></i>
-              </h4>
-
-              <img className="" src={iconlightning} alt="lightning" />
-            </div>
-          </div>
+           ))}
         </div>
       </div>
       

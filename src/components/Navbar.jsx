@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -12,6 +12,8 @@ import "./css/App.css";
 import OffCanvasNavbarMenu from "./OffCanvasNavbarMenu";
 import { toggleShowModal } from "../redux/pageSlice";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+
 
 
 
@@ -30,10 +32,25 @@ function NavbarApparat() {
   const handleCloseMenu = () => setShowMenu(false);
   const cartQuantity = useSelector((state) => state.cart.length);
   const user = useSelector((state) => state.user.firstname)
- 
-
   const navigate = useNavigate();
+  const [categories, setCategories] = useState([])
 
+  useEffect(() =>{
+    const getCategories = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${import.meta.env.VITE_PORT_URL}/categories`,
+      });
+      setCategories(response.data.categories);
+    
+    };
+    
+    getCategories();
+  }, []);
+      
+    
+
+  
  
   
 
@@ -60,9 +77,11 @@ function NavbarApparat() {
 
             
               <Nav className="me-auto d-sm-none d-lg-flex navbar-custom">
+                
                 <NavLink className="nav-link custom-item" to="/">
                   home
                 </NavLink>
+              
                 <NavLink className="nav-link custom-item" to="/shop">
                   shop
                 </NavLink>
@@ -78,24 +97,15 @@ function NavbarApparat() {
                   title="categories"
                   id="basic-nav-dropdown"
                 >
-                  <NavLink className="dropdown-item custom-item" to="/category/1">
-                    chairs
+                  {categories.map((category) => (
+                  <NavLink 
+                  key={category.id} 
+                  className="dropdown-item custom-item" 
+                  to={`/category/${category.id}`}>
+                    {category.name}
                   </NavLink>
-                  <NavLink className="dropdown-item custom-item" to="/category/2">
-                    sofas
-                  </NavLink>
-                  <NavLink className="dropdown-item custom-item" to="/category/4">
-                    tables
-                  </NavLink>
-                  <NavLink className="dropdown-item custom-item" to="/category/3">
-                    lightning
-                  </NavLink>
-                  <NavLink className="dropdown-item custom-item" to="/category/5">
-                    storage & organization
-                  </NavLink>
-                  <NavLink className="dropdown-item custom-item" to="/category/6">
-                    deco
-                  </NavLink>
+                    ))}
+                 
                 </NavDropdown>
               </Nav>
               
