@@ -29,7 +29,7 @@ function CheckOut() {
         Authorization: `Bearer ${userToken.token}`,
       },
     });
-    dispatch (clearCart());
+    dispatch(clearCart());
     navigate("/created-order");
   };
 
@@ -84,7 +84,7 @@ function CheckOut() {
                 ))}
 
                 <hr />
-                
+
                 <div className="total ps-2 pe-4">
                   <p className="checkout-total">Total</p>
                   <p className="checkout-total">
