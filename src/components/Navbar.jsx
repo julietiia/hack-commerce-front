@@ -61,7 +61,7 @@ function NavbarApparat() {
             
               <Nav className="me-auto d-sm-none d-lg-flex navbar-custom">
                 <NavLink className="nav-link custom-item" to="/">
-                  Home
+                  home
                 </NavLink>
                 <NavLink className="nav-link custom-item" to="/shop">
                   shop
