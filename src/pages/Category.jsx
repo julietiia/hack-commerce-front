@@ -7,6 +7,7 @@ import { Carousel } from "react-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
+import Subscription from "../components/Subscription";
 
 function Category() {
   const navigate = useNavigate();
@@ -109,6 +110,7 @@ function Category() {
           ))}
         </div>
       </div>
+      <Subscription/>
     </>
   );
 }

@@ -84,10 +84,7 @@ function CheckOut() {
                 ))}
 
                 <hr />
-                <div className="subtotal ps-2 pe-4">
-                  <p className="checkout-subtotal">Subtotal</p>
-                  <p className="checkout-subtotal">999USD</p>
-                </div>
+                
                 <div className="total ps-2 pe-4">
                   <p className="checkout-total">Total</p>
                   <p className="checkout-total">

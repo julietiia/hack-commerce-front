@@ -8,6 +8,7 @@ import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import { addToCart } from "../redux/cartSlice";
+import Subscription from "../components/Subscription";
 
 function Shop() {
   const allProducts = useSelector((state) => state.products);
@@ -35,7 +36,7 @@ function Shop() {
       {!allProducts.length ? (
         <Spinner />
       ) : (
-        <div className="container mt-2">
+        <div className="container mb-5">
           <div className="row">
             {allProducts.map((product) => (
               <div key={product.id} className="col-sm-12 col-md-6 col-lg-4 mt-5">
@@ -60,6 +61,7 @@ function Shop() {
           </div>
         </div>
       )}
+      <Subscription/>
     </>
   );
 }

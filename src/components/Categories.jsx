@@ -7,6 +7,7 @@ import iconsofas from "../assets/CategoryIcons/iconsofas.png";
 import iconlightning from "../assets/CategoryIcons/iconlightning.png";
 import iconstorage from "../assets/CategoryIcons/iconstorage.png";
 import icondeco from "../assets/CategoryIcons/icondeco.png";
+import Subscription from "./Subscription";
 
 function Categories() {
   const navigate = useNavigate();
@@ -94,6 +95,7 @@ function Categories() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }
