@@ -1,24 +1,22 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
-import banner from "../assets/img/banner.png"
-import banner2 from "../assets/img/banner2.png"
-import banner3 from "../assets/img/banner3.png"
-
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import living_retro from "../assets/img/living_retro.jpg";
+import living_white from "../assets/img/living_white.jpg";
+import living_pink from "../assets/img/living_pink.jpg";
 
 function HomeCarousel() {
   return (
     <Carousel className="">
-      <Carousel.Item>
-        <img src={banner} alt="" />
-        
+      <Carousel.Item className="">
+        <img src={living_white} alt="" />
       </Carousel.Item>
-      <Carousel.Item>
-      <img src={banner2} alt="" />
-        
+
+      <Carousel.Item className="">
+        <img src={living_retro} alt="" />
       </Carousel.Item>
-      <Carousel.Item>
-      <img src={banner3} alt="" />
-        
+
+      <Carousel.Item className="">
+        <img src={living_pink} alt="" />
       </Carousel.Item>
     </Carousel>
   );
