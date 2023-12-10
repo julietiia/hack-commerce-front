@@ -93,7 +93,7 @@ function OffCanvasShoppingCart({
                         onClick={() =>
                           dispatch(removeFromCart(cart.product.id))
                         }
-                        className="bi bi-trash3 btn btn-outline-dark"
+                        className="bi bi-trash3 btn"
                       ></i>
                     </div>
                   </div>

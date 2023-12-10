@@ -65,7 +65,7 @@ function Product() {
                 {product.description}
               </p>
             </div>
-            <div className="qtty-option">
+            <div className="qtty-option mt-4">
               <button
                 className="btn btn-outline-dark qtty-btn"
                 onClick={handleDecrement}

@@ -129,3 +129,12 @@ body {
     height: 4rem;
   }
 }
+
+/* Button Addtocart */
+.addtocart-button{
+  margin-left: 24px;
+  /* width: 140px;; */
+  height: 42px
+  
+  
+}
