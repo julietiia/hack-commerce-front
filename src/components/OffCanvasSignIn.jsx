@@ -26,8 +26,8 @@ function OffCanvasSignIn({
                     {!user.token ? "Login" : "My profile" } </Offcanvas.Title>
                 </Offcanvas.Header>
 
-                <Offcanvas.Body>
-                    <div className="border border-black border-3 rounded p-3 ">
+                <Offcanvas.Body className="d-flex flex-column">
+                    <div className="profile">
                         {!user.token ? <CheckoutLoginForm />  : <UserProfile /> }
                     </div>
                 </Offcanvas.Body>
@@ -35,5 +35,6 @@ function OffCanvasSignIn({
         </>
     );
 }
+// border border-black border-3 rounded p-3
 
 export default OffCanvasSignIn;
