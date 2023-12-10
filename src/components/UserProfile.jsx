@@ -9,7 +9,7 @@ function UserProfile() {
   return (
     <>
     <div className="user-profile-info d-flex gap-5">
-     <i className="bi bi-person-circle profile-icon"></i>
+     <i className="bi bi-person profile-icon"></i>
       <div className="user-profile-info">
         <h3 className="mb-2">
           {user.firstname} {user.lastname}

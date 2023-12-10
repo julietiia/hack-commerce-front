@@ -10,8 +10,9 @@ import "react-toastify/dist/ReactToastify.css";
 const AddToCartButton = ({ product, quantity }) => {
   const dispatch = useDispatch();
   // const showCart = useSelector((state) => state.page.showCart)
+  
   const handleAddToCart = () => {
-    dispatch(addToCart({ product, quantity: quantity }));
+    dispatch(addToCart({ product, quantity: Number(quantity) }));
 
     toast.dark(
       <div className="custom-toast">

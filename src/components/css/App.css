@@ -28,7 +28,7 @@ i:hover {
 .carrito-icon,
 .profile-icon,
 .lupita {
-  font-size: 25px;
+  font-size:1.3em;
 }
 
 body {
@@ -100,7 +100,7 @@ body {
 
   .profile-icon,
   .lupita {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .carrito-icon {

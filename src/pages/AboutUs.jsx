@@ -19,7 +19,7 @@ function AboutUs() {
   return (
     <>
       <div className="container-fluid about-bg-container">
-        <h2 className="about-us-title">about apparat</h2>
+        <h2 className="about-us-title">about this project</h2>
         <img className="about-us-bg" src={aboutapparatbg} alt="" />
       </div>
       <article className="container my-5">

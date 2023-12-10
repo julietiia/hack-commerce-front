@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import soapdispenser from "../assets/img/soapdispenser.png";
 import tables from "../assets/img/tables.png";
 import chair from "../assets/img/chair.png";
@@ -13,12 +13,31 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { clearCart } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { Spinner } from "react-bootstrap";
 
 function CheckOut() {
   const userToken = useSelector((state) => state.user);
   const cartProducts = useSelector((state) => state.cart);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+  console.log(cartProducts)
+
+  const handleClick = () => {
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      sendOrder();
+      setIsLoading(false);
+    }, 3000);
+
+    const button = document.querySelector(".checkout-button");
+    button.disabled = true;
+
+    const cleanupTimer = (timer) => {
+      useEffect(() => () => clearTimeout(timer), []);
+    };
+  };
 
   const sendOrder = async () => {
     await axios({
@@ -44,6 +63,26 @@ function CheckOut() {
       </div>
       <div className="container">
         <div className="row mb-4">
+          {userToken.length !== 0 ? (
+            <div className="col-lg-6 col-md-12">
+              <div className="checkout-user-data">
+                <h3 className="">Welcome, {userToken.firstname}</h3>
+
+                <p>{userToken.email}</p>
+                <p>{userToken.address}</p>
+              </div>
+            </div>
+          ) : (
+            <div className="col-lg-6 col-md-12">
+              <div className="checkout-payment-container">
+                <h3 className="ps-2">already have an account? login</h3>
+                <div className="form-container ps-2 pe-4 py-2">
+                  <CheckoutLoginForm />
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="col-lg-6 col-md-12">
             <div className="shopping-list-container">
               <h3 className="ps-2">Your shopping list</h3>
@@ -90,18 +129,18 @@ function CheckOut() {
                   <p className="checkout-total">
                     USD{" "}
                     {cartProducts.reduce(
-                      (acc, product) =>
-                        acc + product.product.price * product.quantity,
+                      (acc, { product: { price }, quantity }) =>
+                        acc + (price ?? 0) * quantity,
                       0
                     )}
                   </p>
                 </div>
               </div>
               <button
-                onClick={sendOrder}
+                onClick={handleClick}
                 className="checkout-button rounded btn btn-dark text-select"
               >
-                Continue to shipping
+                Continue to shipping {isLoading && <Spinner />}
               </button>
               <div className="pay-buttons">
                 <img src={botonMercadoPago} className="mercadopago" />
@@ -109,28 +148,6 @@ function CheckOut() {
               </div>
             </div>
           </div>
-
-          {userToken.length !== 0 ? (
-            <div className="col-lg-6 col-md-12">
-              <div className="checkout-user-data">
-                <h3 className="pb-3">You are logged as</h3>
-                <h3 className="pb-3">
-                  {userToken.firstname} {userToken.lastname}
-                </h3>
-                <p>{userToken.email}</p>
-                <p>{userToken.address}</p>
-              </div>
-            </div>
-          ) : (
-            <div className="col-lg-6 col-md-12">
-              <div className="checkout-payment-container">
-                <h3 className="ps-2">already have an account? login</h3>
-                <div className="form-container ps-2 pe-4 py-2">
-                  <CheckoutLoginForm />
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
       <div className="container px-">

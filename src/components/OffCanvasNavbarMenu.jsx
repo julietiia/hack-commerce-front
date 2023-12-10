@@ -78,7 +78,7 @@ function OffCanvasNavbarMenu({
             ></i>
             <i
               onClick={(event) => handleShowSignIn(event)}
-              className="bi bi-person-circle profile-icon d-block"
+              className="bi bi-person profile-icon d-block"
             ></i>
           </div>
         </Offcanvas.Body>

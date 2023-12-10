@@ -71,7 +71,7 @@
   border-radius: 20px;
 }
 
-.checkout-user-data{
+.checkout-user-data {
   background-color: #f6f6f6;
   padding: 2rem;
   border-radius: 20px;
@@ -95,7 +95,12 @@
 
 .checkout-button {
   font-size: 1rem;
+  height: 3rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
 }
 
 .pay-buttons {
@@ -103,7 +108,6 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
-
 }
 
 .mercadopago {
@@ -126,17 +130,14 @@
 
 /*Successful Order Page*/
 .created-order-bg {
-  position: relative;
   width: 100%;
-  height: 86vh;
+  height: 50vh;
   object-fit: cover;
-  transition: 1s ease-in-out;
-  object-position: center;
 }
 
 .order-bg-container {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 0;
 }
@@ -145,29 +146,29 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  position: absolute;
+  justify-content: center;
   
+
   z-index: 11;
-  
 }
 
-.succesfull-order-title{
-    font-size: 3rem;
-    font-weight: 700;
-
+.succesfull-order-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
 }
 
-.succesfull-order-message{
-    text-align: start;
-    color: rgb(0, 0, 0);
-    font-weight: 300;
+.succesfull-order-message {
+  margin: 0 0.5rem;
+  text-align: start;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
 }
 
-.my-orders-link{
-    color: black;
+.my-orders-link {
+  color: black;
 }
 
-.my-orders-link:hover{
-    color:#d64933 ;
-
+.my-orders-link:hover {
+  color: #d64933;
 }

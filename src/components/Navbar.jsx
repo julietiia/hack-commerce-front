@@ -104,7 +104,7 @@ function NavbarApparat() {
               <span style={{ marginLeft: "5px" }}>{cartQuantity}</span>
               <i
                 onClick={(event) => handleShowSignIn(event)}
-                className="bi bi-person-circle profile-icon"
+                className="bi bi-person profile-icon"
               ></i>
               {user && (
                 <span

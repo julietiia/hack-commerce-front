@@ -25,7 +25,7 @@ const LoginForm = () => {
     });
     dispatch(login(response.data));
     console.log(response.data)
-    navigate("/");
+    navigate("#");
   };
 
 

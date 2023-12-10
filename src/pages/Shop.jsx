@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux";
@@ -14,6 +14,7 @@ function Shop() {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const getAllProducts = async () => {
@@ -54,7 +55,7 @@ function Shop() {
                     {product.price} USD
                   </p>
 
-                  <AddToCartButton product={product} />
+                  <AddToCartButton product={product} quantity={quantity} />
                 </div>
               </div>
             ))}
