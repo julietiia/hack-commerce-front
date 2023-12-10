@@ -10,6 +10,7 @@ import {
   removeFromCart,
 } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { Cursor } from "react-bootstrap-icons";
 
 function OffCanvasShoppingCart({
   showCart,
@@ -42,87 +43,97 @@ function OffCanvasShoppingCart({
           <Offcanvas.Title>Your cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {cartProducts.length === 0 ? ("Your shopping cart is empty.") : (
-          <div className="container">
-            <div className="row">
-              {cartProducts.map((cart) => (
-                <div key={cart.product.id} className="product-cart">
-                  <div className="col-4">
-                    <div className="cart-product-container">
-                      <img
-                        className="cart-product-pic"
-                        src={`${import.meta.env.VITE_IMAGES_URL}products/${
-                          cart.product.image[1]
-                        }`}
-                        alt={cart.product.name}
-                      />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        {cart.quantity}
-                      </span>
+          {cartProducts.length === 0 ? (
+            <div>
+              {" "}
+              <p className="fw-light">Your shopping cart is empty.</p>
+              <p className="text-decoration-underline" style={{ cursor: "pointer" }} onClick={() => navigate("/shop")}>
+                <i className="bi bi-arrow-right p-0"></i> Go shopping{" "}
+              </p>
+            </div>
+          ) : (
+            <div className="container">
+              <div className="row">
+                {cartProducts.map((cart) => (
+                  <div key={cart.product.id} className="product-cart">
+                    <div className="col-4">
+                      <div className="cart-product-container">
+                        <img
+                          className="cart-product-pic"
+                          src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                            cart.product.image[1]
+                          }`}
+                          alt={cart.product.name}
+                        />
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                          {cart.quantity}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="col-5">
-                    <div className="product-info-cart">
-                      <p className="cart-product-name">{cart.product.name}</p>
-                      <div className="quantity">
-                        <button
-                          className="btn btn-outline-dark"
+                    <div className="col-5">
+                      <div className="product-info-cart">
+                        <p className="cart-product-name">{cart.product.name}</p>
+                        <div className="quantity">
+                          <button
+                            className="btn btn-outline-dark"
+                            onClick={() =>
+                              dispatch(decrementQuantity(cart.product.id))
+                            }
+                          >
+                            -
+                          </button>
+                          <button
+                            className="btn btn-outline-dark"
+                            onClick={() =>
+                              dispatch(incrementQuantity(cart.product.id))
+                            }
+                          >
+                            {" "}
+                            +{" "}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="col-3 price-n-remove">
+                      <p className="cart-unit-price">
+                        USD {cart.product.price}
+                      </p>
+                      <div className="remove-from-cart">
+                        <i
                           onClick={() =>
-                            dispatch(decrementQuantity(cart.product.id))
+                            dispatch(removeFromCart(cart.product.id))
                           }
-                        >
-                          -
-                        </button>
-                        <button
-                          className="btn btn-outline-dark"
-                          onClick={() =>
-                            dispatch(incrementQuantity(cart.product.id))
-                          }
-                        >
-                          {" "}
-                          +{" "}
-                        </button>
+                          className="bi bi-trash3 btn"
+                        ></i>
                       </div>
                     </div>
                   </div>
+                ))}
+              </div>
 
-                  <div className="col-3 price-n-remove">
-                    <p className="cart-unit-price">USD {cart.product.price}</p>
-                    <div className="remove-from-cart">
-                      <i
-                        onClick={() =>
-                          dispatch(removeFromCart(cart.product.id))
-                        }
-                        className="bi bi-trash3 btn"
-                      ></i>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+              <div className="shopping-cart-total ps-2 pe-4 mt-3">
+                <p className="shopping-cart-price">Total</p>
+                <p className="shopping-cart-price">
+                  USD{" "}
+                  {cartProducts.reduce(
+                    (acc, product) =>
+                      acc + product.product.price * product.quantity,
+                    0
+                  )}
+                </p>
+              </div>
 
-            <div className="shopping-cart-total ps-2 pe-4 mt-3">
-              <p className="shopping-cart-price">Total</p>
-              <p className="shopping-cart-price">
-                USD{" "}
-                {cartProducts.reduce(
-                  (acc, product) =>
-                    acc + product.product.price * product.quantity,
-                  0
-                )}
-              </p>
+              <div className="row">
+                <button
+                  className="col-12 mt-3 btn btn-dark check-out-button rounded"
+                  onClick={() => navigate("/checkout")}
+                >
+                  Check out
+                </button>
+              </div>
             </div>
-
-            <div className="row">
-              <button
-                className="col-12 mt-3 btn btn-dark check-out-button rounded"
-                onClick={() => navigate("/checkout")}
-              >
-                Check out
-              </button>
-            </div>
-          </div>
           )}
         </Offcanvas.Body>
       </Offcanvas>
