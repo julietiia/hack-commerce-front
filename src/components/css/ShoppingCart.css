@@ -72,3 +72,19 @@
   font-weight: 600;
   font-size: 1.2rem;
 }
+
+.profile {
+ height: 90%;
+}
+
+.user-profile-info {
+  height: 100%;
+}
+
+.user-profile-info p {
+  text-align: start;
+}
+
+.user-profile-info i {
+  font-size: 80px;
+}
