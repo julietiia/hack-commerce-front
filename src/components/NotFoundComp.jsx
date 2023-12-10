@@ -6,7 +6,7 @@ function NotFound() {
   return (
     <div className="container-fluid bg-container">
       <h1 className="not-found-text">not found</h1>
-      <img className="not-found-bg" src={emptyroom} alt="" />
+      <img className="not-found-bg vh-100" src={emptyroom} alt="" />
     </div>
   );
 }

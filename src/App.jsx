@@ -17,6 +17,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Toastify from "./components/Toastify";
 
+
 import CreatedOrder from "./pages/CreatedOrder.jsx";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
+
       <Footer />
     </>
   );

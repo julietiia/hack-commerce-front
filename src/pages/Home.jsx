@@ -4,10 +4,9 @@ import { useState, useEffect } from "react";
 import "../components/css/Home.css";
 import Categories from "../components/Categories";
 import HomeCarousel from "../components/Carousel"
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import HightlightProducts from "../components/HightlightProducts";
 import Subscription from "../components/Subscription";
+import ScrollUpButton from "../components/ScrollUpButton";
 
 
 function Home() {
@@ -37,6 +36,7 @@ function Home() {
       {/* <section className="carousel">
         <img src="/src/assets/banner.png" alt="banner" />
       </section> */}
+      <ScrollUpButton/>
       <Categories />
       <div className="mt-5">
       <HightlightProducts/>
