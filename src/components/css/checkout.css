@@ -71,6 +71,20 @@
   border-radius: 20px;
 }
 
+.checkout-user-data{
+  background-color: #f6f6f6;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.checkout-user-data p {
+  font-weight: 400;
+  margin: 0;
+}
+
 /*Breadcrum*/
 
 .breadcrumb {
@@ -89,23 +103,24 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
+
 }
 
 .mercadopago {
-  width: 45%;
+  width: 49%;
   height: 2.5rem;
   border-radius: 7px;
   object-fit: cover;
-  margin: 0.5rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
 .ebrou {
-  width: 45%;
+  width: 49%;
   height: 2.5rem;
   border-radius: 7px;
   object-fit: cover;
-  margin: 0.5rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 

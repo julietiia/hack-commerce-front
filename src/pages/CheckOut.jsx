@@ -46,7 +46,7 @@ function CheckOut() {
         <div className="row mb-4">
           <div className="col-lg-6 col-md-12">
             <div className="shopping-list-container">
-              <h3 className="ps-2">your shopping list</h3>
+              <h3 className="ps-2">Your shopping list</h3>
               <Breadcrumb />
 
               <div className="shopping-list">
@@ -103,21 +103,34 @@ function CheckOut() {
               >
                 Continue to shipping
               </button>
-            </div>
-          </div>
-
-          <div className="col-lg-6 col-md-12">
-            <div className="checkout-payment-container">
-              <h3 className="ps-2">already have an account? login</h3>
-              <div className="form-container ps-2 pe-4 py-2">
-                <CheckoutLoginForm />
-              </div>
               <div className="pay-buttons">
                 <img src={botonMercadoPago} className="mercadopago" />
                 <img src={visaNet} className="ebrou" />
               </div>
             </div>
           </div>
+
+          {userToken.length !== 0 ? (
+            <div className="col-lg-6 col-md-12">
+              <div className="checkout-user-data">
+                <h3 className="pb-3">You are logged as</h3>
+                <h3 className="pb-3">
+                  {userToken.firstname} {userToken.lastname}
+                </h3>
+                <p>{userToken.email}</p>
+                <p>{userToken.address}</p>
+              </div>
+            </div>
+          ) : (
+            <div className="col-lg-6 col-md-12">
+              <div className="checkout-payment-container">
+                <h3 className="ps-2">already have an account? login</h3>
+                <div className="form-container ps-2 pe-4 py-2">
+                  <CheckoutLoginForm />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <div className="container px-">
