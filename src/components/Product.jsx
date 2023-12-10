@@ -41,10 +41,10 @@ function Product() {
   };
 
   const handleDecrement = () => {
-    if (quantity > 1 ){
-      setQuantity(quantity - 1)
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
     }
-  }
+  };
 
   return (
     <div className="container mt-4">
@@ -79,10 +79,10 @@ function Product() {
               >
                 +
               </button>
-              <AddToCartButton 
-                product={product} quantity={quantity}
+              <AddToCartButton
+                product={product}
+                quantity={quantity}
                 className="cart-btn"
-                
               />
             </div>
             <div className="container mt-4 p-0">
@@ -94,7 +94,7 @@ function Product() {
                   aria-controls="productDetails"
                   aria-expanded={productDetailsOpen}
                 >
-                  + Product details
+                  {productDetailsOpen ? "-" : "+"} Product details
                 </p>
                 <Collapse in={productDetailsOpen}>
                   <div id="productDetails">
@@ -127,7 +127,7 @@ function Product() {
                   aria-controls="shippingReturns"
                   aria-expanded={shippingReturnsOpen}
                 >
-                  + Shipping + Returns
+                  {shippingReturnsOpen ? "-" : "+"} Shipping + Returns
                 </p>
                 <Collapse in={shippingReturnsOpen}>
                   <div id="shippingReturns">
@@ -174,7 +174,7 @@ function Product() {
                   aria-controls="stockAvailable"
                   aria-expanded={stockAvailableOpen}
                 >
-                  + Stock available in-store
+                  {stockAvailableOpen ? "-" : "+"} Stock available in-store
                 </p>
                 <Collapse in={stockAvailableOpen}>
                   <div id="stockAvailable">
