@@ -46,7 +46,7 @@ function OffCanvasShoppingCart({
           {cartProducts.length === 0 ? (
             <div>
               {" "}
-              <p>Your shopping cart is empty.</p>
+              <p className="fw-light">Your shopping cart is empty.</p>
               <p className="text-decoration-underline" style={{ cursor: "pointer" }} onClick={() => navigate("/shop")}>
                 <i className="bi bi-arrow-right p-0"></i> Go shopping{" "}
               </p>
