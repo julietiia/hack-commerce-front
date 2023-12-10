@@ -42,6 +42,7 @@ function OffCanvasShoppingCart({
           <Offcanvas.Title>Your cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
+          {cartProducts.length === 0 ? ("Your shopping cart is empty.") : (
           <div className="container">
             <div className="row">
               {cartProducts.map((cart) => (
@@ -122,6 +123,7 @@ function OffCanvasShoppingCart({
               </button>
             </div>
           </div>
+          )}
         </Offcanvas.Body>
       </Offcanvas>
     </>
