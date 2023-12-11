@@ -23,6 +23,7 @@ function Category() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/category/${id}`,
       });
+      console.log(response.data.products)
       setCategory(response.data.category);
       setProducts(response.data.products);
     };
