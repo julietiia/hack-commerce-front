@@ -42,7 +42,8 @@ a{
   bottom: 20px;
   right: 20px;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: black;
   color: white;
   border: block;
   border-radius: 20px 0 0 20px;
