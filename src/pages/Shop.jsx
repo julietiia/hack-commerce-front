@@ -11,10 +11,10 @@ import { addToCart } from "../redux/cartSlice";
 import Subscription from "../components/Subscription";
 
 function Shop() {
-  const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+  const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
     const getAllProducts = async () => {
@@ -22,27 +22,29 @@ function Shop() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
-
-      dispatch(setAllProducts(response.data.products));
+      setAllProducts(response.data.products);
     };
     getAllProducts();
   }, []);
 
   return (
     <>
-    <div className="mt-5">
-    <HightlightProducts />
-    </div>
-      
+      <div className="mt-5">
+        <HightlightProducts />
+      </div>
+
       {!allProducts.length ? (
         <Spinner />
       ) : (
         <div className="container mb-5">
           <div className="row">
             {allProducts.map((product) => (
-              <div key={product.id} className="col-sm-12 col-md-6 col-lg-4 mt-5">
+              <div
+                key={product.id}
+                className="col-sm-12 col-md-6 col-lg-4 mt-5"
+              >
                 <img
-                 onClick={() => navigate(`/product/${product.id}`)}
+                  onClick={() => navigate(`/product/${product.id}`)}
                   className="img-hightlight-product mb-3"
                   src={`${import.meta.env.VITE_IMAGES_URL}products/${
                     product.image[0]
@@ -50,7 +52,12 @@ function Shop() {
                   alt={product.name}
                 />
                 <div className="shop-product-info d-flex flex-column">
-                  <p onClick={() => navigate(`/product/${product.id}`)} className="m-0">{product.name}</p>
+                  <p
+                    onClick={() => navigate(`/product/${product.id}`)}
+                    className="m-0"
+                  >
+                    {product.name}
+                  </p>
                   <p id="price" className="mb-2 fw-light">
                     {product.price} USD
                   </p>
@@ -62,7 +69,7 @@ function Shop() {
           </div>
         </div>
       )}
-      <Subscription/>
+      <Subscription />
     </>
   );
 }
