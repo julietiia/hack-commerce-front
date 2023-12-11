@@ -12,10 +12,10 @@ import Subscription from "../components/Subscription";
 import ScrollUpButton from "../components/ScrollUpButton";
 
 function Shop() {
-  const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+  const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
     const getAllProducts = async () => {
@@ -23,8 +23,7 @@ function Shop() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
-
-      dispatch(setAllProducts(response.data.products));
+      setAllProducts(response.data.products);
     };
     getAllProducts();
   }, []);
@@ -71,7 +70,6 @@ function Shop() {
           </div>
         </div>
       )}
-      <ScrollUpButton/>
       <Subscription />
     </>
   );

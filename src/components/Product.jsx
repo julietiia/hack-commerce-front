@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 import { useEffect, useState } from "react";
 import DiscoverSimilarDesigns from "./DiscoverSimilarDesigns";
 import { useDispatch, useSelector } from "react-redux";
-import { setAllProducts } from "../redux/productSlice";
+// import { setProduct} from "../redux/productSlice";
 import axios from "axios";
 import ProductCarousel from "./ProductCarousel";
 import { useParams } from "react-router-dom";
@@ -17,10 +17,8 @@ function Product() {
   const [shippingReturnsOpen, setShippingReturnsOpen] = useState(false);
   const [stockAvailableOpen, setStockAvailableOpen] = useState(false);
 
-  const { id } = useParams();
-  const product = useSelector((state) =>
-    state.products.find((p) => p.id === Number(id))
-  );
+  const params = useParams();
+  const [oneProduct, setOneProduct] = useState();
   const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(1);
@@ -29,9 +27,9 @@ function Product() {
     const getProduct = async () => {
       const response = await axios({
         method: "get",
-        url: `${import.meta.env.VITE_PORT_URL}/products`,
+        url: `${import.meta.env.VITE_PORT_URL}/products/${params.id}`,
       });
-      dispatch(setAllProducts(response.data.products));
+      setOneProduct(response.data.product);
     };
     getProduct();
   }, []);
@@ -48,21 +46,21 @@ function Product() {
 
   return (
     <div className="container mt-4">
-      {product && (
-        <div key={product.id} className="row">
+      {oneProduct && (
+        <div key={oneProduct.id} className="row">
           <div className="col-12 col-md-6">
             <ProductCarousel
-              product={product}
+              oneProduct={oneProduct}
               imagesUrl={import.meta.env.VITE_IMAGES_URL}
             />
           </div>
 
           <div className="col-12 col-md-6 product-description">
             <div className="text-start mt-4">
-              <h3 className="text-start">{product.name}</h3>
-              <p className="text-start">{product.price} USD</p>
+              <h3 className="text-start">{oneProduct.name}</h3>
+              <p className="text-start">{oneProduct.price} USD</p>
               <p className="text-start mt-2 product-description">
-                {product.description}
+                {oneProduct.description}
               </p>
             </div>
             <div className="qtty-option mt-4">
@@ -81,7 +79,7 @@ function Product() {
               </button>
               <div className="d-inline ms-3">
                 <AddToCartButton
-                  product={product}
+                  oneProduct={oneProduct}
                   quantity={quantity}
                   className="cart-btn"
                 />
@@ -103,7 +101,7 @@ function Product() {
                     <Card>
                       <Card.Body>
                         <p className="collapse-details-text text-start">
-                          {product.productDetail
+                          {oneProduct.productDetail
                             .split(".")
                             .map((sentence, index, array) => (
                               <React.Fragment key={index}>
@@ -199,7 +197,7 @@ function Product() {
       <div>
         <section>
           <div className="container similar-design-background my-5">
-            {product && product.id && (
+            {oneProduct && oneProduct.id && (
               <div className="row">
                 <div className="col">
                   <h2 className="d-flex justify-content-center my-4">
@@ -210,10 +208,10 @@ function Product() {
             )}
             <div className="row">
               <div className="col list-similar-products ">
-                {product && product.id && (
+                {oneProduct && oneProduct.id && (
                   <DiscoverSimilarDesigns
-                    productId={product.id}
-                    category={product.categoryId}
+                    productId={oneProduct.id}
+                    category={oneProduct.categoryId}
                   />
                 )}
               </div>

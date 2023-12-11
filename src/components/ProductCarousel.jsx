@@ -2,10 +2,10 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "./css/Product.css";
 
-function ProductCarousel({ product, imagesUrl }) {
+function ProductCarousel({ oneProduct, imagesUrl }) {
   return (
     <Carousel className="mt-2">
-      {product.image.map((image, index) => (
+      {oneProduct.image.map((image, index) => (
         <Carousel.Item key={index}>
           <img
             className="product-image"
