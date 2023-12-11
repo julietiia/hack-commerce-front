@@ -40,7 +40,7 @@ a{
   position: fixed;
   font-size: 20px;
   bottom: 20px;
-  right: 20px;
+  right: 0px;
   padding: 15px;
   /* background-color: rgba(0, 0, 0, 0.8); */
   background-color: black;
