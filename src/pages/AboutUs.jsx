@@ -15,6 +15,7 @@ import discord from "../assets/tech-icons/discord.png";
 import express from "../assets/tech-icons/express.png";
 import infostructure from "../assets/img/infostructure.png";
 import sitestructure from "../assets/img/sitestructure.png";
+import ScrollUpButton from "../components/ScrollUpButton";
 function AboutUs() {
   return (
     <>
@@ -219,6 +220,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
+      <ScrollUpButton/>
     </>
   );
 }
