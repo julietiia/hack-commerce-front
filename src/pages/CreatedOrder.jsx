@@ -27,11 +27,7 @@ function CreatedOrder() {
           </div>
         </div>
       </div>
-      <div className="container px-">
-        <div className="row">
-          <CompleteTheLookWith />
-        </div>
-      </div>
+      <CompleteTheLookWith />
     </>
   );
 }

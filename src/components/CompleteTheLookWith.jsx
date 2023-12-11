@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./css/HighlightProductsCheckout.css";
+import "./css/CompleteTheLookWith.css";
 import { useNavigate, Link } from "react-router-dom";
 
 function CompleteTheLookWith() {
@@ -23,25 +23,46 @@ function CompleteTheLookWith() {
     getHighlightProducts();
   }, []);
 
+  const handleLeftClick = () => {
+    const horizontalScrollElement =
+      document.querySelector(".horizontal-scroll");
+
+    horizontalScrollElement.scrollBy(-200, 0);
+  };
+
+  const handleRightClick = () => {
+    const horizontalScrollElement =
+      document.querySelector(".horizontal-scroll");
+
+    horizontalScrollElement.scrollBy(200, 0);
+  };
 
   return (
     <>
-      <div className="container row-hightlight-products mb-5">
-        <div className="row my-3 ">
-          <h2 className="d-flex justify-content-center mt-2">
-          Complete the look with{" "}
-          </h2>
+    
+      <div className="container-fluid">
+        <div className="container">
+        <div className="row my-3">
+          <div className="col">
+            <div className="complement-navigation">
+              <h2 className="">Complete the look with </h2>
+              <div className="navigation d-none d-lg-block">
+                <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
+                <i className="bi bi-arrow-right" onClick={handleRightClick}></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="row px-3">
+        </div>
+        
+
+        <div className="row horizontal-scroll">
           {products.map((product) => (
-            <div
-              className="col-6 col-sm-6 col-md-3 mb-3 d-flex justify-content-center align-self-center flex-wrap gap-2"
-              key={product.id}
-            >
-              <div className="hightlight-product">
+            <div className="complement-product" key={product.id}>
+              <div className="product-container">
                 <Link to={`/product/${product.id}`}>
                   <img
-                    className="img-hightlight-product mb-3"
+                    className="complement-image mb-3"
                     src={`${import.meta.env.VITE_IMAGES_URL}products/${
                       product.image[0]
                     }`}
@@ -55,8 +76,9 @@ function CompleteTheLookWith() {
           ))}
         </div>
       </div>
+      
     </>
-  )
+  );
 }
 
-export default CompleteTheLookWith
+export default CompleteTheLookWith;

@@ -6,16 +6,16 @@ import living_pink from "../assets/img/living_pink.jpg";
 
 function HomeCarousel() {
   return (
-    <Carousel className="">
-      <Carousel.Item className="">
+    <Carousel>
+      <Carousel.Item>
         <img src={living_white} alt="" />
       </Carousel.Item>
 
-      <Carousel.Item className="">
+      <Carousel.Item>
         <img src={living_retro} alt="" />
       </Carousel.Item>
 
-      <Carousel.Item className="">
+      <Carousel.Item>
         <img src={living_pink} alt="" />
       </Carousel.Item>
     </Carousel>

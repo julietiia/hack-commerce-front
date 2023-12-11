@@ -24,7 +24,7 @@ function Subscription() {
               placeholder="your email goes here"
             />
             <label htmlFor="subscribe"></label>
-            <button className="ms-2 btn btn-dark text-select subscribe-btn">
+            <button className="ms-2 btn btn-dark  subscribe-btn">
               subscribe
             </button>
           </form>

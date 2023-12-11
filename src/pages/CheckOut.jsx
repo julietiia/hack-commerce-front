@@ -21,7 +21,7 @@ function CheckOut() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
-  console.log(cartProducts)
+
 
   const handleClick = () => {
     setIsLoading(true);

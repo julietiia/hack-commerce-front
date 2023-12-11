@@ -72,18 +72,20 @@ function Product() {
               >
                 -
               </button>
-              <span className="m-2">{quantity}</span>
+              <span className="m-2 fw-semibold">{quantity}</span>
               <button
                 className="btn btn-outline-dark qtty-btn"
                 onClick={handleIncrement}
               >
                 +
               </button>
-              <AddToCartButton
-                product={product}
-                quantity={quantity}
-                className="cart-btn"
-              />
+              <div className="d-inline ms-3">
+                <AddToCartButton
+                  product={product}
+                  quantity={quantity}
+                  className="cart-btn"
+                />
+              </div>
             </div>
             <div className="container mt-4 p-0">
               <div>

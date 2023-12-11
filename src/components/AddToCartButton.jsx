@@ -43,7 +43,7 @@ const AddToCartButton = ({ product, quantity }) => {
     <>
       <button
         onClick={handleAddToCart}
-        className="addtocart-button rounded btn btn-dark text-select"
+        className="addtocart-button rounded btn btn-dark"
       >
         Add to cart
       </button>

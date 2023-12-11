@@ -1,0 +1,63 @@
+.complement-bg{
+  background-color: #f6f6f6;
+  margin: 0;
+}
+
+.complement-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height:1vh;
+  
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #989898;
+  border-radius: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background-color: rgb(209, 209, 209);
+  border-radius: 8px;
+}
+
+.complement-product {
+  border-radius: 20px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  width: auto;
+  
+}
+
+.complement-image {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  object-position: center;
+}
+
+
+.navigation {
+  margin: 0;
+}
+
+.navigation i {
+  font-size: 2rem;
+  margin: 1rem;
+  color: #989898;
+  cursor: pointer;
+  padding: 0;
+}

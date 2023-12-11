@@ -18,7 +18,7 @@ function Footer() {
 
   return (
     <footer>
-      <div className="bg-dark text-white pt-3">
+      <div className="bg-dark text-white pt-4">
         <div onClick={() => navigate("/")} className="footer-logo-container pt-1">
           <img
             id="footerLogo"
