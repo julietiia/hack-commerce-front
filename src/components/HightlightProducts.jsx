@@ -28,7 +28,7 @@ function HightlightProducts() {
       <div className="container row-hightlight-products my-3">
         <div className="row my-3 ">
           <h2 className="d-flex justify-content-center mt-3">
-            get inspired by apparat
+            Get inspired by apparat
           </h2>
         </div>
         <div className="row px-3">

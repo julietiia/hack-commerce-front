@@ -79,7 +79,7 @@ function Product() {
               </button>
               <div className="d-inline ms-3">
                 <AddToCartButton
-                  oneProduct={oneProduct}
+                  product={oneProduct}
                   quantity={quantity}
                   className="cart-btn"
                 />

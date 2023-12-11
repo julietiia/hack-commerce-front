@@ -33,7 +33,7 @@ function Categories() {
       <div className="container">
         <div className="row">
           <div className="col-12 d-flex justify-content-center mt-5">
-            <h2 className="ps-2">find what you need </h2>
+            <h2 className="ps-2">Find what you need </h2>
           </div>
         </div>
         <div className="row my-3">

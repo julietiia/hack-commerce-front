@@ -28,7 +28,7 @@ function HightlightProducts() {
       <div className="container row-hightlight-products mb-5">
         <div className="row my-3 ">
           <h2 className="d-flex justify-content-center mt-2">
-            you may also like{" "}
+            You may also like{" "}
           </h2>
         </div>
         <div className="row px-3">
