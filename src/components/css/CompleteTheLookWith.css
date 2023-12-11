@@ -10,6 +10,7 @@
 
 .horizontal-scroll {
   display: flex;
+  flex-direction: row;
   overflow-x: auto;
   flex-wrap: nowrap;
   margin-bottom: 2rem;

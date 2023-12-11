@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./css/CompleteTheLookWith.css";
+import "./css/GetInspiredBy.css";
 import { useNavigate, Link } from "react-router-dom";
 
-function CompleteTheLookWith() {
+function GetInspiredBy() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ function CompleteTheLookWith() {
         <div className="row my-3">
           <div className="col">
             <div className="complement-navigation">
-              <h2 className="">Complete the look with </h2>
+              <h2 className="">Get inspired by </h2>
               <div className="navigation d-none d-lg-block">
                 <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
                 <i className="bi bi-arrow-right" onClick={handleRightClick}></i>
@@ -81,4 +81,4 @@ function CompleteTheLookWith() {
   );
 }
 
-export default CompleteTheLookWith;
+export default GetInspiredBy;

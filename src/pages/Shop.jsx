@@ -3,7 +3,7 @@ import axios from "axios";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux";
 import { setAllProducts } from "../redux/productSlice";
-import HightlightProducts from "../components/HightlightProducts";
+
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ function Shop() {
   return (
     <>
       <div className="mt-5">
-        <HightlightProducts />
+        
       </div>
 
       {!allProducts.length ? (
@@ -71,6 +71,7 @@ function Shop() {
         </div>
       )}
       <Subscription />
+      <ScrollUpButton/>
     </>
   );
 }

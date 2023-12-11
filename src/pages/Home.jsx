@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import "../components/css/Home.css";
 import Categories from "../components/Categories";
 import HomeCarousel from "../components/Carousel"
-import HightlightProducts from "../components/HightlightProducts";
+import GetInspiredBy from "../components/GetInspiredBy";
 import Subscription from "../components/Subscription";
 import ScrollUpButton from "../components/ScrollUpButton";
 
@@ -39,7 +39,7 @@ function Home() {
       <ScrollUpButton/>
       <Categories />
       <div className="mt-5">
-      <HightlightProducts/>
+      <GetInspiredBy/>
       </div>
       
       <Subscription/>
