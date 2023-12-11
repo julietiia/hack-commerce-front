@@ -9,6 +9,7 @@ import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import { addToCart } from "../redux/cartSlice";
 import Subscription from "../components/Subscription";
+import ScrollUpButton from "../components/ScrollUpButton";
 
 function Shop() {
   const dispatch = useDispatch();

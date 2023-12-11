@@ -31,8 +31,9 @@
 }
 
 .about-us-body-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 300;
+  text-align:justify;
 }
 
 .ha-link {
@@ -48,10 +49,12 @@
 /*Icons*/
 
 .technologies-bg {
-  background-color: #000000;
-  border-radius: 20px;
-  margin: 0 0.5rem 2rem 0.5rem;
+  background-color: #4d4c4e;
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  box-shadow: 0 18px 35px rgba(50,50,93,.1),-1px 0 15px rgba(0,0,0,.07);
 }
+
 
 .icons-container {
   padding: 1rem 2rem 2rem 2rem;
@@ -111,15 +114,16 @@
   width: 12rem;
   height: 18rem;
   background-color: #f6f6f6;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 1rem;
 }
 
 .team-row {
-  background-color: #000000;
-  border-radius: 20px;
-  margin: 0 0.5rem 2rem 0.5rem;
+  background-color: #4d4c4e;
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
   justify-content: space-between;
+  box-shadow: 0 18px 35px rgba(50,50,93,.1),-1px 0 15px rgba(0,0,0,.07);
 }
 
 .img-team-member {
@@ -162,13 +166,14 @@
 
 .site-structure-container {
   background-color: #f6f6f6;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
 
   justify-content: center;
-  margin: 0 1rem 2rem;
+  margin: 0 0 2rem 0;
   align-items: top;
   padding: 2rem;
+  box-shadow: 0 18px 35px rgba(50,50,93,.1),-1px 0 15px rgba(0,0,0,.07);
 }
 
 .site-structure-img {

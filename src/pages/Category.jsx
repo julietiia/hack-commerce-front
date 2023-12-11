@@ -15,6 +15,7 @@ function Category() {
   const id = params.id;
   const [category, setCategory] = useState();
   const [products, setProducts] = useState([]);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const getCategory = async () => {
@@ -100,7 +101,7 @@ function Category() {
                 <p id="price" className="mb-2 fw-light">
                   {product.price}USD
                 </p>
-                <AddToCartButton product={product} />
+                <AddToCartButton product={product} quantity={quantity}/>
               </div>
             </div>
           ))}
