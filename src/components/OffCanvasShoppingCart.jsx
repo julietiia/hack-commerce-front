@@ -61,7 +61,7 @@ function OffCanvasShoppingCart({
                       <div className="cart-product-container">
                         <img
                           className="cart-product-pic"
-                          src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                          src={`${import.meta.env.VITE_IMAGES_URL}/${
                             cart.product.image[1]
                           }`}
                           alt={cart.product.name}

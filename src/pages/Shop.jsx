@@ -23,6 +23,7 @@ function Shop() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
+      console.log(response.data.products)
       setAllProducts(response.data.products);
     };
     getAllProducts();
@@ -48,7 +49,7 @@ function Shop() {
                 <img
                   onClick={() => navigate(`/product/${product.id}`)}
                   className="img-shop-product"
-                  src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                  src={`${import.meta.env.VITE_IMAGES_URL}/${
                     product.image[0]
                   }`}
                   alt={product.name}

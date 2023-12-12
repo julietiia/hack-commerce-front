@@ -95,7 +95,7 @@ function CheckOut() {
                       <div className="position-relative">
                         <img
                           className="checkout-product-image"
-                          src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                          src={`${import.meta.env.VITE_IMAGES_URL}/${
                             cart.product.image[1]
                           }`}
                           alt={cart.product.name}

@@ -39,7 +39,7 @@ function Category() {
         {category && (
           <>
             <img
-              src={`${import.meta.env.VITE_IMAGES_URL}products/${
+              src={`${import.meta.env.VITE_IMAGES_URL}/${
                 category.image
               }`}
               alt="image1"
@@ -67,7 +67,7 @@ function Category() {
                         <img
                           src={`${
                             import.meta.env.VITE_IMAGES_URL
-                          }products/${img}`}
+                          }/${img}`}
                           alt={product.name}
                           className="img-chair"
                         />
@@ -82,8 +82,8 @@ function Category() {
               >
                 <div className="image-container">
                   <img
-                    onClick={() => navigate(`/product/${product.id}`)}
-                    src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                    onClick={() => navigate(`/${product.id}`)}
+                    src={`${import.meta.env.VITE_IMAGES_URL}/${
                       product.image[1]
                     }`}
                     alt={product.name}
@@ -91,7 +91,7 @@ function Category() {
                   />
 
                   <img
-                    src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                    src={`${import.meta.env.VITE_IMAGES_URL}/${
                       product.image[0]
                     }`}
                     alt={product.name}

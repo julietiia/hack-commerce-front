@@ -9,7 +9,7 @@ function ProductCarousel({ oneProduct, imagesUrl }) {
         <Carousel.Item key={index}>
           <img
             className="product-image"
-            src={`${imagesUrl}products/${image}`}
+            src={`${imagesUrl}/${image}`}
             alt={`Product Image ${index + 1}`}
           />
         </Carousel.Item>
