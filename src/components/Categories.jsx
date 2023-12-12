@@ -50,7 +50,7 @@ function Categories() {
     
                   <img className="" src={`${
             import.meta.env.VITE_IMAGES_URL
-          }products/${category.imageIcon}`} alt="" />
+          }/${category.imageIcon}`} alt="" />
                 </div>
                   
            

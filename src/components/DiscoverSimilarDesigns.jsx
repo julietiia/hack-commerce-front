@@ -41,7 +41,7 @@ function DiscoverSimilarDesigns({ productId }) {
             >
               <img
                 className="image-product-suggested mb-2"
-                src={`${import.meta.env.VITE_IMAGES_URL}products/${
+                src={`${import.meta.env.VITE_IMAGES_URL}/${
                   product.image[0]
                 }`}
                 alt={product.name}

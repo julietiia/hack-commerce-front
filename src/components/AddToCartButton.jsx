@@ -17,7 +17,7 @@ const AddToCartButton = ({ product, quantity }) => {
     toast.dark(
       <div className="custom-toast">
         <img
-          src={`${import.meta.env.VITE_IMAGES_URL}products/${product.image[0]}`}
+          src={`${import.meta.env.VITE_IMAGES_URL}/${product.image[0]}`}
           alt={product.name}
           className="toast-image toast-img"
         />
