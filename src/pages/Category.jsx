@@ -13,8 +13,8 @@ function Category() {
   const navigate = useNavigate();
   const params = useParams();
   const id = params.id;
-  const [category, setCategory] = useState();
-  const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState([]);
+  const [products, setProducts] = useState([]); // usar lenght>0 ?
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
@@ -29,7 +29,9 @@ function Category() {
     };
     getCategory();
   }, [id]);
-  // se rompe
+  
+  
+
 
   return (
     <>

@@ -70,7 +70,7 @@ function GetInspiredBy() {
                   />
                 </Link>
                 <p className="product-name">{product.name}</p>
-                <p className="fw-light">{product.price} USD</p>
+                <p className="fw-light mb-4">{product.price} USD</p>
               </div>
             </div>
           ))}
