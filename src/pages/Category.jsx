@@ -23,25 +23,19 @@ function Category() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/category/${id}`,
       });
-      console.log(response.data.products)
       setCategory(response.data.category);
       setProducts(response.data.products);
     };
     getCategory();
   }, [id]);
-  
-  
-
 
   return (
     <>
       <div className="header">
-        {category && (
+        {category ? (
           <>
             <img
-              src={`${import.meta.env.VITE_IMAGES_URL}/${
-                category.image
-              }`}
+              src={`${import.meta.env.VITE_IMAGES_URL}/${category.image}`}
               alt="image1"
               className="img-banner-category-chairs"
             />
@@ -49,67 +43,70 @@ function Category() {
               <p className="category-title">{category.name}</p>
             </div>
           </>
+        ) : (
+          <Spinner />
         )}
       </div>
+      {products.length > 0 ? (
+        <div className="container">
+          <div className="row mb-5 mt-5">
+            {products.map((product) => (
+              <div key={product.id} className="col-sm-12 col-md-6 col-lg-3 mt-">
+                <div className="d-lg-none">
+                  <div className="image-container">
+                    <Carousel>
+                      {product.image.map((img, index) => (
+                        <Carousel.Item
+                          key={index}
+                          onClick={() => navigate(`/product/${product.id}`)}
+                        >
+                          <img
+                            src={`${import.meta.env.VITE_IMAGES_URL}/${img}`}
+                            alt={product.name}
+                            className="img-chair"
+                          />
+                        </Carousel.Item>
+                      ))}
+                    </Carousel>
+                  </div>
+                </div>
+                <div
+                  onClick={() => navigate(`/product/${product.id}`)}
+                  className="d-none d-lg-block"
+                >
+                  <div className="image-container">
+                    <img
+                      onClick={() => navigate(`/${product.id}`)}
+                      src={`${import.meta.env.VITE_IMAGES_URL}/${
+                        product.image[1]
+                      }`}
+                      alt={product.name}
+                      className="img-chair img1"
+                    />
 
-      <div className="container">
-        <div className="row mb-5 mt-5">
-          {products.map((product) => (
-            <div key={product.id} className="col-sm-12 col-md-6 col-lg-3 mt-">
-              <div className="d-lg-none">
-                <div className="image-container">
-                  <Carousel>
-                    {product.image.map((img, index) => (
-                      <Carousel.Item
-                        key={index}
-                        onClick={() => navigate(`/product/${product.id}`)}
-                      >
-                        <img
-                          src={`${
-                            import.meta.env.VITE_IMAGES_URL
-                          }/${img}`}
-                          alt={product.name}
-                          className="img-chair"
-                        />
-                      </Carousel.Item>
-                    ))}
-                  </Carousel>
+                    <img
+                      src={`${import.meta.env.VITE_IMAGES_URL}/${
+                        product.image[0]
+                      }`}
+                      alt={product.name}
+                      className="img-chair top-img"
+                    />
+                  </div>
+                </div>
+                <div className="shop-product-info d-flex flex-column mb-5">
+                  <p className="mb-0 mt-2">{product.name}</p>
+                  <p id="price" className="mb-2 fw-light">
+                    {product.price}USD
+                  </p>
+                  <AddToCartButton product={product} quantity={quantity} />
                 </div>
               </div>
-              <div
-                onClick={() => navigate(`/product/${product.id}`)}
-                className="d-none d-lg-block"
-              >
-                <div className="image-container">
-                  <img
-                    onClick={() => navigate(`/${product.id}`)}
-                    src={`${import.meta.env.VITE_IMAGES_URL}/${
-                      product.image[1]
-                    }`}
-                    alt={product.name}
-                    className="img-chair img1"
-                  />
-
-                  <img
-                    src={`${import.meta.env.VITE_IMAGES_URL}/${
-                      product.image[0]
-                    }`}
-                    alt={product.name}
-                    className="img-chair top-img"
-                  />
-                </div>
-              </div>
-              <div className="shop-product-info d-flex flex-column mb-5">
-                <p className="mb-0 mt-2">{product.name}</p>
-                <p id="price" className="mb-2 fw-light">
-                  {product.price}USD
-                </p>
-                <AddToCartButton product={product} quantity={quantity}/>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        <Spinner />
+      )}
       <Subscription />
     </>
   );
