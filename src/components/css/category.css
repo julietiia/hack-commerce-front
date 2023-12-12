@@ -55,7 +55,17 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  transition: opacity 0.3s ease-in-out;
+
+  cursor: pointer;
+}
+
+.image-container img {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.image-container img:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.441);
 }
 
 .top-img {
@@ -67,8 +77,6 @@
 .top-img:hover {
   opacity: 1;
 }
-
-
 
 /*Responsive
 

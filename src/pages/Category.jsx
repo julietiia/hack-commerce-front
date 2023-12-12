@@ -53,7 +53,7 @@ function Category() {
       <div className="container">
         <div className="row mb-5 mt-5">
           {products.map((product) => (
-            <div key={product.id} className="col-6 col-lg-3">
+            <div key={product.id} className="col-sm-12 col-md-6 col-lg-3 mt-">
               <div className="d-lg-none">
                 <div className="image-container">
                   <Carousel>
@@ -97,8 +97,8 @@ function Category() {
                   />
                 </div>
               </div>
-              <div className="shop-product-info d-flex flex-column mb-4">
-                <p className="m-0">{product.name}</p>
+              <div className="shop-product-info d-flex flex-column mb-5">
+                <p className="mb-0 mt-2">{product.name}</p>
                 <p id="price" className="mb-2 fw-light">
                   {product.price}USD
                 </p>

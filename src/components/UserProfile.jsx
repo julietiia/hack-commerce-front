@@ -9,26 +9,33 @@ function UserProfile() {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="user-profile-info d-flex gap-5">
-        <i className="bi bi-person profile-icon"></i>
-        <div className="user-profile-info">
-          <h3 className="mb-2">
-            {user.firstname} {user.lastname}
-          </h3>
-          <p>{user.email}</p>
-          <p>{user.address}</p>
+      <div className="user-profile-container">
+        <div className="user-profile-info d-flex">
+          <i className="bi bi-person"></i>
+
+          <div className="user-profile-info">
+            <h4 className="mb-2">
+              {user.firstname} {user.lastname}
+            </h4>
+            <p>{user.email}</p>
+            <p>{user.address}</p>
+            <a href="/" className="my-orders-user-profile">
+              My Orders
+            </a>
+          </div>
         </div>
+        <hr />
+        <button
+          onClick={() => {
+            dispatch(logout());
+            dispatch(clearCart());
+          }}
+          type="submit"
+          className="col-12 btn btn-dark check-out-button rounded"
+        >
+          <i className="bi bi-box-arrow-right"></i>Log out
+        </button>
       </div>
-      <button
-        onClick={() => {
-          dispatch(logout());
-          dispatch(clearCart());
-        }}
-        type="submit"
-        className="col-12 btn btn-dark check-out-button rounded"
-      >
-        <i className="bi bi-box-arrow-right"></i>Log out
-      </button>
     </>
   );
 }

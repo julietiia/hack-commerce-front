@@ -40,7 +40,7 @@ function GetInspiredBy() {
   return (
     <>
     
-      <div className="container-fluid">
+      <div className="container-fluid get-inpired-bg">
         <div className="container">
         <div className="row my-3">
           <div className="col">
