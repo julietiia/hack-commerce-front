@@ -10,6 +10,7 @@ function UserProfile() {
   return (
     <>
       <div className="user-profile-container">
+
         <div className="user-profile-info d-flex">
           <i className="bi bi-person"></i>
 
@@ -24,17 +25,18 @@ function UserProfile() {
             </a>
           </div>
         </div>
-        <hr />
+        
         <button
           onClick={() => {
             dispatch(logout());
             dispatch(clearCart());
           }}
           type="submit"
-          className="col-12 btn btn-dark check-out-button rounded"
+          className="btn btn-outline-dark check-out-button rounded"
         >
-          <i className="bi bi-box-arrow-right"></i>Log out
+          <i className="bi bi-box-arrow-right p-0 me-2"></i>Log out
         </button>
+
       </div>
     </>
   );

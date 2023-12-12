@@ -1,4 +1,4 @@
-.complement-bg{
+.complement-bg {
   background-color: #f6f6f6;
   margin: 0;
 }
@@ -19,8 +19,7 @@
 }
 
 .horizontal-scroll::-webkit-scrollbar {
-  height:1vh;
-  
+  height: 1vh;
 }
 
 .horizontal-scroll::-webkit-scrollbar-thumb {
@@ -38,7 +37,6 @@
   object-fit: cover;
   margin-right: 0.5rem;
   width: auto;
-  
 }
 
 .complement-image {
@@ -49,7 +47,6 @@
   transition: transform 0.5s ease-in-out;
   object-position: center;
 }
-
 
 .navigation {
   margin: 0;

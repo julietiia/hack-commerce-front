@@ -8,6 +8,7 @@ import ProductCarousel from "../components/ProductCarousel";
 import AddToCartButton from "../components/AddToCartButton";
 import Spinner from "../components/Spinner";
 import Subscription from "../components/Subscription";
+import GetInspiredBy from "../components/GetInspiredBy";
 
 function Category() {
   const navigate = useNavigate();
@@ -107,6 +108,7 @@ function Category() {
       ) : (
         <Spinner />
       )}
+      <GetInspiredBy/>
       <Subscription />
     </>
   );

@@ -73,14 +73,17 @@
 }
 
 .profile {
-  height: 90%;
+  height: 100%;
 }
 
 .user-profile-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  height: 100%;
 }
+
 
 .user-profile-info p {
   margin: 0;
@@ -98,5 +101,5 @@
 }
 
 .my-orders-user-profile:hover {
-  color: #d64933;
+  color: #1f8f46;
 }

@@ -45,7 +45,7 @@ function CompleteTheLookWith() {
         <div className="row my-3">
           <div className="col">
             <div className="complement-navigation">
-              <h2 className="">Complete the look with </h2>
+              <h2 className="">Complete the look</h2>
               <div className="navigation d-none d-lg-block">
                 <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
                 <i className="bi bi-arrow-right" onClick={handleRightClick}></i>

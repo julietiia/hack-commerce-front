@@ -45,7 +45,7 @@ function GetInspiredBy() {
         <div className="row my-3">
           <div className="col">
             <div className="complement-navigation">
-              <h2 className="">Get inspired by </h2>
+              <h2 className="">Get inspired</h2>
               <div className="navigation d-none d-lg-block">
                 <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
                 <i className="bi bi-arrow-right" onClick={handleRightClick}></i>
