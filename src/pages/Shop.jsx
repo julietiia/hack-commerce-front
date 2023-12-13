@@ -31,6 +31,7 @@ function Shop() {
 
   return (
     <>
+
       {!allProducts.length ? (
         <Spinner />
       ) : (
