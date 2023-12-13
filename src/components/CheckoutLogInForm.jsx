@@ -7,8 +7,8 @@ import { login } from '../redux/userSlice';
 
 
 const LoginForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('user1@gmail.com');
+  const [password, setPassword] = useState('1234');
   const [checked, setChecked] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
