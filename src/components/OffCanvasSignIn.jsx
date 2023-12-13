@@ -1,8 +1,9 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import CheckoutLoginForm from "./CheckoutLogInForm";
 import UserProfile from "./UserProfile";
 import { useSelector } from "react-redux/es/hooks/useSelector";
+
 
 function OffCanvasSignIn({
     showSignIn,
@@ -27,10 +28,17 @@ function OffCanvasSignIn({
                 </Offcanvas.Header>
 
                 <Offcanvas.Body className="d-flex flex-column">
+                  
                     <div className="profile">
                         {!user.token ? <CheckoutLoginForm />  : <UserProfile /> }
+                        
                     </div>
+                    <Link to= "http://localhost:5173/admin-login">
+                    <button type="submit" className="col-12 btn btn-outline-dark check-out-button rounded mt-3">
+        Login as admin
+      </button></Link>
                 </Offcanvas.Body>
+               
             </Offcanvas>
         </>
     );
