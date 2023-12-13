@@ -65,7 +65,7 @@
 
 .image-container img:hover {
   border-radius: 10px;
-  /* box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.441); */
+  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.441);
 }
 
 .top-img {

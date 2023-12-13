@@ -12,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   transition: 0.5s ease-in-out;
+  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.183);
 }
 
 /*Pages*/
@@ -70,7 +71,7 @@
 }
 
 .dropdown a:hover {
-  background-color: rgb(180, 180, 180);
+  background-color: #dce3d3;
 }
 
 .dropdown p i {

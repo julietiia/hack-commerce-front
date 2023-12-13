@@ -20,3 +20,11 @@
 .img-shop-product:hover{
   box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.441);
 }
+
+.banner-shop{
+  position: relative;
+  width: 100%;
+  height: 48vh;
+  object-fit: cover;
+  transition: 1s ease-in-out;
+}

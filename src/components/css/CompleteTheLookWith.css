@@ -37,6 +37,7 @@
   object-fit: cover;
   margin-right: 0.5rem;
   width: auto;
+  padding-top: 1rem;
 }
 
 .complement-image {
@@ -44,8 +45,12 @@
   width: 350px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.5s ease-in-out;
   object-position: center;
+  transition: 0.5s ease-in-out;
+}
+
+.complement-image:hover{
+  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.441);
 }
 
 .navigation {

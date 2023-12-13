@@ -6,6 +6,7 @@ import HighlightProductsCheckout from "../components/HighlightProductsCheckout";
 import Breadcrumb from "../components/CheckoutBreadcrumb";
 import "../components/css/checkout.css";
 import CheckoutLoginForm from "../components/CheckoutLogInForm";
+import CompleteTheLookWith from "../components/CompleteTheLookWith"
 import botonMercadoPago from "../assets/buttons/botonMercadoPago.png";
 import visaNet from "../assets/buttons/visaNet.png";
 import { useSelector } from "react-redux/es/hooks/useSelector";
@@ -150,11 +151,7 @@ function CheckOut() {
           </div>
         </div>
       </div>
-      <div className="container px-">
-        <div className="row">
-          <HighlightProductsCheckout />
-        </div>
-      </div>
+      <CompleteTheLookWith/>
     </>
   );
 }

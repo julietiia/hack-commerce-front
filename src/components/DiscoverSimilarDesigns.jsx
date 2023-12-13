@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import "./css/CompleteTheLookWith.css";
 
 function DiscoverSimilarDesigns({ productId }) {
   const [similarProducts, setSimilarProducts] = useState([]);
@@ -30,31 +31,61 @@ function DiscoverSimilarDesigns({ productId }) {
     getSimilarProducts();
   }, []);
 
+  const handleLeftClick = () => {
+    const horizontalScrollElement =
+      document.querySelector(".horizontal-scroll");
+
+    horizontalScrollElement.scrollBy(-200, 0);
+  };
+
+  const handleRightClick = () => {
+    const horizontalScrollElement =
+      document.querySelector(".horizontal-scroll");
+
+    horizontalScrollElement.scrollBy(200, 0);
+  };
+
   return (
-    <div className="row g-3 mx-auto">
-      {similarProducts.map((product) => (
-        <div key={product.id} className="col-6 col-sm-6 col-md-3 ">
-          <div className="similar-design-product">
-            <Link
-              to={`/product/${product.id}`}
-              className="text-reset text-decoration-none"
-            >
-              <img
-                className="image-product-suggested mb-2"
-                src={`${import.meta.env.VITE_IMAGES_URL}/${
-                  product.image[0]
-                }`}
-                alt={product.name}
-              />
-              <p className="text-similar-design-name">{product.name}</p>
-              <p className="text-similar-design-price fw-light">
-                {product.price} USD
-              </p>
-            </Link>
+    <>
+    
+      <div className="container-fluid">
+        <div className="container">
+        <div className="row my-3">
+          <div className="col">
+            <div className="complement-navigation">
+              <h2 className="">Complete the look</h2>
+              <div className="navigation d-none d-lg-block">
+                <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
+                <i className="bi bi-arrow-right" onClick={handleRightClick}></i>
+              </div>
+            </div>
           </div>
         </div>
-      ))}
-    </div>
+        </div>
+        
+
+        <div className="row horizontal-scroll">
+          {similarProducts.map((product) => (
+            <div className="complement-product" key={product.id}>
+              <div className="product-container">
+                <Link to={`/product/${product.id}`}>
+                  <img
+                    className="complement-image mb-3"
+                    src={`${import.meta.env.VITE_IMAGES_URL}/${
+                      product.image[0]
+                    }`}
+                    alt={product.name}
+                  />
+                </Link>
+                <p className="product-name">{product.name}</p>
+                <p className="fw-light">{product.price} USD</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+    </>
   );
 }
 

@@ -11,7 +11,7 @@ function Subscription() {
           <img className="subscription-img" src={subscription} alt="" />
         </div>
         <div className="col-sm-12 col-md-8 subscription-message">
-          <h3 className="newsletter-tittle mt-2">subscribe to our newsletter</h3>
+          <h3 className="newsletter-tittle mt-2">Subscribe to our newsletter</h3>
           <p className="newsletter-paragraph mt-4 text-start">
             Stay up to date with all our products, and get the newsletter
             straight to your inbox. Get first dibs on new arrivals, sales,
@@ -21,7 +21,7 @@ function Subscription() {
             <input
               type="text"
               className=" subscribe-input"
-              placeholder="your email goes here"
+              placeholder="Your email goes here"
             />
             <label htmlFor="subscribe"></label>
             <button className="m-2 btn btn-dark  subscribe-btn">

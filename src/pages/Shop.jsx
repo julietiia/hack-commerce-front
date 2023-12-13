@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { addToCart } from "../redux/cartSlice";
 import Subscription from "../components/Subscription";
 import ScrollUpButton from "../components/ScrollUpButton";
+import shop from "../assets/img/shop.png"
 
 function Shop() {
   const dispatch = useDispatch();
@@ -30,6 +31,13 @@ function Shop() {
 
   return (
     <>
+      <img
+        src={shop}
+        alt="image1"
+        className="banner-shop"
+      />
+      
+
       {!allProducts.length ? (
         <Spinner />
       ) : (
@@ -48,9 +56,7 @@ function Shop() {
                 <img
                   onClick={() => navigate(`/product/${product.id}`)}
                   className="img-shop-product"
-                  src={`${import.meta.env.VITE_IMAGES_URL}/${
-                    product.image[0]
-                  }`}
+                  src={`${import.meta.env.VITE_IMAGES_URL}/${product.image[0]}`}
                   alt={product.name}
                 />
                 <div className="shop-product-info d-flex flex-column">

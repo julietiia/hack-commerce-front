@@ -2,7 +2,7 @@ import "./components/css/app.css";
 import Home from "./pages/Home";
 import NavbarDos from "./components/NavbarDos.jsx";
 import Footer from "./components/Footer";
-import Product from "./components/Product";
+import Product from "./pages/Product";
 import { Route, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs.jsx";
 import CheckOut from "./pages/CheckOut.jsx";

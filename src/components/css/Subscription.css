@@ -5,17 +5,20 @@
 
 .newsletter-paragraph{
     font-size: 1rem;
+    font-weight: 400;
     color: rgba(0, 0, 0, 0.612);
 }
 
 .subscription-background{
-    background-color: #f6f6f6;
+    background-color: #dce3d3;
     border-radius: 20px;
     height: 280px;
     color: white;
     display: flex;
     align-items: center;    
 }
+
+
 
 .subscribe-input{
     height: 3rem;
@@ -32,7 +35,7 @@
 }
 
 .subscription-img{
-    height: 200px;
+    height: 170px;
 }
 
 /* Responsive */
@@ -44,7 +47,7 @@
     }
 
     .subscription-img{
-        height: 200px;
+        height: 250px;
     }
 
     .newsletter-paragraph{
@@ -59,7 +62,11 @@
     .subscription-message{
         display: flex;
         flex-direction: column;
-        
+        align-items: center;
+    }
+
+    .subscription-message{
+        text-align: center;
     }
    
 }
