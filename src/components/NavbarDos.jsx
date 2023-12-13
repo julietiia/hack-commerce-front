@@ -36,7 +36,7 @@ function NavbarDos() {
 
   return (
     <div className="nav-container">
-      <div className="container">
+      
         <div className="navbar-body">
           <div className="brand-pages-body">
             <img src={ApparatBlack} alt="" className="nav-logo" onClick={() => navigate("/")} />
@@ -70,9 +70,11 @@ function NavbarDos() {
                 className="bi bi-cart"
                 onClick={(event) => handleShowCart(event)}
               ></i>
+            {cartQuantity > 0 && (
               <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill">
                 {cartQuantity}
               </span>
+            )}
             </div>
             <div className="icon-nav-container">
               <i
@@ -107,25 +109,30 @@ function NavbarDos() {
             />
           </div>
 
-          <div className="menu-cart-body">
+          
+        </div>
+        <div className="menu-cart-body">
             <div className="cart-menu">
               <i
                 className="bi bi-cart"
                 onClick={(event) => handleShowCart(event)}
               ></i>
+              {cartQuantity > 0 && (
               <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill">
                 {cartQuantity}
               </span>
+              )}
             </div>
             <div className="burger-menu" onClick={handleToggleMenu}>
               <i className="bi bi-list"></i>
+              {cartQuantity > 0 && (
               <span className="position-absolute top-50 start-0 translate-middle badge rounded-pill">
                 {cartQuantity}
               </span>
+              )}
             </div>
           </div>
-        </div>
-      </div>
+      
     </div>
   );
 }
