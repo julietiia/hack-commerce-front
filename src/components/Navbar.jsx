@@ -52,7 +52,7 @@ function NavbarApparat() {
               <div onClick={() => navigate("/")} className="apparat-logo">
                 <img
                   className=" m-0"
-                  src="/src/assets/logo/apparat+black-navbar-logo.png"
+                  src="/src/assets/logo/ApparatBlack.png"
                   alt="Apparat logo"
                 />
               </div>
@@ -120,7 +120,6 @@ function NavbarApparat() {
               onClick={handleToggleMenu}
               className="bi bi-list mobile-menu-icon menu-icon d-lg-none"
             ></i>
-            {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
             <OffCanvasNavbarMenu
               showMenu={showMenu}
               handleCloseMenu={() => setShowMenu(false)}

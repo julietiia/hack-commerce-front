@@ -18,7 +18,9 @@ import { useLocation } from "react-router-dom";
 import Toastify from "./components/Toastify";
 
 
+
 import CreatedOrder from "./pages/CreatedOrder.jsx";
+import NavbarDos from "./components/NavbarDos.jsx";
 
 function App() {
   const location = useLocation();
@@ -41,6 +43,7 @@ function App() {
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/created-order" element={<CreatedOrder />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/navbar" element={<NavbarDos />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>

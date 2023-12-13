@@ -22,7 +22,7 @@ function Footer() {
         <div onClick={() => navigate("/")} className="footer-logo-container pt-1">
           <img
             id="footerLogo"
-            src="/src/assets/logo/apparat+white-navbar-logo.png"
+            src="/src/assets/logo/ApparatWhite.png"
             alt="apparat logo"
           />
         </div>
