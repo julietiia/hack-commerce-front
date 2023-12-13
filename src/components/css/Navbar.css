@@ -90,7 +90,7 @@
   display: flex;
 }
 
-.brand-pages-body img{
+.brand-pages-body img {
   cursor: pointer;
 }
 
@@ -98,7 +98,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  
+
   width: 150px;
 }
 
@@ -121,8 +121,6 @@
 .menu-cart-body {
   display: flex;
   justify-content: center;
-  
-  
 }
 
 /*Burger Menu*/
@@ -135,7 +133,6 @@
   display: none;
   font-size: 2rem;
   z-index: 9000;
-  
 }
 
 .burger-menu span {
@@ -143,7 +140,6 @@
   color: #4d4c4e;
   font-weight: 500;
   display: none;
-  
 }
 
 .cart-menu {
@@ -168,7 +164,7 @@
     display: none;
   }
 
-  .navbar-body{
+  .navbar-body {
     margin: 0;
   }
 
