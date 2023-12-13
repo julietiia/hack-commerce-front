@@ -39,7 +39,7 @@ function NavbarDos() {
       <div className="container">
         <div className="navbar-body">
           <div className="brand-pages-body">
-            <img src={ApparatBlack} alt="" className="nav-logo" />
+            <img src={ApparatBlack} alt="" className="nav-logo" onClick={() => navigate("/")} />
             <div className="pages">
               <p onClick={() => navigate("/")}>home</p>
               <p onClick={() => navigate("/shop")}>shop</p>
@@ -47,7 +47,9 @@ function NavbarDos() {
                 about this project
               </p>
               <div className="dropdown">
-                <p>categories <i class="bi bi-caret-down-fill"></i></p>
+                <p>
+                  categories <i className="bi bi-caret-down-fill"></i>
+                </p>
 
                 <div className="content">
                   {categories.map((category) => (
@@ -105,13 +107,23 @@ function NavbarDos() {
             />
           </div>
 
-          <div className="burger-menu" onClick={handleToggleMenu}>
-            <i className="bi bi-list"></i>
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+          <div className="menu-cart-body">
+            <div className="cart-menu">
+              <i
+                className="bi bi-cart"
+                onClick={(event) => handleShowCart(event)}
+              ></i>
+              <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill">
                 {cartQuantity}
               </span>
+            </div>
+            <div className="burger-menu" onClick={handleToggleMenu}>
+              <i className="bi bi-list"></i>
+              <span className="position-absolute top-50 start-0 translate-middle badge rounded-pill">
+                {cartQuantity}
+              </span>
+            </div>
           </div>
-
         </div>
       </div>
     </div>

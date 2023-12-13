@@ -1,6 +1,6 @@
 import "./components/css/app.css";
 import Home from "./pages/Home";
-import NavbarApparat from "./components/Navbar";
+import NavbarDos from "./components/NavbarDos.jsx";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
 import { Route, Routes } from "react-router-dom";
@@ -16,11 +16,8 @@ import Shop from "./pages/Shop.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Toastify from "./components/Toastify";
-
-
-
 import CreatedOrder from "./pages/CreatedOrder.jsx";
-import NavbarDos from "./components/NavbarDos.jsx";
+
 
 function App() {
   const location = useLocation();
@@ -31,7 +28,7 @@ function App() {
   return (
     <>
       <Toastify />
-      <NavbarApparat />
+      <NavbarDos />
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -43,7 +40,6 @@ function App() {
           <Route path="/checkout" element={<CheckOut />} />
           <Route path="/created-order" element={<CreatedOrder />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/navbar" element={<NavbarDos />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
