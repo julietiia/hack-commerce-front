@@ -23,7 +23,6 @@ function Shop() {
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
-      console.log(response.data.products)
       setAllProducts(response.data.products);
     };
     getAllProducts();
