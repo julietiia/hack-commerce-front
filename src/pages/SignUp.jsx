@@ -24,7 +24,7 @@ function SignUp() {
         console.log(data);
         await axios({
             method: "post",
-            url: `${import.meta.env.VITE_PORT_URL}/usuarios`,
+            url: `${import.meta.env.VITE_PORT_URL}/users`,
             data: data,
         });
         handleShowSignIn();

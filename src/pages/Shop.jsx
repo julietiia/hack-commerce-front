@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { addToCart } from "../redux/cartSlice";
 import Subscription from "../components/Subscription";
 import ScrollUpButton from "../components/ScrollUpButton";
-import shop from "../assets/img/shop.png"
+import shop from "../assets/img/shop.png";
 
 function Shop() {
   const dispatch = useDispatch();
@@ -31,12 +31,7 @@ function Shop() {
 
   return (
     <>
-      <img
-        src={shop}
-        alt="image1"
-        className="banner-shop"
-      />
-      
+      <img src={shop} alt="Shop Banner" className="banner-shop" />
 
       {!allProducts.length ? (
         <Spinner />
