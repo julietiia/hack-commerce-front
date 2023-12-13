@@ -58,9 +58,12 @@ const LoginForm = () => {
         />
       </div>
      
+     
       <button type="submit" className="col-12 btn btn-dark check-out-button rounded">
-        Login
+        Login 
       </button>
+     
+      
       <div className='mt-3 text-decoration-underline'>
        <Link to="/sign-up"> <p> or create a new account</p> </Link>
       </div>
