@@ -28,7 +28,7 @@ function OffCanvasNavbarMenu({
         placement={"end"}
       >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>menu</Offcanvas.Title>
+          <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="me-auto">

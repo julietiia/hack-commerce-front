@@ -2,9 +2,25 @@ import React, { useEffect, useState } from "react";
 import ApparatBlack from "../assets/logo/ApparatBlack.png";
 import "../components/css/Navbar.css";
 import axios from "axios";
+import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
+import OffCanvasSignIn from "./OffCanvasSignIn";
+import { useNavigate } from "react-router-dom";
+import { toggleShowModal } from "../redux/pageSlice";
+import { useDispatch, useSelector } from "react-redux";
+import OffCanvasNavbarMenu from "./OffCanvasNavbarMenu";
 
 function NavbarDos() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.firstname);
+  const showCart = useSelector((state) => state.page.showCart);
+  const cartQuantity = useSelector((state) => state.cart.length);
   const [categories, setCategories] = useState([]);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const handleShowCart = (event) => dispatch(toggleShowModal());
+  const handleShowSignIn = (event) => setShowSignIn(true);
+  const handleToggleMenu = () => setShowMenu(!showMenu);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -25,25 +41,77 @@ function NavbarDos() {
           <div className="brand-pages-body">
             <img src={ApparatBlack} alt="" className="nav-logo" />
             <div className="pages">
-              <p>home</p>
-              <p>shop</p>
-              <p>about this project</p>
+              <p onClick={() => navigate("/")}>home</p>
+              <p onClick={() => navigate("/shop")}>shop</p>
+              <p onClick={() => navigate("/about-this-project")}>
+                about this project
+              </p>
               <div className="dropdown">
-                <button>categories</button>
+                <p>categories <i class="bi bi-caret-down-fill"></i></p>
 
-                {/* <div className="dropdown-content">
+                <div className="content">
                   {categories.map((category) => (
-                    <a href={`/category/${category.id}`}>{category.name}</a>
+                    <a href={`/category/${category.id}`} key={category.id}>
+                      {category.name}
+                    </a>
                   ))}
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
           <div className="user-body">
-            <i class="bi bi-search"></i>
-            <i class="bi bi-cart"></i>
-            <i class="bi bi-person"></i>
+            <div className="icon-nav-container">
+              <i className="bi bi-search"></i>
+            </div>
+            <div className="icon-nav-container">
+              <i
+                className="bi bi-cart"
+                onClick={(event) => handleShowCart(event)}
+              ></i>
+              <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill">
+                {cartQuantity}
+              </span>
+            </div>
+            <div className="icon-nav-container">
+              <i
+                className="bi bi-person"
+                onClick={(event) => handleShowSignIn(event)}
+              ></i>
+              {user && (
+                <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill ">
+                  {user}
+                </span>
+              )}
+            </div>
+
+            <OffCanvasNavbarMenu
+              showMenu={showMenu}
+              handleCloseMenu={() => setShowMenu(false)}
+              handleShowSignIn={() => setShowSignIn(true)}
+              showCart={showCart}
+              handleCloseCart={() => setShowCart(false)}
+              showSignIn={showSignIn}
+              handleCloseSignIn={() => setShowSignIn(false)}
+            />
+
+            <OffCanvasShoppingCart
+              showCart={showCart}
+              handleCloseCart={() => dispatch(toggleShowModal())}
+            />
+
+            <OffCanvasSignIn
+              showSignIn={showSignIn}
+              handleCloseSignIn={() => setShowSignIn(false)}
+            />
           </div>
+
+          <div className="burger-menu" onClick={handleToggleMenu}>
+            <i className="bi bi-list"></i>
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                {cartQuantity}
+              </span>
+          </div>
+
         </div>
       </div>
     </div>
