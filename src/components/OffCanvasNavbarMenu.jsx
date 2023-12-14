@@ -1,5 +1,4 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
-import Navbar from "./Navbar";
 import { Nav, NavDropdown } from "react-bootstrap";
 import "./css/App.css";
 import { useNavigate, NavLink } from "react-router-dom";
