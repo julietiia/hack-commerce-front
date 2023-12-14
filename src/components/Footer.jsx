@@ -34,14 +34,14 @@ function Footer() {
             <div className="col-md-3 text-center d-none d-md-block footer-block">
               <ul>
                 <h4 onClick={() => navigate("/shop")}>shop</h4>
-                <li onClick={() => navigate("/category/sofas")}>sofas</li>
-                <li onClick={() => navigate("/category/chairs")}>chairs</li>
-                <li onClick={() => navigate("/category/tables")}>tables</li>
-                <li onClick={() => navigate("/category/lighting")}>lighting</li>
-                <li onClick={() => navigate("/category/storage")}>
+                <li onClick={() => navigate("/category/2")}>sofas</li>
+                <li onClick={() => navigate("/category/1")}>chairs</li>
+                <li onClick={() => navigate("/category/4")}>tables</li>
+                <li onClick={() => navigate("/category/3")}>lighting</li>
+                <li onClick={() => navigate("/category/5")}>
                   storage & <br /> organization
                 </li>
-                <li onClick={() => navigate("/category/deco")}>deco</li>
+                <li onClick={() => navigate("/category/6")}>deco</li>
               </ul>
             </div>
             <div className="d-block d-md-none mb-2">
@@ -60,22 +60,22 @@ function Footer() {
                   
                     <Card.Body className="blackCard text-white rounded footer-block">
                       <ul className="">
-                        <li onClick={() => navigate("/category/sofas")}>
+                        <li onClick={() => navigate("/category/2")}>
                           sofas
                         </li>
-                        <li onClick={() => navigate("/category/chairs")}>
+                        <li onClick={() => navigate("/category/1")}>
                           chairs
                         </li>
-                        <li onClick={() => navigate("/category/tables")}>
+                        <li onClick={() => navigate("/category/4")}>
                           tables
                         </li>
-                        <li onClick={() => navigate("/category/lighting")}>
+                        <li onClick={() => navigate("/category/3")}>
                           lighting
                         </li>
-                        <li onClick={() => navigate("/category/storage")}>
+                        <li onClick={() => navigate("/category/5")}>
                           storage & organization
                         </li>
-                        <li onClick={() => navigate("/category/deco")}>deco</li>
+                        <li onClick={() => navigate("/category/6")}>deco</li>
                       </ul>
                     </Card.Body>
                   </Card>

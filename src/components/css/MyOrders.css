@@ -1,27 +1,87 @@
-.my-table{
-    background-color: rgb(77, 77, 77);
+.my-table {
+  margin-top: 1rem;
+  background-color: #dce3d3;
+  border-radius: 10px;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
 }
 
-.order-img{
-    width: 100px;
-  }
-  
-  /*Dashboard*/
-  
-  .entity-card{
-    background-color:#f6f6f6 ;
-    border-radius: 20px;
-    padding: 1rem;
-    box-shadow: 0 0  20px rgba(0, 0, 0, 0.228);
-  }
-  
-  .dashboard-img{
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  /*Order table*/
-  
-  .order-product-detail{
-    margin: 0;
-  }
+.my-sidebar {
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: #1f8f46;
+  border-radius: 10px;
+  height: 95vh;
+  color: white;
+}
+
+.my-sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.order-img {
+  width: 100px;
+}
+
+/*Dashboard*/
+
+.entity-card {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.228);
+}
+
+.dashboard-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Order table*/
+
+.order-product-detail {
+  margin: 0;
+}
+
+.adminButton {
+  padding: 20px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  margin: 0;
+}
+
+.my-order {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.my-order-date {
+  margin: 0;
+  text-align: start;
+}
+
+.state-confirmed {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.state-shipped {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.state-delivered {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.state-cancelled {
+  color: red;
+  font-size: 1.2rem;
+}

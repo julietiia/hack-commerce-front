@@ -20,7 +20,7 @@ function UserProfile() {
             </h4>
             <p>{user.email}</p>
             <p>{user.address}</p>
-            <a href="/" className="my-orders-user-profile">
+            <a href="/my-orders" className="my-orders-user-profile">
               My Orders
             </a>
           </div>
