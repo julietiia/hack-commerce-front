@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import "./css/footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ArrowUp, ArrowDown, Plus, Dash } from "react-bootstrap-icons";
+import ApparatWhite from "../assets/logo/ApparatWhite.png"
 
 function Footer() {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ function Footer() {
         >
           <img
             id="footerLogo"
-            src="/src/assets/logo/ApparatWhite.png"
+            src={ApparatWhite}
             alt="apparat logo"
           />
         </div>
@@ -185,7 +186,7 @@ function Footer() {
             </div>
           </div>
           <div className="copyright-footer text-center py-4">
-            © 2023 apparat inc. All rights reserved
+            © 2023 Apparat inc. All rights reserved
           </div>
         </div>
       </div>
