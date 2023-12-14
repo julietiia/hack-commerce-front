@@ -1,6 +1,5 @@
 import React from "react";
 import "../components/css/AboutUs.css";
-// import diagrama from "../assets/img/diagrama.png";
 import aboutapparatbg from "../assets/img/aboutapparatbg.jpg";
 import react from "../assets/tech-icons/react.png";
 import mysql from "../assets/tech-icons/mysql.png";
@@ -16,6 +15,13 @@ import express from "../assets/tech-icons/express.png";
 import infostructure from "../assets/img/infostructure.png";
 import sitestructure from "../assets/img/sitestructure.png";
 import ScrollUpButton from "../components/ScrollUpButton";
+import Ana from "../assets/team/Ana.jpg"
+import Feli from "../assets/team/Feli.jpg"
+import Helm from "../assets/team/Helm.jpg"
+import Juli from "../assets/team/Juli.jpg"
+import Vani from "../assets/team/Vani.jpg"
+
+
 function AboutUs() {
   return (
     <>
@@ -133,7 +139,7 @@ function AboutUs() {
             <div className="team-container">
               <div className="member-card">
                 <img
-                  src="../src/assets/our-teamPic/nick.jpg"
+                  src={Vani}
                   alt=""
                   className="img-team-member"
                 />
@@ -150,7 +156,7 @@ function AboutUs() {
               </div>
               <div className="member-card">
                 <img
-                  src="../src/assets/our-teamPic/howie.jpg"
+                  src={Juli}
                   alt=""
                   className="img-team-member"
                 />
@@ -167,7 +173,7 @@ function AboutUs() {
               </div>
               <div className="member-card">
                 <img
-                  src="../src/assets/our-teamPic/kevin.jpg"
+                  src={Helm}
                   alt=""
                   className="img-team-member"
                 />
@@ -184,7 +190,7 @@ function AboutUs() {
               </div>
               <div className="member-card">
                 <img
-                  src="../src/assets/our-teamPic/brian.jpg"
+                  src={Ana}
                   alt=""
                   className="img-team-member"
                 />
@@ -201,7 +207,7 @@ function AboutUs() {
               </div>
               <div className="member-card">
                 <img
-                  src="../src/assets/our-teamPic/aj.jpg"
+                  src={Feli}
                   alt=""
                   className="img-team-member"
                 />
