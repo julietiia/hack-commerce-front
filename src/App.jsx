@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs.jsx";
 import CheckOut from "./pages/CheckOut.jsx";
 import Admin from "./pages/Admin";
-import "./components/css/Footer.css";
+import "./components/css/footer.css";
 import "./components/css/App.css";
 import Category from "./pages/Category.jsx";
 import SignUp from "./pages/SignUp.jsx";
