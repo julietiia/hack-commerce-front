@@ -200,4 +200,7 @@
   .about-us-title {
     font-size: 3rem;
   }
+  .about-us-title{
+    text-align: center;
+  }
 }

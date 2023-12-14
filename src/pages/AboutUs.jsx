@@ -146,10 +146,10 @@ function AboutUs() {
                 <p className="team-member-name">Vanina Santarnecchi</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/in/vanina-santarnecchi-52113297/" target="_blank">
                     <i className="bi bi-linkedin"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/vanina312B" target="_blank">
                     <i className="bi bi-github"></i>
                   </a>
                 </div>
@@ -163,10 +163,10 @@ function AboutUs() {
                 <p className="team-member-name">Julieta Mautone</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/in/helmuth-dyck/" target="_blank">
                     <i className="bi bi-linkedin"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/julietiia" target="_blank">
                     <i className="bi bi-github"></i>
                   </a>
                 </div>
@@ -180,10 +180,10 @@ function AboutUs() {
                 <p className="team-member-name">Helmuth Dyck</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/in/helmuth-dyck/" target="_blank">
                     <i className="bi bi-linkedin"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/helmdyck" target="_blank">
                     <i className="bi bi-github"></i>
                   </a>
                 </div>
@@ -197,10 +197,10 @@ function AboutUs() {
                 <p className="team-member-name">Ana Baccaro</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/in/anabaccaro/" target="_blank">
                     <i className="bi bi-linkedin"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/AnaBaccaro" target="_blank">
                     <i className="bi bi-github"></i>
                   </a>
                 </div>
@@ -214,10 +214,10 @@ function AboutUs() {
                 <p className="team-member-name">Felipe Baz</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/in/felipe-baz/" target="_blank">
                     <i className="bi bi-linkedin"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/Felipebaz" target="_blank">
                     <i className="bi bi-github"></i>
                   </a>
                 </div>
