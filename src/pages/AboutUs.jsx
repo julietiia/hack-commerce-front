@@ -9,7 +9,7 @@ import bootstrap from "../assets/tech-icons/bootstrap.png";
 import html from "../assets/tech-icons/html.png";
 import css3 from "../assets/tech-icons/css3.png";
 import figma from "../assets/tech-icons/figma.png";
-import trello from "../assets/tech-icons/trello.png";
+import trello from "../assets/tech-icons/Trello.png";
 import discord from "../assets/tech-icons/discord.png";
 import express from "../assets/tech-icons/express.png";
 import infostructure from "../assets/img/infostructure.png";

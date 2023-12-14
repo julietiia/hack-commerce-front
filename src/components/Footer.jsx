@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Collapse from "react-bootstrap/Collapse";
 import { useState } from "react";
 import Card from "react-bootstrap/Card";
-import "./css/Footer.css";
+import "./css/footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ArrowUp, ArrowDown, Plus, Dash } from "react-bootstrap-icons";
 
