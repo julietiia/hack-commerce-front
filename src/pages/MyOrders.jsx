@@ -11,6 +11,8 @@ function MyOrders() {
   const userToken = useSelector((state) => state.user);
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  console.log(orders);
 
   useEffect(() => {
     const getOrders = async () => {
@@ -23,6 +25,7 @@ function MyOrders() {
           },
         });
         setOrders(response.data.orders);
+        setLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -38,41 +41,31 @@ function MyOrders() {
 
   return (
     <>
-      <div className="container-fluid table-container">
-        <div className="row">
-          <div className="col-2">
-            <div className="my-sidebar">
-              <ul className="list-sidebar">
-                <li>
-                  <a href="" className="nav-link">
-                    <h5 className="adminButton">
-                      <i className="adminI bi bi-box-seam"></i> My orders
-                    </h5>
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="nav-link">
-                    <h5 className="adminButton">
-                      <i className="adminI bi bi-person"></i> My profile
-                    </h5>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
+      <div className="container ">
+        <div className="row my-orders-title">
           <div className="col-10">
-            {orders.map((order) => (
-              <div className="my-table">
-                <div className="my-order">
+            <h3 className="m-0">My orders</h3>
+          </div>
+        </div>
+        <div className="row my-orders-body">
+          <div className="col-10">
+            {loading ? ( // Si los datos están cargando, mostrar un spinner
+              <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
+            ) : (
+              // Si los datos están cargados, mostrar el componente
+              orders.map((order) => (
+                <div className="my-order" key={order.id}>
                   <div className="row">
-                    
-                    <p className="my-order-date">{moment(order.date).format("DD/MM/YYYY")}</p>
+                    <p className="my-order-date">
+                      {moment(order.date).format("DD/MM/YYYY")}
+                    </p>
                   </div>
                   <hr />
                   <div className="row">
                     {order.products.map((product) => (
-                      <React.Fragment key={nanoid()}>
+                      <React.Fragment key={product.product.id}>
                         <div className="col-2">
                           <img
                             className="checkout-product-image"
@@ -103,6 +96,9 @@ function MyOrders() {
                           </p>
                         </div>
                         <div className="col-2">
+                          <p>USD {calculateTotalPrice(order)}</p>
+                        </div>
+                        <div className="col-2">
                           <button
                             className="btn btn-success"
                             onClick={() =>
@@ -116,8 +112,8 @@ function MyOrders() {
                     ))}
                   </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
       </div>

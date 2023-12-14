@@ -55,10 +55,24 @@
   margin: 0;
 }
 
+.my-orders-title{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+
+.my-orders-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
 .my-order {
-  background-color: white;
+  background-color: #dce3d3;
   padding: 1rem;
   border-radius: 15px;
+  margin: 1rem 0;
 }
 
 .my-order-date {
@@ -66,9 +80,18 @@
   text-align: start;
 }
 
+.order-product-detail{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .state-confirmed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: green;
   font-size: 1.2rem;
+
 }
 
 .state-shipped {
