@@ -37,3 +37,13 @@ ul {
 li {
   cursor: pointer;
 }
+
+
+.footer-block li {
+  font-weight: 200;
+}
+
+.footer-social i {
+  color: white;
+  padding: 0;
+}

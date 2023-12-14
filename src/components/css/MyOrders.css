@@ -1,0 +1,27 @@
+.my-table{
+    background-color: rgb(77, 77, 77);
+}
+
+.order-img{
+    width: 100px;
+  }
+  
+  /*Dashboard*/
+  
+  .entity-card{
+    background-color:#f6f6f6 ;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 0  20px rgba(0, 0, 0, 0.228);
+  }
+  
+  .dashboard-img{
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /*Order table*/
+  
+  .order-product-detail{
+    margin: 0;
+  }
