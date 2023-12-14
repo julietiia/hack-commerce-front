@@ -5,6 +5,7 @@ import axios from "axios";
 import { nanoid } from "@reduxjs/toolkit";
 import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
 
 function MyOrders() {
   const userToken = useSelector((state) => state.user);
@@ -65,7 +66,8 @@ function MyOrders() {
               <div className="my-table">
                 <div className="my-order">
                   <div className="row">
-                    <p className="my-order-date">{order.date}</p>
+                    
+                    <p className="my-order-date">{moment(order.date).format("DD/MM/YYYY")}</p>
                   </div>
                   <hr />
                   <div className="row">
