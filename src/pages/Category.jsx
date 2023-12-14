@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../components/css/Category.css";
+import "../components/css/category.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
