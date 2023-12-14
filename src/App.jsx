@@ -1,4 +1,3 @@
-import "./components/css/app.css";
 import Home from "./pages/Home";
 import NavbarDos from "./components/NavbarDos.jsx";
 import Footer from "./components/Footer";
