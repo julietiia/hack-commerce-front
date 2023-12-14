@@ -9,12 +9,14 @@ import { login } from '../redux/userSlice';
 const LoginForm = () => {
   const [email, setEmail] = useState('user1@gmail.com');
   const [password, setPassword] = useState('1234');
-  const [checked, setChecked] = useState(false);
+  // const [checked, setChecked] = useState(false);
+  const [error, setError] = useState()
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    try{
     const response = await axios({
       method: "POST",
       url: "http://localhost:3000/tokens",
@@ -24,8 +26,10 @@ const LoginForm = () => {
       },
     });
     dispatch(login(response.data));
-    console.log(response.data)
     navigate("#");
+  } catch (error){
+    setError("Incorrect email or password")
+  }
   };
 
 
@@ -67,6 +71,11 @@ const LoginForm = () => {
       <div className='mt-3 text-decoration-underline'>
        <Link to="/sign-up"> <p> or create a new account</p> </Link>
       </div>
+      {error && (
+        <div className="alert alert-danger" role="alert">
+          {error}
+        </div>
+      )}
     </form>
   );
 };
