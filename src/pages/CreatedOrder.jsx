@@ -15,7 +15,7 @@ function CreatedOrder() {
             </h2>
             <p className="succesfull-order-message">
               You can now go to{" "}
-              <a href="/" className="my-orders-link">
+              <a href="/my-orders" className="my-orders-link">
                 My Orders
               </a>{" "}
               to see the status <br />
