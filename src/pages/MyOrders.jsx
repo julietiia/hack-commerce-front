@@ -10,7 +10,6 @@ function MyOrders() {
   const userToken = useSelector((state) => state.user);
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
-  console.log(orders);
 
   useEffect(() => {
     const getOrders = async () => {
