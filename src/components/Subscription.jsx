@@ -12,7 +12,7 @@ function Subscription() {
         </div>
         <div className="col-sm-12 col-md-8 subscription-message">
           <h3 className="newsletter-tittle mt-2">Subscribe to our newsletter</h3>
-          <p className="newsletter-paragraph mt-4 text-start">
+          <p className="newsletter-paragraph mt-4">
             Stay up to date with all our products, and get the newsletter
             straight to your inbox. Get first dibs on new arrivals, sales,
             exclusive content, events and more!

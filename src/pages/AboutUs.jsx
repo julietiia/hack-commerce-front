@@ -31,7 +31,7 @@ function AboutUs() {
       </div>
       <article className="container my-5">
         <div className="row d-flex justify-content-center">
-          <div className="col-sm-12 col-md-8">
+          <div className="col-12 ">
             <div className="">
               <p className="about-us-body-text">
                 Apparat is a fictitious online store that was born as a final
@@ -60,7 +60,7 @@ function AboutUs() {
         <div className="row technologies-bg">
           <div className="col">
             <p className="technologies-title">
-              This website is built with the following technologies and tools:
+              This website was built using these technologies and tools:
             </p>
             <div className="icons-container">
               <div className="icon-container">
@@ -113,17 +113,17 @@ function AboutUs() {
       </section>
 
       <section className="container">
-        <div className="row site-structure-container">
+        <div className="row site-structure-container gap-2">
           <div className="col-xl-6 col-md-12">
             <p className="site-structure-title">
-              This is the information structure of the site.
+              Information structure.
             </p>
             <img className="site-structure-img" src={infostructure} alt="" />
           </div>
 
           <div className="col-xl-6 col-md-12">
             <p className="site-structure-title">
-              This is the site structure.
+              Site structure.
             </p>
             <img className="site-structure-img" src={sitestructure} alt="" />
           </div>
@@ -133,7 +133,7 @@ function AboutUs() {
       <section className="container">
         <div className="row team-row mb-5">
           <p className="technologies-title">
-            These are the members of the team:
+            This is us
           </p>
           <div className="col">
             <div className="team-container">

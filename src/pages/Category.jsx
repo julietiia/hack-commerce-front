@@ -50,9 +50,9 @@ function Category() {
       </div>
       {products.length > 0 ? (
         <div className="container">
-          <div className="row mb-5 mt-5">
+          <div className="row  mt-5">
             {products.map((product) => (
-              <div key={product.id} className="col-sm-12 col-md-6 col-lg-3 mt-">
+              <div key={product.id} className="col-sm-12 col-md-6 col-lg-3">
                 <div className="d-lg-none">
                   <div className="image-container">
                     <Carousel>

@@ -1,9 +1,10 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Nav, NavDropdown } from "react-bootstrap";
-import "./css/App.css";
 import { useNavigate, NavLink } from "react-router-dom";
 import OffCanvasSignIn from "./OffCanvasSignIn";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function OffCanvasNavbarMenu({
   showMenu,
@@ -14,9 +15,21 @@ function OffCanvasNavbarMenu({
   handleCloseCart,
   showSignIn,
   handleCloseSignIn,
-   ...props
+  ...props
 }) {
+  const [categories, setCategories] = useState([]);
 
+  useEffect(() => {
+    const getCategories = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${import.meta.env.VITE_PORT_URL}/categories`,
+      });
+      setCategories(response.data.categories);
+    };
+
+    getCategories();
+  }, []);
 
   return (
     <>
@@ -30,16 +43,25 @@ function OffCanvasNavbarMenu({
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Nav className="me-auto">
-            <NavLink className="nav-link custom-item" to="/">
+          <Nav className="d-flex justify-content-end">
+            <NavLink
+              className="nav-link custom-item text-black"
+              to="/"
+              onClick={handleCloseMenu}
+            >
               home
             </NavLink>
-            <NavLink className="nav-link custom-item" to="/shop">
+            <NavLink
+              className="nav-link custom-item text-black"
+              to="/shop"
+              onClick={handleCloseMenu}
+            >
               shop
             </NavLink>
             <NavLink
               className="nav-link custom-item text-black"
               to="/about-this-project"
+              onClick={handleCloseMenu}
             >
               about this project
             </NavLink>
@@ -49,46 +71,35 @@ function OffCanvasNavbarMenu({
               title="categories"
               id="basic-nav-dropdown"
             >
-              <NavLink className="dropdown-item" to="/category/chairs">
-                chairs
-              </NavLink>
-              <NavLink className="dropdown-item" to="/category/sofas">
-                sofas
-              </NavLink>
-              <NavLink className="dropdown-item" to="/category/tables">
-                tables
-              </NavLink>
-              <NavLink className="dropdown-item" to="/category/lightning">
-                lightning
-              </NavLink>
-              <NavLink className="dropdown-item" to="/category/storage">
-                storage&organization
-              </NavLink>
-              <NavLink className="dropdown-item" to="/category/deco">
-                deco
-              </NavLink>
+              {categories.map((category) => (
+                <NavLink
+                  className="dropdown-item"
+                  to={`/category/${category.id}`}
+                  key={category.id}
+                  onClick={handleCloseMenu}
+                >
+                  {category.name}
+                </NavLink>
+              ))}
             </NavDropdown>
           </Nav>
-          <div className="shop-profile d-flex">
-            <i className="bi bi-search lupita d-block"></i>
-            <i
-              onClick={(event) => handleShowCart(event)}
-              className="bi bi-cart3 carrito-icon"
-            ></i>
+          <div className="shop-profile d-flex justify-content-end">
+            <i className="bi bi-search lupita d-block px-3"></i>
+            
             <i
               onClick={(event) => handleShowSignIn(event)}
-              className="bi bi-person profile-icon d-block"
+              className="bi bi-person profile-icon d-block px-3"
             ></i>
           </div>
         </Offcanvas.Body>
         <OffCanvasShoppingCart
-            showCart={showCart}
-            handleCloseCart={() => setShowCart(false)}
-          />
-             <OffCanvasSignIn
-              showSignIn={showSignIn}
-              handleCloseSignIn={() => setShowSignIn(false)}
-            />
+          showCart={showCart}
+          handleCloseCart={() => setShowCart(false)}
+        />
+        <OffCanvasSignIn
+          showSignIn={showSignIn}
+          handleCloseSignIn={() => setShowSignIn(false)}
+        />
       </Offcanvas>
     </>
   );

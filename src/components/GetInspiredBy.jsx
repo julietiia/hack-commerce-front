@@ -39,22 +39,23 @@ function GetInspiredBy() {
 
   return (
     <>
-    
       <div className="container-fluid get-inpired-bg">
         <div className="container">
-        <div className="row my-3">
-          <div className="col">
-            <div className="complement-navigation">
-              <h2 className="">Get inspired</h2>
-              <div className="navigation d-none d-lg-block">
-                <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
-                <i className="bi bi-arrow-right" onClick={handleRightClick}></i>
+          <div className="row my-3">
+            <div className="col">
+              <div className="complement-navigation">
+                <h2 className="">Get inspired</h2>
+                <div className="navigation d-none d-lg-block">
+                  <i className="bi bi-arrow-left" onClick={handleLeftClick}></i>
+                  <i
+                    className="bi bi-arrow-right"
+                    onClick={handleRightClick}
+                  ></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-        
 
         <div className="row horizontal-scroll">
           {products.map((product) => (
@@ -76,7 +77,6 @@ function GetInspiredBy() {
           ))}
         </div>
       </div>
-      
     </>
   );
 }

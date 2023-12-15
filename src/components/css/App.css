@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -32,16 +32,11 @@ i:hover {
 .carrito-icon,
 .profile-icon,
 .lupita {
-  font-size:1.3em;
+  font-size: 1.3em;
 }
 
 body {
   width: 100%;
-}
-
-.off-canvas-menu {
-  position: absolute;
-  top: 100%;
 }
 
 #root {
@@ -49,57 +44,18 @@ body {
   padding: 0;
 }
 
-.myNavbar.navbar {
-  height: 4rem;
-  padding-top: 1rem 0 1rem 0; /* Puedes ajustar este valor según tus necesidades */
-}
-
-.custom-item {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.menu-icon {
-  font-size: 2rem;
-}
-
-.higher-z-index {
-  z-index: 1000;
-  background-color: white;
-}
-
-.carrito-icon-responsive {
-  display: none;
-  padding: 0;
-}
-
 /*Toastify css*/
 .toast-img {
-  width: 270px;
+  width: 80%;
   height: 300px;
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
 }
 
-
-
-
-@media (max-width: 992px) {
-  .carrito-icon-responsive {
-    display: block;
-    font-size: 1.2rem;
-  }
-}
-
 @media (max-width: 768px) {
   .parent-navbar-container {
     padding: 0;
-  }
-
-  .carrito-icon-responsive {
-    display: block;
-    font-size: 18px;
   }
 
   .profile-icon,
@@ -114,6 +70,12 @@ body {
   .shop-profile {
     display: flex;
     align-items: end;
+  }
+
+  .toast-img {
+    height: 200px;
+    width: 50%;
+    object-position: top;
   }
 }
 
@@ -136,7 +98,6 @@ body {
 }
 
 /* Button Addtocart */
-.addtocart-button{
-  height: 40px
-   
+.addtocart-button {
+  height: 40px;
 }

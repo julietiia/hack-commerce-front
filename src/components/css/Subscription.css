@@ -1,72 +1,100 @@
-
-.newsletter-tittle{
-    color: black;
+.newsletter-tittle {
+  color: black;
 }
 
-.newsletter-paragraph{
-    font-size: 1rem;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.612);
+.newsletter-paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.612);
+  text-align: left;
 }
 
-.subscription-background{
-    background-color: #dce3d3;
-    border-radius: 20px;
-    height: 280px;
-    color: white;
-    display: flex;
-    align-items: center;    
+.subscription-background {
+  background-color: #dce3d3;
+  border-radius: 20px;
+  height: 280px;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
-
-
-.subscribe-input{
-    height: 3rem;
-    width: 60%;
-    border-radius: 10px;
-    border: none;
-    padding-left: 1rem;
+.subscribe-input {
+  height: 3rem;
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  padding-left: 1rem;
 }
 
-.subscribe-btn{
-    height: 3rem;
-    border-radius: 10px;
-    font-size: 1rem;
+.subscribe-btn {
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
-.subscription-img{
-    height: 170px;
+.subscription-img {
+  height: 170px;
 }
 
 /* Responsive */
-@media (max-width: 768px){
-    .subscription-background{
-        height: 480px;
-        padding: 1rem 0 1rem 0;
-        max-width: 90vw;
-    }
 
-    .subscription-img{
-        height: 250px;
-    }
+@media (max-width: 992px) {
+  .subscription-img {
+    height: 160px;
+  }
+}
 
-    .newsletter-paragraph{
-        font-size: 12px;
-    }
+@media (max-width: 768px) {
+  .subscription-background {
+    height: 480px;
+    padding: 1rem 0 1rem 0;
+    max-width: 90vw;
+  }
 
-    .newsletter-tittle{
-        font-size: 20px;
-        margin-top: 2rem;
-    }
+  .subscription-img {
+    height: 250px;
+  }
 
-    .subscription-message{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .newsletter-paragraph {
+    font-size: 12px;
+  }
 
-    .subscription-message{
-        text-align: center;
-    }
-   
+  .newsletter-tittle {
+    font-size: 20px;
+    margin-top: 2rem;
+  }
+
+  .subscription-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscription-message {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .subscription-img {
+    height: 250px;
+  }
+
+  .newsletter-paragraph{
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscription-img {
+    height: 150px;
+  }
+
+  .subscribe-input{
+    width: 100%;
+  }
+
+  .subscribe-btn{
+    width: 60%;
+  }
 }
