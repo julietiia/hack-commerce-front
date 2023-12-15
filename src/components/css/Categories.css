@@ -12,6 +12,7 @@
   align-items: start;
   cursor: pointer;
   border-radius: 20px;
+  border: solid 1px #dce3d3dd;
   transition: 0.5s ease-in-out;
   color: black;
   padding: 0;
