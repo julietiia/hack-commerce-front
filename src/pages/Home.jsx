@@ -7,6 +7,7 @@ import HomeCarousel from "../components/Carousel"
 import GetInspiredBy from "../components/GetInspiredBy";
 import Subscription from "../components/Subscription";
 import ScrollUpButton from "../components/ScrollUpButton";
+import FloatingAboutUs from "../components/FloatingAboutUs";
 
 
 function Home() {
@@ -41,7 +42,7 @@ function Home() {
       <div className="mt-5">
       <GetInspiredBy/>
       </div>
-      
+      <FloatingAboutUs/>
       <Subscription/>
     </>
   );
