@@ -12,7 +12,7 @@ function DiscoverSimilarDesigns({ productId }) {
     const getSimilarProducts = async () => {
       const response = await axios({
         method: "get",
-        url: `${import.meta.env.VITE_PORT_URL}/products/`,
+        url: `${import.meta.env.VITE_PORT_URL}/products`,
       });
 
       const currentProductId = productId;
