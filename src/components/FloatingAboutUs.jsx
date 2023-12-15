@@ -5,7 +5,7 @@ function FloatingAboutUs() {
   return (
     <div className='float-container'>
         <div className="btn-float">
-            <a href="/about-us">About this project</a>
+            <a href="/about-this-project">About this project</a>
         </div>
     </div>
   )
