@@ -8,6 +8,7 @@ import nodeJS from "../assets/tech-icons/nodeJS.png";
 import bootstrap from "../assets/tech-icons/bootstrap.png";
 import html from "../assets/tech-icons/html.png";
 import css3 from "../assets/tech-icons/css3.png";
+import javaScript from "../assets/tech-icons/javaScript.png"
 import figma from "../assets/tech-icons/figma.png";
 import trello from "../assets/tech-icons/Trello.png";
 import discord from "../assets/tech-icons/discord.png";
@@ -63,6 +64,18 @@ function AboutUs() {
               This website was built using these technologies and tools:
             </p>
             <div className="icons-container">
+            <div className="icon-container">
+                <img src={html} alt="" />
+                <p className="tech-name">HTML5</p>
+              </div>
+              <div className="icon-container">
+                <img src={css3} alt="" />
+                <p className="tech-name">CSS3</p>
+              </div>
+              <div className="icon-container">
+                <img src={javaScript} alt="" />
+                <p className="tech-name">JavaScript</p>
+              </div>
               <div className="icon-container">
                 <img src={react} alt="" />
                 <p className="tech-name">React.js</p>
@@ -86,14 +99,6 @@ function AboutUs() {
               <div className="icon-container">
                 <img src={bootstrap} alt="" />
                 <p className="tech-name">Bootstrap</p>
-              </div>
-              <div className="icon-container">
-                <img src={html} alt="" />
-                <p className="tech-name">HTML5</p>
-              </div>
-              <div className="icon-container">
-                <img src={css3} alt="" />
-                <p className="tech-name">CSS3</p>
               </div>
               <div className="icon-container">
                 <img src={figma} alt="" />
