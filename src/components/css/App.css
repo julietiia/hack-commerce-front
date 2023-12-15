@@ -53,6 +53,15 @@ body {
   border-radius: 20px;
 }
 
+/*Carrousel*/
+
+.carrousel-img img{
+  height: 86vh;
+  object-fit: cover;
+  object-position: left;
+  transition: 1s ease-in-out;
+}
+
 @media (max-width: 768px) {
   .parent-navbar-container {
     padding: 0;
@@ -76,6 +85,10 @@ body {
     height: 200px;
     width: 50%;
     object-position: top;
+  }
+
+  .carrousel-img img{
+    height: 43vh;
   }
 }
 
