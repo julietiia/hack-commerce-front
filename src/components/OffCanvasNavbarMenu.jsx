@@ -46,7 +46,7 @@ function OffCanvasNavbarMenu({
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="off-menu-body">
-          <Nav className="col-6 off-user-body">
+          <Nav className="col-5 off-user-body">
             <div className="off-icon-container">
               <i className="bi bi-search nav-icon"></i>
             </div>
@@ -56,30 +56,30 @@ function OffCanvasNavbarMenu({
                 onClick={(event) => handleShowSignIn(event)}
               ></i>
               {user && (
-                <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill ">
+                <span className="position-absolute top-0 start-50 translate-middle-y badge rounded-pill ">
                   {user}
                 </span>
               )}
             </div>
           </Nav>
 
-          <Nav className="col-6 off-menu-container">
+          <Nav className="col-7 off-menu-container">
             <NavLink
-              className="nav-link custom-item text-black"
+              className="link-off-canvas text-black"
               to="/"
               onClick={handleCloseMenu}
             >
               home
             </NavLink>
             <NavLink
-              className="nav-link custom-item text-black"
+              className="link-off-canvas text-black"
               to="/shop"
               onClick={handleCloseMenu}
             >
               shop
             </NavLink>
             <NavLink
-              className="nav-link custom-item text-black"
+              className="link-off-canvas text-black"
               to="/about-this-project"
               onClick={handleCloseMenu}
             >
@@ -87,7 +87,7 @@ function OffCanvasNavbarMenu({
             </NavLink>
 
             <NavLink>
-              <div className="off-dropdown">
+              <div className="link-off-canvas off-dropdown">
                 <p>
                   categories <i className="bi bi-caret-down-fill"></i>
                 </p>
