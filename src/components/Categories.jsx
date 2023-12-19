@@ -28,7 +28,7 @@ function Categories() {
   }, []);
       
 
-  return (
+  return categories &&(
     <>
       <div className="container">
         <div className="row">
@@ -60,7 +60,9 @@ function Categories() {
       </div>
       
     </>
+  
   );
+        
 }
 
 export default Categories;

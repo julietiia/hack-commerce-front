@@ -21,7 +21,6 @@ function SignUp() {
     const handleCloseSignIn = (event) => setShowSignIn(false);
 
     const onSubmit = async (data) => {
-        console.log(data);
         await axios({
             method: "post",
             url: `${import.meta.env.VITE_PORT_URL}/users`,
