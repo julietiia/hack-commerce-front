@@ -1,16 +1,48 @@
-.btn-float a{
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    background-color: black;
-    color: white;
-    padding: 10px 10px;
-    border-radius: 10px;
-    position: fixed;
-    left: 27px;
-    bottom: 27px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0ox 8px 15px rgba(0, 0, 0, 0.3);
 
+
+.btn-float a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 10px;
+  position: fixed;
+  left: 27px;
+  bottom: 27px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0ox 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-float-mobile {
+  display: none;
+  position: fixed;
+  font-size: 20px;
+  bottom: 20px;
+  left: 0px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border: block;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.btn-float-mobile i {
+    font-size: 1.3rem;
+    padding: 0;
+    color: white;
+}
+
+@media (max-width: 480px) {
+  .btn-float {
+    display: none;
+  }
+
+  .btn-float-mobile {
+    display: block;
+  }
 }
