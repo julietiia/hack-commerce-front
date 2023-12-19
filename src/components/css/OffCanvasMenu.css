@@ -1,0 +1,94 @@
+.off-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.off-menu-body {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.off-user-body {
+  display: flex;
+  justify-content: start;
+
+  width: 150px;
+}
+
+.off-user-body i {
+  padding: 8px 12px;
+}
+
+.off-icon-container {
+  position: relative;
+}
+
+.off-icon-profile {
+  font-size: 1.5rem;
+}
+
+.off-icon-container span {
+  background-color: #dce3d3;
+  color: #4d4c4e;
+  font-weight: 500;
+}
+
+/*Dropdown Offcanvas*/
+
+.off-dropdown {
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+  z-index: 9999;
+  padding: 8px 16px;
+}
+
+.off-dropdown p {
+    color: black;
+    font-weight: 400;
+}
+
+.off-dropdown button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.off-dropdown a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.off-dropdown .content {
+  display: none;
+  font-weight: 300;
+  position: absolute;
+  /* background-color: hsl(0, 0%, 95%); */
+  background-color: white;
+  border-radius: 5px;
+  min-width: 150px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.8);
+  right: 10px;
+}
+
+.off-dropdown:hover .content {
+  display: block;
+  transition: 0.5s ease-in-out;
+}
+
+.off-dropdown a:hover {
+  background-color: #dce3d3;
+}
+
+.off-dropdown p i {
+  padding: 0;
+  font-size: 12px;
+}

@@ -63,11 +63,11 @@ function NavbarDos() {
           </div>
           <div className="user-body">
             <div className="icon-nav-container">
-              <i className="bi bi-search"></i>
+              <i className="bi bi-search nav-icon"></i>
             </div>
             <div className="icon-nav-container">
               <i
-                className="bi bi-cart"
+                className="bi bi-cart nav-icon"
                 onClick={(event) => handleShowCart(event)}
               ></i>
             {cartQuantity > 0 && (
@@ -78,7 +78,7 @@ function NavbarDos() {
             </div>
             <div className="icon-nav-container">
               <i
-                className="bi bi-person"
+                className="bi bi-person nav-icon-profile"
                 onClick={(event) => handleShowSignIn(event)}
               ></i>
               {user && (

@@ -5,6 +5,8 @@ import OffCanvasSignIn from "./OffCanvasSignIn";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "../components/css/OffCanvasMenu.css";
+import { useSelector } from "react-redux";
 
 function OffCanvasNavbarMenu({
   showMenu,
@@ -18,6 +20,7 @@ function OffCanvasNavbarMenu({
   ...props
 }) {
   const [categories, setCategories] = useState([]);
+  const user = useSelector((state) => state.user.firstname);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -42,8 +45,25 @@ function OffCanvasNavbarMenu({
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Nav className="d-flex justify-content-end">
+        <Offcanvas.Body className="off-menu-body">
+          <Nav className="col-6 off-user-body">
+            <div className="off-icon-container">
+              <i className="bi bi-search nav-icon"></i>
+            </div>
+            <div className="off-icon-container">
+              <i
+                className="bi bi-person off-icon-profile"
+                onClick={(event) => handleShowSignIn(event)}
+              ></i>
+              {user && (
+                <span className="position-absolute top-50 start-100 translate-middle-y badge rounded-pill ">
+                  {user}
+                </span>
+              )}
+            </div>
+          </Nav>
+
+          <Nav className="col-6 off-menu-container">
             <NavLink
               className="nav-link custom-item text-black"
               to="/"
@@ -66,26 +86,25 @@ function OffCanvasNavbarMenu({
               about this project
             </NavLink>
 
-            <NavDropdown
-              className="text-black"
-              title="categories"
-              id="basic-nav-dropdown"
-            >
-              {categories.map((category) => (
-                <NavLink
-                  className="dropdown-item"
-                  to={`/category/${category.id}`}
-                  key={category.id}
-                  onClick={handleCloseMenu}
-                >
-                  {category.name}
-                </NavLink>
-              ))}
-            </NavDropdown>
+            <NavLink>
+              <div className="off-dropdown">
+                <p>
+                  categories <i className="bi bi-caret-down-fill"></i>
+                </p>
+
+                <div className="content">
+                  {categories.map((category) => (
+                    <a href={`/category/${category.id}`} key={category.id}>
+                      {category.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </NavLink>
           </Nav>
           <div className="shop-profile d-flex justify-content-end">
             <i className="bi bi-search lupita d-block px-3"></i>
-            
+
             <i
               onClick={(event) => handleShowSignIn(event)}
               className="bi bi-person profile-icon d-block px-3"

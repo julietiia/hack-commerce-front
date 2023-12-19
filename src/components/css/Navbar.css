@@ -107,7 +107,15 @@
 
 .user-body i {
   padding: 8px 4px;
+  
+}
+
+.nav-icon{
   font-size: 1.33rem;
+}
+
+.nav-icon-profile{
+ font-size: 1.5rem;
 }
 
 /*Icons navbar*/
