@@ -1,6 +1,7 @@
 .nav-logo {
   width: 150px;
   object-fit: contain;
+  transition: 0.5s ease-in-out;
 }
 
 .nav-container {
@@ -192,9 +193,9 @@
     display: block;
   }
 
-  /* .cart-menu i {
-    display: none;
-  } */
+  .nav-logo{
+    width: 120px;
+  }
 
   .cart-menu span {
     display: none;

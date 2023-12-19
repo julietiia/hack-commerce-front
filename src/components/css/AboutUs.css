@@ -67,6 +67,7 @@
 .icon-container {
   display: flex;
   justify-content: center;
+  width: 140px;
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
@@ -188,6 +189,10 @@
   .about-us-title {
     font-size: 5rem;
   }
+
+  .icon-container{
+    width: 120px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -197,6 +202,10 @@
 
   .about-us-bg{
     height: 43vh;
+  }
+
+  .icon-container{
+    width: 100px;
   }
 }
 
@@ -211,6 +220,17 @@
 
 @media (max-width: 480px){
   .icon-container img{
-    max-width: 3rem;
+    max-width: 4rem;
   }
+
+  .icons-container{
+    gap: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .icon-container{
+    width: 90px;
+    
+  }
+
 }

@@ -112,10 +112,10 @@ function AboutUs() {
                 <img src={trello} alt="" />
                 <p className="tech-name">Trello</p>
               </div>
-              <div className="icon-container">
+              {/* <div className="icon-container">
                 <img src={discord} alt="" />
                 <p className="tech-name">Discord</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -123,12 +123,12 @@ function AboutUs() {
 
       <section className="container">
         <div className="row site-structure-container gap-2">
-          <div className="col-xl-6 col-md-12">
+          <div className="col-xl-8 col-md-12">
             <p className="site-structure-title">Information structure.</p>
             <img className="site-structure-img" src={infostructure} alt="" />
           </div>
 
-          <div className="col-xl-6 col-md-12">
+          <div className="col-xl-8 col-md-12">
             <p className="site-structure-title">Site structure.</p>
             <img className="site-structure-img" src={sitestructure} alt="" />
           </div>
