@@ -3,12 +3,11 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "../components/css/Home.css";
 import Categories from "../components/Categories";
-import HomeCarousel from "../components/Carousel"
+import HomeCarousel from "../components/Carousel";
 import GetInspiredBy from "../components/GetInspiredBy";
 import Subscription from "../components/Subscription";
 import ScrollUpButton from "../components/ScrollUpButton";
 import FloatingAboutUs from "../components/FloatingAboutUs";
-
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -27,26 +26,14 @@ function Home() {
 
   return (
     <>
-   
-      {/* <ul className="mt-5">
-        {products.map((product) => (
-         <li key={product.id}> {product.name} </li>
-        ))}
-      </ul> */}
       <HomeCarousel />
-      {/* <section className="carousel">
-        <img src="/src/assets/banner.png" alt="banner" />
-      </section> */}
-      <ScrollUpButton/>
+      <ScrollUpButton />
       <Categories />
-      <div className="mt-5">
-      <GetInspiredBy/>
-      </div>
-      <FloatingAboutUs/>
-      <Subscription/>
+      <GetInspiredBy />
+      <FloatingAboutUs />
+      <Subscription />
     </>
   );
 }
 
 export default Home;
-

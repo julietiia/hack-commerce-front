@@ -48,7 +48,11 @@ function OffCanvasShoppingCart({
             <div>
               {" "}
               <p className="fw-light">Your shopping cart is empty.</p>
-              <p className="text-decoration-underline" style={{ cursor: "pointer" }} onClick={() => navigate("/shop")}>
+              <p
+                className="text-decoration-underline"
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate("/shop")}
+              >
                 <i className="bi bi-arrow-right p-0"></i> Go shopping{" "}
               </p>
             </div>
@@ -129,7 +133,10 @@ function OffCanvasShoppingCart({
               <div className="row">
                 <button
                   className="col-12 mt-3 btn btn-dark check-out-button rounded"
-                  onClick={() => navigate("/checkout")}
+                  onClick={() => {
+                    navigate("/checkout");
+                    handleCloseCart();
+                  }}
                 >
                   Check out
                 </button>

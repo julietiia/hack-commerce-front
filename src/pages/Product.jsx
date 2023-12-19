@@ -46,7 +46,7 @@ function Product() {
 
   return (
     <>
-      <div className="container mt-4">
+      <div className="container mt-4 mb-5">
         {oneProduct && (
           <div key={oneProduct.id} className="row">
             <div className="col-12 col-md-6">

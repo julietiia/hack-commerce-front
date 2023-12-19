@@ -14,19 +14,17 @@ function Categories() {
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
 
-  useEffect(() =>{
+  useEffect(() => {
     const getCategories = async () => {
       const response = await axios({
         method: "get",
         url: `${import.meta.env.VITE_PORT_URL}/categories`,
       });
       setCategories(response.data.categories);
-     
     };
-   
+
     getCategories();
   }, []);
-      
 
   return categories &&(
     <>
@@ -37,28 +35,29 @@ function Categories() {
           </div>
         </div>
         <div className="row my-3">
-        {categories.map((category) => (
-          <div className="col-xl-4 col-md-6 " key={category.id}>
-          
-                  <div 
-                  className="category-box"
-                  onClick={() => navigate(`/category/${category.id}`)}
-                >
-                  <h4 className="category-name">
-                    {category.name}<i className="bi bi-arrow-up-right arrow"></i>
-                  </h4>
-    
-                  <img className="" src={`${
-            import.meta.env.VITE_IMAGES_URL
-          }/${category.imageIcon}`} alt="" />
-                </div>
-                  
-           
-          </div>
-           ))}
+          {categories.map((category) => (
+            <div className="col-xl-4 col-md-6 " key={category.id}>
+              <div
+                className="category-box"
+                onClick={() => navigate(`/category/${category.id}`)}
+              >
+                <h4 className="category-name">
+                  {category.name}
+                  <i className="bi bi-arrow-up-right arrow"></i>
+                </h4>
+
+                <img
+                  className=""
+                  src={`${import.meta.env.VITE_IMAGES_URL}/${
+                    category.imageIcon
+                  }`}
+                  alt=""
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      
     </>
   
   );

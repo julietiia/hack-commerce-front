@@ -1,6 +1,7 @@
 .nav-logo {
   width: 150px;
   object-fit: contain;
+  transition: 0.5s ease-in-out;
 }
 
 .nav-container {
@@ -106,7 +107,15 @@
 
 .user-body i {
   padding: 8px 4px;
+  
+}
+
+.nav-icon{
   font-size: 1.33rem;
+}
+
+.nav-icon-profile{
+ font-size: 1.5rem;
 }
 
 /*Icons navbar*/
@@ -192,11 +201,12 @@
     display: block;
   }
 
-  /* .cart-menu i {
-    display: none;
-  } */
+  .nav-logo{
+    width: 120px;
+  }
 
   .cart-menu span {
     display: none;
   }
+  
 }

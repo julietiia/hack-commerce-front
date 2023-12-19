@@ -172,3 +172,11 @@
 .my-orders-link:hover {
   color: #1f8f46;
 }
+
+@media (max-width: 992px) {
+  .shopping-list-container{
+    margin-top: 2rem;
+  }
+}
+  
+

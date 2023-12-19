@@ -6,8 +6,10 @@ import mysql from "../assets/tech-icons/mysql.png";
 import redux from "../assets/tech-icons/redux.png";
 import nodeJS from "../assets/tech-icons/nodeJS.png";
 import bootstrap from "../assets/tech-icons/bootstrap.png";
+import git from "../assets/tech-icons/git.png";
 import html from "../assets/tech-icons/html.png";
 import css3 from "../assets/tech-icons/css3.png";
+import javaScript from "../assets/tech-icons/javaScript.png";
 import figma from "../assets/tech-icons/figma.png";
 import trello from "../assets/tech-icons/Trello.png";
 import discord from "../assets/tech-icons/discord.png";
@@ -15,18 +17,17 @@ import express from "../assets/tech-icons/express.png";
 import infostructure from "../assets/img/infostructure.png";
 import sitestructure from "../assets/img/sitestructure.png";
 import ScrollUpButton from "../components/ScrollUpButton";
-import Ana from "../assets/team/Ana.jpg"
-import Feli from "../assets/team/Feli.jpg"
-import Helm from "../assets/team/Helm.jpg"
-import Juli from "../assets/team/Juli.jpg"
-import Vani from "../assets/team/Vani.jpg"
-
+import Ana from "../assets/team/Ana.jpg";
+import Feli from "../assets/team/Feli.jpg";
+import Helm from "../assets/team/Helm.jpg";
+import Juli from "../assets/team/Juli.jpg";
+import Vani from "../assets/team/Vani.jpg";
 
 function AboutUs() {
   return (
     <>
       <div className="container-fluid about-bg-container">
-        <h2 className="about-us-title">about this project</h2>
+        <h2 className="about-us-title">About this project</h2>
         <img className="about-us-bg" src={aboutapparatbg} alt="" />
       </div>
       <article className="container my-5">
@@ -64,6 +65,18 @@ function AboutUs() {
             </p>
             <div className="icons-container">
               <div className="icon-container">
+                <img src={html} alt="" />
+                <p className="tech-name">HTML5</p>
+              </div>
+              <div className="icon-container">
+                <img src={css3} alt="" />
+                <p className="tech-name">CSS3</p>
+              </div>
+              <div className="icon-container">
+                <img src={javaScript} alt="" />
+                <p className="tech-name">JavaScript</p>
+              </div>
+              <div className="icon-container">
                 <img src={react} alt="" />
                 <p className="tech-name">React.js</p>
               </div>
@@ -88,12 +101,8 @@ function AboutUs() {
                 <p className="tech-name">Bootstrap</p>
               </div>
               <div className="icon-container">
-                <img src={html} alt="" />
-                <p className="tech-name">HTML5</p>
-              </div>
-              <div className="icon-container">
-                <img src={css3} alt="" />
-                <p className="tech-name">CSS3</p>
+                <img src={git} alt="" />
+                <p className="tech-name">Git</p>
               </div>
               <div className="icon-container">
                 <img src={figma} alt="" />
@@ -103,10 +112,10 @@ function AboutUs() {
                 <img src={trello} alt="" />
                 <p className="tech-name">Trello</p>
               </div>
-              <div className="icon-container">
+              {/* <div className="icon-container">
                 <img src={discord} alt="" />
                 <p className="tech-name">Discord</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -114,17 +123,13 @@ function AboutUs() {
 
       <section className="container">
         <div className="row site-structure-container gap-2">
-          <div className="col-xl-6 col-md-12">
-            <p className="site-structure-title">
-              Information structure.
-            </p>
+          <div className="col-xl-8 col-md-12">
+            <p className="site-structure-title">Information structure.</p>
             <img className="site-structure-img" src={infostructure} alt="" />
           </div>
 
-          <div className="col-xl-6 col-md-12">
-            <p className="site-structure-title">
-              Site structure.
-            </p>
+          <div className="col-xl-8 col-md-12">
+            <p className="site-structure-title">Site structure.</p>
             <img className="site-structure-img" src={sitestructure} alt="" />
           </div>
         </div>
@@ -132,21 +137,18 @@ function AboutUs() {
 
       <section className="container">
         <div className="row team-row mb-5">
-          <p className="technologies-title">
-            This is us
-          </p>
+          <p className="technologies-title">This is us</p>
           <div className="col">
             <div className="team-container">
               <div className="member-card">
-                <img
-                  src={Vani}
-                  alt=""
-                  className="img-team-member"
-                />
+                <img src={Vani} alt="" className="img-team-member" />
                 <p className="team-member-name">Vanina Santarnecchi</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="https://www.linkedin.com/in/vanina-santarnecchi-52113297/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/vanina-santarnecchi-52113297/"
+                    target="_blank"
+                  >
                     <i className="bi bi-linkedin"></i>
                   </a>
                   <a href="https://github.com/vanina312B" target="_blank">
@@ -155,15 +157,14 @@ function AboutUs() {
                 </div>
               </div>
               <div className="member-card">
-                <img
-                  src={Juli}
-                  alt=""
-                  className="img-team-member"
-                />
+                <img src={Juli} alt="" className="img-team-member" />
                 <p className="team-member-name">Julieta Mautone</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="https://www.linkedin.com/in/helmuth-dyck/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/julieta-mautone/"
+                    target="_blank"
+                  >
                     <i className="bi bi-linkedin"></i>
                   </a>
                   <a href="https://github.com/julietiia" target="_blank">
@@ -172,15 +173,14 @@ function AboutUs() {
                 </div>
               </div>
               <div className="member-card">
-                <img
-                  src={Helm}
-                  alt=""
-                  className="img-team-member"
-                />
+                <img src={Helm} alt="" className="img-team-member" />
                 <p className="team-member-name">Helmuth Dyck</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="https://www.linkedin.com/in/helmuth-dyck/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/helmuth-dyck/"
+                    target="_blank"
+                  >
                     <i className="bi bi-linkedin"></i>
                   </a>
                   <a href="https://github.com/helmdyck" target="_blank">
@@ -189,15 +189,14 @@ function AboutUs() {
                 </div>
               </div>
               <div className="member-card">
-                <img
-                  src={Ana}
-                  alt=""
-                  className="img-team-member"
-                />
+                <img src={Ana} alt="" className="img-team-member" />
                 <p className="team-member-name">Ana Baccaro</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="https://www.linkedin.com/in/anabaccaro/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/anabaccaro/"
+                    target="_blank"
+                  >
                     <i className="bi bi-linkedin"></i>
                   </a>
                   <a href="https://github.com/AnaBaccaro" target="_blank">
@@ -206,15 +205,14 @@ function AboutUs() {
                 </div>
               </div>
               <div className="member-card">
-                <img
-                  src={Feli}
-                  alt=""
-                  className="img-team-member"
-                />
+                <img src={Feli} alt="" className="img-team-member" />
                 <p className="team-member-name">Felipe Baz</p>
                 <p className="team-member-job-position">Full Stack Developer</p>
                 <div className="personal-links">
-                  <a href="https://www.linkedin.com/in/felipe-baz/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/felipe-baz/"
+                    target="_blank"
+                  >
                     <i className="bi bi-linkedin"></i>
                   </a>
                   <a href="https://github.com/Felipebaz" target="_blank">
@@ -226,7 +224,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
-      <ScrollUpButton/>
+      <ScrollUpButton />
     </>
   );
 }
