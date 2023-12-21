@@ -1,13 +1,22 @@
-.signUp{
-    background-color:#f6f6f6;
-    border-radius: 20px;
-    /* display: flex; */
-    justify-content: center;
-    margin: 2rem 0 2rem 0;
-
+.signUp {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  /* display: flex; */
+  justify-content: center;
+  margin: 2rem 0 2rem 0;
 }
 
-.form-text{
-    font-size: 0.75rem;
+.reset {
+  font-size: 1rem;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-right: 1rem;
 }
 
+.form-text {
+  font-size: 0.75rem;
+}
