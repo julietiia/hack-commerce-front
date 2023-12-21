@@ -25,7 +25,7 @@ function Subscription() {
             />
             <label htmlFor="subscribe"></label>
             <button className="m-2 btn btn-dark  subscribe-btn">
-              subscribe
+              Subscribe
             </button>
           </form>
         </div>
