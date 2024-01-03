@@ -3,8 +3,6 @@ import { Nav, NavDropdown } from "react-bootstrap";
 import { useNavigate, NavLink } from "react-router-dom";
 import OffCanvasSignIn from "./OffCanvasSignIn";
 import OffCanvasShoppingCart from "./OffCanvasShoppingCart";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "../components/css/OffCanvasMenu.css";
 import { useSelector } from "react-redux";
 
@@ -17,22 +15,13 @@ function OffCanvasNavbarMenu({
   handleCloseCart,
   showSignIn,
   handleCloseSignIn,
+  categories,
   ...props
+  
 }) {
-  const [categories, setCategories] = useState([]);
+
   const user = useSelector((state) => state.user.firstname);
-
-  useEffect(() => {
-    const getCategories = async () => {
-      const response = await axios({
-        method: "get",
-        url: `${import.meta.env.VITE_PORT_URL}/categories`,
-      });
-      setCategories(response.data.categories);
-    };
-
-    getCategories();
-  }, []);
+  const navigate = useNavigate()
 
   return (
     <>
@@ -94,9 +83,9 @@ function OffCanvasNavbarMenu({
 
                 <div className="content">
                   {categories.map((category) => (
-                    <a href={`/category/${category.id}`} key={category.id}>
+                    <NavLink to={`/category/${category.id}`} key={category.id} onClick={handleCloseMenu}>
                       {category.name}
-                    </a>
+                    </NavLink>
                   ))}
                 </div>
               </div>

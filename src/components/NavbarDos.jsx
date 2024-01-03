@@ -96,6 +96,7 @@ function NavbarDos() {
               handleCloseCart={() => setShowCart(false)}
               showSignIn={showSignIn}
               handleCloseSignIn={() => setShowSignIn(false)}
+              categories= {categories}
             />
 
             <OffCanvasShoppingCart
