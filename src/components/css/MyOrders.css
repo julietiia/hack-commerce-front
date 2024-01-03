@@ -75,9 +75,24 @@
   margin: 1rem 0;
 }
 
+.order-items{
+  display: flex;
+  align-items: center;
+}
+
 .my-order-date {
   margin: 0;
   text-align: start;
+}
+
+.order-product-image {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  margin: 1rem;
+  border-radius: 15px;
+  border: solid 2px #000000;
+  flex-shrink: 0;
 }
 
 .order-product-detail{

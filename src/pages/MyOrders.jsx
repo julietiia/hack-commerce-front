@@ -63,54 +63,52 @@ function MyOrders() {
                     </p>
                   </div>
                   <hr />
-                  <div className="row">
-                    {order.products.map((product) => (
-                      <React.Fragment key={product.product.id}>
-                        <div className="col-2">
-                          <img
-                            className="checkout-product-image"
-                            src={`${import.meta.env.VITE_IMAGES_URL}/${
-                              product.product.image[1]
-                            }`}
-                            alt={product.product.name}
-                          />
-                        </div>
-                        <div className="col-2">
-                          <p
-                            className={
-                              order.state === "confirmed" ||
-                              order.state === "shipped" ||
-                              order.state === "delivered"
-                                ? "state-confirmed"
-                                : order.state === "cancelled"
-                                ? "state-cancelled"
-                                : ""
-                            }
-                          >
-                            {order.state}
-                          </p>
-                        </div>
-                        <div className="col">
-                          <p className="order-product-detail">
-                            {product.product.name} - {product.quantity} Units
-                          </p>
-                        </div>
-                        <div className="col-2">
-                          <p>USD {calculateTotalPrice(order)}</p>
-                        </div>
-                        <div className="col-2">
-                          <button
-                            className="btn btn-success"
-                            onClick={() =>
-                              navigate(`/products/${product.product.id}`)
-                            }
-                          >
-                            Buy again
-                          </button>
-                        </div>
-                      </React.Fragment>
-                    ))}
-                  </div>
+                  {order.products.map((product) => (
+                    <div className="row order-items" key={product.product.id}>
+                      <div className="col-2">
+                        <img
+                          className="order-product-image"
+                          src={`${import.meta.env.VITE_IMAGES_URL}/${
+                            product.product.image[1]
+                          }`}
+                          alt={product.product.name}
+                        />
+                      </div>
+                      <div className="col-2">
+                        <p
+                          className={
+                            order.state === "confirmed" ||
+                            order.state === "shipped" ||
+                            order.state === "delivered"
+                              ? "state-confirmed"
+                              : order.state === "cancelled"
+                              ? "state-cancelled"
+                              : ""
+                          }
+                        >
+                          {order.state}
+                        </p>
+                      </div>
+                      <div className="col">
+                        <p className="order-product-detail">
+                          {product.product.name} - {product.quantity} Units
+                        </p>
+                      </div>
+                      <div className="col-2">
+                        <p>USD {calculateTotalPrice(order)}</p>
+                      </div>
+                      <div className="col-2">
+                        <button
+                          className="btn btn-success"
+                          onClick={() =>
+                            navigate(`/product/${product.product.id}`)
+                          }
+                        >
+                          Buy again
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ))
             )}
